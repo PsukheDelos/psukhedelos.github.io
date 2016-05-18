@@ -1,0 +1,91 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Charlie Brim
+N:Brim;Charlie;;;
+TEL;TYPE=CELL:027 348 3998
+END:VCARD
+BEGIN:VCARD
+VERSION:3.0
+FN:Colin Douch
+N:Douch;Colin;;;
+TEL;TYPE=CELL:+64 22 689 0407
+END:VCARD
+BEGIN:VCARD
+VERSION:3.0
+FN:Dan Costello
+N:Costello;Dan;;;
+EMAIL;TYPE=INTERNET:dancfilm@gmail.com
+EMAIL;TYPE=INTERNET:dan.costello@wingnutfilms.co.nz
+END:VCARD
+BEGIN:VCARD
+VERSION:3.0
+FN:Dan Malpass
+N:Malpass;Dan;;;
+TEL;TYPE=CELL:027 870 0856
+END:VCARD
+BEGIN:VCARD
+VERSION:3.0
+FN:Emily Davadoss
+N:Davadoss;Emily;;;
+TEL;TYPE=CELL:022 681 8697
+END:VCARD
+BEGIN:VCARD
+VERSION:3.0
+FN:Jennifer Sykes
+N:Sykes;Jennifer;;;
+EMAIL;TYPE=INTERNET;TYPE=HOME:msjsykes@gmail.com
+EMAIL;TYPE=INTERNET:Jennifer.Sykes@mbie.govt.nz
+TEL;TYPE=CELL:021 326 982
+item1.URL:http\://www.google.com/profiles/114125342899671124378
+item1.X-ABLabel:PROFILE
+END:VCARD
+BEGIN:VCARD
+VERSION:3.0
+FN:Johanna Lowe
+N:Lowe;Johanna;;;
+EMAIL;TYPE=INTERNET:johanna.lowe.nz@gmail.com
+TEL;TYPE=CELL:027 416 5406
+END:VCARD
+BEGIN:VCARD
+VERSION:3.0
+FN:Julia Forsyth
+N:Forsyth;Julia;;;
+EMAIL;TYPE=INTERNET:julia.forsyth@bigears.com
+EMAIL;TYPE=INTERNET;TYPE=HOME:julia.forsyth@yourbigears.com
+TEL;TYPE=CELL:027 298 9807
+ORG:Big Ears Ltd.
+END:VCARD
+BEGIN:VCARD
+VERSION:3.0
+FN:Kevin Peek
+N:Peek;Kevin;;;
+EMAIL;TYPE=INTERNET;TYPE=HOME:peeke318@gmail.com
+EMAIL;TYPE=INTERNET:kevin.peek@cdhb.health.nz
+EMAIL;TYPE=INTERNET:peekkevin@msn.com
+ADR;TYPE=HOME:;;26/44 Peterborough Street;Christchurch;Canterbury;8013;New 
+ Zealand
+END:VCARD
+BEGIN:VCARD
+VERSION:3.0
+FN:Stuart Tizard
+N:Tizard;Stuart;;;
+EMAIL;TYPE=INTERNET;TYPE=HOME:stuart.tizard@gmail.com
+TEL;TYPE=CELL:+64 21 163 4531
+END:VCARD
+BEGIN:VCARD
+VERSION:3.0
+FN:Teresa O'Keefe
+N:O'Keefe;Teresa;;;
+EMAIL;TYPE=INTERNET:ur_jst_jealous@hotmail.com
+TEL;TYPE=CELL:+64 27 738 3482
+END:VCARD
+BEGIN:VCARD
+VERSION:3.0
+FN:Woody Cizadlo
+N:Cizadlo;Woody;;;
+EMAIL;TYPE=INTERNET:micr0softener@gmail.com
+EMAIL;TYPE=INTERNET:woodrow.cizadlo@bigears.com
+TEL;TYPE=CELL:027 460 9316
+item1.URL:http\://www.google.com/profiles/112502491646643206510
+item1.X-ABLabel:PROFILE
+END:VCARD
