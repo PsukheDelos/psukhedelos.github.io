@@ -716,6 +716,18 @@ extendDialect("sniff", "StandardGrace");
 //[GRACEFUL MUSIC]
 dialects.musical = {
     methods: {
+        "note": {
+            name: "note",
+            parts: [{name: "note", args: [Number]}],
+            description: "Play a sin",
+            returns: "Done",
+        },
+        "sin": {
+            name: "sin",
+            parts: [{name: "sin", args: [Number]}],
+            description: "Play a sin",
+            returns: "Done",
+        },
         "rectangle": {
             name: "rectangle",
             parts: [{name: "rectangle", args: []}],
@@ -1083,7 +1095,7 @@ dialects.musical = {
     }
 };
 for (var k in dialects.musical.methods)
-    dialects.musical.methods[k].category = "Sniff";
+    dialects.musical.methods[k].category = "Graceful Music";
 dialects.musical.methods['whenever()do'].category = "Control";
 dialects.musical.methods['always'].category = "Control";
 dialects.musical.methods['stop'].category = "Control";
