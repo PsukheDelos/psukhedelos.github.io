@@ -728,6 +728,12 @@ dialects.musical = {
             description: "Play a sin",
             returns: "Done",
         },
+        "gymnopedie": {
+            name: "gymnopedie",
+            parts: [{name: "gymnopedie", args: []}],
+            description: "Play gymnopedie",
+            returns: "Done",
+        },
         "rectangle": {
             name: "rectangle",
             parts: [{name: "rectangle", args: []}],
