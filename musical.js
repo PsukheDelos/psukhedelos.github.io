@@ -3433,7 +3433,7 @@ function gracecode_musical () {
     moduleName = "musical";
     try {
       lineNumber = 485
-      var string997 = new GraceString("a1");
+      var string997 = new GraceString("a4");
       var call998 = callmethod(var_dom,"window", [0]);
       var call999 = callmethod(call998,"t_add", [1], string997);
       return call999
@@ -3464,7 +3464,7 @@ function gracecode_musical () {
     moduleName = "musical";
     try {
       lineNumber = 488
-      var string1001 = new GraceString("b1");
+      var string1001 = new GraceString("b4");
       var call1002 = callmethod(var_dom,"window", [0]);
       var call1003 = callmethod(call1002,"t_add", [1], string1001);
       return call1003
@@ -3495,7 +3495,7 @@ function gracecode_musical () {
     moduleName = "musical";
     try {
       lineNumber = 491
-      var string1005 = new GraceString("c1");
+      var string1005 = new GraceString("c4");
       var call1006 = callmethod(var_dom,"window", [0]);
       var call1007 = callmethod(call1006,"t_add", [1], string1005);
       return call1007
@@ -3526,7 +3526,7 @@ function gracecode_musical () {
     moduleName = "musical";
     try {
       lineNumber = 494
-      var string1009 = new GraceString("d1");
+      var string1009 = new GraceString("d4");
       var call1010 = callmethod(var_dom,"window", [0]);
       var call1011 = callmethod(call1010,"t_add", [1], string1009);
       return call1011
@@ -3557,7 +3557,7 @@ function gracecode_musical () {
     moduleName = "musical";
     try {
       lineNumber = 497
-      var string1013 = new GraceString("e1");
+      var string1013 = new GraceString("e4");
       var call1014 = callmethod(var_dom,"window", [0]);
       var call1015 = callmethod(call1014,"t_add", [1], string1013);
       return call1015
@@ -3588,7 +3588,7 @@ function gracecode_musical () {
     moduleName = "musical";
     try {
       lineNumber = 500
-      var string1017 = new GraceString("f1");
+      var string1017 = new GraceString("f4");
       var call1018 = callmethod(var_dom,"window", [0]);
       var call1019 = callmethod(call1018,"t_add", [1], string1017);
       return call1019
@@ -3619,7 +3619,7 @@ function gracecode_musical () {
     moduleName = "musical";
     try {
       lineNumber = 503
-      var string1021 = new GraceString("g1");
+      var string1021 = new GraceString("g4");
       var call1022 = callmethod(var_dom,"window", [0]);
       var call1023 = callmethod(call1022,"t_add", [1], string1021);
       return call1023
@@ -8967,7 +8967,7 @@ gracecode_musical.imports = [
 'StandardPrelude',
 ];
 if (gctCache)
-  gctCache['musical'] = "fresh:image:\n forward\n height\n moveTo\n angle:=\n jumpTo\n mousedown\n isPointOver\n url:=\n face\n bounceFrom\n always\n touchingEdge\n imgTag\n step\n destY:=\n whenever()do\n x:=\n height:=\n normaliseAngle\n width:=\n x\n y\n width\n stamp\n angle\n url\n turn\n bounceOff\n bounce\n destX:=\n touching\n destX\n destY\n tick\n draw\n alwaysBlocks\n y:=\nconstructors-of:drawable:\n new\nconstructors-of:point:\n x()y\nmodules:\n mgcollections\n StandardPrelude\npublic:\n document\n document:=\n canvas\n canvas:=\n backingCanvas\n backingCanvas:=\n backingContext\n backingContext:=\n mouseDownListener\n mouseDownListener:=\n mouseMoveListener\n mouseMoveListener:=\n trig\n PI\n stopRunning\n stopRunning:=\n initialised\n initialised:=\n backgroundColour\n backgroundColour:=\n registeredObjects\n stepBlocks\n audioTags\n canvasWidth\n canvasWidth:=\n canvasHeight\n canvasHeight:=\n left\n right\n top\n bottom\n centre\n centre:=\n leftCentre\n leftCentre:=\n rightCentre\n rightCentre:=\n above\n above:=\n \u0394\n \u0394:=\n playing\n playing:=\n point\n drawable\n rectangle\n SniffCircle\n circle\n image\n value\n mouse\n clear\n always\n whenever()do\n hue()saturation()lightness\n h()s()l\n initialise\n background\n random\n playSound\n stopSound\n start\n stop\n atModuleEnd\n A\n B\n C\n D\n E\n F\n G\n Instrument\n monoSynth\n pluckSynth\n polySynth\n fmSynth\n membraneSynth\n duoSynth\n bass\nfresh-methods:\n rectangle\n circle\n image\n value\nfresh:circle:\n forward\n moveTo\n angle:=\n jumpTo\n mousedown\n isPointOver\n radius\n face\n bounceFrom\n always\n touchingEdge\n radius:=\n step\n destY:=\n whenever()do\n colour:=\n x:=\n normaliseAngle\n colour\n x\n y\n stamp\n angle\n turn\n bounceOff\n bounce\n destX:=\n touching\n destX\n destY\n tick\n draw\n alwaysBlocks\n y:=\nmethods-of:point.x()y:\n down\n up\n x\n y\n left\n right\nfresh:rectangle:\n forward\n height\n moveTo\n angle:=\n jumpTo\n mousedown\n isPointOver\n face\n bounceFrom\n always\n touchingEdge\n step\n destY:=\n whenever()do\n colour:=\n x:=\n height:=\n normaliseAngle\n colour\n width:=\n x\n y\n width\n stamp\n angle\n asString\n turn\n bounceOff\n bounce\n destX:=\n touching\n destX\n destY\n tick\n draw\n alwaysBlocks\n y:=\nmethods-of:drawable.new:\n forward\n x\n y\n moveTo\n bounceOff\n angle:=\n jumpTo\n mousedown\n isPointOver\n stamp\n angle\n face\n bounceFrom\n always\n alwaysBlocks\n whenever()do\n turn\n bounce\n step\n touchingEdge\n destX:=\n destY:=\n touching\n destX\n destY\n tick\n draw\n x:=\n y:=\n normaliseAngle\npath:\n musical\nclasses:\n point\n drawable\nfresh:value:\n forward\n moveTo\n angle:=\n jumpTo\n mousedown\n isPointOver\n face\n bounceFrom\n always\n touchingEdge\n step\n destY:=\n whenever()do\n colour:=\n x:=\n normaliseAngle\n colour\n label:=\n x\n y\n label\n stamp\n angle\n turn\n bounceOff\n bounce\n destX:=\n touching\n destX\n destY\n tick\n draw\n alwaysBlocks\n y:=\nconfidential:\n";
+  gctCache['musical'] = "constructors-of:drawable:\n new\nmodules:\n StandardPrelude\n mgcollections\npublic:\n document\n document:=\n canvas\n canvas:=\n backingCanvas\n backingCanvas:=\n backingContext\n backingContext:=\n mouseDownListener\n mouseDownListener:=\n mouseMoveListener\n mouseMoveListener:=\n trig\n PI\n stopRunning\n stopRunning:=\n initialised\n initialised:=\n backgroundColour\n backgroundColour:=\n registeredObjects\n stepBlocks\n audioTags\n canvasWidth\n canvasWidth:=\n canvasHeight\n canvasHeight:=\n left\n right\n top\n bottom\n centre\n centre:=\n leftCentre\n leftCentre:=\n rightCentre\n rightCentre:=\n above\n above:=\n \u0394\n \u0394:=\n playing\n playing:=\n point\n drawable\n rectangle\n SniffCircle\n circle\n image\n value\n mouse\n clear\n always\n whenever()do\n hue()saturation()lightness\n h()s()l\n initialise\n background\n random\n playSound\n stopSound\n start\n stop\n atModuleEnd\n A\n B\n C\n D\n E\n F\n G\n Instrument\n monoSynth\n pluckSynth\n polySynth\n fmSynth\n membraneSynth\n duoSynth\n bass\nfresh-methods:\n rectangle\n circle\n image\n value\nfresh:circle:\n x\n y\n angle:=\n touching\n isPointOver\n stamp\n angle\n turn\n tick\n draw\n alwaysBlocks\n normaliseAngle\n colour\n bounceOff\n radius:=\n destY:=\n face\n destX\n destY\n x:=\n jumpTo\n touchingEdge\n step\n mousedown\n whenever()do\n bounce\n colour:=\n moveTo\n destX:=\n bounceFrom\n radius\n y:=\n always\n forward\nfresh:rectangle:\n asString\n x\n y\n angle:=\n width\n touching\n isPointOver\n stamp\n angle\n turn\n tick\n draw\n alwaysBlocks\n normaliseAngle\n colour\n bounceOff\n destY:=\n face\n destX\n destY\n x:=\n jumpTo\n touchingEdge\n width:=\n step\n mousedown\n whenever()do\n bounce\n colour:=\n height:=\n height\n moveTo\n destX:=\n bounceFrom\n y:=\n always\n forward\nmethods-of:point.x()y:\n x\n y\n left\n down\n right\n up\npath:\n musical\nclasses:\n point\n drawable\nfresh:value:\n x\n y\n angle:=\n label\n touching\n isPointOver\n stamp\n angle\n turn\n tick\n draw\n alwaysBlocks\n normaliseAngle\n colour\n bounceOff\n destY:=\n face\n destX\n destY\n x:=\n jumpTo\n touchingEdge\n label:=\n step\n mousedown\n whenever()do\n bounce\n colour:=\n moveTo\n destX:=\n bounceFrom\n y:=\n always\n forward\nconfidential:\nconstructors-of:point:\n x()y\nmethods-of:drawable.new:\n touchingEdge\n x\n y\n step\n angle:=\n mousedown\n isPointOver\n bounceFrom\n stamp\n angle\n whenever()do\n turn\n tick\n draw\n alwaysBlocks\n normaliseAngle\n bounceOff\n touching\n moveTo\n destX:=\n destY:=\n face\n bounce\n destX\n destY\n x:=\n y:=\n always\n jumpTo\n forward\nfresh:image:\n x\n y\n angle:=\n width\n touching\n isPointOver\n stamp\n angle\n turn\n tick\n draw\n alwaysBlocks\n normaliseAngle\n imgTag\n bounceOff\n destY:=\n face\n destX\n destY\n x:=\n jumpTo\n touchingEdge\n width:=\n step\n mousedown\n whenever()do\n bounce\n url:=\n height:=\n url\n height\n moveTo\n destX:=\n bounceFrom\n y:=\n always\n forward\n";
 if (originalSourceLines) {
   originalSourceLines["musical"] = [
     "import \"mgcollections\" as collections",
@@ -9454,25 +9454,25 @@ if (originalSourceLines) {
     "",
     "//Notes",
     "method A(){",
-    "    dom.window.t_add(\"a1\")",
+    "    dom.window.t_add(\"a4\")",
     "}",
     "method B(){",
-    "    dom.window.t_add(\"b1\")",
+    "    dom.window.t_add(\"b4\")",
     "}",
     "method C(){",
-    "    dom.window.t_add(\"c1\")",
+    "    dom.window.t_add(\"c4\")",
     "}",
     "method D(){",
-    "    dom.window.t_add(\"d1\")",
+    "    dom.window.t_add(\"d4\")",
     "}",
     "method E(){",
-    "    dom.window.t_add(\"e1\")",
+    "    dom.window.t_add(\"e4\")",
     "}",
     "method F(){",
-    "    dom.window.t_add(\"f1\")",
+    "    dom.window.t_add(\"f4\")",
     "}",
     "method G(){",
-    "    dom.window.t_add(\"g1\")",
+    "    dom.window.t_add(\"g4\")",
     "}",
     "",
     "//Instruments",
