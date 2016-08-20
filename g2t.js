@@ -3,6 +3,77 @@
 //grace to tone shim
 
 var debug = false;
+var seq = [];
+var bass = new Tone.MonoSynth();
+var bassPart;
+var instruments = [];
+var inst = [];
+
+
+
+Tone.Transport.bpm.value = 90;
+
+function t_init(){
+	seq = [];
+}
+
+function t_add(note){
+	seq.push(note);
+}
+
+function t_bass(){
+
+	console.log("bass: " + seq);
+
+	instruments[0] = "test";
+	console.log(instruments[0]);
+
+
+	// bass.dispose();
+	// if(bassPart!=null){
+	// 	bassPart = bassPart.dispose();
+	// }
+
+	bass = new Tone.MonoSynth({
+		"volume" : -10,
+		"filterEnvelope" : {
+			"attack" : 0.001,
+			"decay" : 0.01,
+			"sustain" : 0.5,
+			"baseFrequency" : 200,
+			"octaves" : 2.6
+		}
+	}).toMaster();
+
+	bass.triggerRelease();
+
+
+	var bassPart = new Tone.Sequence(function(time, note){
+		bass.triggerAttackRelease(note, "8n", time);
+	}, 
+
+	seq
+
+	).start(0);
+
+}
+
+
+
+function t_play() {
+	Tone.Transport.start();
+}
+
+function bass_reset(){
+	// bass = bass.dispose();
+}
+
+function t_stop(){
+	Tone.Transport.stop();
+	seq = [];
+}
+
+
 // /*
 //  KICK
 //  */
@@ -45,18 +116,18 @@ var debug = false;
 /**
  *  PIANO
  */
-		var piano = new Tone.PolySynth(4, Tone.Synth, {
-			"volume" : -8,
-			// "oscillator" : {
-			// 	"partials" : [1, 2, 1],
-			// }//,
-			// "portamento" : 0.05
-		}).toMaster()
+		// var piano = new Tone.PolySynth(4, Tone.Synth, {
+		// 	"volume" : -8,
+		// 	// "oscillator" : {
+		// 	// 	"partials" : [1, 2, 1],
+		// 	// }//,
+		// 	// "portamento" : 0.05
+		// }).toMaster()
 
-		var cChord = ["C4"];
-		var eChord = ["E4"];
-		var fChord = ["F4"];
-		var gChord = ["G4"];
+		// var cChord = ["C4"];
+		// var eChord = ["E4"];
+		// var fChord = ["F4"];
+		// var gChord = ["G4"];
 
 		// var pianoPart = new Tone.Part(function(time, chord){
 		// 	piano.triggerAttackRelease(chord, "8n", time);
@@ -134,22 +205,8 @@ var debug = false;
 		// bassPart.probability = 0.9;
 
 		//set the transport 
-		Tone.Transport.bpm.value = 90;
 		// Tone.Transport.start();
 
-
-var seq = [];
-
-function t_init(){
-	seq = [];
-}
-
-function t_add(note){
-	// console.log("t_add: " + note);
-	// console.log(seq);
-	seq.push(note);
-	// console.log(seq);
-}
 
 // var bass = new Tone.MonoSynth({
 // 	"volume" : -10,
@@ -176,67 +233,7 @@ function t_add(note){
 
 // ).start(0);
 
-var bass = new Tone.MonoSynth();
-var bassPart;
 
-var instruments = [];
-
-var inst = [];
-
-function t_bass(){
-
-	console.log("bass: " + seq);
-
-	instruments[0] = "test";
-	console.log(instruments[0]);
-
-
-	// bass.dispose();
-	// if(bassPart!=null){
-	// 	bassPart = bassPart.dispose();
-	// }
-
-	bass = new Tone.MonoSynth({
-		"volume" : -10,
-		"filterEnvelope" : {
-			"attack" : 0.001,
-			"decay" : 0.01,
-			"sustain" : 0.5,
-			"baseFrequency" : 200,
-			"octaves" : 2.6
-		}
-	}).toMaster();
-
-	bass.triggerRelease();
-
-
-	var bassPart = new Tone.Sequence(function(time, note){
-		bass.triggerAttackRelease(note, "8n", time);
-	}, 
-
-	seq
-
-	).start(0);
-
-}
-
-
-
-function t_play() {
-	Tone.Transport.start();
-}
-
-function bass_reset(){
-	// bass = bass.dispose();
-}
-
-function t_stop(){
-	// bass.dispose();
-	// console.log("t_stop");
-	Tone.Transport.stop();
-	// Tone.Master.reset();
-	seq = [];
-}
 
 // /*
 //  KICK
