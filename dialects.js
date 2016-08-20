@@ -848,7 +848,8 @@ dialects.musical = {
             multiline: true,
             selfcall: true,
             description: "Any time a condition is true, do something.",
-            toplevel: true
+            toplevel: true,
+            type: "note"
         },
         "monoSynth": {
             name: "monoSynth",
