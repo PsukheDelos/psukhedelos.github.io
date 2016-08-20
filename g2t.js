@@ -79,6 +79,8 @@ function t_synth_mono(){
 	var monoSeq = new Tone.Sequence(function(time, note){
 		mono.triggerAttackRelease(note, "8n", time);
 	}, sequence ).start(0);
+	
+	instruments.push(mono);
 
 	applyEffects(mono);
 }
@@ -90,6 +92,8 @@ function t_synth_pluck(){
 		pluck.triggerAttackRelease(note, "8n", time);
 	}, sequence ).start(0);
 
+	instruments.push(pluck);
+
 	applyEffects(pluck);
 }
 
@@ -99,6 +103,8 @@ function t_synth_poly(){
 	var polySeq = new Tone.Sequence(function(time, note){
 		poly.triggerAttackRelease(note, "8n", time);
 	}, sequence ).start(0);
+	
+	instruments.push(poly);
 
 	applyEffects(poly);
 
@@ -112,6 +118,8 @@ function t_synth_fm(){
 		console.log(note);
 	}, sequence ).start(0);
 
+	instruments.push(fm);
+
 	applyEffects(fm);
 }
 
@@ -121,6 +129,8 @@ function t_synth_membrane(){
 	var membraneSeq = new Tone.Sequence(function(time, note){
 		membrane.triggerAttackRelease(note, "8n", time);
 	}, sequence ).start(0);
+
+	instruments.push(membrane);
 
 	applyEffects(membrane);
 }
@@ -132,7 +142,16 @@ function t_synth_duo(){
 		duo.triggerAttackRelease(note, "8n", time);
 	}, sequence ).start(0);
 
+	instruments.push(duo);
+
 	applyEffects(duo);
+}
+
+function t_reset(){
+	// for (var i = instruments.length - 1; i >= 0; i--) {
+	// 	instruments[i].dispose();
+	// }
+	// instruments = [];
 }
 
 // * Effects 
