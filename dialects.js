@@ -822,6 +822,98 @@ dialects.musical = {
             description: "Play Music",
             multiline: true,
         },
+        "monoSynth": {
+            name: "monoSynth",
+            parts: [
+                {
+                    name: 'monoSynth',
+                    args: [
+                        {type: 'Block', returns: 'Any', multiline: true,
+                            description: "Something to play"}
+                    ],
+                }
+            ],
+            returns: "Done",
+            description: "Play Music",
+            multiline: true,
+        },
+        "pluckSynth": {
+            name: "pluckSynth",
+            parts: [
+                {
+                    name: 'pluckSynth',
+                    args: [
+                        {type: 'Block', returns: 'Any', multiline: true,
+                            description: "Something to play"}
+                    ],
+                }
+            ],
+            returns: "Done",
+            description: "Play Music",
+            multiline: true,
+        },
+        "polySynth": {
+            name: "polySynth",
+            parts: [
+                {
+                    name: 'polySynth',
+                    args: [
+                        {type: 'Block', returns: 'Any', multiline: true,
+                            description: "Something to play"}
+                    ],
+                }
+            ],
+            returns: "Done",
+            description: "Play Music",
+            multiline: true,
+        },
+
+        "fmSynth": {
+            name: "fmSynth",
+            parts: [
+                {
+                    name: 'fmSynth',
+                    args: [
+                        {type: 'Block', returns: 'Any', multiline: true,
+                            description: "Something to play"}
+                    ],
+                }
+            ],
+            returns: "Done",
+            description: "Play Music",
+            multiline: true,
+        },
+
+        "membraneSynth": {
+            name: "membraneSynth",
+            parts: [
+                {
+                    name: 'membraneSynth',
+                    args: [
+                        {type: 'Block', returns: 'Any', multiline: true,
+                            description: "Something to play"}
+                    ],
+                }
+            ],
+            returns: "Done",
+            description: "Play Music",
+            multiline: true,
+        },
+        "duoSynth": {
+            name: "duoSynth",
+            parts: [
+                {
+                    name: 'duoSynth',
+                    args: [
+                        {type: 'Block', returns: 'Any', multiline: true,
+                            description: "Something to play"}
+                    ],
+                }
+            ],
+            returns: "Done",
+            description: "Play Music",
+            multiline: true,
+        },
 
         "loop": {
             name: "loop",

@@ -21,6 +21,54 @@ function t_add(note){
 	seq.push(note);
 }
 
+function t_synth_mono(){
+	var mono = new Tone.MonoSynth().toMaster();
+
+	var monoSeq = new Tone.Sequence(function(time, note){
+		mono.triggerAttackRelease(note, "8n", time);
+	}, seq ).start(0);
+}
+
+function t_synth_pluck(){
+	var pluck = new Tone.PluckSynth().toMaster();
+
+	var pluckSeq = new Tone.Sequence(function(time, note){
+		pluck.triggerAttackRelease(note, "8n", time);
+	}, seq ).start(0);
+}
+
+function t_synth_poly(){
+	var poly = new Tone.PolySynth().toMaster();
+
+	var polySeq = new Tone.Sequence(function(time, note){
+		poly.triggerAttackRelease(note, "8n", time);
+	}, seq ).start(0);
+}
+
+function t_synth_fm(){
+	var fm = new Tone.FMSynth().toMaster();
+
+	var fmSeq = new Tone.Sequence(function(time, note){
+		fm.triggerAttackRelease(note, "8n", time);
+	}, seq ).start(0);
+}
+
+function t_synth_membrane(){
+	var membrane = new Tone.MembraneSynth().toMaster();
+
+	var membraneSeq = new Tone.Sequence(function(time, note){
+		membrane.triggerAttackRelease(note, "8n", time);
+	}, seq ).start(0);
+}
+
+function t_synth_duo(){
+	var duo = new Tone.DuoSynth().toMaster();
+
+	var duoSeq = new Tone.Sequence(function(time, note){
+		duo.triggerAttackRelease(note, "8n", time);
+	}, seq ).start(0);
+}
+
 function t_bass(){
 
 	console.log("bass: " + seq);
@@ -45,7 +93,7 @@ function t_bass(){
 		}
 	}).toMaster();
 
-	bass.triggerRelease();
+	// bass.triggerRelease();
 
 
 	var bassPart = new Tone.Sequence(function(time, note){
