@@ -470,6 +470,7 @@ function populateTile(tile, obj) {
             fillNextPrev(elseHole);
             break;
         case "var":
+            console.log("var");
             var sel = tile.getElementsByClassName('var-name')[0];
             sel.innerHTML = obj.value;
             sel.oldName = obj.value;

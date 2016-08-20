@@ -2589,7 +2589,7 @@ gracecode_turtle.imports = [
 'mgcollections',
 ];
 if (gctCache)
-  gctCache['turtle'] = "modules:\n mgcollections\nfresh-methods:\nmethods-of:colour.r()g()b:\n b\n g\n r\nconstructors-of:colour:\n r()g()b\npath:\n turtle\nclasses:\n colour\npublic:\n document\n document:=\n canvas\n canvas:=\n ctx\n ctx:=\n trig\n trig:=\n colour\n black\n blue\n green\n red\n x\n x:=\n y\n y:=\n started\n started:=\n maxActionsDrawn\n maxActionsDrawn:=\n delay\n delay:=\n turtleAngle\n turtleAngle:=\n steps\n stages\n PI\n drawTurtle\n backingCanvas\n backingCanvas:=\n drawingEnabled\n drawingEnabled:=\n move\n turnRight\n turnLeft\n penUp\n penDown\n initialised\n initialised:=\n initialise\n start\nconfidential:\n";
+  gctCache['turtle'] = "modules:\n mgcollections\npath:\n turtle\nclasses:\n colour\npublic:\n document\n document:=\n canvas\n canvas:=\n ctx\n ctx:=\n trig\n trig:=\n colour\n black\n blue\n green\n red\n x\n x:=\n y\n y:=\n started\n started:=\n maxActionsDrawn\n maxActionsDrawn:=\n delay\n delay:=\n turtleAngle\n turtleAngle:=\n steps\n stages\n PI\n drawTurtle\n backingCanvas\n backingCanvas:=\n drawingEnabled\n drawingEnabled:=\n move\n turnRight\n turnLeft\n penUp\n penDown\n initialised\n initialised:=\n initialise\n start\nconfidential:\nmethods-of:colour.r()g()b:\n g\n r\n b\nfresh-methods:\nconstructors-of:colour:\n r()g()b\n";
 if (originalSourceLines) {
   originalSourceLines["turtle"] = [
     "import \"dom\" as dom",
