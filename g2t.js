@@ -135,6 +135,12 @@ function t_effect_cheby(){
 
 }
 
+// * Timing
+// ******************
+function t_bpm(bpm){
+	Tone.Transport.bpm.value = bpm;
+}
+
 
 //commented out timbre stuff
 

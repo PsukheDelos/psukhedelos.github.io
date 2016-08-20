@@ -723,36 +723,6 @@ dialects.musical = {
         //     description: "Play a note",
         //     returns: "Done",
         // },
-        // "test": {
-        //     name: "test",
-        //     parts: [{name: "test", args: [Number]}],
-        //     description: "Play a sin",
-        //     returns: "Done",
-        // },
-        "A": {
-            name: "A",
-            parts: [
-                {
-                    name: 'A',
-                    args: [],
-                }
-            ],
-            returns: "Done",
-            description: "Play A Note",
-            type: "note"
-        },
-        "B": {
-            name: "B",
-            parts: [
-                {
-                    name: 'B',
-                    args: [],
-                }
-            ],
-            returns: "Done",
-            description: "Play B Note",
-            type: "note"
-        },
         "C": {
             name: "C",
             parts: [
@@ -813,14 +783,67 @@ dialects.musical = {
             description: "Play G Note",
             type: "note"
         },
+        "A": {
+            name: "A",
+            parts: [
+                {
+                    name: 'A',
+                    args: [],
+                }
+            ],
+            returns: "Done",
+            description: "Play A Note",
+            type: "note"
+        },
+        "B": {
+            name: "B",
+            parts: [
+                {
+                    name: 'B',
+                    args: [],
+                }
+            ],
+            returns: "Done",
+            description: "Play B Note",
+            type: "note"
+        },
+        "flat": {
+            name: "flat",
+            parts: [
+                {
+                    name: 'flat',
+                    args: [
+                        {type: 'Block', returns: 'Any', multiline: true, description: "Something to play"}
+                    ],
+                }
+            ],
+            returns: "Done",
+            description: "Play Music",
+            multiline: true,
+            type: "note"
+        },
+        "sharp": {
+            name: "sharp",
+            parts: [
+                {
+                    name: 'sharp',
+                    args: [
+                        {type: 'Block', returns: 'Any', multiline: true, description: "Something to play"}
+                    ],
+                }
+            ],
+            returns: "Done",
+            description: "Play Music",
+            multiline: true,
+            type: "note"
+        },
         "monoSynth": {
             name: "monoSynth",
             parts: [
                 {
                     name: 'monoSynth',
                     args: [
-                        {type: 'Block', returns: 'Any', multiline: true,
-                            description: "Something to play"}
+                        {type: 'Block', returns: 'Any', multiline: true, description: "Something to play"}
                     ],
                 }
             ],
@@ -973,505 +996,13 @@ dialects.musical = {
             multiline: true,
             type: "effect"
         },
-        // "loop": {
-        //     name: "loop",
-        //     parts: [
-        //         {
-        //             name: 'loop',
-        //             args: [
-        //                 {type: 'Block', returns: 'Any', multiline: true,
-        //                     description: "Something to play"}
-        //             ],
-        //         }
-        //     ],
-        //     returns: "Done",
-        //     description: "Play Music",
-        //     multiline: true,
-        // },
-
-
-
-        // "bass": {
-        //     name: "bass",
-        //     parts: [
-        //         {
-        //             name: 'bass',
-        //             args: [
-        //                 {type: 'Block', returns: 'Any', multiline: true,
-        //                     description: "Something to play"}
-        //             ],
-        //         }
-        //     ],
-        //     returns: "Done",
-        //     description: "Play Music",
-        //     multiline: true,
-        // },
-
-        // "instrument": {
-        //     name: "instrument",
-        //     parts: [
-
-        //             {name: "instrument", args: [
-        //             {type: 'Block', returns: 'Boolean', multiline: false,
-        //                 description: "Condition."}]},
-                    
-        //             {name: "vol", args: [
-        //             {type: 'Number', returns: 'Any', multiline: false,
-        //                 description: "Something to do when true."}
-        //             ]},
-
-        //             {name: "effect", args: [
-        //             {type: 'String', returns: 'Any', multiline: false,
-        //                 description: "Something to do when true."}
-        //             ]},
-
-        //             {name: "sequence", args: [
-        //             {type: 'Block', returns: 'Any', multiline: true,
-        //                 description: "Something to do when true."}
-        //             ]}
-
-
-        //             ],
-        //     returns: "Done",
-        //     multiline: true,
-        //     selfcall: true,
-        //     description: "Any time a condition is true, do something.",
-        //     toplevel: true
-        // },
-
-        // "piano": {
-        //     name: "piano",
-        //     parts: [
-        //         {
-        //             name: 'piano',
-        //             args: [
-        //                 {type: 'Block', returns: 'Any', multiline: true,
-        //                     description: "Something to play"}
-        //             ],
-        //         }
-        //     ],
-        //     returns: "Done",
-        //     description: "Play Music",
-        //     multiline: true,
-        // },
-
-        // ,
-        // "sin": {
-        //     name: "sin",
-        //     parts: [{name: "sin", args: [String]}],
-        //     description: "Play a sin",
-        //     returns: "Done",
-        // },
-        // "gymnopedie": {
-        //     name: "gymnopedie",
-        //     parts: [{name: "gymnopedie", args: []}],
-        //     description: "Play gymnopedie",
-        //     returns: "Done",
-        // },
-        // ,
-        // "rectangle": {
-        //     name: "rectangle",
-        //     parts: [{name: "rectangle", args: []}],
-        //     returns: "Shape",
-        //     description: "Create a rectangle.",
-        //     inheritedVars: ["width", "height", "x", "y", "colour"]
-        // },
-        // "circle": {
-        //     name: "circle",
-        //     parts: [{name: "circle", args: []}],
-        //     returns: "Shape",
-        //     description: "Create a circle.",
-        //     inheritedVars: ["radius", "x", "y", "colour"]
-        // },
-        // "image": {
-        //     name: "image",
-        //     parts: [{name: "image", args: []}],
-        //     returns: "Shape",
-        //     description: "Create an image object.",
-        //     inheritedVars: ["width", "height", "x", "y", "url"],
-        //     onRegenerate: function(tile) {
-        //         var inheritsTile = tile.parentNode.parentNode;
-        //         if (!inheritsTile.classList.contains("inherits"))
-        //             return;
-        //         var objTile = inheritsTile.parentNode.parentNode.parentNode;
-        //         if (!objTile.classList.contains("object"))
-        //             return;
-        //         var assigns = objTile.getElementsByClassName("assign");
-        //         assigns = Array.prototype.slice.call(assigns, 0);
-        //         assigns.forEach(function(assign) {
-        //             var extras = assign.getElementsByClassName("extra-indicator");
-        //             var extra = null;
-        //             if (extras.length == 1) {
-        //                 extra = extras[0];
-        //                 if (extra.parentNode != assign)
-        //                     extra = null;
-        //             }
-        //             var vhole = assign.childNodes[0];
-        //             if (vhole.lastChild == null) {
-        //                 if (extra)
-        //                     extra.parentNode.removeChild(extra);
-        //                 return;
-        //             }
-        //             var vtile = vhole.childNodes[0];
-        //             if (!vtile.classList.contains("var")) {
-        //                 if (extra)
-        //                     extra.parentNode.removeChild(extra);
-        //                 return;
-        //             }
-        //             var varname = vtile.childNodes[0].innerHTML;
-        //             if (varname != "url") {
-        //                 if (extra)
-        //                     extra.parentNode.removeChild(extra);
-        //                 return;
-        //             }
-        //             var valhole = assign.childNodes[2];
-        //             if (valhole.lastChild == null) {
-        //                 if (extra)
-        //                     extra.parentNode.removeChild(extra);
-        //                 return;
-        //             }
-        //             var valtile = valhole.childNodes[0];
-        //             var valOrigin = findDefiniteValue(valtile);
-        //             if (!valOrigin||!valOrigin.classList.contains("string")) {
-        //                 if (extra)
-        //                     extra.parentNode.removeChild(extra);
-        //                 return;
-        //             }
-        //             var strValue = valOrigin.getElementsByTagName("input")[0].value;
-        //             if (extras.length == 0) {
-        //                 var extra = document.createElement("img");
-        //                 extra.classList.add("extra-indicator");
-        //                 extra.style.maxWidth = "3ex";
-        //                 extra.style.maxHeight = "3ex";
-        //                 extra.style.border = "1px solid black";
-        //             } else
-        //                 var extra = extras[0];
-        //             var available = ["ball.png", "face.jpg", "moon.png",
-        //                 "star.png", "sun.png", "bug.png",
-        //                 "smile.png", "stuart.jpg"];
-        //             extra.onmousedown = function() {
-        //                 var menu = document.createElement("ul");
-        //                 menu.classList.add("popup-menu");
-        //                 var xy = findOffsetTopLeft(extra);
-        //                 menu.style.top = (xy.top + extra.offsetHeight - codearea.offsetTop - 10) + 'px';
-        //                 menu.style.left = xy.left + 'px';
-        //                 available.forEach(function(url) {
-        //                     var li = document.createElement('li');
-        //                     var img = document.createElement('img');
-        //                     img.style.maxWidth = '5ex';
-        //                     img.style.maxHeight = '5ex';
-        //                     img.style.marginLeft = 'auto';
-        //                     img.style.marginRight = 'auto';
-        //                     img.src = url;
-        //                     li.appendChild(img);
-        //                     menu.appendChild(li);
-        //                     var inp=valOrigin.getElementsByTagName("input")[0];
-        //                     li.addEventListener('click', function() {
-        //                         inp.value = url;
-        //                         codearea.removeChild(menu);
-        //                         updateTileIndicator();
-        //                         generateCode();
-        //                         checkpointSave();
-        //                         if (typeof Event == 'function') {
-        //                             var event = new Event('blur');
-        //                             inp.dispatchEvent(event);
-        //                         }
-        //                         inp.classList.remove('popout');
-        //                     });
-        //                     li.addEventListener('mouseover', function() {
-        //                         inp.classList.add('popout');
-        //                     });
-        //                     li.addEventListener('mouseout', function() {
-        //                         inp.classList.remove('popout');
-        //                     });
-        //                 });
-        //                 codearea.appendChild(menu);
-        //             }
-        //             extra.src = strValue;
-        //             assign.appendChild(extra);
-        //         });
-        //     }
-        // },
-        // "value": {
-        //     name: "value",
-        //     parts: [{name: "value", args: [
-        //         {type: 'Block', returns: 'Any', multiline: false}]
-        //     }],
-        //     returns: "Shape",
-        //     description: "Display a value on screen.",
-        //     inheritedVars: ["x", "y", "label"]
-        // }
-        // "always": {
-        //     name: "always",
-        //     parts: [{name: "always",
-        //             args: [{type: 'Block', returns: 'Any', multiline: true}]
-        //             }],
-        //     returns: "Done",
-        //     multiline: true,
-        //     selfcall: true,
-        //     description: "Do something all the time.",
-        //     toplevel: true
-        // },
-        // "bounce": {
-        //     name: "bounce",
-        //     parts: [{name: "bounce", args: []}],
-        //     returns: "Done",
-        //     description: "Bounce off an edge.",
-        //     selfcall: true
-        // },
-        // "forward": {
-        //     name: "forward",
-        //     parts: [{name: "forward", args: ["Number"]}],
-        //     returns: "Done",
-        //     description: "Move forward some distance.",
-        //     selfcall: true
-        // },
-        // "bounceOff": {
-        //     name: "bounceOff",
-        //     parts: [{name: "bounceOff", args: ["Shape"]}],
-        //     returns: "Done",
-        //     description: "Bounce off another object.",
-        //     selfcall: true
-        // },
-        // "touchingEdge": {
-        //     name: "touchingEdge",
-        //     parts: [{name: "touchingEdge", args: []}],
-        //     returns: "Boolean",
-        //     description: "True if this object is touching an edge.",
-        //     selfcall: true
-        // },
-        // "touching": {
-        //     name: "touching",
-        //     parts: [{name: "touching", args: ["Point"]}],
-        //     returns: "Boolean",
-        //     description: "True if this object is touching the other.",
-        //     selfcall: true
-        // },
-        // "face": {
-        //     name: "face",
-        //     parts: [{name: "face", args: ["Point"]}],
-        //     returns: "Done",
-        //     description: "Turn to face a particular point.",
-        //     selfcall: true
-        // },
-        // "above": {
-        //     name: "above",
-        //     parts: [{name: "above", args: []}],
-        //     description: "Refers to the last object created.",
-        //     returns: "Shape"
-        // },
-        // "Δ": {
-        //     name: "Δ",
-        //     parts: [{name: "Δ", args: []}],
-        //     description: "Refers to the last object created.",
-        //     returns: "Shape"
-        // },
-        // "stop": {
-        //     name: "stop",
-        //     parts: [{name: "stop", args: []}],
-        //     description: "Stop the program.",
-        //     returns: "Done"
-        // },
-        // "random": {
-        //     name: "random",
-        //     parts: [{name: "random", args: ["Number"]}],
-        //     description: "Returns a random number.",
-        //     returns: "Number"
-        // },
-        // "randomPoint": {
-        //     name: "randomPoint",
-        //     parts: [{name: "randomPoint", args: []}],
-        //     description: "Returns a random point in the drawing area.",
-        //     returns: "Point"
-        // },
-        // "canvasWidth": {
-        //     name: "canvasWidth",
-        //     parts: [{name: "canvasWidth", args: []}],
-        //     description: "Width of the drawing area.",
-        //     returns: "Number"
-        // },
-        // "canvasHeight": {
-        //     name: "canvasHeight",
-        //     parts: [{name: "canvasHeight", args: []}],
-        //     description: "Height of the drawing area.",
-        //     returns: "Number"
-        // },
-        // "turn": {
-        //     name: "turn",
-        //     parts: [{name: "turn", args: ["Number"]}],
-        //     returns: "Done",
-        //     description: "Rotate anticlockwise this many degrees.",
-        //     selfcall: true
-        // },
-        // "jumpTo": {
-        //     name: "jumpTo",
-        //     parts: [{name: "jumpTo", args: ["Point"]}],
-        //     returns: "Done",
-        //     description: "Move immediately to a point.",
-        //     selfcall: true
-        // },
-        // "stamp": {
-        //     name: "stamp",
-        //     parts: [{name: "stamp", args: []}],
-        //     returns: "Done",
-        //     description: "Draw this item onto the background.",
-        //     selfcall: true
-        // },
-        // "clear": {
-        //     name: "clear",
-        //     parts: [{name: "clear", args: []}],
-        //     description: "Erase the background.",
-        //     returns: "Done",
-        // },
-        // "background": {
-        //     name: "background",
-        //     parts: [{name: "background", args: ["String"]}],
-        //     description: "Set the background colour.",
-        //     returns: "Done"
-        // },
-        // "playSound": {
-        //     name: "playSound",
-        //     parts: [{name: "playSound", args: ["String"]}],
-        //     returns: "Done",
-        //     description: "Play a sound.",
-        //     selfcall: true
-        // },
-        // "stopSound": {
-        //     name: "stopSound",
-        //     parts: [{name: "stopSound", args: ["String"]}],
-        //     returns: "Done",
-        //     description: "Stop playing a sound.",
-        //     selfcall: true
-        // },
-        // "mouse": {
-        //     name: "mouse",
-        //     parts: [{name: "mouse", args: []}],
-        //     description: "The current location of the mouse pointer.",
-        //     returns: "Point"
-        // },
-        // "centre": {name: "centre", parts: [{name: "centre", args: []}],
-        //     returns: "Point", constant: true,
-        //     description: "The centre of the drawing area."},
-        // "rightCentre": {name: "rightCentre",
-        //     parts: [{name: "rightCentre", args: []}],
-        //     returns: "Point", constant: true,
-        //     description: "The middle of the right edge of the drawing area."},
-        // "leftCentre": {name: "leftCentre",
-        //     parts: [{name: "leftCentre", args: []}],
-        //     returns: "Point", constant: true,
-        //     description: "The middle of the left edge of the drawing area."},
-        // "hue()saturation()lightness": {
-        //     name: "hue()saturation()lightness",
-        //     parts: [{name: "hue", args: [
-        //             {type: 'Number',
-        //                 description: "0=red, 120=green, 240=blue."}]},
-        //         {name: "saturation", args: [
-        //             {type: 'Number',
-        //                 description: "How strong the colour is (0-100)."}
-        //             ]},
-        //         {name: "lightness", args: [
-        //             {type: 'Number',
-        //                 description: "How light the colour is (0-100)."}
-        //             ]}
-        //     ],
-        //     returns: "String",
-        //     selfcall: true,
-        //     description: "Create a colour.",
-        //     toplevel: true,
-        //     onRegenerate: function(tile) {
-        //         var colours = tile.getElementsByClassName("extra-indicator");
-        //         var holes = tile.getElementsByClassName("hole");
-        //         if (holes.length > 3) {
-        //             if (colours.length)
-        //                 colours[0].parentNode.removeChild(colours[0]);
-        //             return;
-        //         }
-        //         var definiteValues = [null, null, null];
-        //         for (var i=0; i<holes.length; i++) {
-        //             if (holes[i].childNodes.length != 1) {
-        //                 if (colours.length)
-        //                     colours[0].parentNode.removeChild(colours[0]);
-        //                 return;
-        //             }
-        //             definiteValues[i] = findDefiniteValue(holes[i].lastChild);
-        //         }
-        //         for (var i=0; i<definiteValues.length; i++) {
-        //             if (!definiteValues[i] ||
-        //                     !definiteValues[i].classList.contains("number")) {
-        //                 if (colours.length)
-        //                     colours[0].parentNode.removeChild(colours[0]);
-        //                 return;
-        //             }
-        //         }
-        //         var hue = definiteValues[0].childNodes[0].value;
-        //         var sat = definiteValues[1].childNodes[0].value;
-        //         var lit = definiteValues[2].childNodes[0].value;
-        //         if (colours.length == 0) {
-        //             var col = document.createElement("span");
-        //             col.classList.add("extra-indicator");
-        //             col.style.width = "2ex";
-        //             col.style.height = "1.5ex";
-        //             col.style.border = "1px solid black";
-        //         } else
-        //             var col = colours[0];
-        //         col.style.background = "hsl(" + hue + ", " + sat + "%, " + lit + "%)";
-        //         tile.appendChild(col);
-        //     }
-        // },
-        // "freq()mul()": {
-        //     name: "freq()mul()",
-        //     parts: [{name: "freq", args: [
-        //             {type: 'Number',
-        //                 description: "0=red, 120=green, 240=blue."}]},
-        //         {name: "mul", args: [
-        //             {type: 'Number',
-        //                 description: "How strong the colour is (0-100)."}
-        //             ]},
-        //     ],
-        //     returns: "String",
-        //     selfcall: true,
-        //     description: "Create a colour.",
-        //     toplevel: true,
-        //     onRegenerate: function(tile) {
-        //         // var colours = tile.getElementsByClassName("extra-indicator");
-        //         // var holes = tile.getElementsByClassName("hole");
-        //         // if (holes.length > 3) {
-        //         //     if (colours.length)
-        //         //         colours[0].parentNode.removeChild(colours[0]);
-        //         //     return;
-        //         // }
-        //         // var definiteValues = [null, null, null];
-        //         // for (var i=0; i<holes.length; i++) {
-        //         //     if (holes[i].childNodes.length != 1) {
-        //         //         if (colours.length)
-        //         //             colours[0].parentNode.removeChild(colours[0]);
-        //         //         return;
-        //         //     }
-        //         //     definiteValues[i] = findDefiniteValue(holes[i].lastChild);
-        //         // }
-        //         // for (var i=0; i<definiteValues.length; i++) {
-        //         //     if (!definiteValues[i] ||
-        //         //             !definiteValues[i].classList.contains("number")) {
-        //         //         if (colours.length)
-        //         //             colours[0].parentNode.removeChild(colours[0]);
-        //         //         return;
-        //         //     }
-        //         // }
-        //         // var hue = definiteValues[0].childNodes[0].value;
-        //         // var sat = definiteValues[1].childNodes[0].value;
-        //         // var lit = definiteValues[2].childNodes[0].value;
-        //         // if (colours.length == 0) {
-        //         //     var col = document.createElement("span");
-        //         //     col.classList.add("extra-indicator");
-        //         //     col.style.width = "2ex";
-        //         //     col.style.height = "1.5ex";
-        //         //     col.style.border = "1px solid black";
-        //         // } else
-        //         //     var col = colours[0];
-        //         // col.style.background = "hsl(" + hue + ", " + sat + "%, " + lit + "%)";
-        //         // tile.appendChild(col);
-        //     }
-        // }
+        "SetBPM": {
+            name: "SetBPM",
+            parts: [{name: "SetBPM", args: [Number]}],
+            description: "Set Tone BPM",
+            returns: "Done",
+            type: "timing"
+        },
     }
 };
 for (var k in dialects.musical.methods){
@@ -1484,22 +1015,13 @@ for (var k in dialects.musical.methods){
     else if(dialects.musical.methods[k].type == "effect"){
         dialects.musical.methods[k].category = "Effects";
     }
+    else if(dialects.musical.methods[k].type == "timing"){
+        dialects.musical.methods[k].category = "Timing";
+    }
     else{
        dialects.musical.methods[k].category = "Graceful Music";
     }
 }
-// dialects.musical.methods['whenever()do'].category = "Control";
-// dialects.musical.methods['always'].category = "Control";
-// dialects.musical.methods['stop'].category = "Control";
-// dialects.musical.methods.turn.category = "Motion";
-// dialects.musical.methods.face.category = "Motion";
-// dialects.musical.methods.forward.category = "Motion";
-// dialects.musical.methods.jumpTo.category = "Motion";
-// dialects.musical.methods.bounce.category = "Motion";
-// dialects.musical.methods.bounceOff.category = "Motion";
-// dialects.musical.methods.mouse.category = "Sensing";
-// dialects.musical.methods.touching.category = "Sensing";
-// dialects.musical.methods.touchingEdge.category = "Sensing";
 extendDialect("musical", "StandardGrace");
 
 
