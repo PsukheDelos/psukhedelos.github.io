@@ -738,7 +738,8 @@ dialects.musical = {
                 }
             ],
             returns: "Done",
-            description: "Play A Note"
+            description: "Play A Note",
+            type: "note"
         },
         "B": {
             name: "B",
@@ -749,7 +750,8 @@ dialects.musical = {
                 }
             ],
             returns: "Done",
-            description: "Play B Note"
+            description: "Play B Note",
+            type: "note"
         },
         "C": {
             name: "C",
@@ -760,7 +762,8 @@ dialects.musical = {
                 }
             ],
             returns: "Done",
-            description: "Play C Note"
+            description: "Play C Note",
+            type: "note"
         },
         "D": {
             name: "D",
@@ -771,7 +774,8 @@ dialects.musical = {
                 }
             ],
             returns: "Done",
-            description: "Play D Note"
+            description: "Play D Note",
+            type: "note"
         },
         "E": {
             name: "E",
@@ -782,8 +786,8 @@ dialects.musical = {
                 }
             ],
             returns: "Done",
-            description: "Play E Note"
-
+            description: "Play E Note",
+            type: "note"
         },
         "F": {
             name: "F",
@@ -794,7 +798,8 @@ dialects.musical = {
                 }
             ],
             returns: "Done",
-            description: "Play F Note"
+            description: "Play F Note",
+            type: "note"
         },
         "G": {
             name: "G",
@@ -805,23 +810,24 @@ dialects.musical = {
                 }
             ],
             returns: "Done",
-            description: "Play G Note"
+            description: "Play G Note",
+            type: "note"
         },
-        "bass": {
-            name: "bass",
-            parts: [
-                {
-                    name: 'bass',
-                    args: [
-                        {type: 'Block', returns: 'Any', multiline: true,
-                            description: "Something to play"}
-                    ],
-                }
-            ],
-            returns: "Done",
-            description: "Play Music",
-            multiline: true,
-        },
+        // "bass": {
+        //     name: "bass",
+        //     parts: [
+        //         {
+        //             name: 'bass',
+        //             args: [
+        //                 {type: 'Block', returns: 'Any', multiline: true,
+        //                     description: "Something to play"}
+        //             ],
+        //         }
+        //     ],
+        //     returns: "Done",
+        //     description: "Play Music",
+        //     multiline: true,
+        // },
         "monoSynth": {
             name: "monoSynth",
             parts: [
@@ -836,6 +842,7 @@ dialects.musical = {
             returns: "Done",
             description: "Play Music",
             multiline: true,
+            type: "instrument"
         },
         "pluckSynth": {
             name: "pluckSynth",
@@ -851,6 +858,7 @@ dialects.musical = {
             returns: "Done",
             description: "Play Music",
             multiline: true,
+            type: "instrument"
         },
         "polySynth": {
             name: "polySynth",
@@ -866,6 +874,7 @@ dialects.musical = {
             returns: "Done",
             description: "Play Music",
             multiline: true,
+            type: "instrument"
         },
 
         "fmSynth": {
@@ -882,6 +891,7 @@ dialects.musical = {
             returns: "Done",
             description: "Play Music",
             multiline: true,
+            type: "instrument"
         },
 
         "membraneSynth": {
@@ -898,6 +908,7 @@ dialects.musical = {
             returns: "Done",
             description: "Play Music",
             multiline: true,
+            type: "instrument"
         },
         "duoSynth": {
             name: "duoSynth",
@@ -913,23 +924,24 @@ dialects.musical = {
             returns: "Done",
             description: "Play Music",
             multiline: true,
+            type: "instrument"
         },
 
-        "loop": {
-            name: "loop",
-            parts: [
-                {
-                    name: 'loop',
-                    args: [
-                        {type: 'Block', returns: 'Any', multiline: true,
-                            description: "Something to play"}
-                    ],
-                }
-            ],
-            returns: "Done",
-            description: "Play Music",
-            multiline: true,
-        },
+        // "loop": {
+        //     name: "loop",
+        //     parts: [
+        //         {
+        //             name: 'loop',
+        //             args: [
+        //                 {type: 'Block', returns: 'Any', multiline: true,
+        //                     description: "Something to play"}
+        //             ],
+        //         }
+        //     ],
+        //     returns: "Done",
+        //     description: "Play Music",
+        //     multiline: true,
+        // },
 
 
 
@@ -949,37 +961,37 @@ dialects.musical = {
         //     multiline: true,
         // },
 
-        "instrument": {
-            name: "instrument",
-            parts: [
+        // "instrument": {
+        //     name: "instrument",
+        //     parts: [
 
-                    {name: "instrument", args: [
-                    {type: 'Block', returns: 'Boolean', multiline: false,
-                        description: "Condition."}]},
+        //             {name: "instrument", args: [
+        //             {type: 'Block', returns: 'Boolean', multiline: false,
+        //                 description: "Condition."}]},
                     
-                    {name: "vol", args: [
-                    {type: 'Number', returns: 'Any', multiline: false,
-                        description: "Something to do when true."}
-                    ]},
+        //             {name: "vol", args: [
+        //             {type: 'Number', returns: 'Any', multiline: false,
+        //                 description: "Something to do when true."}
+        //             ]},
 
-                    {name: "effect", args: [
-                    {type: 'String', returns: 'Any', multiline: false,
-                        description: "Something to do when true."}
-                    ]},
+        //             {name: "effect", args: [
+        //             {type: 'String', returns: 'Any', multiline: false,
+        //                 description: "Something to do when true."}
+        //             ]},
 
-                    {name: "sequence", args: [
-                    {type: 'Block', returns: 'Any', multiline: true,
-                        description: "Something to do when true."}
-                    ]}
+        //             {name: "sequence", args: [
+        //             {type: 'Block', returns: 'Any', multiline: true,
+        //                 description: "Something to do when true."}
+        //             ]}
 
 
-                    ],
-            returns: "Done",
-            multiline: true,
-            selfcall: true,
-            description: "Any time a condition is true, do something.",
-            toplevel: true
-        },
+        //             ],
+        //     returns: "Done",
+        //     multiline: true,
+        //     selfcall: true,
+        //     description: "Any time a condition is true, do something.",
+        //     toplevel: true
+        // },
 
         // "piano": {
         //     name: "piano",
@@ -1416,8 +1428,20 @@ dialects.musical = {
         // }
     }
 };
-for (var k in dialects.musical.methods)
-    dialects.musical.methods[k].category = "Graceful Music";
+for (var k in dialects.musical.methods){
+    if(dialects.musical.methods[k].type == "instrument"){
+        dialects.musical.methods[k].category = "Instruments";
+    }
+    else if(dialects.musical.methods[k].type == "note"){
+        dialects.musical.methods[k].category = "Notes";
+    }
+    else if(dialects.musical.methods[k].type == "effect"){
+        dialects.musical.methods[k].category = "Effects";
+    }
+    else{
+       dialects.musical.methods[k].category = "Graceful Music";
+    }
+}
 // dialects.musical.methods['whenever()do'].category = "Control";
 // dialects.musical.methods['always'].category = "Control";
 // dialects.musical.methods['stop'].category = "Control";
