@@ -11,6 +11,9 @@ var inst = [];
 
 Tone.Transport.bpm.value = 90;
 
+// * Control 
+// ******************
+
 function t_init(){
 	seq = [];
 }
@@ -18,6 +21,23 @@ function t_init(){
 function t_add(note){
 	seq.push(note);
 }
+
+function t_play() {
+	Tone.Transport.start();
+}
+
+function bass_reset(){
+	// bass = bass.dispose();
+}
+
+function t_stop(){
+	Tone.Transport.stop();
+	seq = [];
+}
+
+
+// * Instruments 
+// ******************
 
 function t_synth_mono(){
 	var mono = new Tone.MonoSynth().toMaster();
@@ -67,17 +87,23 @@ function t_synth_duo(){
 	}, seq ).start(0);
 }
 
-function t_play() {
-	Tone.Transport.start();
+// * Effects 
+// ******************
+
+function t_effect_chorus(){
+
 }
 
-function bass_reset(){
-	// bass = bass.dispose();
+function t_effect_reverb(){
+
 }
 
-function t_stop(){
-	Tone.Transport.stop();
-	seq = [];
+function t_effect_autowah(){
+
+}
+
+function t_effect_cheby(){
+
 }
 
 
