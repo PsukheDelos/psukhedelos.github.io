@@ -102,43 +102,43 @@ window.addEventListener('load', function(ev) {
         inputs[i].value = inputs[i].getAttribute('value');
     }
     var op = tb.querySelector('.tile.assign');
-    var holes = op.getElementsByClassName('hole');
-    if (holes[0].offsetTop != holes[1].offsetTop) {
-        var obscurer = document.createElement("div");
-        obscurer.style.position = "fixed";
-        obscurer.style.top = '0px';
-        obscurer.style.left = '0px';
-        obscurer.style.bottom = '0px';
-        obscurer.style.right = '0px';
-        obscurer.style.background = 'black';
-        obscurer.style.color = 'white';
-        obscurer.style.fontSize = '100px';
-        obscurer.style.opacity = 0.95;
-        obscurer.style.textAlign = 'center';
-        document.body.appendChild(obscurer);
-        if (navigator.userAgent.indexOf('Firefox') != -1 &&
-                (+navigator.userAgent.replace(/^.*rv:([0-9.]+)\).*$/,"$1") >= 18
-                    || !navigator.userAgent.search(/rv:[0-9.]+/))
-                ) {
-            obscurer.appendChild(document.createTextNode(
-                    "Go to about:config and set layout.css.flexbox.enabled to true, then reload this page."));
-            alert("It looks like you're using Firefox 21 or earlier, but "
-                + "haven't "
-                + "enabled the preference necessary for this tool to "
-                + "use the flexbox layout it requires.\n\nGo to "
-                + "about:config and set layout.css.flexbox.enabled to "
-                + "true, then reload the page. Alternatively, upgrade to "
-                + "Firefox 22 or later.");
-        } else {
-            obscurer.appendChild(document.createTextNode(
-                    "Not usable in this browser. Try a recent version of "
-                    + "Firefox or Chrome."));
-            alert("It looks like your browser doesn't support the "
-                + "flexbox layout used in this tool. Try returning to "
-                + "this page in a recent version of Firefox, Chrome, "
-                + "or Internet Explorer.");
-        }
-    }
+    // var holes = op.getElementsByClassName('hole');
+    // if (holes[0].offsetTop != holes[1].offsetTop) {
+    //     var obscurer = document.createElement("div");
+    //     obscurer.style.position = "fixed";
+    //     obscurer.style.top = '0px';
+    //     obscurer.style.left = '0px';
+    //     obscurer.style.bottom = '0px';
+    //     obscurer.style.right = '0px';
+    //     obscurer.style.background = 'black';
+    //     obscurer.style.color = 'white';
+    //     obscurer.style.fontSize = '100px';
+    //     obscurer.style.opacity = 0.95;
+    //     obscurer.style.textAlign = 'center';
+    //     document.body.appendChild(obscurer);
+    //     if (navigator.userAgent.indexOf('Firefox') != -1 &&
+    //             (+navigator.userAgent.replace(/^.*rv:([0-9.]+)\).*$/,"$1") >= 18
+    //                 || !navigator.userAgent.search(/rv:[0-9.]+/))
+    //             ) {
+    //         obscurer.appendChild(document.createTextNode(
+    //                 "Go to about:config and set layout.css.flexbox.enabled to true, then reload this page."));
+    //         alert("It looks like you're using Firefox 21 or earlier, but "
+    //             + "haven't "
+    //             + "enabled the preference necessary for this tool to "
+    //             + "use the flexbox layout it requires.\n\nGo to "
+    //             + "about:config and set layout.css.flexbox.enabled to "
+    //             + "true, then reload the page. Alternatively, upgrade to "
+    //             + "Firefox 22 or later.");
+    //     } else {
+    //         obscurer.appendChild(document.createTextNode(
+    //                 "Not usable in this browser. Try a recent version of "
+    //                 + "Firefox or Chrome."));
+    //         alert("It looks like your browser doesn't support the "
+    //             + "flexbox layout used in this tool. Try returning to "
+    //             + "this page in a recent version of Firefox, Chrome, "
+    //             + "or Internet Explorer.");
+    //     }
+    // }
     var can = document.getElementById('overlay-canvas');
     can.width = codearea.offsetWidth;
     can.height = codearea.offsetHeight;
