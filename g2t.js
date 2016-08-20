@@ -1,38 +1,67 @@
 "use strict"
 
-//Grace to Tone.js Shim
+// ************************
+// * Grace to Tone.js Shim 
+// ************************
 
+// * Variables  
+// ******************
 var debug = false;
-var seq = [];
-var bass = new Tone.MonoSynth();
-var bassPart;
+
+var sequence = [];
 var instruments = [];
-var inst = [];
 
 Tone.Transport.bpm.value = 90;
+
+// * Declarations
+// ******************
+
+// ******* Effects ********
+var chorus = new Tone.Chorus()
+	.receive("chorus")
+	.toMaster();
+
+var cheby = new Tone.Chebyshev(50)
+	.receive("cheby")
+	.toMaster();
+
+var reverb = new Tone.Freeverb(0.9, 4000)
+	.receive("reverb")
+	.toMaster();
+
+var autoWah = new Tone.AutoWah()
+	.receive("autowah")
+	.toMaster()
+	.set({
+		"baseFrequency" : 100,
+		"octaves" : 4,
+		"sensitivity" : 0,
+		"Q" : 2,
+		"gain" : 10,
+		"follower" : {
+			"attack" : 0.05,
+			"release" : 0.2
+		}
+	});
 
 // * Control 
 // ******************
 
 function t_init(){
-	seq = [];
+	sequence = [];
 }
 
 function t_add(note){
-	seq.push(note);
+	sequence.push(note);
 }
 
 function t_play() {
 	Tone.Transport.start();
 }
 
-function bass_reset(){
-	// bass = bass.dispose();
-}
-
 function t_stop(){
 	Tone.Transport.stop();
-	seq = [];
+	sequence = [];
 }
 
 
@@ -44,7 +73,7 @@ function t_synth_mono(){
 
 	var monoSeq = new Tone.Sequence(function(time, note){
 		mono.triggerAttackRelease(note, "8n", time);
-	}, seq ).start(0);
+	}, sequence ).start(0);
 }
 
 function t_synth_pluck(){
@@ -52,7 +81,7 @@ function t_synth_pluck(){
 
 	var pluckSeq = new Tone.Sequence(function(time, note){
 		pluck.triggerAttackRelease(note, "8n", time);
-	}, seq ).start(0);
+	}, sequence ).start(0);
 }
 
 function t_synth_poly(){
@@ -60,7 +89,7 @@ function t_synth_poly(){
 
 	var polySeq = new Tone.Sequence(function(time, note){
 		poly.triggerAttackRelease(note, "8n", time);
-	}, seq ).start(0);
+	}, sequence ).start(0);
 }
 
 function t_synth_fm(){
@@ -68,7 +97,7 @@ function t_synth_fm(){
 
 	var fmSeq = new Tone.Sequence(function(time, note){
 		fm.triggerAttackRelease(note, "8n", time);
-	}, seq ).start(0);
+	}, sequence ).start(0);
 }
 
 function t_synth_membrane(){
@@ -76,7 +105,7 @@ function t_synth_membrane(){
 
 	var membraneSeq = new Tone.Sequence(function(time, note){
 		membrane.triggerAttackRelease(note, "8n", time);
-	}, seq ).start(0);
+	}, sequence ).start(0);
 }
 
 function t_synth_duo(){
@@ -84,14 +113,14 @@ function t_synth_duo(){
 
 	var duoSeq = new Tone.Sequence(function(time, note){
 		duo.triggerAttackRelease(note, "8n", time);
-	}, seq ).start(0);
+	}, sequence ).start(0);
 }
 
 // * Effects 
 // ******************
 
 function t_effect_chorus(){
-
+	
 }
 
 function t_effect_reverb(){
@@ -105,7 +134,6 @@ function t_effect_autowah(){
 function t_effect_cheby(){
 
 }
-
 
 
 //commented out timbre stuff
