@@ -13,16 +13,17 @@ var instruments = [];
 
 Tone.Transport.bpm.value = 90;
 
+var applyChorus = false;
+var applyReverb = false;
+var applyAutowah = false;
+var applyCheby = false;
+
 // * Declarations
 // ******************
 
 // ******* Effects ********
 var chorus = new Tone.Chorus()
 	.receive("chorus")
-	.toMaster();
-
-var cheby = new Tone.Chebyshev(50)
-	.receive("cheby")
 	.toMaster();
 
 var reverb = new Tone.Freeverb(0.9, 4000)
@@ -43,6 +44,10 @@ var autoWah = new Tone.AutoWah()
 			"release" : 0.2
 		}
 	});
+
+var cheby = new Tone.Chebyshev(50)
+	.receive("cheby")
+	.toMaster();
 
 // * Control 
 // ******************
@@ -74,6 +79,8 @@ function t_synth_mono(){
 	var monoSeq = new Tone.Sequence(function(time, note){
 		mono.triggerAttackRelease(note, "8n", time);
 	}, sequence ).start(0);
+
+	applyEffects(mono);
 }
 
 function t_synth_pluck(){
@@ -82,6 +89,8 @@ function t_synth_pluck(){
 	var pluckSeq = new Tone.Sequence(function(time, note){
 		pluck.triggerAttackRelease(note, "8n", time);
 	}, sequence ).start(0);
+
+	applyEffects(pluck);
 }
 
 function t_synth_poly(){
@@ -90,6 +99,9 @@ function t_synth_poly(){
 	var polySeq = new Tone.Sequence(function(time, note){
 		poly.triggerAttackRelease(note, "8n", time);
 	}, sequence ).start(0);
+
+	applyEffects(poly);
+
 }
 
 function t_synth_fm(){
@@ -98,6 +110,8 @@ function t_synth_fm(){
 	var fmSeq = new Tone.Sequence(function(time, note){
 		fm.triggerAttackRelease(note, "8n", time);
 	}, sequence ).start(0);
+
+	applyEffects(fm);
 }
 
 function t_synth_membrane(){
@@ -106,6 +120,8 @@ function t_synth_membrane(){
 	var membraneSeq = new Tone.Sequence(function(time, note){
 		membrane.triggerAttackRelease(note, "8n", time);
 	}, sequence ).start(0);
+
+	applyEffects(membrane);
 }
 
 function t_synth_duo(){
@@ -114,26 +130,55 @@ function t_synth_duo(){
 	var duoSeq = new Tone.Sequence(function(time, note){
 		duo.triggerAttackRelease(note, "8n", time);
 	}, sequence ).start(0);
+
+	applyEffects(duo);
 }
 
 // * Effects 
 // ******************
 
+function applyEffects(instrument){
+	if(applyChorus){
+		var chorusSend = instrument.send("chorus", -Infinity);
+		chorusSend.gain.value = 1.0;
+	}
+	if(applyReverb){
+		var chorusSend = instrument.send("reverb", -Infinity);
+		chorusSend.gain.value = 1.0;
+	}
+	if(applyAutowah){
+		var chorusSend = instrument.send("autowah", -Infinity);
+		chorusSend.gain.value = 1.0;
+	}
+	if(applyCheby){
+		var chorusSend = instrument.send("cheby", -Infinity);
+		chorusSend.gain.value = 1.0;
+	}
+}
+
 function t_effect_chorus(){
-	
+	applyChorus = true;
 }
 
 function t_effect_reverb(){
-
+	applyReverb = true;
 }
 
 function t_effect_autowah(){
-
+	applyAutowah = true;
 }
 
 function t_effect_cheby(){
-
+	applyReverb = true;
 }
+
+function t_effect_reset(){
+	applyChorus = false;
+	applyReverb = false;
+	applyAutowah = false;
+	applyCheby = false;
+}
+
 
 // * Timing
 // ******************
