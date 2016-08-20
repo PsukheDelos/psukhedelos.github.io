@@ -837,6 +837,19 @@ dialects.musical = {
             multiline: true,
             type: "note"
         },
+        "octave()on": {
+            name: "octave()on",
+            parts: [{name: "octave", args: [Number]},
+                {name: "on", args: [
+                    {type: 'Block', returns: 'Any', multiline: true,
+                        description: "Something to do when true."}
+                    ]}],
+            returns: "Done",
+            multiline: true,
+            selfcall: true,
+            description: "Any time a condition is true, do something.",
+            toplevel: true
+        },
         "monoSynth": {
             name: "monoSynth",
             parts: [

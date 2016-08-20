@@ -109,6 +109,7 @@ function t_synth_fm(){
 
 	var fmSeq = new Tone.Sequence(function(time, note){
 		fm.triggerAttackRelease(note, "8n", time);
+		console.log(note);
 	}, sequence ).start(0);
 
 	applyEffects(fm);
