@@ -946,6 +946,13 @@ dialects.musical = {
             multiline: true,
             type: "instrument"
         },
+        "arpeggio": {
+            name: "arpeggio",
+            parts: [{name: "arpeggio", args: [String]}],
+            returns: "Done",
+            description: "Play a sound.",
+            type: "instrument"
+        },
         "Chorus": {
             name: "Chorus",
             parts: [

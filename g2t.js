@@ -545,117 +545,118 @@ var ArpeggioPatterns = function () {
 
 ;
 
+function t_synth_arpeggio(note){
+	var chords = [0, 2, 6, 3, 4, 2, 5, 1];
+	var ms_key = note;
+	var ms_mode = 'major';
+	var ap_steps = 6;
+	var ap_pattern_type = 'straight'; // || 'looped'
+	var ap_pattern_id = 0;
+	var player = {
+	  chord_step: 0,
+	  octave_base: 4,
+	  arp_repeat: 2,
+	  bass_on: false,
+	  triad_step: 0,
+	  step: 0,
+	  playing: false,
+	  bpm: 135
+	};
 
-var chords = [0, 2, 6, 3, 4, 2, 5, 1];
-var ms_key = 'B';
-var ms_mode = 'major';
-var ap_steps = 6;
-var ap_pattern_type = 'straight'; // || 'looped'
-var ap_pattern_id = 0;
-var player = {
-  chord_step: 0,
-  octave_base: 4,
-  arp_repeat: 2,
-  bass_on: false,
-  triad_step: 0,
-  step: 0,
-  playing: false,
-  bpm: 135
-};
-var chord_count = chords.length;
-var MS = new MusicalScale({ key: ms_key, mode: ms_mode });
-var AP = new ArpeggioPatterns({ steps: ap_steps });
+	var chord_count = chords.length;
+	var MS = new MusicalScale({ key: ms_key, mode: ms_mode });
+	var AP = new ArpeggioPatterns({ steps: ap_steps });
 
-var arpeggio = AP.patterns[this.ap_pattern_type][this.ap_pattern_id];
+	var arpeggio = AP.patterns[ap_pattern_type][ap_pattern_id];
 
-// Load Synths
-var channel = {
-  master: new Tone.Gain(0.7),
-  treb: new Tone.Gain(0.7),
-  bass: new Tone.Gain(0.8)
-};
-var fx = {
-  distortion: new Tone.Distortion(0.8),
-  reverb: new Tone.Freeverb(0.1, 3000),
-  delay: new Tone.PingPongDelay('16n', 0.1)
-};
-var synths = {
-  treb: new Tone.PolySynth(1, Tone.SimpleAM),
-  bass: new Tone.DuoSynth()
-};
+	// Load Synths
+	var channel = {
+	  master: new Tone.Gain(0.7),
+	  treb: new Tone.Gain(0.7),
+	  bass: new Tone.Gain(0.8)
+	};
+	var fx = {
+	  distortion: new Tone.Distortion(0.8),
+	  reverb: new Tone.Freeverb(0.1, 3000),
+	  delay: new Tone.PingPongDelay('16n', 0.1)
+	};
+	var synths = {
+	  treb: new Tone.PolySynth(1, Tone.SimpleAM),
+	  bass: new Tone.DuoSynth()
+	};
 
-this.synths.bass.vibratoAmount.value = 0.1;
-this.synths.bass.harmonicity.value = 1.5;
-this.synths.bass.voice0.oscillator.type = 'triangle';
-this.synths.bass.voice0.envelope.attack = 0.05;
-this.synths.bass.voice1.oscillator.type = 'triangle';
-this.synths.bass.voice1.envelope.attack = 0.05;
+	synths.bass.vibratoAmount.value = 0.1;
+	synths.bass.harmonicity.value = 1.5;
+	synths.bass.voice0.oscillator.type = 'triangle';
+	synths.bass.voice0.envelope.attack = 0.05;
+	synths.bass.voice1.oscillator.type = 'triangle';
+	synths.bass.voice1.envelope.attack = 0.05;
 
-// fx mixes
-this.fx.distortion.wet.value = 0.2;
-this.fx.reverb.wet.value = 0.2;
-this.fx.delay.wet.value = 0.3;
-// gain levels
-this.channel.master.toMaster();
-this.channel.treb.connect(this.channel.master);
-this.channel.bass.connect(this.channel.master);
-// fx chains
-this.synths.treb.chain(this.fx.delay, this.fx.reverb, this.channel.treb);
-this.synths.bass.chain(this.fx.distortion, this.channel.bass);
+	// fx mixes
+	fx.distortion.wet.value = 0.2;
+	fx.reverb.wet.value = 0.2;
+	fx.delay.wet.value = 0.3;
+	// gain levels
+	channel.master.toMaster();
+	channel.treb.connect(channel.master);
+	channel.bass.connect(channel.master);
+	// fx chains
+	synths.treb.chain(fx.delay, fx.reverb, channel.treb);
+	synths.bass.chain(fx.distortion, channel.bass);
 
-//Load Transport
+	//Load Transport
 
-Tone.Transport.scheduleRepeat(function (time) {
-  var curr_chord = player.chord_step % chord_count;
+	Tone.Transport.scheduleRepeat(function (time) {
+	  var curr_chord = player.chord_step % chord_count;
 
-  var prev = document.querySelector('.chord > div.active');
-  if (prev) prev.classList.remove('active');
-  var curr = document.querySelector('.chord > div:nth-of-type(' + (curr_chord + 1) + ')');
-  if (curr) curr.classList.add('active');
+	  var prev = document.querySelector('.chord > div.active');
+	  if (prev) prev.classList.remove('active');
+	  var curr = document.querySelector('.chord > div:nth-of-type(' + (curr_chord + 1) + ')');
+	  if (curr) curr.classList.add('active');
 
-  var chord = MS.notes[chords[curr_chord]];
+	  var chord = MS.notes[chords[curr_chord]];
 
-  // finding the current note
-  var notes = chord.triad.notes;
+	  // finding the current note
+	  var notes = chord.triad.notes;
 
-  var _loop2 = function _loop2(i) {
-    notes = notes.concat(notes.map(function (n) {
-      return { note: n.note, rel_octave: n.rel_octave + (i + 1) };
-    }));
-  };
+	  var _loop2 = function _loop2(i) {
+	    notes = notes.concat(notes.map(function (n) {
+	      return { note: n.note, rel_octave: n.rel_octave + (i + 1) };
+	    }));
+	  };
 
-  for (var i = 0; i < Math.ceil(ap_steps / 3); i++) {
-    _loop2(i);
-  }
-  var note = notes[arpeggio[player.step % arpeggio.length]];
+	  for (var i = 0; i < Math.ceil(ap_steps / 3); i++) {
+	    _loop2(i);
+	  }
+	  var note = notes[arpeggio[player.step % arpeggio.length]];
 
-  // setting bass notes
-  var bass_o = chord.rel_octave + 2;
-  var bass_1 = chord.note + bass_o;
+	  // setting bass notes
+	  var bass_o = chord.rel_octave + 2;
+	  var bass_1 = chord.note + bass_o;
 
-  // slappin da bass
-  if (!player.bass_on) {
-    player.bass_on = true;
-    synths.bass.triggerAttack(bass_1);
-  }
+	  // slappin da bass
+	  if (!player.bass_on) {
+	    player.bass_on = true;
+	    synths.bass.triggerAttack(bass_1);
+	  }
 
-  // bump the step
-  player.step++;
+	  // bump the step
+	  player.step++;
 
-  // changing chords
-  if (player.step % (arpeggio.length * player.arp_repeat) === 0) {
-	player.chord_step++;
-    player.bass_on = false;
-    synths.bass.triggerRelease();
-	player.triad_step++;
-  }
-  // arpin'
-  var note_ref = '' + note.note + (note.rel_octave + player.octave_base);
-  // _this2._utilActiveNoteClassToggle([note_ref.replace('#', 'is')], 'active-t');
-  synths.treb.triggerAttackRelease(note_ref, '16n');
-}, '16n');
-
-Tone.Transport.start();
+	  // changing chords
+	  if (player.step % (arpeggio.length * player.arp_repeat) === 0) {
+		player.chord_step++;
+	    player.bass_on = false;
+	    synths.bass.triggerRelease();
+		player.triad_step++;
+	  }
+	  // arpin'
+	  var note_ref = '' + note.note + (note.rel_octave + player.octave_base);
+	  // _this2._utilActiveNoteClassToggle([note_ref.replace('#', 'is')], 'active-t');
+	  synths.treb.triggerAttackRelease(note_ref, '16n');
+	}, '16n');
+}
+// Tone.Transport.start();
 
 
 
