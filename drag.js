@@ -195,6 +195,7 @@ function dragstart(ev) {
             document.getElementById('overlay-canvas').style.display = 'none';
             t_stop();
             t_reset();
+            
             go();
             return;
         }
