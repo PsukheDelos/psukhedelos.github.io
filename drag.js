@@ -193,6 +193,8 @@ function dragstart(ev) {
             checkpointSave();
             clearPopouts();
             document.getElementById('overlay-canvas').style.display = 'none';
+            t_stop();
+            t_reset();
             go();
             return;
         }

@@ -84,6 +84,7 @@ function t_synth_mono(){
 	}, sequence ).start(0);
 	
 	instruments.push(mono);
+	sequences.push(monoSeq);
 
 	applyEffects(mono);
 }
@@ -111,7 +112,6 @@ function t_synth_poly(){
 	
 	instruments.push(poly);
 	sequences.push(polySeq);
-	console.log(instruments.length);
 
 	applyEffects(poly);
 
@@ -126,6 +126,7 @@ function t_synth_fm(){
 	}, sequence ).start(0);
 
 	instruments.push(fm);
+	sequences.push(fmSeq);
 
 	applyEffects(fm);
 }
@@ -138,6 +139,7 @@ function t_synth_membrane(){
 	}, sequence ).start(0);
 
 	instruments.push(membrane);
+	sequences.push(membraneSeq);
 
 	applyEffects(membrane);
 }
@@ -150,11 +152,15 @@ function t_synth_duo(){
 	}, sequence ).start(0);
 
 	instruments.push(duo);
-
+	sequences.push(duoSeq);
+	
 	applyEffects(duo);
 }
 
 function t_reset(){
+
+	Tone.Transport.cancel(0);
+
 	if(instruments.length > 0){
 		for (var i = instruments.length - 1; i >= 0; i--) {
 			instruments[i].disconnect();
@@ -600,6 +606,9 @@ function t_synth_arpeggio(note){
 	  bass: new Tone.DuoSynth()
 	};
 
+	instruments.push(synths.treb);
+	instruments.push(synths.bass);
+
 	synths.bass.vibratoAmount.value = 0.1;
 	synths.bass.harmonicity.value = 1.5;
 	synths.bass.voice0.oscillator.type = 'triangle';
@@ -670,7 +679,9 @@ function t_synth_arpeggio(note){
 	  // _this2._utilActiveNoteClassToggle([note_ref.replace('#', 'is')], 'active-t');
 	  synths.treb.triggerAttackRelease(note_ref, '16n');
 	}, '16n');
+
 }
+
 // Tone.Transport.start();
 
 
