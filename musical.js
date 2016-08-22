@@ -2695,86 +2695,81 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 368
-      var string810 = new GraceString("initialise");
-      var call811 = callmethod(var_dom,"window", [0]);
-      var call812 = callmethod(call811,"console", [0]);
-      var call813 = callmethod(call812,"log", [1], string810);
       lineNumber = 372
-      var if814 = var_done;
+      var if810 = var_done;
       lineNumber = 369
       if (Grace_isTrue(var_initialised)) {
         lineNumber = 371
         lineNumber = 370
-        var bool815 = new GraceBoolean(false)
-        return bool815
+        var bool811 = new GraceBoolean(false)
+        return bool811
       }
       lineNumber = 373
       lineNumber = 372
-      var bool816 = new GraceBoolean(true)
-      var_initialised = bool816;
+      var bool812 = new GraceBoolean(true)
+      var_initialised = bool812;
       lineNumber = 374
       lineNumber = 373
-      var call817 = callmethod(var_dom,"document", [0]);
-      var_document = call817;
+      var call813 = callmethod(var_dom,"document", [0]);
+      var_document = call813;
       lineNumber = 374
-      var string818 = new GraceString("standard-canvas");
-      var call819 = callmethod(var_document,"getElementById", [1], string818);
-      var_canvas = call819;
+      var string814 = new GraceString("standard-canvas");
+      var call815 = callmethod(var_document,"getElementById", [1], string814);
+      var_canvas = call815;
       lineNumber = 376
       lineNumber = 375
-      var call820 = callmethod(var_canvas,"width", [0]);
-      var_canvasWidth = call820;
+      var call816 = callmethod(var_canvas,"width", [0]);
+      var_canvasWidth = call816;
       lineNumber = 377
       lineNumber = 376
-      var call821 = callmethod(var_canvas,"height", [0]);
-      var_canvasHeight = call821;
+      var call817 = callmethod(var_canvas,"height", [0]);
+      var_canvasHeight = call817;
       lineNumber = 377
-      var quotient824 = callmethod(var_canvasWidth, "/", [1], new GraceNum(2));
-      var quotient827 = callmethod(var_canvasHeight, "/", [1], new GraceNum(2));
-      var call828 = callmethod(var_point,"x()y", [1, 1], quotient824, quotient827);
-      var_centre = call828;
+      var quotient820 = callmethod(var_canvasWidth, "/", [1], new GraceNum(2));
+      var quotient823 = callmethod(var_canvasHeight, "/", [1], new GraceNum(2));
+      var call824 = callmethod(var_point,"x()y", [1, 1], quotient820, quotient823);
+      var_centre = call824;
       lineNumber = 378
-      var quotient831 = callmethod(var_canvasHeight, "/", [1], new GraceNum(2));
-      var call832 = callmethod(var_point,"x()y", [1, 1], new GraceNum(0), quotient831);
-      var_leftCentre = call832;
+      var quotient827 = callmethod(var_canvasHeight, "/", [1], new GraceNum(2));
+      var call828 = callmethod(var_point,"x()y", [1, 1], new GraceNum(0), quotient827);
+      var_leftCentre = call828;
       lineNumber = 379
-      var quotient835 = callmethod(var_canvasHeight, "/", [1], new GraceNum(2));
-      var call836 = callmethod(var_point,"x()y", [1, 1], var_canvasWidth, quotient835);
-      var_rightCentre = call836;
+      var quotient831 = callmethod(var_canvasHeight, "/", [1], new GraceNum(2));
+      var call832 = callmethod(var_point,"x()y", [1, 1], var_canvasWidth, quotient831);
+      var_rightCentre = call832;
       lineNumber = 383
       lineNumber = 376
       lineNumber = 380
-      var call837 = callmethod(var_mouse,"position:=", [1], var_centre);
+      var call833 = callmethod(var_mouse,"position:=", [1], var_centre);
       lineNumber = 388
-      var block838 = Grace_allocObject();
-      block838.methods["apply"] = function() {
+      var block834 = Grace_allocObject();
+      block834.methods["apply"] = function() {
         var args = Array.prototype.slice.call(arguments, 1);
         return this.real.apply(this.receiver, args);
       }
-      block838.methods["applyIndirectly"] = function(argcv, a) {
+      block834.methods["applyIndirectly"] = function(argcv, a) {
         return this.real.apply(this.receiver, a._value);
       }
-      block838.methods["outer"] = function() {
+      block834.methods["outer"] = function() {
         return callmethod(this.receiver, 'outer', [0]);
       }
-      block838.methods["match"] = GraceBlock_match;
-      block838.methods["prefix?"] = GraceBlock_lift;
-      block838.receiver = this;
-      block838.className = 'block<musical:388>';
-      block838.real = function(
+      block834.methods["match"] = GraceBlock_match;
+      block834.methods["prefix?"] = GraceBlock_lift;
+      block834.receiver = this;
+      block834.className = 'block<musical:388>';
+      block834.real = function(
         var_ev
       ) {
         sourceObject = this;
         lineNumber = 385
         lineNumber = 384
-        var call840 = callmethod(var_canvas,"offsetWidth", [0]);
-        var call842 = callmethod(var_canvas,"offsetLeft", [0]);
-        var call844 = callmethod(var_ev,"clientX", [0]);
-        var diff846 = callmethod(call844, "-", [1], call842);
-        var quotient848 = callmethod(diff846, "/", [1], call840);
-        var prod850 = callmethod(quotient848, "*", [1], var_canvasHeight);
-        var var_x = prod850;
+        var call836 = callmethod(var_canvas,"offsetWidth", [0]);
+        var call838 = callmethod(var_canvas,"offsetLeft", [0]);
+        var call840 = callmethod(var_ev,"clientX", [0]);
+        var diff842 = callmethod(call840, "-", [1], call838);
+        var quotient844 = callmethod(diff842, "/", [1], call836);
+        var prod846 = callmethod(quotient844, "*", [1], var_canvasHeight);
+        var var_x = prod846;
         lineNumber = 385;
         moduleName = "musical";
         lineNumber = 384
@@ -2785,14 +2780,14 @@ function gracecode_musical () {
                   + "initial value of def 'x' to be of type Unknown"))
         lineNumber = 386
         lineNumber = 385
-        var call852 = callmethod(var_canvas,"offsetHeight", [0]);
-        var call855 = callmethod(var_canvas,"offsetTop", [0]);
-        var call857 = callmethod(var_ev,"clientY", [0]);
-        var diff859 = callmethod(call857, "-", [1], call855);
-        var diff861 = callmethod(diff859, "-", [1], new GraceNum(7));
-        var quotient863 = callmethod(diff861, "/", [1], call852);
-        var prod865 = callmethod(quotient863, "*", [1], var_canvasHeight);
-        var var_y = prod865;
+        var call848 = callmethod(var_canvas,"offsetHeight", [0]);
+        var call851 = callmethod(var_canvas,"offsetTop", [0]);
+        var call853 = callmethod(var_ev,"clientY", [0]);
+        var diff855 = callmethod(call853, "-", [1], call851);
+        var diff857 = callmethod(diff855, "-", [1], new GraceNum(7));
+        var quotient859 = callmethod(diff857, "/", [1], call848);
+        var prod861 = callmethod(quotient859, "*", [1], var_canvasHeight);
+        var var_y = prod861;
         lineNumber = 386;
         moduleName = "musical";
         lineNumber = 385
@@ -2804,43 +2799,43 @@ function gracecode_musical () {
         lineNumber = 386
         lineNumber = 385
         lineNumber = 386
-        var call866 = callmethod(var_point,"x()y", [1, 1], var_x, var_y);
-        var call867 = callmethod(var_mouse,"position:=", [1], call866);
-        return call867;
+        var call862 = callmethod(var_point,"x()y", [1, 1], var_x, var_y);
+        var call863 = callmethod(var_mouse,"position:=", [1], call862);
+        return call863;
       };
-      var_mouseMoveListener = block838;
+      var_mouseMoveListener = block834;
       lineNumber = 388
-      var string868 = new GraceString("mousemove");
-      var call869 = callmethod(var_canvas,"addEventListener", [2], string868, var_mouseMoveListener);
-      lineNumber = 404
-      var block870 = Grace_allocObject();
-      block870.methods["apply"] = function() {
+      var string864 = new GraceString("mousemove");
+      var call865 = callmethod(var_canvas,"addEventListener", [2], string864, var_mouseMoveListener);
+      lineNumber = 421
+      var block866 = Grace_allocObject();
+      block866.methods["apply"] = function() {
         var args = Array.prototype.slice.call(arguments, 1);
         return this.real.apply(this.receiver, args);
       }
-      block870.methods["applyIndirectly"] = function(argcv, a) {
+      block866.methods["applyIndirectly"] = function(argcv, a) {
         return this.real.apply(this.receiver, a._value);
       }
-      block870.methods["outer"] = function() {
+      block866.methods["outer"] = function() {
         return callmethod(this.receiver, 'outer', [0]);
       }
-      block870.methods["match"] = GraceBlock_match;
-      block870.methods["prefix?"] = GraceBlock_lift;
-      block870.receiver = this;
-      block870.className = 'block<musical:404>';
-      block870.real = function(
+      block866.methods["match"] = GraceBlock_match;
+      block866.methods["prefix?"] = GraceBlock_lift;
+      block866.receiver = this;
+      block866.className = 'block<musical:421>';
+      block866.real = function(
         var_ev
       ) {
         sourceObject = this;
         lineNumber = 391
         lineNumber = 390
-        var call872 = callmethod(var_canvas,"offsetWidth", [0]);
-        var call874 = callmethod(var_canvas,"offsetLeft", [0]);
-        var call876 = callmethod(var_ev,"clientX", [0]);
-        var diff878 = callmethod(call876, "-", [1], call874);
-        var quotient880 = callmethod(diff878, "/", [1], call872);
-        var prod882 = callmethod(quotient880, "*", [1], var_canvasHeight);
-        var var_x = prod882;
+        var call868 = callmethod(var_canvas,"offsetWidth", [0]);
+        var call870 = callmethod(var_canvas,"offsetLeft", [0]);
+        var call872 = callmethod(var_ev,"clientX", [0]);
+        var diff874 = callmethod(call872, "-", [1], call870);
+        var quotient876 = callmethod(diff874, "/", [1], call868);
+        var prod878 = callmethod(quotient876, "*", [1], var_canvasHeight);
+        var var_x = prod878;
         lineNumber = 391;
         moduleName = "musical";
         lineNumber = 390
@@ -2849,16 +2844,16 @@ function gracecode_musical () {
             throw new GraceExceptionPacket(TypeErrorObject,
                   new GraceString("expected "
                   + "initial value of def 'x' to be of type Unknown"))
-        lineNumber = 392
+        lineNumber = 397
         lineNumber = 391
-        var call884 = callmethod(var_canvas,"offsetHeight", [0]);
-        var call886 = callmethod(var_canvas,"offsetTop", [0]);
-        var call888 = callmethod(var_ev,"clientY", [0]);
-        var diff890 = callmethod(call888, "-", [1], call886);
-        var quotient892 = callmethod(diff890, "/", [1], call884);
-        var prod894 = callmethod(quotient892, "*", [1], var_canvasHeight);
-        var var_y = prod894;
-        lineNumber = 392;
+        var call880 = callmethod(var_canvas,"offsetHeight", [0]);
+        var call882 = callmethod(var_canvas,"offsetTop", [0]);
+        var call884 = callmethod(var_ev,"clientY", [0]);
+        var diff886 = callmethod(call884, "-", [1], call882);
+        var quotient888 = callmethod(diff886, "/", [1], call880);
+        var prod890 = callmethod(quotient888, "*", [1], var_canvasHeight);
+        var var_y = prod890;
+        lineNumber = 397;
         moduleName = "musical";
         lineNumber = 391
         if (!Grace_isTrue(callmethod(var_Unknown, "match",
@@ -2866,73 +2861,98 @@ function gracecode_musical () {
             throw new GraceExceptionPacket(TypeErrorObject,
                   new GraceString("expected "
                   + "initial value of def 'y' to be of type Unknown"))
-        lineNumber = 396
-        var if895 = var_done;
-        lineNumber = 392
-        var opresult898 = callmethod(var_y, "<", [1], new GraceNum(20));
-        var diff902 = callmethod(var_canvasWidth, "-", [1], new GraceNum(20));
-        var opresult905 = callmethod(var_x, ">", [1], diff902);
-        var opresult907 = callmethod(opresult905, "&&", [1], opresult898);
-        if (Grace_isTrue(opresult907)) {
-          lineNumber = 393
-          var call908 = callmethod(var_ev,"preventDefault", [0]);
-          lineNumber = 394
+        lineNumber = 411
+        var if891 = var_done;
+        lineNumber = 397
+        if (Grace_isTrue(var_stopRunning)) {
+          lineNumber = 398
+          var string892 = new GraceString("if stopRunning");
+          var call893 = callmethod(var_dom,"window", [0]);
+          var call894 = callmethod(call893,"console", [0]);
+          var call895 = callmethod(call894,"log", [1], string892);
+          lineNumber = 400
+          var call896 = callmethod(var_ev,"preventDefault", [0]);
+          lineNumber = 402
+          lineNumber = 401
+          var bool897 = new GraceBoolean(false)
+          var_stopRunning = bool897;
+          lineNumber = 402
           onSelf = true;
-          var call909 = callmethod(this, "stop", [0]);
-          if895 = call909;
+          var call898 = callmethod(this, "start", [0]);
+          lineNumber = 403
+          var call899 = callmethod(var_dom,"window", [0]);
+          var call900 = callmethod(call899,"t_play", [0]);
+          if891 = call900;
+        } else {
+          lineNumber = 405
+          var string901 = new GraceString("if !stopRunning");
+          var call902 = callmethod(var_dom,"window", [0]);
+          var call903 = callmethod(call902,"console", [0]);
+          var call904 = callmethod(call903,"log", [1], string901);
+          lineNumber = 406
+          var call905 = callmethod(var_ev,"preventDefault", [0]);
+          lineNumber = 407
+          onSelf = true;
+          var call906 = callmethod(this, "stop", [0]);
+          if891 = call906;
         }
-        lineNumber = 396
-        var call910 = callmethod(var_point,"x()y", [1, 1], var_x, var_y);
-        var var_p = call910;
-        lineNumber = 396;
+        lineNumber = 411
+        var string907 = new GraceString("mousedown");
+        var call908 = callmethod(var_dom,"window", [0]);
+        var call909 = callmethod(call908,"console", [0]);
+        var call910 = callmethod(call909,"log", [1], string907);
+        lineNumber = 413
+        var call911 = callmethod(var_point,"x()y", [1, 1], var_x, var_y);
+        var var_p = call911;
+        lineNumber = 413;
         moduleName = "musical";
         if (!Grace_isTrue(callmethod(var_Unknown, "match",
           [1], var_p)))
             throw new GraceExceptionPacket(TypeErrorObject,
                   new GraceString("expected "
                   + "initial value of def 'p' to be of type Unknown"))
-        lineNumber = 397
-        lineNumber = 403
-        var block911 = Grace_allocObject();
-        block911.methods["apply"] = function() {
+        lineNumber = 414
+        lineNumber = 420
+        var block912 = Grace_allocObject();
+        block912.methods["apply"] = function() {
           var args = Array.prototype.slice.call(arguments, 1);
           return this.real.apply(this.receiver, args);
         }
-        block911.methods["applyIndirectly"] = function(argcv, a) {
+        block912.methods["applyIndirectly"] = function(argcv, a) {
           return this.real.apply(this.receiver, a._value);
         }
-        block911.methods["outer"] = function() {
+        block912.methods["outer"] = function() {
           return callmethod(this.receiver, 'outer', [0]);
         }
-        block911.methods["match"] = GraceBlock_match;
-        block911.methods["prefix?"] = GraceBlock_lift;
-        block911.receiver = this;
-        block911.className = 'block<musical:403>';
-        block911.real = function(
+        block912.methods["match"] = GraceBlock_match;
+        block912.methods["prefix?"] = GraceBlock_lift;
+        block912.receiver = this;
+        block912.className = 'block<musical:420>';
+        block912.real = function(
           var_obj
         ) {
           sourceObject = this;
-          lineNumber = 402
-          var if912 = var_done;
-          lineNumber = 398
-          var call913 = callmethod(var_obj,"isPointOver", [1], var_p);
-          if (Grace_isTrue(call913)) {
-            lineNumber = 399
-            var call914 = callmethod(var_obj,"mousedown", [0]);
-            lineNumber = 400
-            var call915 = callmethod(var_ev,"preventDefault", [0]);
-            if912 = call915;
+          lineNumber = 419
+          var if913 = var_done;
+          lineNumber = 415
+          var call914 = callmethod(var_obj,"isPointOver", [1], var_p);
+          if (Grace_isTrue(call914)) {
+            lineNumber = 416
+            var call915 = callmethod(var_obj,"mousedown", [0]);
+            lineNumber = 417
+            var call916 = callmethod(var_ev,"preventDefault", [0]);
+            if913 = call916;
           }
-          return if912;
+          return if913;
         };
-        var call916 = callmethod(Grace_prelude,"for()do", [1, 1], var_registeredObjects, block911);
-        return call916;
+        var call917 = callmethod(Grace_prelude,"for()do", [1, 1], var_registeredObjects, block912);
+        return call917;
       };
-      var_mouseDownListener = block870;
-      lineNumber = 404
-      var string917 = new GraceString("mousedown");
-      var call918 = callmethod(var_canvas,"addEventListener", [2], string917, var_mouseDownListener);
-      return call918
+      var_mouseDownListener = block866;
+      lineNumber = 421
+      var string918 = new GraceString("mousedown");
+      var call919 = callmethod(var_canvas,"addEventListener", [2], string918, var_mouseDownListener);
+      return call919
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
         return e.returnvalue;
@@ -2950,54 +2970,21 @@ function gracecode_musical () {
   this.methods["initialise"] = func809;
   func809.definitionLine = 367;
   func809.definitionModule = "musical";
-  lineNumber = 406
-  var func919 = function(argcv) {
+  lineNumber = 423
+  var func920 = function(argcv) {
     var curarg = 1;
     var var_col = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func919.paramCounts[0])
+    if (argcv[0] !=  func920.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (background)"));
     var returnTarget = invocationCount;
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 408
-      lineNumber = 407
+      lineNumber = 425
+      lineNumber = 424
       var_backgroundColour = var_col;
       return var_col
-    } catch(e) {
-      if ((e.exctype == 'return') && (e.target == returnTarget)) {
-        return e.returnvalue;
-      } else {
-        throw e;
-      }
-    }
-  }
-  func919.paramCounts = [
-    1,
-  ];
-  func919.variableArities = [
-    false,
-  ];
-  this.methods["background"] = func919;
-  func919.definitionLine = 406;
-  func919.definitionModule = "musical";
-  lineNumber = 409
-  var func920 = function(argcv) {
-    var curarg = 1;
-    var var_n = arguments[curarg];
-    curarg++;
-    if (argcv[0] !=  func920.paramCounts[0])
-      callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (random)"));
-    var returnTarget = invocationCount;
-    invocationCount++;
-    moduleName = "musical";
-    try {
-      lineNumber = 410
-      var call921 = callmethod(var_randomModule,"random", [0]);
-      var prod924 = callmethod(var_n, "*", [1], call921);
-      var call925 = callmethod(prod924,"truncate", [0]);
-      return call925
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
         return e.returnvalue;
@@ -3012,68 +2999,101 @@ function gracecode_musical () {
   func920.variableArities = [
     false,
   ];
-  this.methods["random"] = func920;
-  func920.definitionLine = 409;
+  this.methods["background"] = func920;
+  func920.definitionLine = 423;
   func920.definitionModule = "musical";
-  lineNumber = 413
-  var func926 = function(argcv) {
+  lineNumber = 426
+  var func921 = function(argcv) {
+    var curarg = 1;
+    var var_n = arguments[curarg];
+    curarg++;
+    if (argcv[0] !=  func921.paramCounts[0])
+      callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (random)"));
+    var returnTarget = invocationCount;
+    invocationCount++;
+    moduleName = "musical";
+    try {
+      lineNumber = 427
+      var call922 = callmethod(var_randomModule,"random", [0]);
+      var prod925 = callmethod(var_n, "*", [1], call922);
+      var call926 = callmethod(prod925,"truncate", [0]);
+      return call926
+    } catch(e) {
+      if ((e.exctype == 'return') && (e.target == returnTarget)) {
+        return e.returnvalue;
+      } else {
+        throw e;
+      }
+    }
+  }
+  func921.paramCounts = [
+    1,
+  ];
+  func921.variableArities = [
+    false,
+  ];
+  this.methods["random"] = func921;
+  func921.definitionLine = 426;
+  func921.definitionModule = "musical";
+  lineNumber = 430
+  var func927 = function(argcv) {
     var curarg = 1;
     var var_url = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func926.paramCounts[0])
+    if (argcv[0] !=  func927.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (playSound)"));
     var returnTarget = invocationCount;
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 425
-      var if927 = var_done;
-      lineNumber = 414
-      var call928 = callmethod(var_audioTags,"contains", [1], var_url);
-      if (Grace_isTrue(call928)) {
-        lineNumber = 415
-        var call929 = callmethod(var_audioTags,"get", [1], var_url);
-        var var_audio = call929;
-        lineNumber = 415;
+      lineNumber = 442
+      var if928 = var_done;
+      lineNumber = 431
+      var call929 = callmethod(var_audioTags,"contains", [1], var_url);
+      if (Grace_isTrue(call929)) {
+        lineNumber = 432
+        var call930 = callmethod(var_audioTags,"get", [1], var_url);
+        var var_audio = call930;
+        lineNumber = 432;
         moduleName = "musical";
         if (!Grace_isTrue(callmethod(var_Unknown, "match",
           [1], var_audio)))
             throw new GraceExceptionPacket(TypeErrorObject,
                   new GraceString("expected "
                   + "initial value of def 'audio' to be of type Unknown"))
-        lineNumber = 417
-        lineNumber = 410
-        lineNumber = 416
-        var call930 = callmethod(var_audio,"currentTime:=", [1], new GraceNum(0));
-        lineNumber = 417
-        var call931 = callmethod(var_audio,"play", [0]);
-        if927 = call931;
+        lineNumber = 434
+        lineNumber = 427
+        lineNumber = 433
+        var call931 = callmethod(var_audio,"currentTime:=", [1], new GraceNum(0));
+        lineNumber = 434
+        var call932 = callmethod(var_audio,"play", [0]);
+        if928 = call932;
       } else {
-        lineNumber = 419
-        var string932 = new GraceString("audio");
-        var call933 = callmethod(var_dom,"document", [0]);
-        var call934 = callmethod(call933,"createElement", [1], string932);
-        var var_audio = call934;
-        lineNumber = 419;
+        lineNumber = 436
+        var string933 = new GraceString("audio");
+        var call934 = callmethod(var_dom,"document", [0]);
+        var call935 = callmethod(call934,"createElement", [1], string933);
+        var var_audio = call935;
+        lineNumber = 436;
         moduleName = "musical";
         if (!Grace_isTrue(callmethod(var_Unknown, "match",
           [1], var_audio)))
             throw new GraceExceptionPacket(TypeErrorObject,
                   new GraceString("expected "
                   + "initial value of def 'audio' to be of type Unknown"))
-        lineNumber = 420
-        var call935 = callmethod(var_audioTags,"put", [2], var_url, var_audio);
-        lineNumber = 422
-        lineNumber = 419
-        lineNumber = 421
-        var call936 = callmethod(var_audio,"src:=", [1], var_url);
-        lineNumber = 422
-        var call937 = callmethod(var_audio,"load", [0]);
-        lineNumber = 423
-        var call938 = callmethod(var_audio,"play", [0]);
-        if927 = call938;
+        lineNumber = 437
+        var call936 = callmethod(var_audioTags,"put", [2], var_url, var_audio);
+        lineNumber = 439
+        lineNumber = 436
+        lineNumber = 438
+        var call937 = callmethod(var_audio,"src:=", [1], var_url);
+        lineNumber = 439
+        var call938 = callmethod(var_audio,"load", [0]);
+        lineNumber = 440
+        var call939 = callmethod(var_audio,"play", [0]);
+        if928 = call939;
       }
-      return if927
+      return if928
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
         return e.returnvalue;
@@ -3082,46 +3102,46 @@ function gracecode_musical () {
       }
     }
   }
-  func926.paramCounts = [
+  func927.paramCounts = [
     1,
   ];
-  func926.variableArities = [
+  func927.variableArities = [
     false,
   ];
-  this.methods["playSound"] = func926;
-  func926.definitionLine = 413;
-  func926.definitionModule = "musical";
-  lineNumber = 426
-  var func939 = function(argcv) {
+  this.methods["playSound"] = func927;
+  func927.definitionLine = 430;
+  func927.definitionModule = "musical";
+  lineNumber = 443
+  var func940 = function(argcv) {
     var curarg = 1;
     var var_url = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func939.paramCounts[0])
+    if (argcv[0] !=  func940.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (stopSound)"));
     var returnTarget = invocationCount;
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 431
-      var if940 = var_done;
-      lineNumber = 427
-      var call941 = callmethod(var_audioTags,"contains", [1], var_url);
-      if (Grace_isTrue(call941)) {
-        lineNumber = 428
-        var call942 = callmethod(var_audioTags,"get", [1], var_url);
-        var var_audio = call942;
-        lineNumber = 428;
+      lineNumber = 448
+      var if941 = var_done;
+      lineNumber = 444
+      var call942 = callmethod(var_audioTags,"contains", [1], var_url);
+      if (Grace_isTrue(call942)) {
+        lineNumber = 445
+        var call943 = callmethod(var_audioTags,"get", [1], var_url);
+        var var_audio = call943;
+        lineNumber = 445;
         moduleName = "musical";
         if (!Grace_isTrue(callmethod(var_Unknown, "match",
           [1], var_audio)))
             throw new GraceExceptionPacket(TypeErrorObject,
                   new GraceString("expected "
                   + "initial value of def 'audio' to be of type Unknown"))
-        lineNumber = 429
-        var call943 = callmethod(var_audio,"pause", [0]);
-        if940 = call943;
+        lineNumber = 446
+        var call944 = callmethod(var_audio,"pause", [0]);
+        if941 = call944;
       }
-      return if940
+      return if941
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
         return e.returnvalue;
@@ -3130,107 +3150,128 @@ function gracecode_musical () {
       }
     }
   }
-  func939.paramCounts = [
+  func940.paramCounts = [
     1,
   ];
-  func939.variableArities = [
+  func940.variableArities = [
     false,
   ];
-  this.methods["stopSound"] = func939;
-  func939.definitionLine = 426;
-  func939.definitionModule = "musical";
-  lineNumber = 432
-  var func944 = function(argcv) {
+  this.methods["stopSound"] = func940;
+  func940.definitionLine = 443;
+  func940.definitionModule = "musical";
+  lineNumber = 449
+  var func945 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func944.paramCounts[0])
+    if (argcv[0] !=  func945.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (start)"));
     var returnTarget = invocationCount;
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 433
+      lineNumber = 450
       onSelf = true;
-      var call945 = callmethod(this, "initialise", [0]);
-      lineNumber = 435
-      var string946 = new GraceString("start");
-      var call947 = callmethod(var_dom,"window", [0]);
-      var call948 = callmethod(call947,"console", [0]);
-      var call949 = callmethod(call948,"log", [1], string946);
-      lineNumber = 438
-      lineNumber = 437
-      var bool950 = new GraceBoolean(false)
-      var_stopRunning = bool950;
-      lineNumber = 438
-      var string951 = new GraceString("canvas");
-      var call952 = callmethod(var_dom,"document", [0]);
-      var call953 = callmethod(call952,"createElement", [1], string951);
-      var_backingCanvas = call953;
-      lineNumber = 440
-      lineNumber = 438
-      lineNumber = 439
-      var call954 = callmethod(var_backingCanvas,"height:=", [1], var_canvasHeight);
-      lineNumber = 441
-      lineNumber = 438
-      lineNumber = 440
-      var call955 = callmethod(var_backingCanvas,"width:=", [1], var_canvasWidth);
-      lineNumber = 441
-      var string956 = new GraceString("2d");
-      var call957 = callmethod(var_backingCanvas,"getContext", [1], string956);
-      var_backingContext = call957;
-      lineNumber = 442
-      var string958 = new GraceString("2d");
-      var call959 = callmethod(var_canvas,"getContext", [1], string958);
-      var var_mctx = call959;
-      lineNumber = 442;
+      var call946 = callmethod(this, "initialise", [0]);
+      lineNumber = 455
+      lineNumber = 454
+      var bool947 = new GraceBoolean(false)
+      var_stopRunning = bool947;
+      lineNumber = 455
+      var string948 = new GraceString("canvas");
+      var call949 = callmethod(var_dom,"document", [0]);
+      var call950 = callmethod(call949,"createElement", [1], string948);
+      var_backingCanvas = call950;
+      lineNumber = 457
+      lineNumber = 455
+      lineNumber = 456
+      var call951 = callmethod(var_backingCanvas,"height:=", [1], var_canvasHeight);
+      lineNumber = 458
+      lineNumber = 455
+      lineNumber = 457
+      var call952 = callmethod(var_backingCanvas,"width:=", [1], var_canvasWidth);
+      lineNumber = 458
+      var string953 = new GraceString("2d");
+      var call954 = callmethod(var_backingCanvas,"getContext", [1], string953);
+      var_backingContext = call954;
+      lineNumber = 459
+      var string955 = new GraceString("2d");
+      var call956 = callmethod(var_canvas,"getContext", [1], string955);
+      var var_mctx = call956;
+      lineNumber = 459;
       moduleName = "musical";
       if (!Grace_isTrue(callmethod(var_Unknown, "match",
         [1], var_mctx)))
           throw new GraceExceptionPacket(TypeErrorObject,
                 new GraceString("expected "
                 + "initial value of def 'mctx' to be of type Unknown"))
-      lineNumber = 443
-      var block960 = Grace_allocObject();
-      block960.methods["apply"] = function() {
-        var args = Array.prototype.slice.call(arguments, 1);
-        return this.real.apply(this.receiver, args);
-      }
-      block960.methods["applyIndirectly"] = function(argcv, a) {
-        return this.real.apply(this.receiver, a._value);
-      }
-      block960.methods["outer"] = function() {
-        return callmethod(this.receiver, 'outer', [0]);
-      }
-      block960.methods["match"] = GraceBlock_match;
-      block960.methods["prefix?"] = GraceBlock_lift;
-      block960.receiver = this;
-      block960.className = 'block<musical:443>';
-      block960.real = function(
-      ) {
-        sourceObject = this;
-        var call961 = callmethod(var_stopRunning,"prefix!", [0]);
-        return call961;
-      };
       lineNumber = 460
-      var block962 = Grace_allocObject();
-      block962.methods["apply"] = function() {
+      var block957 = Grace_allocObject();
+      block957.methods["apply"] = function() {
         var args = Array.prototype.slice.call(arguments, 1);
         return this.real.apply(this.receiver, args);
       }
-      block962.methods["applyIndirectly"] = function(argcv, a) {
+      block957.methods["applyIndirectly"] = function(argcv, a) {
         return this.real.apply(this.receiver, a._value);
       }
-      block962.methods["outer"] = function() {
+      block957.methods["outer"] = function() {
         return callmethod(this.receiver, 'outer', [0]);
       }
-      block962.methods["match"] = GraceBlock_match;
-      block962.methods["prefix?"] = GraceBlock_lift;
-      block962.receiver = this;
-      block962.className = 'block<musical:460>';
-      block962.real = function(
+      block957.methods["match"] = GraceBlock_match;
+      block957.methods["prefix?"] = GraceBlock_lift;
+      block957.receiver = this;
+      block957.className = 'block<musical:460>';
+      block957.real = function(
       ) {
         sourceObject = this;
-        lineNumber = 444
-        lineNumber = 447
+        var call958 = callmethod(var_stopRunning,"prefix!", [0]);
+        return call958;
+      };
+      lineNumber = 476
+      var block959 = Grace_allocObject();
+      block959.methods["apply"] = function() {
+        var args = Array.prototype.slice.call(arguments, 1);
+        return this.real.apply(this.receiver, args);
+      }
+      block959.methods["applyIndirectly"] = function(argcv, a) {
+        return this.real.apply(this.receiver, a._value);
+      }
+      block959.methods["outer"] = function() {
+        return callmethod(this.receiver, 'outer', [0]);
+      }
+      block959.methods["match"] = GraceBlock_match;
+      block959.methods["prefix?"] = GraceBlock_lift;
+      block959.receiver = this;
+      block959.className = 'block<musical:476>';
+      block959.real = function(
+      ) {
+        sourceObject = this;
+        lineNumber = 461
+        lineNumber = 464
+        var block960 = Grace_allocObject();
+        block960.methods["apply"] = function() {
+          var args = Array.prototype.slice.call(arguments, 1);
+          return this.real.apply(this.receiver, args);
+        }
+        block960.methods["applyIndirectly"] = function(argcv, a) {
+          return this.real.apply(this.receiver, a._value);
+        }
+        block960.methods["outer"] = function() {
+          return callmethod(this.receiver, 'outer', [0]);
+        }
+        block960.methods["match"] = GraceBlock_match;
+        block960.methods["prefix?"] = GraceBlock_lift;
+        block960.receiver = this;
+        block960.className = 'block<musical:464>';
+        block960.real = function(
+          var_obj
+        ) {
+          sourceObject = this;
+          lineNumber = 462
+          var call961 = callmethod(var_obj,"step", [0]);
+          return call961;
+        };
+        var call962 = callmethod(Grace_prelude,"for()do", [1, 1], var_registeredObjects, block960);
+        lineNumber = 464
+        lineNumber = 467
         var block963 = Grace_allocObject();
         block963.methods["apply"] = function() {
           var args = Array.prototype.slice.call(arguments, 1);
@@ -3245,89 +3286,77 @@ function gracecode_musical () {
         block963.methods["match"] = GraceBlock_match;
         block963.methods["prefix?"] = GraceBlock_lift;
         block963.receiver = this;
-        block963.className = 'block<musical:447>';
+        block963.className = 'block<musical:467>';
         block963.real = function(
-          var_obj
-        ) {
-          sourceObject = this;
-          lineNumber = 445
-          var call964 = callmethod(var_obj,"step", [0]);
-          return call964;
-        };
-        var call965 = callmethod(Grace_prelude,"for()do", [1, 1], var_registeredObjects, block963);
-        lineNumber = 447
-        lineNumber = 450
-        var block966 = Grace_allocObject();
-        block966.methods["apply"] = function() {
-          var args = Array.prototype.slice.call(arguments, 1);
-          return this.real.apply(this.receiver, args);
-        }
-        block966.methods["applyIndirectly"] = function(argcv, a) {
-          return this.real.apply(this.receiver, a._value);
-        }
-        block966.methods["outer"] = function() {
-          return callmethod(this.receiver, 'outer', [0]);
-        }
-        block966.methods["match"] = GraceBlock_match;
-        block966.methods["prefix?"] = GraceBlock_lift;
-        block966.receiver = this;
-        block966.className = 'block<musical:450>';
-        block966.real = function(
           var_step
         ) {
           sourceObject = this;
-          lineNumber = 448
-          var call967 = callmethod(var_step,"apply", [0]);
-          return call967;
+          lineNumber = 465
+          var call964 = callmethod(var_step,"apply", [0]);
+          return call964;
         };
-        var call968 = callmethod(Grace_prelude,"for()do", [1, 1], var_stepBlocks, block966);
-        lineNumber = 451
-        lineNumber = 448
-        lineNumber = 450
-        var call969 = callmethod(var_mctx,"fillStyle:=", [1], var_backgroundColour);
-        lineNumber = 451
-        var call970 = callmethod(var_mctx,"fillRect", [4], new GraceNum(0), new GraceNum(0), var_canvasWidth, var_canvasHeight);
-        lineNumber = 452
-        var call971 = callmethod(var_mctx,"drawImage", [3], var_backingCanvas, new GraceNum(0), new GraceNum(0));
-        lineNumber = 453
-        lineNumber = 456
-        var block972 = Grace_allocObject();
-        block972.methods["apply"] = function() {
+        var call965 = callmethod(Grace_prelude,"for()do", [1, 1], var_stepBlocks, block963);
+        lineNumber = 468
+        lineNumber = 465
+        lineNumber = 467
+        var call966 = callmethod(var_mctx,"fillStyle:=", [1], var_backgroundColour);
+        lineNumber = 468
+        var call967 = callmethod(var_mctx,"fillRect", [4], new GraceNum(0), new GraceNum(0), var_canvasWidth, var_canvasHeight);
+        lineNumber = 469
+        var call968 = callmethod(var_mctx,"drawImage", [3], var_backingCanvas, new GraceNum(0), new GraceNum(0));
+        lineNumber = 470
+        lineNumber = 473
+        var block969 = Grace_allocObject();
+        block969.methods["apply"] = function() {
           var args = Array.prototype.slice.call(arguments, 1);
           return this.real.apply(this.receiver, args);
         }
-        block972.methods["applyIndirectly"] = function(argcv, a) {
+        block969.methods["applyIndirectly"] = function(argcv, a) {
           return this.real.apply(this.receiver, a._value);
         }
-        block972.methods["outer"] = function() {
+        block969.methods["outer"] = function() {
           return callmethod(this.receiver, 'outer', [0]);
         }
-        block972.methods["match"] = GraceBlock_match;
-        block972.methods["prefix?"] = GraceBlock_lift;
-        block972.receiver = this;
-        block972.className = 'block<musical:456>';
-        block972.real = function(
+        block969.methods["match"] = GraceBlock_match;
+        block969.methods["prefix?"] = GraceBlock_lift;
+        block969.receiver = this;
+        block969.className = 'block<musical:473>';
+        block969.real = function(
           var_obj
         ) {
           sourceObject = this;
-          lineNumber = 454
-          var call973 = callmethod(var_obj,"draw", [1], var_mctx);
-          return call973;
+          lineNumber = 471
+          var call970 = callmethod(var_obj,"draw", [1], var_mctx);
+          return call970;
         };
-        var call974 = callmethod(Grace_prelude,"for()do", [1, 1], var_registeredObjects, block972);
-        lineNumber = 457
-        lineNumber = 448
-        lineNumber = 456
-        var string975 = new GraceString("red");
-        var call976 = callmethod(var_mctx,"fillStyle:=", [1], string975);
-        lineNumber = 457
-        var diff979 = callmethod(var_canvasWidth, "-", [1], new GraceNum(20));
-        var call980 = callmethod(var_mctx,"fillRect", [4], diff979, new GraceNum(0), new GraceNum(20), new GraceNum(20));
-        return call980;
+        var call971 = callmethod(Grace_prelude,"for()do", [1, 1], var_registeredObjects, block969);
+        lineNumber = 474
+        lineNumber = 465
+        lineNumber = 473
+        var string972 = new GraceString("red");
+        var call973 = callmethod(var_mctx,"fillStyle:=", [1], string972);
+        lineNumber = 474
+        var quotient976 = callmethod(var_canvasWidth, "/", [1], new GraceNum(4));
+        var quotient979 = callmethod(var_canvasHeight, "/", [1], new GraceNum(4));
+        var quotient982 = callmethod(var_canvasWidth, "/", [1], new GraceNum(2));
+        var quotient985 = callmethod(var_canvasHeight, "/", [1], new GraceNum(2));
+        var call986 = callmethod(var_mctx,"fillRect", [4], quotient976, quotient979, quotient982, quotient985);
+        return call986;
       };
-      lineNumber = 443
-      var call981 = callmethod(var_dom,"while()waiting()do", [1, 1, 1], block960, new GraceNum(10), block962);
-      return call981
+      lineNumber = 460
+      var call987 = callmethod(var_dom,"while()waiting()do", [1, 1, 1], block957, new GraceNum(10), block959);
+      lineNumber = 477
+      lineNumber = 465
+      lineNumber = 476
+      var string988 = new GraceString("green");
+      var call989 = callmethod(var_mctx,"fillStyle:=", [1], string988);
+      lineNumber = 477
+      var quotient992 = callmethod(var_canvasWidth, "/", [1], new GraceNum(4));
+      var quotient995 = callmethod(var_canvasHeight, "/", [1], new GraceNum(4));
+      var quotient998 = callmethod(var_canvasWidth, "/", [1], new GraceNum(2));
+      var quotient1001 = callmethod(var_canvasHeight, "/", [1], new GraceNum(2));
+      var call1002 = callmethod(var_mctx,"fillRect", [4], quotient992, quotient995, quotient998, quotient1001);
+      return call1002
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
         return e.returnvalue;
@@ -3336,35 +3365,35 @@ function gracecode_musical () {
       }
     }
   }
-  func944.paramCounts = [
+  func945.paramCounts = [
     0,
   ];
-  func944.variableArities = [
+  func945.variableArities = [
     false,
   ];
-  this.methods["start"] = func944;
-  func944.definitionLine = 432;
-  func944.definitionModule = "musical";
-  lineNumber = 461
-  var func982 = function(argcv) {
+  this.methods["start"] = func945;
+  func945.definitionLine = 449;
+  func945.definitionModule = "musical";
+  lineNumber = 480
+  var func1003 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func982.paramCounts[0])
+    if (argcv[0] !=  func1003.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (stop)"));
     var returnTarget = invocationCount;
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 463
-      lineNumber = 462
-      var bool983 = new GraceBoolean(true)
-      var_stopRunning = bool983;
-      lineNumber = 463
-      var string984 = new GraceString("mousedown");
-      var call985 = callmethod(var_canvas,"removeEventListener", [2], string984, var_mouseDownListener);
-      lineNumber = 464
-      var string986 = new GraceString("mousemove");
-      var call987 = callmethod(var_canvas,"removeEventListener", [2], string986, var_mouseMoveListener);
-      return call987
+      lineNumber = 486
+      lineNumber = 481
+      var bool1004 = new GraceBoolean(true)
+      var_stopRunning = bool1004;
+      lineNumber = 486
+      var call1005 = callmethod(var_dom,"window", [0]);
+      var call1006 = callmethod(call1005,"t_stop", [0]);
+      lineNumber = 487
+      var call1007 = callmethod(var_dom,"window", [0]);
+      var call1008 = callmethod(call1007,"t_reset", [0]);
+      return call1008
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
         return e.returnvalue;
@@ -3373,33 +3402,33 @@ function gracecode_musical () {
       }
     }
   }
-  func982.paramCounts = [
+  func1003.paramCounts = [
     0,
   ];
-  func982.variableArities = [
+  func1003.variableArities = [
     false,
   ];
-  this.methods["stop"] = func982;
-  func982.definitionLine = 461;
-  func982.definitionModule = "musical";
-  lineNumber = 468
-  var func988 = function(argcv) {
+  this.methods["stop"] = func1003;
+  func1003.definitionLine = 480;
+  func1003.definitionModule = "musical";
+  lineNumber = 489
+  var func1009 = function(argcv) {
     var curarg = 1;
     var var_module = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func988.paramCounts[0])
+    if (argcv[0] !=  func1009.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (atModuleEnd)"));
     var returnTarget = invocationCount;
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 469
+      lineNumber = 490
       onSelf = true;
-      var call989 = callmethod(this, "start", [0]);
-      lineNumber = 471
-      var call990 = callmethod(var_dom,"window", [0]);
-      var call991 = callmethod(call990,"t_play", [0]);
-      return call991
+      var call1010 = callmethod(this, "start", [0]);
+      lineNumber = 492
+      var call1011 = callmethod(var_dom,"window", [0]);
+      var call1012 = callmethod(call1011,"t_play", [0]);
+      return call1012
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
         return e.returnvalue;
@@ -3408,91 +3437,91 @@ function gracecode_musical () {
       }
     }
   }
-  func988.paramCounts = [
+  func1009.paramCounts = [
     1,
   ];
-  func988.variableArities = [
+  func1009.variableArities = [
     false,
   ];
-  this.methods["atModuleEnd"] = func988;
-  func988.definitionLine = 468;
-  func988.definitionModule = "musical";
-  lineNumber = 506
-  var func992 = function(argcv) {
+  this.methods["atModuleEnd"] = func1009;
+  func1009.definitionLine = 489;
+  func1009.definitionModule = "musical";
+  lineNumber = 537
+  var func1013 = function(argcv) {
     var curarg = 1;
     var var_note = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func992.paramCounts[0])
+    if (argcv[0] !=  func1013.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (Note)"));
     var returnTarget = invocationCount;
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 511
-      var if993 = var_done;
-      lineNumber = 507
-      var bool994 = new GraceBoolean(true)
-      var opresult997 = callmethod(var_applyFlat, "==", [1], bool994);
-      if (Grace_isTrue(opresult997)) {
-        lineNumber = 508
-        var string998 = new GraceString("");
-        var string1001 = new GraceString("b");
-        var string1004 = new GraceString("");
-        var opresult1006 = callmethod(string1004, "++", [1], var_note);
-        var opresult1008 = callmethod(opresult1006, "++", [1], string1001);
-        var opresult1010 = callmethod(opresult1008, "++", [1], var_octave);
-        var opresult1012 = callmethod(opresult1010, "++", [1], string998);
-        var call1013 = callmethod(var_dom,"window", [0]);
-        var call1014 = callmethod(call1013,"t_add", [1], opresult1012);
-        lineNumber = 510
-        lineNumber = 509
-        var string1015 = new GraceString("b");
-        var string1018 = new GraceString("");
-        var opresult1020 = callmethod(string1018, "++", [1], var_note);
-        var opresult1022 = callmethod(opresult1020, "++", [1], string1015);
-        return opresult1022
+      lineNumber = 542
+      var if1014 = var_done;
+      lineNumber = 538
+      var bool1015 = new GraceBoolean(true)
+      var opresult1018 = callmethod(var_applyFlat, "==", [1], bool1015);
+      if (Grace_isTrue(opresult1018)) {
+        lineNumber = 539
+        var string1019 = new GraceString("");
+        var string1022 = new GraceString("b");
+        var string1025 = new GraceString("");
+        var opresult1027 = callmethod(string1025, "++", [1], var_note);
+        var opresult1029 = callmethod(opresult1027, "++", [1], string1022);
+        var opresult1031 = callmethod(opresult1029, "++", [1], var_octave);
+        var opresult1033 = callmethod(opresult1031, "++", [1], string1019);
+        var call1034 = callmethod(var_dom,"window", [0]);
+        var call1035 = callmethod(call1034,"t_add", [1], opresult1033);
+        lineNumber = 541
+        lineNumber = 540
+        var string1036 = new GraceString("b");
+        var string1039 = new GraceString("");
+        var opresult1041 = callmethod(string1039, "++", [1], var_note);
+        var opresult1043 = callmethod(opresult1041, "++", [1], string1036);
+        return opresult1043
       }
-      lineNumber = 515
-      var if1023 = var_done;
-      lineNumber = 511
-      var bool1024 = new GraceBoolean(true)
-      var opresult1027 = callmethod(var_applySharp, "==", [1], bool1024);
-      if (Grace_isTrue(opresult1027)) {
-        lineNumber = 512
-        var string1028 = new GraceString("");
-        var string1031 = new GraceString("#");
-        var string1034 = new GraceString("");
-        var opresult1036 = callmethod(string1034, "++", [1], var_note);
-        var opresult1038 = callmethod(opresult1036, "++", [1], string1031);
-        var opresult1040 = callmethod(opresult1038, "++", [1], var_octave);
-        var opresult1042 = callmethod(opresult1040, "++", [1], string1028);
-        var call1043 = callmethod(var_dom,"window", [0]);
-        var call1044 = callmethod(call1043,"t_add", [1], opresult1042);
-        lineNumber = 514
-        lineNumber = 513
-        var string1045 = new GraceString("#");
-        var string1048 = new GraceString("");
-        var opresult1050 = callmethod(string1048, "++", [1], var_note);
-        var opresult1052 = callmethod(opresult1050, "++", [1], string1045);
-        return opresult1052
+      lineNumber = 546
+      var if1044 = var_done;
+      lineNumber = 542
+      var bool1045 = new GraceBoolean(true)
+      var opresult1048 = callmethod(var_applySharp, "==", [1], bool1045);
+      if (Grace_isTrue(opresult1048)) {
+        lineNumber = 543
+        var string1049 = new GraceString("");
+        var string1052 = new GraceString("#");
+        var string1055 = new GraceString("");
+        var opresult1057 = callmethod(string1055, "++", [1], var_note);
+        var opresult1059 = callmethod(opresult1057, "++", [1], string1052);
+        var opresult1061 = callmethod(opresult1059, "++", [1], var_octave);
+        var opresult1063 = callmethod(opresult1061, "++", [1], string1049);
+        var call1064 = callmethod(var_dom,"window", [0]);
+        var call1065 = callmethod(call1064,"t_add", [1], opresult1063);
+        lineNumber = 545
+        lineNumber = 544
+        var string1066 = new GraceString("#");
+        var string1069 = new GraceString("");
+        var opresult1071 = callmethod(string1069, "++", [1], var_note);
+        var opresult1073 = callmethod(opresult1071, "++", [1], string1066);
+        return opresult1073
       }
-      lineNumber = 515
-      var string1053 = new GraceString("");
-      var string1056 = new GraceString("");
-      var string1059 = new GraceString("");
-      var opresult1061 = callmethod(string1059, "++", [1], var_note);
-      var opresult1063 = callmethod(opresult1061, "++", [1], string1056);
-      var opresult1065 = callmethod(opresult1063, "++", [1], var_octave);
-      var opresult1067 = callmethod(opresult1065, "++", [1], string1053);
-      var call1068 = callmethod(var_dom,"window", [0]);
-      var call1069 = callmethod(call1068,"t_add", [1], opresult1067);
-      lineNumber = 517
-      lineNumber = 516
-      var string1070 = new GraceString("");
-      var string1073 = new GraceString("");
-      var opresult1075 = callmethod(string1073, "++", [1], var_note);
-      var opresult1077 = callmethod(opresult1075, "++", [1], string1070);
-      return opresult1077
+      lineNumber = 546
+      var string1074 = new GraceString("");
+      var string1077 = new GraceString("");
+      var string1080 = new GraceString("");
+      var opresult1082 = callmethod(string1080, "++", [1], var_note);
+      var opresult1084 = callmethod(opresult1082, "++", [1], string1077);
+      var opresult1086 = callmethod(opresult1084, "++", [1], var_octave);
+      var opresult1088 = callmethod(opresult1086, "++", [1], string1074);
+      var call1089 = callmethod(var_dom,"window", [0]);
+      var call1090 = callmethod(call1089,"t_add", [1], opresult1088);
+      lineNumber = 548
+      lineNumber = 547
+      var string1091 = new GraceString("");
+      var string1094 = new GraceString("");
+      var opresult1096 = callmethod(string1094, "++", [1], var_note);
+      var opresult1098 = callmethod(opresult1096, "++", [1], string1091);
+      return opresult1098
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
         return e.returnvalue;
@@ -3501,266 +3530,29 @@ function gracecode_musical () {
       }
     }
   }
-  func992.paramCounts = [
+  func1013.paramCounts = [
     1,
   ];
-  func992.variableArities = [
+  func1013.variableArities = [
     false,
   ];
-  this.methods["Note"] = func992;
-  func992.definitionLine = 506;
-  func992.definitionModule = "musical";
-  lineNumber = 519
-  var func1078 = function(argcv) {
+  this.methods["Note"] = func1013;
+  func1013.definitionLine = 537;
+  func1013.definitionModule = "musical";
+  lineNumber = 550
+  var func1099 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func1078.paramCounts[0])
+    if (argcv[0] !=  func1099.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (C)"));
     var returnTarget = invocationCount;
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 520
-      var string1079 = new GraceString("C");
+      lineNumber = 551
+      var string1100 = new GraceString("C");
       onSelf = true;
-      var call1080 = callmethod(this, "Note", [1], string1079);
-      return call1080
-    } catch(e) {
-      if ((e.exctype == 'return') && (e.target == returnTarget)) {
-        return e.returnvalue;
-      } else {
-        throw e;
-      }
-    }
-  }
-  func1078.paramCounts = [
-    0,
-  ];
-  func1078.variableArities = [
-    false,
-  ];
-  this.methods["C"] = func1078;
-  func1078.definitionLine = 519;
-  func1078.definitionModule = "musical";
-  lineNumber = 522
-  var func1081 = function(argcv) {
-    var curarg = 1;
-    if (argcv[0] !=  func1081.paramCounts[0])
-      callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (D)"));
-    var returnTarget = invocationCount;
-    invocationCount++;
-    moduleName = "musical";
-    try {
-      lineNumber = 523
-      var string1082 = new GraceString("D");
-      onSelf = true;
-      var call1083 = callmethod(this, "Note", [1], string1082);
-      return call1083
-    } catch(e) {
-      if ((e.exctype == 'return') && (e.target == returnTarget)) {
-        return e.returnvalue;
-      } else {
-        throw e;
-      }
-    }
-  }
-  func1081.paramCounts = [
-    0,
-  ];
-  func1081.variableArities = [
-    false,
-  ];
-  this.methods["D"] = func1081;
-  func1081.definitionLine = 522;
-  func1081.definitionModule = "musical";
-  lineNumber = 525
-  var func1084 = function(argcv) {
-    var curarg = 1;
-    if (argcv[0] !=  func1084.paramCounts[0])
-      callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (E)"));
-    var returnTarget = invocationCount;
-    invocationCount++;
-    moduleName = "musical";
-    try {
-      lineNumber = 526
-      var string1085 = new GraceString("E");
-      onSelf = true;
-      var call1086 = callmethod(this, "Note", [1], string1085);
-      return call1086
-    } catch(e) {
-      if ((e.exctype == 'return') && (e.target == returnTarget)) {
-        return e.returnvalue;
-      } else {
-        throw e;
-      }
-    }
-  }
-  func1084.paramCounts = [
-    0,
-  ];
-  func1084.variableArities = [
-    false,
-  ];
-  this.methods["E"] = func1084;
-  func1084.definitionLine = 525;
-  func1084.definitionModule = "musical";
-  lineNumber = 528
-  var func1087 = function(argcv) {
-    var curarg = 1;
-    if (argcv[0] !=  func1087.paramCounts[0])
-      callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (F)"));
-    var returnTarget = invocationCount;
-    invocationCount++;
-    moduleName = "musical";
-    try {
-      lineNumber = 529
-      var string1088 = new GraceString("F");
-      onSelf = true;
-      var call1089 = callmethod(this, "Note", [1], string1088);
-      return call1089
-    } catch(e) {
-      if ((e.exctype == 'return') && (e.target == returnTarget)) {
-        return e.returnvalue;
-      } else {
-        throw e;
-      }
-    }
-  }
-  func1087.paramCounts = [
-    0,
-  ];
-  func1087.variableArities = [
-    false,
-  ];
-  this.methods["F"] = func1087;
-  func1087.definitionLine = 528;
-  func1087.definitionModule = "musical";
-  lineNumber = 531
-  var func1090 = function(argcv) {
-    var curarg = 1;
-    if (argcv[0] !=  func1090.paramCounts[0])
-      callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (G)"));
-    var returnTarget = invocationCount;
-    invocationCount++;
-    moduleName = "musical";
-    try {
-      lineNumber = 532
-      var string1091 = new GraceString("G");
-      onSelf = true;
-      var call1092 = callmethod(this, "Note", [1], string1091);
-      return call1092
-    } catch(e) {
-      if ((e.exctype == 'return') && (e.target == returnTarget)) {
-        return e.returnvalue;
-      } else {
-        throw e;
-      }
-    }
-  }
-  func1090.paramCounts = [
-    0,
-  ];
-  func1090.variableArities = [
-    false,
-  ];
-  this.methods["G"] = func1090;
-  func1090.definitionLine = 531;
-  func1090.definitionModule = "musical";
-  lineNumber = 534
-  var func1093 = function(argcv) {
-    var curarg = 1;
-    if (argcv[0] !=  func1093.paramCounts[0])
-      callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (A)"));
-    var returnTarget = invocationCount;
-    invocationCount++;
-    moduleName = "musical";
-    try {
-      lineNumber = 535
-      var string1094 = new GraceString("A");
-      onSelf = true;
-      var call1095 = callmethod(this, "Note", [1], string1094);
-      return call1095
-    } catch(e) {
-      if ((e.exctype == 'return') && (e.target == returnTarget)) {
-        return e.returnvalue;
-      } else {
-        throw e;
-      }
-    }
-  }
-  func1093.paramCounts = [
-    0,
-  ];
-  func1093.variableArities = [
-    false,
-  ];
-  this.methods["A"] = func1093;
-  func1093.definitionLine = 534;
-  func1093.definitionModule = "musical";
-  lineNumber = 537
-  var func1096 = function(argcv) {
-    var curarg = 1;
-    if (argcv[0] !=  func1096.paramCounts[0])
-      callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (B)"));
-    var returnTarget = invocationCount;
-    invocationCount++;
-    moduleName = "musical";
-    try {
-      lineNumber = 538
-      var string1097 = new GraceString("B");
-      onSelf = true;
-      var call1098 = callmethod(this, "Note", [1], string1097);
-      return call1098
-    } catch(e) {
-      if ((e.exctype == 'return') && (e.target == returnTarget)) {
-        return e.returnvalue;
-      } else {
-        throw e;
-      }
-    }
-  }
-  func1096.paramCounts = [
-    0,
-  ];
-  func1096.variableArities = [
-    false,
-  ];
-  this.methods["B"] = func1096;
-  func1096.definitionLine = 537;
-  func1096.definitionModule = "musical";
-  lineNumber = 541
-  var func1099 = function(argcv) {
-    var curarg = 1;
-    var var_note = arguments[curarg];
-    curarg++;
-    if (argcv[0] !=  func1099.paramCounts[0])
-      callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (flat)"));
-    var returnTarget = invocationCount;
-    invocationCount++;
-    moduleName = "musical";
-    try {
-      lineNumber = 543
-      lineNumber = 542
-      var bool1100 = new GraceBoolean(true)
-      var_applyFlat = bool1100;
-      lineNumber = 544
-      lineNumber = 543
-      var call1101 = callmethod(var_note,"apply", [0]);
-      var var_ret = call1101;
-      lineNumber = 544;
-      moduleName = "musical";
-      lineNumber = 543
-      if (!Grace_isTrue(callmethod(var_Unknown, "match",
-        [1], var_ret)))
-          throw new GraceExceptionPacket(TypeErrorObject,
-                new GraceString("expected "
-                + "initial value of var 'ret' to be of type Unknown"))
-      lineNumber = 545
-      lineNumber = 544
-      var bool1102 = new GraceBoolean(false)
-      var_applyFlat = bool1102;
-      lineNumber = 546
-      lineNumber = 545
-      return var_ret
+      var call1101 = callmethod(this, "Note", [1], string1100);
+      return call1101
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
         return e.returnvalue;
@@ -3770,47 +3562,284 @@ function gracecode_musical () {
     }
   }
   func1099.paramCounts = [
-    1,
+    0,
   ];
   func1099.variableArities = [
     false,
   ];
-  this.methods["flat"] = func1099;
-  func1099.definitionLine = 541;
+  this.methods["C"] = func1099;
+  func1099.definitionLine = 550;
   func1099.definitionModule = "musical";
-  lineNumber = 547
-  var func1103 = function(argcv) {
+  lineNumber = 553
+  var func1102 = function(argcv) {
+    var curarg = 1;
+    if (argcv[0] !=  func1102.paramCounts[0])
+      callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (D)"));
+    var returnTarget = invocationCount;
+    invocationCount++;
+    moduleName = "musical";
+    try {
+      lineNumber = 554
+      var string1103 = new GraceString("D");
+      onSelf = true;
+      var call1104 = callmethod(this, "Note", [1], string1103);
+      return call1104
+    } catch(e) {
+      if ((e.exctype == 'return') && (e.target == returnTarget)) {
+        return e.returnvalue;
+      } else {
+        throw e;
+      }
+    }
+  }
+  func1102.paramCounts = [
+    0,
+  ];
+  func1102.variableArities = [
+    false,
+  ];
+  this.methods["D"] = func1102;
+  func1102.definitionLine = 553;
+  func1102.definitionModule = "musical";
+  lineNumber = 556
+  var func1105 = function(argcv) {
+    var curarg = 1;
+    if (argcv[0] !=  func1105.paramCounts[0])
+      callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (E)"));
+    var returnTarget = invocationCount;
+    invocationCount++;
+    moduleName = "musical";
+    try {
+      lineNumber = 557
+      var string1106 = new GraceString("E");
+      onSelf = true;
+      var call1107 = callmethod(this, "Note", [1], string1106);
+      return call1107
+    } catch(e) {
+      if ((e.exctype == 'return') && (e.target == returnTarget)) {
+        return e.returnvalue;
+      } else {
+        throw e;
+      }
+    }
+  }
+  func1105.paramCounts = [
+    0,
+  ];
+  func1105.variableArities = [
+    false,
+  ];
+  this.methods["E"] = func1105;
+  func1105.definitionLine = 556;
+  func1105.definitionModule = "musical";
+  lineNumber = 559
+  var func1108 = function(argcv) {
+    var curarg = 1;
+    if (argcv[0] !=  func1108.paramCounts[0])
+      callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (F)"));
+    var returnTarget = invocationCount;
+    invocationCount++;
+    moduleName = "musical";
+    try {
+      lineNumber = 560
+      var string1109 = new GraceString("F");
+      onSelf = true;
+      var call1110 = callmethod(this, "Note", [1], string1109);
+      return call1110
+    } catch(e) {
+      if ((e.exctype == 'return') && (e.target == returnTarget)) {
+        return e.returnvalue;
+      } else {
+        throw e;
+      }
+    }
+  }
+  func1108.paramCounts = [
+    0,
+  ];
+  func1108.variableArities = [
+    false,
+  ];
+  this.methods["F"] = func1108;
+  func1108.definitionLine = 559;
+  func1108.definitionModule = "musical";
+  lineNumber = 562
+  var func1111 = function(argcv) {
+    var curarg = 1;
+    if (argcv[0] !=  func1111.paramCounts[0])
+      callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (G)"));
+    var returnTarget = invocationCount;
+    invocationCount++;
+    moduleName = "musical";
+    try {
+      lineNumber = 563
+      var string1112 = new GraceString("G");
+      onSelf = true;
+      var call1113 = callmethod(this, "Note", [1], string1112);
+      return call1113
+    } catch(e) {
+      if ((e.exctype == 'return') && (e.target == returnTarget)) {
+        return e.returnvalue;
+      } else {
+        throw e;
+      }
+    }
+  }
+  func1111.paramCounts = [
+    0,
+  ];
+  func1111.variableArities = [
+    false,
+  ];
+  this.methods["G"] = func1111;
+  func1111.definitionLine = 562;
+  func1111.definitionModule = "musical";
+  lineNumber = 565
+  var func1114 = function(argcv) {
+    var curarg = 1;
+    if (argcv[0] !=  func1114.paramCounts[0])
+      callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (A)"));
+    var returnTarget = invocationCount;
+    invocationCount++;
+    moduleName = "musical";
+    try {
+      lineNumber = 566
+      var string1115 = new GraceString("A");
+      onSelf = true;
+      var call1116 = callmethod(this, "Note", [1], string1115);
+      return call1116
+    } catch(e) {
+      if ((e.exctype == 'return') && (e.target == returnTarget)) {
+        return e.returnvalue;
+      } else {
+        throw e;
+      }
+    }
+  }
+  func1114.paramCounts = [
+    0,
+  ];
+  func1114.variableArities = [
+    false,
+  ];
+  this.methods["A"] = func1114;
+  func1114.definitionLine = 565;
+  func1114.definitionModule = "musical";
+  lineNumber = 568
+  var func1117 = function(argcv) {
+    var curarg = 1;
+    if (argcv[0] !=  func1117.paramCounts[0])
+      callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (B)"));
+    var returnTarget = invocationCount;
+    invocationCount++;
+    moduleName = "musical";
+    try {
+      lineNumber = 569
+      var string1118 = new GraceString("B");
+      onSelf = true;
+      var call1119 = callmethod(this, "Note", [1], string1118);
+      return call1119
+    } catch(e) {
+      if ((e.exctype == 'return') && (e.target == returnTarget)) {
+        return e.returnvalue;
+      } else {
+        throw e;
+      }
+    }
+  }
+  func1117.paramCounts = [
+    0,
+  ];
+  func1117.variableArities = [
+    false,
+  ];
+  this.methods["B"] = func1117;
+  func1117.definitionLine = 568;
+  func1117.definitionModule = "musical";
+  lineNumber = 572
+  var func1120 = function(argcv) {
     var curarg = 1;
     var var_note = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1103.paramCounts[0])
+    if (argcv[0] !=  func1120.paramCounts[0])
+      callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (flat)"));
+    var returnTarget = invocationCount;
+    invocationCount++;
+    moduleName = "musical";
+    try {
+      lineNumber = 574
+      lineNumber = 573
+      var bool1121 = new GraceBoolean(true)
+      var_applyFlat = bool1121;
+      lineNumber = 575
+      lineNumber = 574
+      var call1122 = callmethod(var_note,"apply", [0]);
+      var var_ret = call1122;
+      lineNumber = 575;
+      moduleName = "musical";
+      lineNumber = 574
+      if (!Grace_isTrue(callmethod(var_Unknown, "match",
+        [1], var_ret)))
+          throw new GraceExceptionPacket(TypeErrorObject,
+                new GraceString("expected "
+                + "initial value of var 'ret' to be of type Unknown"))
+      lineNumber = 576
+      lineNumber = 575
+      var bool1123 = new GraceBoolean(false)
+      var_applyFlat = bool1123;
+      lineNumber = 577
+      lineNumber = 576
+      return var_ret
+    } catch(e) {
+      if ((e.exctype == 'return') && (e.target == returnTarget)) {
+        return e.returnvalue;
+      } else {
+        throw e;
+      }
+    }
+  }
+  func1120.paramCounts = [
+    1,
+  ];
+  func1120.variableArities = [
+    false,
+  ];
+  this.methods["flat"] = func1120;
+  func1120.definitionLine = 572;
+  func1120.definitionModule = "musical";
+  lineNumber = 578
+  var func1124 = function(argcv) {
+    var curarg = 1;
+    var var_note = arguments[curarg];
+    curarg++;
+    if (argcv[0] !=  func1124.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (sharp)"));
     var returnTarget = invocationCount;
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 549
-      lineNumber = 548
-      var bool1104 = new GraceBoolean(true)
-      var_applySharp = bool1104;
-      lineNumber = 550
-      lineNumber = 549
-      var call1105 = callmethod(var_note,"apply", [0]);
-      var var_ret = call1105;
-      lineNumber = 550;
+      lineNumber = 580
+      lineNumber = 579
+      var bool1125 = new GraceBoolean(true)
+      var_applySharp = bool1125;
+      lineNumber = 581
+      lineNumber = 580
+      var call1126 = callmethod(var_note,"apply", [0]);
+      var var_ret = call1126;
+      lineNumber = 581;
       moduleName = "musical";
-      lineNumber = 549
+      lineNumber = 580
       if (!Grace_isTrue(callmethod(var_Unknown, "match",
         [1], var_ret)))
           throw new GraceExceptionPacket(TypeErrorObject,
                 new GraceString("expected "
                 + "initial value of var 'ret' to be of type Unknown"))
-      lineNumber = 551
-      lineNumber = 550
-      var bool1106 = new GraceBoolean(false)
-      var_applySharp = bool1106;
-      lineNumber = 552
-      lineNumber = 551
+      lineNumber = 582
+      lineNumber = 581
+      var bool1127 = new GraceBoolean(false)
+      var_applySharp = bool1127;
+      lineNumber = 583
+      lineNumber = 582
       return var_ret
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -3820,61 +3849,61 @@ function gracecode_musical () {
       }
     }
   }
-  func1103.paramCounts = [
+  func1124.paramCounts = [
     1,
   ];
-  func1103.variableArities = [
+  func1124.variableArities = [
     false,
   ];
-  this.methods["sharp"] = func1103;
-  func1103.definitionLine = 547;
-  func1103.definitionModule = "musical";
-  lineNumber = 554
-  var func1107 = function(argcv) {
+  this.methods["sharp"] = func1124;
+  func1124.definitionLine = 578;
+  func1124.definitionModule = "musical";
+  lineNumber = 585
+  var func1128 = function(argcv) {
     var curarg = 1;
     var var_num = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1107.paramCounts[0])
+    if (argcv[0] !=  func1128.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (octave)"));
     var var_notes = arguments[curarg];
     curarg++;
-    if (argcv[1] !=  func1107.paramCounts[1])
+    if (argcv[1] !=  func1128.paramCounts[1])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 2 (on)"));
     var returnTarget = invocationCount;
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 556
-      lineNumber = 555
+      lineNumber = 587
+      lineNumber = 586
       var var_oldOctave = var_octave;
-      lineNumber = 556;
+      lineNumber = 587;
       moduleName = "musical";
-      lineNumber = 555
+      lineNumber = 586
       if (!Grace_isTrue(callmethod(var_Unknown, "match",
         [1], var_oldOctave)))
           throw new GraceExceptionPacket(TypeErrorObject,
                 new GraceString("expected "
                 + "initial value of var 'oldOctave' to be of type Unknown"))
-      lineNumber = 557
-      lineNumber = 556
+      lineNumber = 588
+      lineNumber = 587
       var_octave = var_num;
-      lineNumber = 558
-      lineNumber = 557
-      var call1108 = callmethod(var_notes,"apply", [0]);
-      var var_ret = call1108;
-      lineNumber = 558;
+      lineNumber = 589
+      lineNumber = 588
+      var call1129 = callmethod(var_notes,"apply", [0]);
+      var var_ret = call1129;
+      lineNumber = 589;
       moduleName = "musical";
-      lineNumber = 557
+      lineNumber = 588
       if (!Grace_isTrue(callmethod(var_Unknown, "match",
         [1], var_ret)))
           throw new GraceExceptionPacket(TypeErrorObject,
                 new GraceString("expected "
                 + "initial value of var 'ret' to be of type Unknown"))
-      lineNumber = 559
-      lineNumber = 558
+      lineNumber = 590
+      lineNumber = 589
       var_octave = var_oldOctave;
-      lineNumber = 560
-      lineNumber = 559
+      lineNumber = 591
+      lineNumber = 590
       return var_ret
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -3884,49 +3913,49 @@ function gracecode_musical () {
       }
     }
   }
-  func1107.paramCounts = [
+  func1128.paramCounts = [
     1,
     1,
   ];
-  func1107.variableArities = [
+  func1128.variableArities = [
     false,
     false,
   ];
-  this.methods["octave()on"] = func1107;
-  func1107.definitionLine = 554;
-  func1107.definitionModule = "musical";
-  lineNumber = 565
-  var func1109 = function(argcv) {
+  this.methods["octave()on"] = func1128;
+  func1128.definitionLine = 585;
+  func1128.definitionModule = "musical";
+  lineNumber = 596
+  var func1130 = function(argcv) {
     var curarg = 1;
     var var_blocks = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1109.paramCounts[0])
+    if (argcv[0] !=  func1130.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (Instrument)"));
     var returnTarget = invocationCount;
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 570
-      var if1110 = var_done;
-      lineNumber = 566
-      var bool1111 = new GraceBoolean(true)
-      var opresult1114 = callmethod(var_firstPass, "==", [1], bool1111);
-      if (Grace_isTrue(opresult1114)) {
-        lineNumber = 567
-        var call1115 = callmethod(var_dom,"window", [0]);
-        var call1116 = callmethod(call1115,"t_reset", [0]);
-        lineNumber = 569
-        lineNumber = 568
-        var bool1117 = new GraceBoolean(false)
-        var_firstPass = bool1117;
-        if1110 = bool1117;
+      lineNumber = 601
+      var if1131 = var_done;
+      lineNumber = 597
+      var bool1132 = new GraceBoolean(true)
+      var opresult1135 = callmethod(var_firstPass, "==", [1], bool1132);
+      if (Grace_isTrue(opresult1135)) {
+        lineNumber = 598
+        var call1136 = callmethod(var_dom,"window", [0]);
+        var call1137 = callmethod(call1136,"t_reset", [0]);
+        lineNumber = 600
+        lineNumber = 599
+        var bool1138 = new GraceBoolean(false)
+        var_firstPass = bool1138;
+        if1131 = bool1138;
       }
-      lineNumber = 570
-      var call1118 = callmethod(var_dom,"window", [0]);
-      var call1119 = callmethod(call1118,"t_init", [0]);
-      lineNumber = 571
-      var call1120 = callmethod(var_blocks,"apply", [0]);
-      return call1120
+      lineNumber = 601
+      var call1139 = callmethod(var_dom,"window", [0]);
+      var call1140 = callmethod(call1139,"t_init", [0]);
+      lineNumber = 602
+      var call1141 = callmethod(var_blocks,"apply", [0]);
+      return call1141
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
         return e.returnvalue;
@@ -3935,33 +3964,33 @@ function gracecode_musical () {
       }
     }
   }
-  func1109.paramCounts = [
+  func1130.paramCounts = [
     1,
   ];
-  func1109.variableArities = [
+  func1130.variableArities = [
     false,
   ];
-  this.methods["Instrument"] = func1109;
-  func1109.definitionLine = 565;
-  func1109.definitionModule = "musical";
-  lineNumber = 574
-  var func1121 = function(argcv) {
+  this.methods["Instrument"] = func1130;
+  func1130.definitionLine = 596;
+  func1130.definitionModule = "musical";
+  lineNumber = 605
+  var func1142 = function(argcv) {
     var curarg = 1;
     var var_blocks = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1121.paramCounts[0])
+    if (argcv[0] !=  func1142.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (monoSynth)"));
     var returnTarget = invocationCount;
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 575
+      lineNumber = 606
       onSelf = true;
-      var call1122 = callmethod(this, "Instrument", [1], var_blocks);
-      lineNumber = 576
-      var call1123 = callmethod(var_dom,"window", [0]);
-      var call1124 = callmethod(call1123,"t_synth_mono", [0]);
-      return call1124
+      var call1143 = callmethod(this, "Instrument", [1], var_blocks);
+      lineNumber = 607
+      var call1144 = callmethod(var_dom,"window", [0]);
+      var call1145 = callmethod(call1144,"t_synth_mono", [0]);
+      return call1145
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
         return e.returnvalue;
@@ -3970,33 +3999,33 @@ function gracecode_musical () {
       }
     }
   }
-  func1121.paramCounts = [
+  func1142.paramCounts = [
     1,
   ];
-  func1121.variableArities = [
+  func1142.variableArities = [
     false,
   ];
-  this.methods["monoSynth"] = func1121;
-  func1121.definitionLine = 574;
-  func1121.definitionModule = "musical";
-  lineNumber = 579
-  var func1125 = function(argcv) {
+  this.methods["monoSynth"] = func1142;
+  func1142.definitionLine = 605;
+  func1142.definitionModule = "musical";
+  lineNumber = 610
+  var func1146 = function(argcv) {
     var curarg = 1;
     var var_blocks = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1125.paramCounts[0])
+    if (argcv[0] !=  func1146.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (pluckSynth)"));
     var returnTarget = invocationCount;
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 580
+      lineNumber = 611
       onSelf = true;
-      var call1126 = callmethod(this, "Instrument", [1], var_blocks);
-      lineNumber = 581
-      var call1127 = callmethod(var_dom,"window", [0]);
-      var call1128 = callmethod(call1127,"t_synth_pluck", [0]);
-      return call1128
+      var call1147 = callmethod(this, "Instrument", [1], var_blocks);
+      lineNumber = 612
+      var call1148 = callmethod(var_dom,"window", [0]);
+      var call1149 = callmethod(call1148,"t_synth_pluck", [0]);
+      return call1149
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
         return e.returnvalue;
@@ -4005,33 +4034,33 @@ function gracecode_musical () {
       }
     }
   }
-  func1125.paramCounts = [
+  func1146.paramCounts = [
     1,
   ];
-  func1125.variableArities = [
+  func1146.variableArities = [
     false,
   ];
-  this.methods["pluckSynth"] = func1125;
-  func1125.definitionLine = 579;
-  func1125.definitionModule = "musical";
-  lineNumber = 584
-  var func1129 = function(argcv) {
+  this.methods["pluckSynth"] = func1146;
+  func1146.definitionLine = 610;
+  func1146.definitionModule = "musical";
+  lineNumber = 615
+  var func1150 = function(argcv) {
     var curarg = 1;
     var var_blocks = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1129.paramCounts[0])
+    if (argcv[0] !=  func1150.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (polySynth)"));
     var returnTarget = invocationCount;
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 585
+      lineNumber = 616
       onSelf = true;
-      var call1130 = callmethod(this, "Instrument", [1], var_blocks);
-      lineNumber = 586
-      var call1131 = callmethod(var_dom,"window", [0]);
-      var call1132 = callmethod(call1131,"t_synth_poly", [0]);
-      return call1132
+      var call1151 = callmethod(this, "Instrument", [1], var_blocks);
+      lineNumber = 617
+      var call1152 = callmethod(var_dom,"window", [0]);
+      var call1153 = callmethod(call1152,"t_synth_poly", [0]);
+      return call1153
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
         return e.returnvalue;
@@ -4040,33 +4069,33 @@ function gracecode_musical () {
       }
     }
   }
-  func1129.paramCounts = [
+  func1150.paramCounts = [
     1,
   ];
-  func1129.variableArities = [
+  func1150.variableArities = [
     false,
   ];
-  this.methods["polySynth"] = func1129;
-  func1129.definitionLine = 584;
-  func1129.definitionModule = "musical";
-  lineNumber = 589
-  var func1133 = function(argcv) {
+  this.methods["polySynth"] = func1150;
+  func1150.definitionLine = 615;
+  func1150.definitionModule = "musical";
+  lineNumber = 620
+  var func1154 = function(argcv) {
     var curarg = 1;
     var var_blocks = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1133.paramCounts[0])
+    if (argcv[0] !=  func1154.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (fmSynth)"));
     var returnTarget = invocationCount;
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 590
+      lineNumber = 621
       onSelf = true;
-      var call1134 = callmethod(this, "Instrument", [1], var_blocks);
-      lineNumber = 591
-      var call1135 = callmethod(var_dom,"window", [0]);
-      var call1136 = callmethod(call1135,"t_synth_fm", [0]);
-      return call1136
+      var call1155 = callmethod(this, "Instrument", [1], var_blocks);
+      lineNumber = 622
+      var call1156 = callmethod(var_dom,"window", [0]);
+      var call1157 = callmethod(call1156,"t_synth_fm", [0]);
+      return call1157
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
         return e.returnvalue;
@@ -4075,33 +4104,33 @@ function gracecode_musical () {
       }
     }
   }
-  func1133.paramCounts = [
+  func1154.paramCounts = [
     1,
   ];
-  func1133.variableArities = [
+  func1154.variableArities = [
     false,
   ];
-  this.methods["fmSynth"] = func1133;
-  func1133.definitionLine = 589;
-  func1133.definitionModule = "musical";
-  lineNumber = 594
-  var func1137 = function(argcv) {
+  this.methods["fmSynth"] = func1154;
+  func1154.definitionLine = 620;
+  func1154.definitionModule = "musical";
+  lineNumber = 625
+  var func1158 = function(argcv) {
     var curarg = 1;
     var var_blocks = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1137.paramCounts[0])
+    if (argcv[0] !=  func1158.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (membraneSynth)"));
     var returnTarget = invocationCount;
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 595
+      lineNumber = 626
       onSelf = true;
-      var call1138 = callmethod(this, "Instrument", [1], var_blocks);
-      lineNumber = 596
-      var call1139 = callmethod(var_dom,"window", [0]);
-      var call1140 = callmethod(call1139,"t_synth_membrane", [0]);
-      return call1140
+      var call1159 = callmethod(this, "Instrument", [1], var_blocks);
+      lineNumber = 627
+      var call1160 = callmethod(var_dom,"window", [0]);
+      var call1161 = callmethod(call1160,"t_synth_membrane", [0]);
+      return call1161
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
         return e.returnvalue;
@@ -4110,33 +4139,33 @@ function gracecode_musical () {
       }
     }
   }
-  func1137.paramCounts = [
+  func1158.paramCounts = [
     1,
   ];
-  func1137.variableArities = [
+  func1158.variableArities = [
     false,
   ];
-  this.methods["membraneSynth"] = func1137;
-  func1137.definitionLine = 594;
-  func1137.definitionModule = "musical";
-  lineNumber = 599
-  var func1141 = function(argcv) {
+  this.methods["membraneSynth"] = func1158;
+  func1158.definitionLine = 625;
+  func1158.definitionModule = "musical";
+  lineNumber = 630
+  var func1162 = function(argcv) {
     var curarg = 1;
     var var_blocks = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1141.paramCounts[0])
+    if (argcv[0] !=  func1162.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (duoSynth)"));
     var returnTarget = invocationCount;
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 600
+      lineNumber = 631
       onSelf = true;
-      var call1142 = callmethod(this, "Instrument", [1], var_blocks);
-      lineNumber = 601
-      var call1143 = callmethod(var_dom,"window", [0]);
-      var call1144 = callmethod(call1143,"t_synth_duo", [0]);
-      return call1144
+      var call1163 = callmethod(this, "Instrument", [1], var_blocks);
+      lineNumber = 632
+      var call1164 = callmethod(var_dom,"window", [0]);
+      var call1165 = callmethod(call1164,"t_synth_duo", [0]);
+      return call1165
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
         return e.returnvalue;
@@ -4145,30 +4174,30 @@ function gracecode_musical () {
       }
     }
   }
-  func1141.paramCounts = [
+  func1162.paramCounts = [
     1,
   ];
-  func1141.variableArities = [
+  func1162.variableArities = [
     false,
   ];
-  this.methods["duoSynth"] = func1141;
-  func1141.definitionLine = 599;
-  func1141.definitionModule = "musical";
-  lineNumber = 604
-  var func1145 = function(argcv) {
+  this.methods["duoSynth"] = func1162;
+  func1162.definitionLine = 630;
+  func1162.definitionModule = "musical";
+  lineNumber = 635
+  var func1166 = function(argcv) {
     var curarg = 1;
     var var_note = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1145.paramCounts[0])
+    if (argcv[0] !=  func1166.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (arpeggio)"));
     var returnTarget = invocationCount;
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 605
-      var call1146 = callmethod(var_dom,"window", [0]);
-      var call1147 = callmethod(call1146,"t_synth_arpeggio", [1], var_note);
-      return call1147
+      lineNumber = 636
+      var call1167 = callmethod(var_dom,"window", [0]);
+      var call1168 = callmethod(call1167,"t_synth_arpeggio", [1], var_note);
+      return call1168
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
         return e.returnvalue;
@@ -4177,76 +4206,76 @@ function gracecode_musical () {
       }
     }
   }
-  func1145.paramCounts = [
+  func1166.paramCounts = [
     1,
   ];
-  func1145.variableArities = [
+  func1166.variableArities = [
     false,
   ];
-  this.methods["arpeggio"] = func1145;
-  func1145.definitionLine = 604;
-  func1145.definitionModule = "musical";
-  lineNumber = 611
-  var func1148 = function(argcv) {
+  this.methods["arpeggio"] = func1166;
+  func1166.definitionLine = 635;
+  func1166.definitionModule = "musical";
+  lineNumber = 642
+  var func1169 = function(argcv) {
     var curarg = 1;
     var var_blocks = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1148.paramCounts[0])
+    if (argcv[0] !=  func1169.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (Effect)"));
     var returnTarget = invocationCount;
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 615
-      var if1149 = var_done;
-      lineNumber = 612
-      var bool1150 = new GraceBoolean(true)
-      var opresult1153 = callmethod(var_applyChorus, "==", [1], bool1150);
-      if (Grace_isTrue(opresult1153)) {
-        lineNumber = 613
-        var call1154 = callmethod(var_dom,"window", [0]);
-        var call1155 = callmethod(call1154,"t_effect_chorus", [0]);
-        if1149 = call1155;
-      }
-      lineNumber = 618
-      var if1156 = var_done;
-      lineNumber = 615
-      var bool1157 = new GraceBoolean(true)
-      var opresult1160 = callmethod(var_applyReverb, "==", [1], bool1157);
-      if (Grace_isTrue(opresult1160)) {
-        lineNumber = 616
-        var call1161 = callmethod(var_dom,"window", [0]);
-        var call1162 = callmethod(call1161,"t_effect_reverb", [0]);
-        if1156 = call1162;
-      }
-      lineNumber = 621
-      var if1163 = var_done;
-      lineNumber = 618
-      var bool1164 = new GraceBoolean(true)
-      var opresult1167 = callmethod(var_applyAutowah, "==", [1], bool1164);
-      if (Grace_isTrue(opresult1167)) {
-        lineNumber = 619
-        var call1168 = callmethod(var_dom,"window", [0]);
-        var call1169 = callmethod(call1168,"t_effect_autowah", [0]);
-        if1163 = call1169;
-      }
-      lineNumber = 624
+      lineNumber = 646
       var if1170 = var_done;
-      lineNumber = 621
+      lineNumber = 643
       var bool1171 = new GraceBoolean(true)
-      var opresult1174 = callmethod(var_applyCheby, "==", [1], bool1171);
+      var opresult1174 = callmethod(var_applyChorus, "==", [1], bool1171);
       if (Grace_isTrue(opresult1174)) {
-        lineNumber = 622
+        lineNumber = 644
         var call1175 = callmethod(var_dom,"window", [0]);
-        var call1176 = callmethod(call1175,"t_effect_cheby", [0]);
+        var call1176 = callmethod(call1175,"t_effect_chorus", [0]);
         if1170 = call1176;
       }
-      lineNumber = 624
-      var call1177 = callmethod(var_blocks,"apply", [0]);
-      lineNumber = 625
-      var call1178 = callmethod(var_dom,"window", [0]);
-      var call1179 = callmethod(call1178,"t_effect_reset", [0]);
-      return call1179
+      lineNumber = 649
+      var if1177 = var_done;
+      lineNumber = 646
+      var bool1178 = new GraceBoolean(true)
+      var opresult1181 = callmethod(var_applyReverb, "==", [1], bool1178);
+      if (Grace_isTrue(opresult1181)) {
+        lineNumber = 647
+        var call1182 = callmethod(var_dom,"window", [0]);
+        var call1183 = callmethod(call1182,"t_effect_reverb", [0]);
+        if1177 = call1183;
+      }
+      lineNumber = 652
+      var if1184 = var_done;
+      lineNumber = 649
+      var bool1185 = new GraceBoolean(true)
+      var opresult1188 = callmethod(var_applyAutowah, "==", [1], bool1185);
+      if (Grace_isTrue(opresult1188)) {
+        lineNumber = 650
+        var call1189 = callmethod(var_dom,"window", [0]);
+        var call1190 = callmethod(call1189,"t_effect_autowah", [0]);
+        if1184 = call1190;
+      }
+      lineNumber = 655
+      var if1191 = var_done;
+      lineNumber = 652
+      var bool1192 = new GraceBoolean(true)
+      var opresult1195 = callmethod(var_applyCheby, "==", [1], bool1192);
+      if (Grace_isTrue(opresult1195)) {
+        lineNumber = 653
+        var call1196 = callmethod(var_dom,"window", [0]);
+        var call1197 = callmethod(call1196,"t_effect_cheby", [0]);
+        if1191 = call1197;
+      }
+      lineNumber = 655
+      var call1198 = callmethod(var_blocks,"apply", [0]);
+      lineNumber = 656
+      var call1199 = callmethod(var_dom,"window", [0]);
+      var call1200 = callmethod(call1199,"t_effect_reset", [0]);
+      return call1200
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
         return e.returnvalue;
@@ -4255,38 +4284,38 @@ function gracecode_musical () {
       }
     }
   }
-  func1148.paramCounts = [
+  func1169.paramCounts = [
     1,
   ];
-  func1148.variableArities = [
+  func1169.variableArities = [
     false,
   ];
-  this.methods["Effect"] = func1148;
-  func1148.definitionLine = 611;
-  func1148.definitionModule = "musical";
-  lineNumber = 628
-  var func1180 = function(argcv) {
+  this.methods["Effect"] = func1169;
+  func1169.definitionLine = 642;
+  func1169.definitionModule = "musical";
+  lineNumber = 659
+  var func1201 = function(argcv) {
     var curarg = 1;
     var var_blocks = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1180.paramCounts[0])
+    if (argcv[0] !=  func1201.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (Chorus)"));
     var returnTarget = invocationCount;
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 630
-      lineNumber = 629
-      var bool1181 = new GraceBoolean(true)
-      var_applyChorus = bool1181;
-      lineNumber = 630
+      lineNumber = 661
+      lineNumber = 660
+      var bool1202 = new GraceBoolean(true)
+      var_applyChorus = bool1202;
+      lineNumber = 661
       onSelf = true;
-      var call1182 = callmethod(this, "Effect", [1], var_blocks);
-      lineNumber = 632
-      lineNumber = 631
-      var bool1183 = new GraceBoolean(false)
-      var_applyChorus = bool1183;
-      return bool1183
+      var call1203 = callmethod(this, "Effect", [1], var_blocks);
+      lineNumber = 663
+      lineNumber = 662
+      var bool1204 = new GraceBoolean(false)
+      var_applyChorus = bool1204;
+      return bool1204
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
         return e.returnvalue;
@@ -4295,38 +4324,38 @@ function gracecode_musical () {
       }
     }
   }
-  func1180.paramCounts = [
+  func1201.paramCounts = [
     1,
   ];
-  func1180.variableArities = [
+  func1201.variableArities = [
     false,
   ];
-  this.methods["Chorus"] = func1180;
-  func1180.definitionLine = 628;
-  func1180.definitionModule = "musical";
-  lineNumber = 634
-  var func1184 = function(argcv) {
+  this.methods["Chorus"] = func1201;
+  func1201.definitionLine = 659;
+  func1201.definitionModule = "musical";
+  lineNumber = 665
+  var func1205 = function(argcv) {
     var curarg = 1;
     var var_blocks = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1184.paramCounts[0])
+    if (argcv[0] !=  func1205.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (Reverb)"));
     var returnTarget = invocationCount;
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 636
-      lineNumber = 635
-      var bool1185 = new GraceBoolean(true)
-      var_applyReverb = bool1185;
-      lineNumber = 636
+      lineNumber = 667
+      lineNumber = 666
+      var bool1206 = new GraceBoolean(true)
+      var_applyReverb = bool1206;
+      lineNumber = 667
       onSelf = true;
-      var call1186 = callmethod(this, "Effect", [1], var_blocks);
-      lineNumber = 638
-      lineNumber = 637
-      var bool1187 = new GraceBoolean(false)
-      var_applyReverb = bool1187;
-      return bool1187
+      var call1207 = callmethod(this, "Effect", [1], var_blocks);
+      lineNumber = 669
+      lineNumber = 668
+      var bool1208 = new GraceBoolean(false)
+      var_applyReverb = bool1208;
+      return bool1208
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
         return e.returnvalue;
@@ -4335,38 +4364,38 @@ function gracecode_musical () {
       }
     }
   }
-  func1184.paramCounts = [
+  func1205.paramCounts = [
     1,
   ];
-  func1184.variableArities = [
+  func1205.variableArities = [
     false,
   ];
-  this.methods["Reverb"] = func1184;
-  func1184.definitionLine = 634;
-  func1184.definitionModule = "musical";
-  lineNumber = 640
-  var func1188 = function(argcv) {
+  this.methods["Reverb"] = func1205;
+  func1205.definitionLine = 665;
+  func1205.definitionModule = "musical";
+  lineNumber = 671
+  var func1209 = function(argcv) {
     var curarg = 1;
     var var_blocks = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1188.paramCounts[0])
+    if (argcv[0] !=  func1209.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (Autowah)"));
     var returnTarget = invocationCount;
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 642
-      lineNumber = 641
-      var bool1189 = new GraceBoolean(true)
-      var_applyAutowah = bool1189;
-      lineNumber = 642
+      lineNumber = 673
+      lineNumber = 672
+      var bool1210 = new GraceBoolean(true)
+      var_applyAutowah = bool1210;
+      lineNumber = 673
       onSelf = true;
-      var call1190 = callmethod(this, "Effect", [1], var_blocks);
-      lineNumber = 644
-      lineNumber = 643
-      var bool1191 = new GraceBoolean(false)
-      var_applyAutowah = bool1191;
-      return bool1191
+      var call1211 = callmethod(this, "Effect", [1], var_blocks);
+      lineNumber = 675
+      lineNumber = 674
+      var bool1212 = new GraceBoolean(false)
+      var_applyAutowah = bool1212;
+      return bool1212
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
         return e.returnvalue;
@@ -4375,38 +4404,38 @@ function gracecode_musical () {
       }
     }
   }
-  func1188.paramCounts = [
+  func1209.paramCounts = [
     1,
   ];
-  func1188.variableArities = [
+  func1209.variableArities = [
     false,
   ];
-  this.methods["Autowah"] = func1188;
-  func1188.definitionLine = 640;
-  func1188.definitionModule = "musical";
-  lineNumber = 646
-  var func1192 = function(argcv) {
+  this.methods["Autowah"] = func1209;
+  func1209.definitionLine = 671;
+  func1209.definitionModule = "musical";
+  lineNumber = 677
+  var func1213 = function(argcv) {
     var curarg = 1;
     var var_blocks = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1192.paramCounts[0])
+    if (argcv[0] !=  func1213.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (Cheby)"));
     var returnTarget = invocationCount;
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 648
-      lineNumber = 647
-      var bool1193 = new GraceBoolean(true)
-      var_applyCheby = bool1193;
-      lineNumber = 648
+      lineNumber = 679
+      lineNumber = 678
+      var bool1214 = new GraceBoolean(true)
+      var_applyCheby = bool1214;
+      lineNumber = 679
       onSelf = true;
-      var call1194 = callmethod(this, "Effect", [1], var_blocks);
-      lineNumber = 650
-      lineNumber = 649
-      var bool1195 = new GraceBoolean(false)
-      var_applyCheby = bool1195;
-      return bool1195
+      var call1215 = callmethod(this, "Effect", [1], var_blocks);
+      lineNumber = 681
+      lineNumber = 680
+      var bool1216 = new GraceBoolean(false)
+      var_applyCheby = bool1216;
+      return bool1216
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
         return e.returnvalue;
@@ -4415,30 +4444,30 @@ function gracecode_musical () {
       }
     }
   }
-  func1192.paramCounts = [
+  func1213.paramCounts = [
     1,
   ];
-  func1192.variableArities = [
+  func1213.variableArities = [
     false,
   ];
-  this.methods["Cheby"] = func1192;
-  func1192.definitionLine = 646;
-  func1192.definitionModule = "musical";
-  lineNumber = 654
-  var func1196 = function(argcv) {
+  this.methods["Cheby"] = func1213;
+  func1213.definitionLine = 677;
+  func1213.definitionModule = "musical";
+  lineNumber = 685
+  var func1217 = function(argcv) {
     var curarg = 1;
     var var_bpm = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1196.paramCounts[0])
+    if (argcv[0] !=  func1217.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (SetBPM)"));
     var returnTarget = invocationCount;
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 655
-      var call1197 = callmethod(var_dom,"window", [0]);
-      var call1198 = callmethod(call1197,"t_bpm", [1], var_bpm);
-      return call1198
+      lineNumber = 686
+      var call1218 = callmethod(var_dom,"window", [0]);
+      var call1219 = callmethod(call1218,"t_bpm", [1], var_bpm);
+      return call1219
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
         return e.returnvalue;
@@ -4447,15 +4476,15 @@ function gracecode_musical () {
       }
     }
   }
-  func1196.paramCounts = [
+  func1217.paramCounts = [
     1,
   ];
-  func1196.variableArities = [
+  func1217.variableArities = [
     false,
   ];
-  this.methods["SetBPM"] = func1196;
-  func1196.definitionLine = 654;
-  func1196.definitionModule = "musical";
+  this.methods["SetBPM"] = func1217;
+  func1217.definitionLine = 685;
+  func1217.definitionModule = "musical";
   lineNumber = 1
   // Import of mgcollections
   if (typeof gracecode_mgcollections == 'undefined')
@@ -4481,17 +4510,17 @@ function gracecode_musical () {
       new GraceString('could not find module sp'));
   var var_sp = do_import("StandardPrelude", gracecode_StandardPrelude);
   lineNumber = 6
-  var call1199 = callmethod(var_sp,"new()object", [0, 1], this);
-  this.superobj = call1199;
-  this.data = call1199.data;
-  this._value = call1199._value;
+  var call1220 = callmethod(var_sp,"new()object", [0, 1], this);
+  this.superobj = call1220;
+  this.data = call1220.data;
+  this._value = call1220._value;
   lineNumber = 8
   lineNumber = 9
   var var_document;
-  lineNumber = 655
-  var func1200 = function(argcv) {
+  lineNumber = 686
+  var func1221 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func1200.paramCounts[0])
+    if (argcv[0] !=  func1221.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (document)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -4507,21 +4536,21 @@ function gracecode_musical () {
       }
     }
   }
-  func1200.paramCounts = [
+  func1221.paramCounts = [
     0,
   ];
-  func1200.variableArities = [
+  func1221.variableArities = [
     false,
   ];
-  this.methods["document"] = func1200;
-  func1200.definitionLine = 655;
-  func1200.definitionModule = "musical";
-  lineNumber = 655
-  var func1201 = function(argcv) {
+  this.methods["document"] = func1221;
+  func1221.definitionLine = 686;
+  func1221.definitionModule = "musical";
+  lineNumber = 686
+  var func1222 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1201.paramCounts[0])
+    if (argcv[0] !=  func1222.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (document:=)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -4537,21 +4566,21 @@ function gracecode_musical () {
       }
     }
   }
-  func1201.paramCounts = [
+  func1222.paramCounts = [
     1,
   ];
-  func1201.variableArities = [
+  func1222.variableArities = [
     false,
   ];
-  this.methods["document:="] = func1201;
-  func1201.definitionLine = 655;
-  func1201.definitionModule = "musical";
+  this.methods["document:="] = func1222;
+  func1222.definitionLine = 686;
+  func1222.definitionModule = "musical";
   lineNumber = 10
   var var_canvas;
-  lineNumber = 655
-  var func1202 = function(argcv) {
+  lineNumber = 686
+  var func1223 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func1202.paramCounts[0])
+    if (argcv[0] !=  func1223.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (canvas)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -4567,21 +4596,21 @@ function gracecode_musical () {
       }
     }
   }
-  func1202.paramCounts = [
+  func1223.paramCounts = [
     0,
   ];
-  func1202.variableArities = [
+  func1223.variableArities = [
     false,
   ];
-  this.methods["canvas"] = func1202;
-  func1202.definitionLine = 655;
-  func1202.definitionModule = "musical";
-  lineNumber = 655
-  var func1203 = function(argcv) {
+  this.methods["canvas"] = func1223;
+  func1223.definitionLine = 686;
+  func1223.definitionModule = "musical";
+  lineNumber = 686
+  var func1224 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1203.paramCounts[0])
+    if (argcv[0] !=  func1224.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (canvas:=)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -4597,21 +4626,21 @@ function gracecode_musical () {
       }
     }
   }
-  func1203.paramCounts = [
+  func1224.paramCounts = [
     1,
   ];
-  func1203.variableArities = [
+  func1224.variableArities = [
     false,
   ];
-  this.methods["canvas:="] = func1203;
-  func1203.definitionLine = 655;
-  func1203.definitionModule = "musical";
+  this.methods["canvas:="] = func1224;
+  func1224.definitionLine = 686;
+  func1224.definitionModule = "musical";
   lineNumber = 11
   var var_backingCanvas;
-  lineNumber = 655
-  var func1204 = function(argcv) {
+  lineNumber = 686
+  var func1225 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func1204.paramCounts[0])
+    if (argcv[0] !=  func1225.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (backingCanvas)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -4627,21 +4656,21 @@ function gracecode_musical () {
       }
     }
   }
-  func1204.paramCounts = [
+  func1225.paramCounts = [
     0,
   ];
-  func1204.variableArities = [
+  func1225.variableArities = [
     false,
   ];
-  this.methods["backingCanvas"] = func1204;
-  func1204.definitionLine = 655;
-  func1204.definitionModule = "musical";
-  lineNumber = 655
-  var func1205 = function(argcv) {
+  this.methods["backingCanvas"] = func1225;
+  func1225.definitionLine = 686;
+  func1225.definitionModule = "musical";
+  lineNumber = 686
+  var func1226 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1205.paramCounts[0])
+    if (argcv[0] !=  func1226.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (backingCanvas:=)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -4657,21 +4686,21 @@ function gracecode_musical () {
       }
     }
   }
-  func1205.paramCounts = [
+  func1226.paramCounts = [
     1,
   ];
-  func1205.variableArities = [
+  func1226.variableArities = [
     false,
   ];
-  this.methods["backingCanvas:="] = func1205;
-  func1205.definitionLine = 655;
-  func1205.definitionModule = "musical";
+  this.methods["backingCanvas:="] = func1226;
+  func1226.definitionLine = 686;
+  func1226.definitionModule = "musical";
   lineNumber = 12
   var var_backingContext;
-  lineNumber = 655
-  var func1206 = function(argcv) {
+  lineNumber = 686
+  var func1227 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func1206.paramCounts[0])
+    if (argcv[0] !=  func1227.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (backingContext)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -4687,21 +4716,21 @@ function gracecode_musical () {
       }
     }
   }
-  func1206.paramCounts = [
+  func1227.paramCounts = [
     0,
   ];
-  func1206.variableArities = [
+  func1227.variableArities = [
     false,
   ];
-  this.methods["backingContext"] = func1206;
-  func1206.definitionLine = 655;
-  func1206.definitionModule = "musical";
-  lineNumber = 655
-  var func1207 = function(argcv) {
+  this.methods["backingContext"] = func1227;
+  func1227.definitionLine = 686;
+  func1227.definitionModule = "musical";
+  lineNumber = 686
+  var func1228 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1207.paramCounts[0])
+    if (argcv[0] !=  func1228.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (backingContext:=)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -4717,21 +4746,21 @@ function gracecode_musical () {
       }
     }
   }
-  func1207.paramCounts = [
+  func1228.paramCounts = [
     1,
   ];
-  func1207.variableArities = [
+  func1228.variableArities = [
     false,
   ];
-  this.methods["backingContext:="] = func1207;
-  func1207.definitionLine = 655;
-  func1207.definitionModule = "musical";
+  this.methods["backingContext:="] = func1228;
+  func1228.definitionLine = 686;
+  func1228.definitionModule = "musical";
   lineNumber = 13
   var var_mouseDownListener;
-  lineNumber = 655
-  var func1208 = function(argcv) {
+  lineNumber = 686
+  var func1229 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func1208.paramCounts[0])
+    if (argcv[0] !=  func1229.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (mouseDownListener)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -4747,21 +4776,21 @@ function gracecode_musical () {
       }
     }
   }
-  func1208.paramCounts = [
+  func1229.paramCounts = [
     0,
   ];
-  func1208.variableArities = [
+  func1229.variableArities = [
     false,
   ];
-  this.methods["mouseDownListener"] = func1208;
-  func1208.definitionLine = 655;
-  func1208.definitionModule = "musical";
-  lineNumber = 655
-  var func1209 = function(argcv) {
+  this.methods["mouseDownListener"] = func1229;
+  func1229.definitionLine = 686;
+  func1229.definitionModule = "musical";
+  lineNumber = 686
+  var func1230 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1209.paramCounts[0])
+    if (argcv[0] !=  func1230.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (mouseDownListener:=)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -4777,21 +4806,21 @@ function gracecode_musical () {
       }
     }
   }
-  func1209.paramCounts = [
+  func1230.paramCounts = [
     1,
   ];
-  func1209.variableArities = [
+  func1230.variableArities = [
     false,
   ];
-  this.methods["mouseDownListener:="] = func1209;
-  func1209.definitionLine = 655;
-  func1209.definitionModule = "musical";
+  this.methods["mouseDownListener:="] = func1230;
+  func1230.definitionLine = 686;
+  func1230.definitionModule = "musical";
   lineNumber = 15
   var var_mouseMoveListener;
-  lineNumber = 655
-  var func1210 = function(argcv) {
+  lineNumber = 686
+  var func1231 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func1210.paramCounts[0])
+    if (argcv[0] !=  func1231.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (mouseMoveListener)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -4807,21 +4836,21 @@ function gracecode_musical () {
       }
     }
   }
-  func1210.paramCounts = [
+  func1231.paramCounts = [
     0,
   ];
-  func1210.variableArities = [
+  func1231.variableArities = [
     false,
   ];
-  this.methods["mouseMoveListener"] = func1210;
-  func1210.definitionLine = 655;
-  func1210.definitionModule = "musical";
-  lineNumber = 655
-  var func1211 = function(argcv) {
+  this.methods["mouseMoveListener"] = func1231;
+  func1231.definitionLine = 686;
+  func1231.definitionModule = "musical";
+  lineNumber = 686
+  var func1232 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1211.paramCounts[0])
+    if (argcv[0] !=  func1232.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (mouseMoveListener:=)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -4837,24 +4866,24 @@ function gracecode_musical () {
       }
     }
   }
-  func1211.paramCounts = [
+  func1232.paramCounts = [
     1,
   ];
-  func1211.variableArities = [
+  func1232.variableArities = [
     false,
   ];
-  this.methods["mouseMoveListener:="] = func1211;
-  func1211.definitionLine = 655;
-  func1211.definitionModule = "musical";
+  this.methods["mouseMoveListener:="] = func1232;
+  func1232.definitionLine = 686;
+  func1232.definitionModule = "musical";
   lineNumber = 15
   lineNumber = 16
   lineNumber = 15
-  var call1212 = callmethod(var_dom,"window", [0]);
-  var call1213 = callmethod(call1212,"Math", [0]);
-  var var_trig = call1213;
-  var func1214 = function(argcv) {
+  var call1233 = callmethod(var_dom,"window", [0]);
+  var call1234 = callmethod(call1233,"Math", [0]);
+  var var_trig = call1234;
+  var func1235 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func1214.paramCounts[0])
+    if (argcv[0] !=  func1235.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (trig)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -4869,15 +4898,15 @@ function gracecode_musical () {
       }
     }
   }
-  func1214.paramCounts = [
+  func1235.paramCounts = [
     0,
   ];
-  func1214.variableArities = [
+  func1235.variableArities = [
     false,
   ];
-  this.methods["trig"] = func1214;
-  func1214.definitionLine = 15;
-  func1214.definitionModule = "musical";
+  this.methods["trig"] = func1235;
+  func1235.definitionLine = 15;
+  func1235.definitionModule = "musical";
   lineNumber = 16;
   moduleName = "musical";
   lineNumber = 15
@@ -4890,9 +4919,9 @@ function gracecode_musical () {
   lineNumber = 16
   var var_PI = new GraceNum(3.14159);
   lineNumber = 15
-  var func1215 = function(argcv) {
+  var func1236 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func1215.paramCounts[0])
+    if (argcv[0] !=  func1236.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (PI)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -4908,15 +4937,15 @@ function gracecode_musical () {
       }
     }
   }
-  func1215.paramCounts = [
+  func1236.paramCounts = [
     0,
   ];
-  func1215.variableArities = [
+  func1236.variableArities = [
     false,
   ];
-  this.methods["PI"] = func1215;
-  func1215.definitionLine = 15;
-  func1215.definitionModule = "musical";
+  this.methods["PI"] = func1236;
+  func1236.definitionLine = 15;
+  func1236.definitionModule = "musical";
   lineNumber = 18;
   moduleName = "musical";
   lineNumber = 16
@@ -4928,12 +4957,12 @@ function gracecode_musical () {
   lineNumber = 18
   lineNumber = 19
   lineNumber = 18
-  var bool1216 = new GraceBoolean(false)
-  var var_stopRunning = bool1216;
+  var bool1237 = new GraceBoolean(false)
+  var var_stopRunning = bool1237;
   lineNumber = 15
-  var func1217 = function(argcv) {
+  var func1238 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func1217.paramCounts[0])
+    if (argcv[0] !=  func1238.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (stopRunning)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -4949,21 +4978,21 @@ function gracecode_musical () {
       }
     }
   }
-  func1217.paramCounts = [
+  func1238.paramCounts = [
     0,
   ];
-  func1217.variableArities = [
+  func1238.variableArities = [
     false,
   ];
-  this.methods["stopRunning"] = func1217;
-  func1217.definitionLine = 15;
-  func1217.definitionModule = "musical";
+  this.methods["stopRunning"] = func1238;
+  func1238.definitionLine = 15;
+  func1238.definitionModule = "musical";
   lineNumber = 15
-  var func1218 = function(argcv) {
+  var func1239 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1218.paramCounts[0])
+    if (argcv[0] !=  func1239.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (stopRunning:=)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -4979,15 +5008,15 @@ function gracecode_musical () {
       }
     }
   }
-  func1218.paramCounts = [
+  func1239.paramCounts = [
     1,
   ];
-  func1218.variableArities = [
+  func1239.variableArities = [
     false,
   ];
-  this.methods["stopRunning:="] = func1218;
-  func1218.definitionLine = 15;
-  func1218.definitionModule = "musical";
+  this.methods["stopRunning:="] = func1239;
+  func1239.definitionLine = 15;
+  func1239.definitionModule = "musical";
   lineNumber = 19;
   moduleName = "musical";
   lineNumber = 18
@@ -4998,12 +5027,12 @@ function gracecode_musical () {
             + "initial value of var 'stopRunning' to be of type Unknown"))
   lineNumber = 20
   lineNumber = 19
-  var bool1219 = new GraceBoolean(false)
-  var var_initialised = bool1219;
+  var bool1240 = new GraceBoolean(false)
+  var var_initialised = bool1240;
   lineNumber = 15
-  var func1220 = function(argcv) {
+  var func1241 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func1220.paramCounts[0])
+    if (argcv[0] !=  func1241.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (initialised)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -5019,21 +5048,21 @@ function gracecode_musical () {
       }
     }
   }
-  func1220.paramCounts = [
+  func1241.paramCounts = [
     0,
   ];
-  func1220.variableArities = [
+  func1241.variableArities = [
     false,
   ];
-  this.methods["initialised"] = func1220;
-  func1220.definitionLine = 15;
-  func1220.definitionModule = "musical";
+  this.methods["initialised"] = func1241;
+  func1241.definitionLine = 15;
+  func1241.definitionModule = "musical";
   lineNumber = 15
-  var func1221 = function(argcv) {
+  var func1242 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1221.paramCounts[0])
+    if (argcv[0] !=  func1242.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (initialised:=)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -5049,15 +5078,15 @@ function gracecode_musical () {
       }
     }
   }
-  func1221.paramCounts = [
+  func1242.paramCounts = [
     1,
   ];
-  func1221.variableArities = [
+  func1242.variableArities = [
     false,
   ];
-  this.methods["initialised:="] = func1221;
-  func1221.definitionLine = 15;
-  func1221.definitionModule = "musical";
+  this.methods["initialised:="] = func1242;
+  func1242.definitionLine = 15;
+  func1242.definitionModule = "musical";
   lineNumber = 20;
   moduleName = "musical";
   lineNumber = 19
@@ -5068,12 +5097,12 @@ function gracecode_musical () {
             + "initial value of var 'initialised' to be of type Unknown"))
   lineNumber = 21
   lineNumber = 20
-  var string1222 = new GraceString("white");
-  var var_backgroundColour = string1222;
+  var string1243 = new GraceString("white");
+  var var_backgroundColour = string1243;
   lineNumber = 15
-  var func1223 = function(argcv) {
+  var func1244 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func1223.paramCounts[0])
+    if (argcv[0] !=  func1244.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (backgroundColour)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -5089,21 +5118,21 @@ function gracecode_musical () {
       }
     }
   }
-  func1223.paramCounts = [
+  func1244.paramCounts = [
     0,
   ];
-  func1223.variableArities = [
+  func1244.variableArities = [
     false,
   ];
-  this.methods["backgroundColour"] = func1223;
-  func1223.definitionLine = 15;
-  func1223.definitionModule = "musical";
+  this.methods["backgroundColour"] = func1244;
+  func1244.definitionLine = 15;
+  func1244.definitionModule = "musical";
   lineNumber = 15
-  var func1224 = function(argcv) {
+  var func1245 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1224.paramCounts[0])
+    if (argcv[0] !=  func1245.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (backgroundColour:=)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -5119,15 +5148,15 @@ function gracecode_musical () {
       }
     }
   }
-  func1224.paramCounts = [
+  func1245.paramCounts = [
     1,
   ];
-  func1224.variableArities = [
+  func1245.variableArities = [
     false,
   ];
-  this.methods["backgroundColour:="] = func1224;
-  func1224.definitionLine = 15;
-  func1224.definitionModule = "musical";
+  this.methods["backgroundColour:="] = func1245;
+  func1245.definitionLine = 15;
+  func1245.definitionModule = "musical";
   lineNumber = 21;
   moduleName = "musical";
   lineNumber = 20
@@ -5138,12 +5167,12 @@ function gracecode_musical () {
             + "initial value of var 'backgroundColour' to be of type Unknown"))
   lineNumber = 22
   lineNumber = 21
-  var call1225 = callmethod(var_collections,"list", [0]);
-  var call1226 = callmethod(call1225,"new", [0]);
-  var var_registeredObjects = call1226;
-  var func1227 = function(argcv) {
+  var call1246 = callmethod(var_collections,"list", [0]);
+  var call1247 = callmethod(call1246,"new", [0]);
+  var var_registeredObjects = call1247;
+  var func1248 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func1227.paramCounts[0])
+    if (argcv[0] !=  func1248.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (registeredObjects)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -5158,15 +5187,15 @@ function gracecode_musical () {
       }
     }
   }
-  func1227.paramCounts = [
+  func1248.paramCounts = [
     0,
   ];
-  func1227.variableArities = [
+  func1248.variableArities = [
     false,
   ];
-  this.methods["registeredObjects"] = func1227;
-  func1227.definitionLine = 21;
-  func1227.definitionModule = "musical";
+  this.methods["registeredObjects"] = func1248;
+  func1248.definitionLine = 21;
+  func1248.definitionModule = "musical";
   lineNumber = 22;
   moduleName = "musical";
   lineNumber = 21
@@ -5177,12 +5206,12 @@ function gracecode_musical () {
             + "initial value of def 'registeredObjects' to be of type Unknown"))
   lineNumber = 23
   lineNumber = 22
-  var call1228 = callmethod(var_collections,"list", [0]);
-  var call1229 = callmethod(call1228,"new", [0]);
-  var var_stepBlocks = call1229;
-  var func1230 = function(argcv) {
+  var call1249 = callmethod(var_collections,"list", [0]);
+  var call1250 = callmethod(call1249,"new", [0]);
+  var var_stepBlocks = call1250;
+  var func1251 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func1230.paramCounts[0])
+    if (argcv[0] !=  func1251.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (stepBlocks)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -5197,15 +5226,15 @@ function gracecode_musical () {
       }
     }
   }
-  func1230.paramCounts = [
+  func1251.paramCounts = [
     0,
   ];
-  func1230.variableArities = [
+  func1251.variableArities = [
     false,
   ];
-  this.methods["stepBlocks"] = func1230;
-  func1230.definitionLine = 22;
-  func1230.definitionModule = "musical";
+  this.methods["stepBlocks"] = func1251;
+  func1251.definitionLine = 22;
+  func1251.definitionModule = "musical";
   lineNumber = 23;
   moduleName = "musical";
   lineNumber = 22
@@ -5216,12 +5245,12 @@ function gracecode_musical () {
             + "initial value of def 'stepBlocks' to be of type Unknown"))
   lineNumber = 25
   lineNumber = 23
-  var call1231 = callmethod(var_collections,"map", [0]);
-  var call1232 = callmethod(call1231,"new", [0]);
-  var var_audioTags = call1232;
-  var func1233 = function(argcv) {
+  var call1252 = callmethod(var_collections,"map", [0]);
+  var call1253 = callmethod(call1252,"new", [0]);
+  var var_audioTags = call1253;
+  var func1254 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func1233.paramCounts[0])
+    if (argcv[0] !=  func1254.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (audioTags)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -5236,15 +5265,15 @@ function gracecode_musical () {
       }
     }
   }
-  func1233.paramCounts = [
+  func1254.paramCounts = [
     0,
   ];
-  func1233.variableArities = [
+  func1254.variableArities = [
     false,
   ];
-  this.methods["audioTags"] = func1233;
-  func1233.definitionLine = 23;
-  func1233.definitionModule = "musical";
+  this.methods["audioTags"] = func1254;
+  func1254.definitionLine = 23;
+  func1254.definitionModule = "musical";
   lineNumber = 25;
   moduleName = "musical";
   lineNumber = 23
@@ -5257,9 +5286,9 @@ function gracecode_musical () {
   lineNumber = 26
   var var_canvasWidth;
   lineNumber = 23
-  var func1234 = function(argcv) {
+  var func1255 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func1234.paramCounts[0])
+    if (argcv[0] !=  func1255.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (canvasWidth)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -5275,21 +5304,21 @@ function gracecode_musical () {
       }
     }
   }
-  func1234.paramCounts = [
+  func1255.paramCounts = [
     0,
   ];
-  func1234.variableArities = [
+  func1255.variableArities = [
     false,
   ];
-  this.methods["canvasWidth"] = func1234;
-  func1234.definitionLine = 23;
-  func1234.definitionModule = "musical";
+  this.methods["canvasWidth"] = func1255;
+  func1255.definitionLine = 23;
+  func1255.definitionModule = "musical";
   lineNumber = 23
-  var func1235 = function(argcv) {
+  var func1256 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1235.paramCounts[0])
+    if (argcv[0] !=  func1256.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (canvasWidth:=)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -5305,21 +5334,21 @@ function gracecode_musical () {
       }
     }
   }
-  func1235.paramCounts = [
+  func1256.paramCounts = [
     1,
   ];
-  func1235.variableArities = [
+  func1256.variableArities = [
     false,
   ];
-  this.methods["canvasWidth:="] = func1235;
-  func1235.definitionLine = 23;
-  func1235.definitionModule = "musical";
+  this.methods["canvasWidth:="] = func1256;
+  func1256.definitionLine = 23;
+  func1256.definitionModule = "musical";
   lineNumber = 28
   var var_canvasHeight;
   lineNumber = 23
-  var func1236 = function(argcv) {
+  var func1257 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func1236.paramCounts[0])
+    if (argcv[0] !=  func1257.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (canvasHeight)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -5335,21 +5364,21 @@ function gracecode_musical () {
       }
     }
   }
-  func1236.paramCounts = [
+  func1257.paramCounts = [
     0,
   ];
-  func1236.variableArities = [
+  func1257.variableArities = [
     false,
   ];
-  this.methods["canvasHeight"] = func1236;
-  func1236.definitionLine = 23;
-  func1236.definitionModule = "musical";
+  this.methods["canvasHeight"] = func1257;
+  func1257.definitionLine = 23;
+  func1257.definitionModule = "musical";
   lineNumber = 23
-  var func1237 = function(argcv) {
+  var func1258 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1237.paramCounts[0])
+    if (argcv[0] !=  func1258.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (canvasHeight:=)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -5365,24 +5394,24 @@ function gracecode_musical () {
       }
     }
   }
-  func1237.paramCounts = [
+  func1258.paramCounts = [
     1,
   ];
-  func1237.variableArities = [
+  func1258.variableArities = [
     false,
   ];
-  this.methods["canvasHeight:="] = func1237;
-  func1237.definitionLine = 23;
-  func1237.definitionModule = "musical";
+  this.methods["canvasHeight:="] = func1258;
+  func1258.definitionLine = 23;
+  func1258.definitionModule = "musical";
   lineNumber = 28
   lineNumber = 29
   lineNumber = 28
-  var string1238 = new GraceString("left");
-  var var_left = string1238;
+  var string1259 = new GraceString("left");
+  var var_left = string1259;
   lineNumber = 23
-  var func1239 = function(argcv) {
+  var func1260 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func1239.paramCounts[0])
+    if (argcv[0] !=  func1260.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (left)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -5398,15 +5427,15 @@ function gracecode_musical () {
       }
     }
   }
-  func1239.paramCounts = [
+  func1260.paramCounts = [
     0,
   ];
-  func1239.variableArities = [
+  func1260.variableArities = [
     false,
   ];
-  this.methods["left"] = func1239;
-  func1239.definitionLine = 23;
-  func1239.definitionModule = "musical";
+  this.methods["left"] = func1260;
+  func1260.definitionLine = 23;
+  func1260.definitionModule = "musical";
   lineNumber = 29;
   moduleName = "musical";
   lineNumber = 28
@@ -5417,12 +5446,12 @@ function gracecode_musical () {
             + "initial value of def 'left' to be of type Unknown"))
   lineNumber = 30
   lineNumber = 29
-  var string1240 = new GraceString("right");
-  var var_right = string1240;
+  var string1261 = new GraceString("right");
+  var var_right = string1261;
   lineNumber = 23
-  var func1241 = function(argcv) {
+  var func1262 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func1241.paramCounts[0])
+    if (argcv[0] !=  func1262.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (right)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -5438,15 +5467,15 @@ function gracecode_musical () {
       }
     }
   }
-  func1241.paramCounts = [
+  func1262.paramCounts = [
     0,
   ];
-  func1241.variableArities = [
+  func1262.variableArities = [
     false,
   ];
-  this.methods["right"] = func1241;
-  func1241.definitionLine = 23;
-  func1241.definitionModule = "musical";
+  this.methods["right"] = func1262;
+  func1262.definitionLine = 23;
+  func1262.definitionModule = "musical";
   lineNumber = 30;
   moduleName = "musical";
   lineNumber = 29
@@ -5457,12 +5486,12 @@ function gracecode_musical () {
             + "initial value of def 'right' to be of type Unknown"))
   lineNumber = 31
   lineNumber = 30
-  var string1242 = new GraceString("top");
-  var var_top = string1242;
+  var string1263 = new GraceString("top");
+  var var_top = string1263;
   lineNumber = 23
-  var func1243 = function(argcv) {
+  var func1264 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func1243.paramCounts[0])
+    if (argcv[0] !=  func1264.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (top)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -5478,15 +5507,15 @@ function gracecode_musical () {
       }
     }
   }
-  func1243.paramCounts = [
+  func1264.paramCounts = [
     0,
   ];
-  func1243.variableArities = [
+  func1264.variableArities = [
     false,
   ];
-  this.methods["top"] = func1243;
-  func1243.definitionLine = 23;
-  func1243.definitionModule = "musical";
+  this.methods["top"] = func1264;
+  func1264.definitionLine = 23;
+  func1264.definitionModule = "musical";
   lineNumber = 31;
   moduleName = "musical";
   lineNumber = 30
@@ -5497,12 +5526,12 @@ function gracecode_musical () {
             + "initial value of def 'top' to be of type Unknown"))
   lineNumber = 33
   lineNumber = 31
-  var string1244 = new GraceString("bottom");
-  var var_bottom = string1244;
+  var string1265 = new GraceString("bottom");
+  var var_bottom = string1265;
   lineNumber = 23
-  var func1245 = function(argcv) {
+  var func1266 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func1245.paramCounts[0])
+    if (argcv[0] !=  func1266.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (bottom)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -5518,15 +5547,15 @@ function gracecode_musical () {
       }
     }
   }
-  func1245.paramCounts = [
+  func1266.paramCounts = [
     0,
   ];
-  func1245.variableArities = [
+  func1266.variableArities = [
     false,
   ];
-  this.methods["bottom"] = func1245;
-  func1245.definitionLine = 23;
-  func1245.definitionModule = "musical";
+  this.methods["bottom"] = func1266;
+  func1266.definitionLine = 23;
+  func1266.definitionModule = "musical";
   lineNumber = 33;
   moduleName = "musical";
   lineNumber = 31
@@ -5539,9 +5568,9 @@ function gracecode_musical () {
   lineNumber = 34
   var var_centre;
   lineNumber = 23
-  var func1246 = function(argcv) {
+  var func1267 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func1246.paramCounts[0])
+    if (argcv[0] !=  func1267.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (centre)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -5557,21 +5586,21 @@ function gracecode_musical () {
       }
     }
   }
-  func1246.paramCounts = [
+  func1267.paramCounts = [
     0,
   ];
-  func1246.variableArities = [
+  func1267.variableArities = [
     false,
   ];
-  this.methods["centre"] = func1246;
-  func1246.definitionLine = 23;
-  func1246.definitionModule = "musical";
+  this.methods["centre"] = func1267;
+  func1267.definitionLine = 23;
+  func1267.definitionModule = "musical";
   lineNumber = 23
-  var func1247 = function(argcv) {
+  var func1268 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1247.paramCounts[0])
+    if (argcv[0] !=  func1268.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (centre:=)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -5587,21 +5616,21 @@ function gracecode_musical () {
       }
     }
   }
-  func1247.paramCounts = [
+  func1268.paramCounts = [
     1,
   ];
-  func1247.variableArities = [
+  func1268.variableArities = [
     false,
   ];
-  this.methods["centre:="] = func1247;
-  func1247.definitionLine = 23;
-  func1247.definitionModule = "musical";
+  this.methods["centre:="] = func1268;
+  func1268.definitionLine = 23;
+  func1268.definitionModule = "musical";
   lineNumber = 35
   var var_leftCentre;
   lineNumber = 23
-  var func1248 = function(argcv) {
+  var func1269 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func1248.paramCounts[0])
+    if (argcv[0] !=  func1269.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (leftCentre)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -5617,21 +5646,21 @@ function gracecode_musical () {
       }
     }
   }
-  func1248.paramCounts = [
+  func1269.paramCounts = [
     0,
   ];
-  func1248.variableArities = [
+  func1269.variableArities = [
     false,
   ];
-  this.methods["leftCentre"] = func1248;
-  func1248.definitionLine = 23;
-  func1248.definitionModule = "musical";
+  this.methods["leftCentre"] = func1269;
+  func1269.definitionLine = 23;
+  func1269.definitionModule = "musical";
   lineNumber = 23
-  var func1249 = function(argcv) {
+  var func1270 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1249.paramCounts[0])
+    if (argcv[0] !=  func1270.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (leftCentre:=)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -5647,21 +5676,21 @@ function gracecode_musical () {
       }
     }
   }
-  func1249.paramCounts = [
+  func1270.paramCounts = [
     1,
   ];
-  func1249.variableArities = [
+  func1270.variableArities = [
     false,
   ];
-  this.methods["leftCentre:="] = func1249;
-  func1249.definitionLine = 23;
-  func1249.definitionModule = "musical";
+  this.methods["leftCentre:="] = func1270;
+  func1270.definitionLine = 23;
+  func1270.definitionModule = "musical";
   lineNumber = 37
   var var_rightCentre;
   lineNumber = 23
-  var func1250 = function(argcv) {
+  var func1271 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func1250.paramCounts[0])
+    if (argcv[0] !=  func1271.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (rightCentre)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -5677,21 +5706,21 @@ function gracecode_musical () {
       }
     }
   }
-  func1250.paramCounts = [
+  func1271.paramCounts = [
     0,
   ];
-  func1250.variableArities = [
+  func1271.variableArities = [
     false,
   ];
-  this.methods["rightCentre"] = func1250;
-  func1250.definitionLine = 23;
-  func1250.definitionModule = "musical";
+  this.methods["rightCentre"] = func1271;
+  func1271.definitionLine = 23;
+  func1271.definitionModule = "musical";
   lineNumber = 23
-  var func1251 = function(argcv) {
+  var func1272 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1251.paramCounts[0])
+    if (argcv[0] !=  func1272.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (rightCentre:=)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -5707,22 +5736,22 @@ function gracecode_musical () {
       }
     }
   }
-  func1251.paramCounts = [
+  func1272.paramCounts = [
     1,
   ];
-  func1251.variableArities = [
+  func1272.variableArities = [
     false,
   ];
-  this.methods["rightCentre:="] = func1251;
-  func1251.definitionLine = 23;
-  func1251.definitionModule = "musical";
+  this.methods["rightCentre:="] = func1272;
+  func1272.definitionLine = 23;
+  func1272.definitionModule = "musical";
   lineNumber = 37
   lineNumber = 38
   var var_above;
   lineNumber = 23
-  var func1252 = function(argcv) {
+  var func1273 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func1252.paramCounts[0])
+    if (argcv[0] !=  func1273.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (above)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -5738,21 +5767,21 @@ function gracecode_musical () {
       }
     }
   }
-  func1252.paramCounts = [
+  func1273.paramCounts = [
     0,
   ];
-  func1252.variableArities = [
+  func1273.variableArities = [
     false,
   ];
-  this.methods["above"] = func1252;
-  func1252.definitionLine = 23;
-  func1252.definitionModule = "musical";
+  this.methods["above"] = func1273;
+  func1273.definitionLine = 23;
+  func1273.definitionModule = "musical";
   lineNumber = 23
-  var func1253 = function(argcv) {
+  var func1274 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1253.paramCounts[0])
+    if (argcv[0] !=  func1274.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (above:=)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -5768,21 +5797,21 @@ function gracecode_musical () {
       }
     }
   }
-  func1253.paramCounts = [
+  func1274.paramCounts = [
     1,
   ];
-  func1253.variableArities = [
+  func1274.variableArities = [
     false,
   ];
-  this.methods["above:="] = func1253;
-  func1253.definitionLine = 23;
-  func1253.definitionModule = "musical";
+  this.methods["above:="] = func1274;
+  func1274.definitionLine = 23;
+  func1274.definitionModule = "musical";
   lineNumber = 40
   var var___916__;
   lineNumber = 23
-  var func1254 = function(argcv) {
+  var func1275 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func1254.paramCounts[0])
+    if (argcv[0] !=  func1275.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (Δ)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -5798,21 +5827,21 @@ function gracecode_musical () {
       }
     }
   }
-  func1254.paramCounts = [
+  func1275.paramCounts = [
     0,
   ];
-  func1254.variableArities = [
+  func1275.variableArities = [
     false,
   ];
-  this.methods["\u0394"] = func1254;
-  func1254.definitionLine = 23;
-  func1254.definitionModule = "musical";
+  this.methods["\u0394"] = func1275;
+  func1275.definitionLine = 23;
+  func1275.definitionModule = "musical";
   lineNumber = 23
-  var func1255 = function(argcv) {
+  var func1276 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1255.paramCounts[0])
+    if (argcv[0] !=  func1276.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (Δ:=)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -5828,19 +5857,19 @@ function gracecode_musical () {
       }
     }
   }
-  func1255.paramCounts = [
+  func1276.paramCounts = [
     1,
   ];
-  func1255.variableArities = [
+  func1276.variableArities = [
     false,
   ];
-  this.methods["\u0394:="] = func1255;
-  func1255.definitionLine = 23;
-  func1255.definitionModule = "musical";
+  this.methods["\u0394:="] = func1276;
+  func1276.definitionLine = 23;
+  func1276.definitionModule = "musical";
   lineNumber = 40
-  var func1256 = function(argcv) {
+  var func1277 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func1256.paramCounts[0])
+    if (argcv[0] !=  func1277.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (point)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -5855,58 +5884,58 @@ function gracecode_musical () {
       }
     }
   }
-  func1256.paramCounts = [
+  func1277.paramCounts = [
     0,
   ];
-  func1256.variableArities = [
+  func1277.variableArities = [
     false,
   ];
-  this.methods["point"] = func1256;
-  func1256.definitionLine = 40;
-  func1256.definitionModule = "musical";
-  var obj1257 = Grace_allocObject();
-  obj1257.definitionModule = "musical";
-  obj1257.definitionLine = 40;
-  obj1257.outer = this;
-  var reader_musical_outer_1258 = function() {
+  this.methods["point"] = func1277;
+  func1277.definitionLine = 40;
+  func1277.definitionModule = "musical";
+  var obj1278 = Grace_allocObject();
+  obj1278.definitionModule = "musical";
+  obj1278.definitionLine = 40;
+  obj1278.outer = this;
+  var reader_musical_outer_1279 = function() {
     return this.outer;
   }
-  obj1257.methods["outer"] = reader_musical_outer_1258;
-  function obj_init_1257() {
+  obj1278.methods["outer"] = reader_musical_outer_1279;
+  function obj_init_1278() {
     var origSuperDepth = superDepth;
-    superDepth = obj1257;
-    obj1257.annotations = [];
-    var func1259 = function(argcv) {
+    superDepth = obj1278;
+    obj1278.annotations = [];
+    var func1280 = function(argcv) {
       var curarg = 1;
       var var_x__39__ = arguments[curarg];
       curarg++;
-      if (argcv[0] !=  func1259.paramCounts[0])
+      if (argcv[0] !=  func1280.paramCounts[0])
         callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (x)"));
       var var_y__39__ = arguments[curarg];
       curarg++;
-      if (argcv[1] !=  func1259.paramCounts[1])
+      if (argcv[1] !=  func1280.paramCounts[1])
         callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 2 (y)"));
       var returnTarget = invocationCount;
       invocationCount++;
       moduleName = "musical";
       try {
-        var obj1260 = Grace_allocObject();
-        obj1260.definitionModule = "musical";
-        obj1260.definitionLine = 40;
-        obj1260.outer = this;
-        var reader_musical_outer_1261 = function() {
+        var obj1281 = Grace_allocObject();
+        obj1281.definitionModule = "musical";
+        obj1281.definitionLine = 40;
+        obj1281.outer = this;
+        var reader_musical_outer_1282 = function() {
           return this.outer;
         }
-        obj1260.methods["outer"] = reader_musical_outer_1261;
-        function obj_init_1260() {
+        obj1281.methods["outer"] = reader_musical_outer_1282;
+        function obj_init_1281() {
           var origSuperDepth = superDepth;
-          superDepth = obj1260;
-          obj1260.annotations = [];
-          var func1262 = function(argcv) {
+          superDepth = obj1281;
+          obj1281.annotations = [];
+          var func1283 = function(argcv) {
             var curarg = 1;
             var var_dx = arguments[curarg];
             curarg++;
-            if (argcv[0] !=  func1262.paramCounts[0])
+            if (argcv[0] !=  func1283.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (left)"));
             var returnTarget = invocationCount;
             invocationCount++;
@@ -5914,116 +5943,11 @@ function gracecode_musical () {
             try {
               lineNumber = 43
               onSelf = true;
-              var call1264 = callmethod(this, "x", [0]);
-              var diff1266 = callmethod(call1264, "-", [1], var_dx);
+              var call1285 = callmethod(this, "x", [0]);
+              var diff1287 = callmethod(call1285, "-", [1], var_dx);
               onSelf = true;
-              var call1267 = callmethod(this, "y", [0]);
-              var call1268 = callmethod(var_point,"x()y", [1, 1], diff1266, call1267);
-              return call1268
-            } catch(e) {
-              if ((e.exctype == 'return') && (e.target == returnTarget)) {
-                return e.returnvalue;
-              } else {
-                throw e;
-              }
-            }
-          }
-          func1262.paramCounts = [
-            1,
-          ];
-          func1262.variableArities = [
-            false,
-          ];
-          obj1260.methods["left"] = func1262;
-          func1262.definitionLine = 43;
-          func1262.definitionModule = "musical";
-          var func1269 = function(argcv) {
-            var curarg = 1;
-            var var_dx = arguments[curarg];
-            curarg++;
-            if (argcv[0] !=  func1269.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (right)"));
-            var returnTarget = invocationCount;
-            invocationCount++;
-            moduleName = "musical";
-            try {
-              lineNumber = 44
-              onSelf = true;
-              var call1271 = callmethod(this, "x", [0]);
-              var opresult1273 = callmethod(call1271, "+", [1], var_dx);
-              onSelf = true;
-              var call1274 = callmethod(this, "y", [0]);
-              var call1275 = callmethod(var_point,"x()y", [1, 1], opresult1273, call1274);
-              return call1275
-            } catch(e) {
-              if ((e.exctype == 'return') && (e.target == returnTarget)) {
-                return e.returnvalue;
-              } else {
-                throw e;
-              }
-            }
-          }
-          func1269.paramCounts = [
-            1,
-          ];
-          func1269.variableArities = [
-            false,
-          ];
-          obj1260.methods["right"] = func1269;
-          func1269.definitionLine = 44;
-          func1269.definitionModule = "musical";
-          var func1276 = function(argcv) {
-            var curarg = 1;
-            var var_dy = arguments[curarg];
-            curarg++;
-            if (argcv[0] !=  func1276.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (up)"));
-            var returnTarget = invocationCount;
-            invocationCount++;
-            moduleName = "musical";
-            try {
-              lineNumber = 45
-              onSelf = true;
-              var call1277 = callmethod(this, "x", [0]);
-              onSelf = true;
-              var call1279 = callmethod(this, "y", [0]);
-              var diff1281 = callmethod(call1279, "-", [1], var_dy);
-              var call1282 = callmethod(var_point,"x()y", [1, 1], call1277, diff1281);
-              return call1282
-            } catch(e) {
-              if ((e.exctype == 'return') && (e.target == returnTarget)) {
-                return e.returnvalue;
-              } else {
-                throw e;
-              }
-            }
-          }
-          func1276.paramCounts = [
-            1,
-          ];
-          func1276.variableArities = [
-            false,
-          ];
-          obj1260.methods["up"] = func1276;
-          func1276.definitionLine = 45;
-          func1276.definitionModule = "musical";
-          var func1283 = function(argcv) {
-            var curarg = 1;
-            var var_dy = arguments[curarg];
-            curarg++;
-            if (argcv[0] !=  func1283.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (down)"));
-            var returnTarget = invocationCount;
-            invocationCount++;
-            moduleName = "musical";
-            try {
-              lineNumber = 46
-              onSelf = true;
-              var call1284 = callmethod(this, "x", [0]);
-              onSelf = true;
-              var call1286 = callmethod(this, "y", [0]);
-              var opresult1288 = callmethod(call1286, "+", [1], var_dy);
-              var call1289 = callmethod(var_point,"x()y", [1, 1], call1284, opresult1288);
+              var call1288 = callmethod(this, "y", [0]);
+              var call1289 = callmethod(var_point,"x()y", [1, 1], diff1287, call1288);
               return call1289
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -6039,17 +5963,122 @@ function gracecode_musical () {
           func1283.variableArities = [
             false,
           ];
-          obj1260.methods["down"] = func1283;
-          func1283.definitionLine = 46;
+          obj1281.methods["left"] = func1283;
+          func1283.definitionLine = 43;
           func1283.definitionModule = "musical";
-          sourceObject = obj1260;
+          var func1290 = function(argcv) {
+            var curarg = 1;
+            var var_dx = arguments[curarg];
+            curarg++;
+            if (argcv[0] !=  func1290.paramCounts[0])
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (right)"));
+            var returnTarget = invocationCount;
+            invocationCount++;
+            moduleName = "musical";
+            try {
+              lineNumber = 44
+              onSelf = true;
+              var call1292 = callmethod(this, "x", [0]);
+              var opresult1294 = callmethod(call1292, "+", [1], var_dx);
+              onSelf = true;
+              var call1295 = callmethod(this, "y", [0]);
+              var call1296 = callmethod(var_point,"x()y", [1, 1], opresult1294, call1295);
+              return call1296
+            } catch(e) {
+              if ((e.exctype == 'return') && (e.target == returnTarget)) {
+                return e.returnvalue;
+              } else {
+                throw e;
+              }
+            }
+          }
+          func1290.paramCounts = [
+            1,
+          ];
+          func1290.variableArities = [
+            false,
+          ];
+          obj1281.methods["right"] = func1290;
+          func1290.definitionLine = 44;
+          func1290.definitionModule = "musical";
+          var func1297 = function(argcv) {
+            var curarg = 1;
+            var var_dy = arguments[curarg];
+            curarg++;
+            if (argcv[0] !=  func1297.paramCounts[0])
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (up)"));
+            var returnTarget = invocationCount;
+            invocationCount++;
+            moduleName = "musical";
+            try {
+              lineNumber = 45
+              onSelf = true;
+              var call1298 = callmethod(this, "x", [0]);
+              onSelf = true;
+              var call1300 = callmethod(this, "y", [0]);
+              var diff1302 = callmethod(call1300, "-", [1], var_dy);
+              var call1303 = callmethod(var_point,"x()y", [1, 1], call1298, diff1302);
+              return call1303
+            } catch(e) {
+              if ((e.exctype == 'return') && (e.target == returnTarget)) {
+                return e.returnvalue;
+              } else {
+                throw e;
+              }
+            }
+          }
+          func1297.paramCounts = [
+            1,
+          ];
+          func1297.variableArities = [
+            false,
+          ];
+          obj1281.methods["up"] = func1297;
+          func1297.definitionLine = 45;
+          func1297.definitionModule = "musical";
+          var func1304 = function(argcv) {
+            var curarg = 1;
+            var var_dy = arguments[curarg];
+            curarg++;
+            if (argcv[0] !=  func1304.paramCounts[0])
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (down)"));
+            var returnTarget = invocationCount;
+            invocationCount++;
+            moduleName = "musical";
+            try {
+              lineNumber = 46
+              onSelf = true;
+              var call1305 = callmethod(this, "x", [0]);
+              onSelf = true;
+              var call1307 = callmethod(this, "y", [0]);
+              var opresult1309 = callmethod(call1307, "+", [1], var_dy);
+              var call1310 = callmethod(var_point,"x()y", [1, 1], call1305, opresult1309);
+              return call1310
+            } catch(e) {
+              if ((e.exctype == 'return') && (e.target == returnTarget)) {
+                return e.returnvalue;
+              } else {
+                throw e;
+              }
+            }
+          }
+          func1304.paramCounts = [
+            1,
+          ];
+          func1304.variableArities = [
+            false,
+          ];
+          obj1281.methods["down"] = func1304;
+          func1304.definitionLine = 46;
+          func1304.definitionModule = "musical";
+          sourceObject = obj1281;
           lineNumber = 41
-          obj1260.data["x"] = var_x__39__;
-          var reader_musical_x_1290 = function() {
+          obj1281.data["x"] = var_x__39__;
+          var reader_musical_x_1311 = function() {
             return this.data["x"];
           }
-          reader_musical_x_1290.def = true;
-          obj1260.methods["x"] = reader_musical_x_1290;
+          reader_musical_x_1311.def = true;
+          obj1281.methods["x"] = reader_musical_x_1311;
           lineNumber = 42;
           moduleName = "musical";
           lineNumber = 41
@@ -6058,14 +6087,14 @@ function gracecode_musical () {
               throw new GraceExceptionPacket(TypeErrorObject,
                     new GraceString("expected "
                     + "initial value of def 'x' to be of type Unknown"))
-          sourceObject = obj1260;
+          sourceObject = obj1281;
           lineNumber = 42
-          obj1260.data["y"] = var_y__39__;
-          var reader_musical_y_1291 = function() {
+          obj1281.data["y"] = var_y__39__;
+          var reader_musical_y_1312 = function() {
             return this.data["y"];
           }
-          reader_musical_y_1291.def = true;
-          obj1260.methods["y"] = reader_musical_y_1291;
+          reader_musical_y_1312.def = true;
+          obj1281.methods["y"] = reader_musical_y_1312;
           lineNumber = 43;
           moduleName = "musical";
           lineNumber = 42
@@ -6074,14 +6103,14 @@ function gracecode_musical () {
               throw new GraceExceptionPacket(TypeErrorObject,
                     new GraceString("expected "
                     + "initial value of def 'y' to be of type Unknown"))
-          sourceObject = obj1260;
-          sourceObject = obj1260;
-          sourceObject = obj1260;
-          sourceObject = obj1260;
+          sourceObject = obj1281;
+          sourceObject = obj1281;
+          sourceObject = obj1281;
+          sourceObject = obj1281;
           superDepth = origSuperDepth;
         }
-        obj_init_1260.apply(obj1260, []);
-        return obj1260
+        obj_init_1281.apply(obj1281, []);
+        return obj1281
       } catch(e) {
         if ((e.exctype == 'return') && (e.target == returnTarget)) {
           return e.returnvalue;
@@ -6090,18 +6119,18 @@ function gracecode_musical () {
         }
       }
     }
-    func1259.paramCounts = [
+    func1280.paramCounts = [
       1,
       1,
     ];
-    func1259.variableArities = [
+    func1280.variableArities = [
       false,
       false,
     ];
-    obj1257.methods["x()y"] = func1259;
-    func1259.definitionLine = 40;
-    func1259.definitionModule = "musical";
-    var func1292 = function(argcv) {
+    obj1278.methods["x()y"] = func1280;
+    func1280.definitionLine = 40;
+    func1280.definitionModule = "musical";
+    var func1313 = function(argcv) {
       var curarg = 1;
       var var_x__39__ = arguments[curarg];
       curarg++;
@@ -6111,27 +6140,27 @@ function gracecode_musical () {
       var returnTarget = invocationCount;
       invocationCount++;
       try {
-        var obj1293 = Grace_allocObject();
-        obj1293.definitionModule = "musical";
-        obj1293.definitionLine = 40;
-        var inho1293 = inheritingObject;
-        while (inho1293.superobj) inho1293 = inho1293.superobj;
-        inho1293.superobj = obj1293;
-        obj1293.data = inheritingObject.data;
-        obj1293.outer = this;
-        var reader_musical_outer_1294 = function() {
+        var obj1314 = Grace_allocObject();
+        obj1314.definitionModule = "musical";
+        obj1314.definitionLine = 40;
+        var inho1314 = inheritingObject;
+        while (inho1314.superobj) inho1314 = inho1314.superobj;
+        inho1314.superobj = obj1314;
+        obj1314.data = inheritingObject.data;
+        obj1314.outer = this;
+        var reader_musical_outer_1315 = function() {
           return this.outer;
         }
-        obj1293.methods["outer"] = reader_musical_outer_1294;
-        function obj_init_1293() {
+        obj1314.methods["outer"] = reader_musical_outer_1315;
+        function obj_init_1314() {
           var origSuperDepth = superDepth;
-          superDepth = obj1293;
-          obj1293.annotations = [];
-          var func1295 = function(argcv) {
+          superDepth = obj1314;
+          obj1314.annotations = [];
+          var func1316 = function(argcv) {
             var curarg = 1;
             var var_dx = arguments[curarg];
             curarg++;
-            if (argcv[0] !=  func1295.paramCounts[0])
+            if (argcv[0] !=  func1316.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (left)"));
             var returnTarget = invocationCount;
             invocationCount++;
@@ -6139,116 +6168,11 @@ function gracecode_musical () {
             try {
               lineNumber = 43
               onSelf = true;
-              var call1297 = callmethod(this, "x", [0]);
-              var diff1299 = callmethod(call1297, "-", [1], var_dx);
+              var call1318 = callmethod(this, "x", [0]);
+              var diff1320 = callmethod(call1318, "-", [1], var_dx);
               onSelf = true;
-              var call1300 = callmethod(this, "y", [0]);
-              var call1301 = callmethod(var_point,"x()y", [1, 1], diff1299, call1300);
-              return call1301
-            } catch(e) {
-              if ((e.exctype == 'return') && (e.target == returnTarget)) {
-                return e.returnvalue;
-              } else {
-                throw e;
-              }
-            }
-          }
-          func1295.paramCounts = [
-            1,
-          ];
-          func1295.variableArities = [
-            false,
-          ];
-          obj1293.methods["left"] = func1295;
-          func1295.definitionLine = 43;
-          func1295.definitionModule = "musical";
-          var func1302 = function(argcv) {
-            var curarg = 1;
-            var var_dx = arguments[curarg];
-            curarg++;
-            if (argcv[0] !=  func1302.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (right)"));
-            var returnTarget = invocationCount;
-            invocationCount++;
-            moduleName = "musical";
-            try {
-              lineNumber = 44
-              onSelf = true;
-              var call1304 = callmethod(this, "x", [0]);
-              var opresult1306 = callmethod(call1304, "+", [1], var_dx);
-              onSelf = true;
-              var call1307 = callmethod(this, "y", [0]);
-              var call1308 = callmethod(var_point,"x()y", [1, 1], opresult1306, call1307);
-              return call1308
-            } catch(e) {
-              if ((e.exctype == 'return') && (e.target == returnTarget)) {
-                return e.returnvalue;
-              } else {
-                throw e;
-              }
-            }
-          }
-          func1302.paramCounts = [
-            1,
-          ];
-          func1302.variableArities = [
-            false,
-          ];
-          obj1293.methods["right"] = func1302;
-          func1302.definitionLine = 44;
-          func1302.definitionModule = "musical";
-          var func1309 = function(argcv) {
-            var curarg = 1;
-            var var_dy = arguments[curarg];
-            curarg++;
-            if (argcv[0] !=  func1309.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (up)"));
-            var returnTarget = invocationCount;
-            invocationCount++;
-            moduleName = "musical";
-            try {
-              lineNumber = 45
-              onSelf = true;
-              var call1310 = callmethod(this, "x", [0]);
-              onSelf = true;
-              var call1312 = callmethod(this, "y", [0]);
-              var diff1314 = callmethod(call1312, "-", [1], var_dy);
-              var call1315 = callmethod(var_point,"x()y", [1, 1], call1310, diff1314);
-              return call1315
-            } catch(e) {
-              if ((e.exctype == 'return') && (e.target == returnTarget)) {
-                return e.returnvalue;
-              } else {
-                throw e;
-              }
-            }
-          }
-          func1309.paramCounts = [
-            1,
-          ];
-          func1309.variableArities = [
-            false,
-          ];
-          obj1293.methods["up"] = func1309;
-          func1309.definitionLine = 45;
-          func1309.definitionModule = "musical";
-          var func1316 = function(argcv) {
-            var curarg = 1;
-            var var_dy = arguments[curarg];
-            curarg++;
-            if (argcv[0] !=  func1316.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (down)"));
-            var returnTarget = invocationCount;
-            invocationCount++;
-            moduleName = "musical";
-            try {
-              lineNumber = 46
-              onSelf = true;
-              var call1317 = callmethod(this, "x", [0]);
-              onSelf = true;
-              var call1319 = callmethod(this, "y", [0]);
-              var opresult1321 = callmethod(call1319, "+", [1], var_dy);
-              var call1322 = callmethod(var_point,"x()y", [1, 1], call1317, opresult1321);
+              var call1321 = callmethod(this, "y", [0]);
+              var call1322 = callmethod(var_point,"x()y", [1, 1], diff1320, call1321);
               return call1322
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -6264,17 +6188,122 @@ function gracecode_musical () {
           func1316.variableArities = [
             false,
           ];
-          obj1293.methods["down"] = func1316;
-          func1316.definitionLine = 46;
+          obj1314.methods["left"] = func1316;
+          func1316.definitionLine = 43;
           func1316.definitionModule = "musical";
-          sourceObject = obj1293;
+          var func1323 = function(argcv) {
+            var curarg = 1;
+            var var_dx = arguments[curarg];
+            curarg++;
+            if (argcv[0] !=  func1323.paramCounts[0])
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (right)"));
+            var returnTarget = invocationCount;
+            invocationCount++;
+            moduleName = "musical";
+            try {
+              lineNumber = 44
+              onSelf = true;
+              var call1325 = callmethod(this, "x", [0]);
+              var opresult1327 = callmethod(call1325, "+", [1], var_dx);
+              onSelf = true;
+              var call1328 = callmethod(this, "y", [0]);
+              var call1329 = callmethod(var_point,"x()y", [1, 1], opresult1327, call1328);
+              return call1329
+            } catch(e) {
+              if ((e.exctype == 'return') && (e.target == returnTarget)) {
+                return e.returnvalue;
+              } else {
+                throw e;
+              }
+            }
+          }
+          func1323.paramCounts = [
+            1,
+          ];
+          func1323.variableArities = [
+            false,
+          ];
+          obj1314.methods["right"] = func1323;
+          func1323.definitionLine = 44;
+          func1323.definitionModule = "musical";
+          var func1330 = function(argcv) {
+            var curarg = 1;
+            var var_dy = arguments[curarg];
+            curarg++;
+            if (argcv[0] !=  func1330.paramCounts[0])
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (up)"));
+            var returnTarget = invocationCount;
+            invocationCount++;
+            moduleName = "musical";
+            try {
+              lineNumber = 45
+              onSelf = true;
+              var call1331 = callmethod(this, "x", [0]);
+              onSelf = true;
+              var call1333 = callmethod(this, "y", [0]);
+              var diff1335 = callmethod(call1333, "-", [1], var_dy);
+              var call1336 = callmethod(var_point,"x()y", [1, 1], call1331, diff1335);
+              return call1336
+            } catch(e) {
+              if ((e.exctype == 'return') && (e.target == returnTarget)) {
+                return e.returnvalue;
+              } else {
+                throw e;
+              }
+            }
+          }
+          func1330.paramCounts = [
+            1,
+          ];
+          func1330.variableArities = [
+            false,
+          ];
+          obj1314.methods["up"] = func1330;
+          func1330.definitionLine = 45;
+          func1330.definitionModule = "musical";
+          var func1337 = function(argcv) {
+            var curarg = 1;
+            var var_dy = arguments[curarg];
+            curarg++;
+            if (argcv[0] !=  func1337.paramCounts[0])
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (down)"));
+            var returnTarget = invocationCount;
+            invocationCount++;
+            moduleName = "musical";
+            try {
+              lineNumber = 46
+              onSelf = true;
+              var call1338 = callmethod(this, "x", [0]);
+              onSelf = true;
+              var call1340 = callmethod(this, "y", [0]);
+              var opresult1342 = callmethod(call1340, "+", [1], var_dy);
+              var call1343 = callmethod(var_point,"x()y", [1, 1], call1338, opresult1342);
+              return call1343
+            } catch(e) {
+              if ((e.exctype == 'return') && (e.target == returnTarget)) {
+                return e.returnvalue;
+              } else {
+                throw e;
+              }
+            }
+          }
+          func1337.paramCounts = [
+            1,
+          ];
+          func1337.variableArities = [
+            false,
+          ];
+          obj1314.methods["down"] = func1337;
+          func1337.definitionLine = 46;
+          func1337.definitionModule = "musical";
+          sourceObject = obj1314;
           lineNumber = 41
-          obj1293.data["x"] = var_x__39__;
-          var reader_musical_x_1323 = function() {
+          obj1314.data["x"] = var_x__39__;
+          var reader_musical_x_1344 = function() {
             return this.data["x"];
           }
-          reader_musical_x_1323.def = true;
-          obj1293.methods["x"] = reader_musical_x_1323;
+          reader_musical_x_1344.def = true;
+          obj1314.methods["x"] = reader_musical_x_1344;
           lineNumber = 42;
           moduleName = "musical";
           lineNumber = 41
@@ -6283,14 +6312,14 @@ function gracecode_musical () {
               throw new GraceExceptionPacket(TypeErrorObject,
                     new GraceString("expected "
                     + "initial value of def 'x' to be of type Unknown"))
-          sourceObject = obj1293;
+          sourceObject = obj1314;
           lineNumber = 42
-          obj1293.data["y"] = var_y__39__;
-          var reader_musical_y_1324 = function() {
+          obj1314.data["y"] = var_y__39__;
+          var reader_musical_y_1345 = function() {
             return this.data["y"];
           }
-          reader_musical_y_1324.def = true;
-          obj1293.methods["y"] = reader_musical_y_1324;
+          reader_musical_y_1345.def = true;
+          obj1314.methods["y"] = reader_musical_y_1345;
           lineNumber = 43;
           moduleName = "musical";
           lineNumber = 42
@@ -6299,14 +6328,14 @@ function gracecode_musical () {
               throw new GraceExceptionPacket(TypeErrorObject,
                     new GraceString("expected "
                     + "initial value of def 'y' to be of type Unknown"))
-          sourceObject = obj1293;
-          sourceObject = obj1293;
-          sourceObject = obj1293;
-          sourceObject = obj1293;
+          sourceObject = obj1314;
+          sourceObject = obj1314;
+          sourceObject = obj1314;
+          sourceObject = obj1314;
           superDepth = origSuperDepth;
         }
-        obj_init_1293.apply(inheritingObject, []);
-        return obj1293
+        obj_init_1314.apply(inheritingObject, []);
+        return obj1314
       } catch(e) {
         if ((e.exctype == 'return') && (e.target == returnTarget)) {
           return e.returnvalue;
@@ -6315,16 +6344,16 @@ function gracecode_musical () {
         }
       }
     }
-    obj1257.methods["x()y()object"] = func1292;
-    var func1325 = function(argcv) {
+    obj1278.methods["x()y()object"] = func1313;
+    var func1346 = function(argcv) {
       var curarg = 1;
       var returnTarget = invocationCount;
       invocationCount++;
       moduleName = "musical";
       try {
         lineNumber = 40
-        var string1326 = new GraceString("class point");
-        return string1326
+        var string1347 = new GraceString("class point");
+        return string1347
       } catch(e) {
         if ((e.exctype == 'return') && (e.target == returnTarget)) {
           return e.returnvalue;
@@ -6333,23 +6362,23 @@ function gracecode_musical () {
         }
       }
     }
-    func1325.paramCounts = [
+    func1346.paramCounts = [
     ];
-    func1325.variableArities = [
+    func1346.variableArities = [
     ];
-    obj1257.methods["asDebugString"] = func1325;
-    func1325.definitionLine = 40;
-    func1325.definitionModule = "musical";
-    sourceObject = obj1257;
-    sourceObject = obj1257;
+    obj1278.methods["asDebugString"] = func1346;
+    func1346.definitionLine = 40;
+    func1346.definitionModule = "musical";
+    sourceObject = obj1278;
+    sourceObject = obj1278;
     superDepth = origSuperDepth;
   }
-  obj_init_1257.apply(obj1257, []);
-  var var_point = obj1257;
+  obj_init_1278.apply(obj1278, []);
+  var var_point = obj1278;
   lineNumber = 48
-  var func1327 = function(argcv) {
+  var func1348 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func1327.paramCounts[0])
+    if (argcv[0] !=  func1348.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (drawable)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -6364,50 +6393,50 @@ function gracecode_musical () {
       }
     }
   }
-  func1327.paramCounts = [
+  func1348.paramCounts = [
     0,
   ];
-  func1327.variableArities = [
+  func1348.variableArities = [
     false,
   ];
-  this.methods["drawable"] = func1327;
-  func1327.definitionLine = 48;
-  func1327.definitionModule = "musical";
-  var obj1328 = Grace_allocObject();
-  obj1328.definitionModule = "musical";
-  obj1328.definitionLine = 48;
-  obj1328.outer = this;
-  var reader_musical_outer_1329 = function() {
+  this.methods["drawable"] = func1348;
+  func1348.definitionLine = 48;
+  func1348.definitionModule = "musical";
+  var obj1349 = Grace_allocObject();
+  obj1349.definitionModule = "musical";
+  obj1349.definitionLine = 48;
+  obj1349.outer = this;
+  var reader_musical_outer_1350 = function() {
     return this.outer;
   }
-  obj1328.methods["outer"] = reader_musical_outer_1329;
-  function obj_init_1328() {
+  obj1349.methods["outer"] = reader_musical_outer_1350;
+  function obj_init_1349() {
     var origSuperDepth = superDepth;
-    superDepth = obj1328;
-    obj1328.annotations = [];
-    var func1330 = function(argcv) {
+    superDepth = obj1349;
+    obj1349.annotations = [];
+    var func1351 = function(argcv) {
       var curarg = 1;
-      if (argcv[0] !=  func1330.paramCounts[0])
+      if (argcv[0] !=  func1351.paramCounts[0])
         callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (new)"));
       var returnTarget = invocationCount;
       invocationCount++;
       moduleName = "musical";
       try {
-        var obj1331 = Grace_allocObject();
-        obj1331.definitionModule = "musical";
-        obj1331.definitionLine = 48;
-        obj1331.outer = this;
-        var reader_musical_outer_1332 = function() {
+        var obj1352 = Grace_allocObject();
+        obj1352.definitionModule = "musical";
+        obj1352.definitionLine = 48;
+        obj1352.outer = this;
+        var reader_musical_outer_1353 = function() {
           return this.outer;
         }
-        obj1331.methods["outer"] = reader_musical_outer_1332;
-        function obj_init_1331() {
+        obj1352.methods["outer"] = reader_musical_outer_1353;
+        function obj_init_1352() {
           var origSuperDepth = superDepth;
-          superDepth = obj1331;
-          obj1331.annotations = [];
-          var func1333 = function(argcv) {
+          superDepth = obj1352;
+          obj1352.annotations = [];
+          var func1354 = function(argcv) {
             var curarg = 1;
-            if (argcv[0] !=  func1333.paramCounts[0])
+            if (argcv[0] !=  func1354.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (step)"));
             var returnTarget = invocationCount;
             invocationCount++;
@@ -6415,36 +6444,36 @@ function gracecode_musical () {
             try {
               lineNumber = 60
               onSelf = true;
-              var call1334 = callmethod(this, "alwaysBlocks", [0]);
+              var call1355 = callmethod(this, "alwaysBlocks", [0]);
               lineNumber = 63
-              var block1335 = Grace_allocObject();
-              block1335.methods["apply"] = function() {
+              var block1356 = Grace_allocObject();
+              block1356.methods["apply"] = function() {
                 var args = Array.prototype.slice.call(arguments, 1);
                 return this.real.apply(this.receiver, args);
               }
-              block1335.methods["applyIndirectly"] = function(argcv, a) {
+              block1356.methods["applyIndirectly"] = function(argcv, a) {
                 return this.real.apply(this.receiver, a._value);
               }
-              block1335.methods["outer"] = function() {
+              block1356.methods["outer"] = function() {
                 return callmethod(this.receiver, 'outer', [0]);
               }
-              block1335.methods["match"] = GraceBlock_match;
-              block1335.methods["prefix?"] = GraceBlock_lift;
-              block1335.receiver = this;
-              block1335.className = 'block<musical:63>';
-              block1335.real = function(
+              block1356.methods["match"] = GraceBlock_match;
+              block1356.methods["prefix?"] = GraceBlock_lift;
+              block1356.receiver = this;
+              block1356.className = 'block<musical:63>';
+              block1356.real = function(
                 var_b
               ) {
                 sourceObject = this;
                 lineNumber = 61
-                var call1336 = callmethod(var_b,"apply", [0]);
-                return call1336;
+                var call1357 = callmethod(var_b,"apply", [0]);
+                return call1357;
               };
-              var call1337 = callmethod(Grace_prelude,"for()do", [1, 1], call1334, block1335);
+              var call1358 = callmethod(Grace_prelude,"for()do", [1, 1], call1355, block1356);
               lineNumber = 63
               onSelf = true;
-              var call1338 = callmethod(this, "tick", [0]);
-              return call1338
+              var call1359 = callmethod(this, "tick", [0]);
+              return call1359
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -6453,18 +6482,18 @@ function gracecode_musical () {
               }
             }
           }
-          func1333.paramCounts = [
+          func1354.paramCounts = [
             0,
           ];
-          func1333.variableArities = [
+          func1354.variableArities = [
             false,
           ];
-          obj1331.methods["step"] = func1333;
-          func1333.definitionLine = 59;
-          func1333.definitionModule = "musical";
-          var func1339 = function(argcv) {
+          obj1352.methods["step"] = func1354;
+          func1354.definitionLine = 59;
+          func1354.definitionModule = "musical";
+          var func1360 = function(argcv) {
             var curarg = 1;
-            if (argcv[0] !=  func1339.paramCounts[0])
+            if (argcv[0] !=  func1360.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (tick)"));
             var returnTarget = invocationCount;
             invocationCount++;
@@ -6479,20 +6508,20 @@ function gracecode_musical () {
               }
             }
           }
-          func1339.paramCounts = [
+          func1360.paramCounts = [
             0,
           ];
-          func1339.variableArities = [
+          func1360.variableArities = [
             false,
           ];
-          obj1331.methods["tick"] = func1339;
-          func1339.definitionLine = 66;
-          func1339.definitionModule = "musical";
-          var func1340 = function(argcv) {
+          obj1352.methods["tick"] = func1360;
+          func1360.definitionLine = 66;
+          func1360.definitionModule = "musical";
+          var func1361 = function(argcv) {
             var curarg = 1;
             var var_ctx = arguments[curarg];
             curarg++;
-            if (argcv[0] !=  func1340.paramCounts[0])
+            if (argcv[0] !=  func1361.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (draw)"));
             var returnTarget = invocationCount;
             invocationCount++;
@@ -6507,20 +6536,20 @@ function gracecode_musical () {
               }
             }
           }
-          func1340.paramCounts = [
+          func1361.paramCounts = [
             1,
           ];
-          func1340.variableArities = [
+          func1361.variableArities = [
             false,
           ];
-          obj1331.methods["draw"] = func1340;
-          func1340.definitionLine = 67;
-          func1340.definitionModule = "musical";
-          var func1341 = function(argcv) {
+          obj1352.methods["draw"] = func1361;
+          func1361.definitionLine = 67;
+          func1361.definitionModule = "musical";
+          var func1362 = function(argcv) {
             var curarg = 1;
             var var_p = arguments[curarg];
             curarg++;
-            if (argcv[0] !=  func1341.paramCounts[0])
+            if (argcv[0] !=  func1362.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (moveTo)"));
             var returnTarget = invocationCount;
             invocationCount++;
@@ -6529,222 +6558,15 @@ function gracecode_musical () {
               lineNumber = 70
               lineNumber = 61
               lineNumber = 69
-              var call1342 = callmethod(var_p,"x", [0]);
+              var call1363 = callmethod(var_p,"x", [0]);
               onSelf = true;
-              var call1343 = callmethod(this, "destX:=", [1], call1342);
+              var call1364 = callmethod(this, "destX:=", [1], call1363);
               lineNumber = 71
               lineNumber = 69
               lineNumber = 70
-              var call1344 = callmethod(var_p,"y", [0]);
+              var call1365 = callmethod(var_p,"y", [0]);
               onSelf = true;
-              var call1345 = callmethod(this, "destY:=", [1], call1344);
-              return call1345
-            } catch(e) {
-              if ((e.exctype == 'return') && (e.target == returnTarget)) {
-                return e.returnvalue;
-              } else {
-                throw e;
-              }
-            }
-          }
-          func1341.paramCounts = [
-            1,
-          ];
-          func1341.variableArities = [
-            false,
-          ];
-          obj1331.methods["moveTo"] = func1341;
-          func1341.definitionLine = 68;
-          func1341.definitionModule = "musical";
-          var func1346 = function(argcv) {
-            var curarg = 1;
-            var var_p = arguments[curarg];
-            curarg++;
-            if (argcv[0] !=  func1346.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (jumpTo)"));
-            var returnTarget = invocationCount;
-            invocationCount++;
-            moduleName = "musical";
-            try {
-              lineNumber = 74
-              lineNumber = 70
-              lineNumber = 73
-              var call1347 = callmethod(var_p,"x", [0]);
-              onSelf = true;
-              var call1348 = callmethod(this, "x:=", [1], call1347);
-              lineNumber = 75
-              lineNumber = 73
-              lineNumber = 74
-              var call1349 = callmethod(var_p,"y", [0]);
-              onSelf = true;
-              var call1350 = callmethod(this, "y:=", [1], call1349);
-              lineNumber = 76
-              lineNumber = 74
-              lineNumber = 75
-              onSelf = true;
-              var call1351 = callmethod(this, "x", [0]);
-              onSelf = true;
-              var call1352 = callmethod(this, "destX:=", [1], call1351);
-              lineNumber = 77
-              lineNumber = 74
-              lineNumber = 76
-              onSelf = true;
-              var call1353 = callmethod(this, "y", [0]);
-              onSelf = true;
-              var call1354 = callmethod(this, "destY:=", [1], call1353);
-              return call1354
-            } catch(e) {
-              if ((e.exctype == 'return') && (e.target == returnTarget)) {
-                return e.returnvalue;
-              } else {
-                throw e;
-              }
-            }
-          }
-          func1346.paramCounts = [
-            1,
-          ];
-          func1346.variableArities = [
-            false,
-          ];
-          obj1331.methods["jumpTo"] = func1346;
-          func1346.definitionLine = 72;
-          func1346.definitionModule = "musical";
-          var func1355 = function(argcv) {
-            var curarg = 1;
-            var var_p = arguments[curarg];
-            curarg++;
-            if (argcv[0] !=  func1355.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (isPointOver)"));
-            var returnTarget = invocationCount;
-            invocationCount++;
-            moduleName = "musical";
-            try {
-              lineNumber = 78
-              var bool1356 = new GraceBoolean(false)
-              return bool1356
-            } catch(e) {
-              if ((e.exctype == 'return') && (e.target == returnTarget)) {
-                return e.returnvalue;
-              } else {
-                throw e;
-              }
-            }
-          }
-          func1355.paramCounts = [
-            1,
-          ];
-          func1355.variableArities = [
-            false,
-          ];
-          obj1331.methods["isPointOver"] = func1355;
-          func1355.definitionLine = 78;
-          func1355.definitionModule = "musical";
-          var func1357 = function(argcv) {
-            var curarg = 1;
-            if (argcv[0] !=  func1357.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (mousedown)"));
-            var returnTarget = invocationCount;
-            invocationCount++;
-            moduleName = "musical";
-            try {
-              return var_done
-            } catch(e) {
-              if ((e.exctype == 'return') && (e.target == returnTarget)) {
-                return e.returnvalue;
-              } else {
-                throw e;
-              }
-            }
-          }
-          func1357.paramCounts = [
-            0,
-          ];
-          func1357.variableArities = [
-            false,
-          ];
-          obj1331.methods["mousedown"] = func1357;
-          func1357.definitionLine = 79;
-          func1357.definitionModule = "musical";
-          var func1358 = function(argcv) {
-            var curarg = 1;
-            var var_b = arguments[curarg];
-            curarg++;
-            if (argcv[0] !=  func1358.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (always)"));
-            var returnTarget = invocationCount;
-            invocationCount++;
-            moduleName = "musical";
-            try {
-              lineNumber = 81
-              onSelf = true;
-              var call1359 = callmethod(this, "alwaysBlocks", [0]);
-              var call1360 = callmethod(call1359,"push", [1], var_b);
-              return call1360
-            } catch(e) {
-              if ((e.exctype == 'return') && (e.target == returnTarget)) {
-                return e.returnvalue;
-              } else {
-                throw e;
-              }
-            }
-          }
-          func1358.paramCounts = [
-            1,
-          ];
-          func1358.variableArities = [
-            false,
-          ];
-          obj1331.methods["always"] = func1358;
-          func1358.definitionLine = 80;
-          func1358.definitionModule = "musical";
-          var func1361 = function(argcv) {
-            var curarg = 1;
-            var var_cond = arguments[curarg];
-            curarg++;
-            if (argcv[0] !=  func1361.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (whenever)"));
-            var var_b = arguments[curarg];
-            curarg++;
-            if (argcv[1] !=  func1361.paramCounts[1])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 2 (do)"));
-            var returnTarget = invocationCount;
-            invocationCount++;
-            moduleName = "musical";
-            try {
-              lineNumber = 84
-              lineNumber = 89
-              var block1362 = Grace_allocObject();
-              block1362.methods["apply"] = function() {
-                var args = Array.prototype.slice.call(arguments, 1);
-                return this.real.apply(this.receiver, args);
-              }
-              block1362.methods["applyIndirectly"] = function(argcv, a) {
-                return this.real.apply(this.receiver, a._value);
-              }
-              block1362.methods["outer"] = function() {
-                return callmethod(this.receiver, 'outer', [0]);
-              }
-              block1362.methods["match"] = GraceBlock_match;
-              block1362.methods["prefix?"] = GraceBlock_lift;
-              block1362.receiver = this;
-              block1362.className = 'block<musical:89>';
-              block1362.real = function(
-              ) {
-                sourceObject = this;
-                lineNumber = 88
-                var if1363 = var_done;
-                lineNumber = 85
-                var call1364 = callmethod(var_cond,"apply", [0]);
-                if (Grace_isTrue(call1364)) {
-                  lineNumber = 86
-                  var call1365 = callmethod(var_b,"apply", [0]);
-                  if1363 = call1365;
-                }
-                return if1363;
-              };
-              onSelf = true;
-              var call1366 = callmethod(this, "always", [1], block1362);
+              var call1366 = callmethod(this, "destY:=", [1], call1365);
               return call1366
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -6754,80 +6576,52 @@ function gracecode_musical () {
               }
             }
           }
-          func1361.paramCounts = [
-            1,
+          func1362.paramCounts = [
             1,
           ];
-          func1361.variableArities = [
-            false,
+          func1362.variableArities = [
             false,
           ];
-          obj1331.methods["whenever()do"] = func1361;
-          func1361.definitionLine = 83;
-          func1361.definitionModule = "musical";
+          obj1352.methods["moveTo"] = func1362;
+          func1362.definitionLine = 68;
+          func1362.definitionModule = "musical";
           var func1367 = function(argcv) {
             var curarg = 1;
-            var var_dist = arguments[curarg];
+            var var_p = arguments[curarg];
             curarg++;
             if (argcv[0] !=  func1367.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (forward)"));
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (jumpTo)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "musical";
             try {
-              lineNumber = 92
-              lineNumber = 91
+              lineNumber = 74
+              lineNumber = 70
+              lineNumber = 73
+              var call1368 = callmethod(var_p,"x", [0]);
               onSelf = true;
-              var call1371 = callmethod(this, "angle", [0]);
-              var quotient1373 = callmethod(call1371, "/", [1], new GraceNum(180));
-              var prod1375 = callmethod(quotient1373, "*", [1], var_PI);
-              var call1376 = callmethod(var_trig,"cos", [1], prod1375);
-              var prod1378 = callmethod(call1376, "*", [1], var_dist);
-              var var_y__39__ = prod1378;
-              lineNumber = 92;
-              moduleName = "musical";
-              lineNumber = 91
-              if (!Grace_isTrue(callmethod(var_Unknown, "match",
-                [1], var_y__39__)))
-                  throw new GraceExceptionPacket(TypeErrorObject,
-                        new GraceString("expected "
-                        + "initial value of def 'y'' to be of type Unknown"))
-              lineNumber = 93
-              lineNumber = 92
+              var call1369 = callmethod(this, "x:=", [1], call1368);
+              lineNumber = 75
+              lineNumber = 73
+              lineNumber = 74
+              var call1370 = callmethod(var_p,"y", [0]);
               onSelf = true;
-              var call1382 = callmethod(this, "angle", [0]);
-              var quotient1384 = callmethod(call1382, "/", [1], new GraceNum(180));
-              var prod1386 = callmethod(quotient1384, "*", [1], var_PI);
-              var call1387 = callmethod(var_trig,"sin", [1], prod1386);
-              var prod1389 = callmethod(call1387, "*", [1], var_dist);
-              var var_x__39__ = prod1389;
-              lineNumber = 93;
-              moduleName = "musical";
-              lineNumber = 92
-              if (!Grace_isTrue(callmethod(var_Unknown, "match",
-                [1], var_x__39__)))
-                  throw new GraceExceptionPacket(TypeErrorObject,
-                        new GraceString("expected "
-                        + "initial value of def 'x'' to be of type Unknown"))
-              lineNumber = 94
-              lineNumber = 86
-              lineNumber = 94
-              lineNumber = 93
+              var call1371 = callmethod(this, "y:=", [1], call1370);
+              lineNumber = 76
+              lineNumber = 74
+              lineNumber = 75
               onSelf = true;
-              var call1391 = callmethod(this, "x", [0]);
-              var opresult1393 = callmethod(call1391, "+", [1], var_x__39__);
+              var call1372 = callmethod(this, "x", [0]);
               onSelf = true;
-              var call1394 = callmethod(this, "x:=", [1], opresult1393);
-              lineNumber = 95
-              lineNumber = 86
-              lineNumber = 95
-              lineNumber = 94
+              var call1373 = callmethod(this, "destX:=", [1], call1372);
+              lineNumber = 77
+              lineNumber = 74
+              lineNumber = 76
               onSelf = true;
-              var call1396 = callmethod(this, "y", [0]);
-              var opresult1398 = callmethod(call1396, "+", [1], var_y__39__);
+              var call1374 = callmethod(this, "y", [0]);
               onSelf = true;
-              var call1399 = callmethod(this, "y:=", [1], opresult1398);
-              return call1399
+              var call1375 = callmethod(this, "destY:=", [1], call1374);
+              return call1375
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -6842,1195 +6636,22 @@ function gracecode_musical () {
           func1367.variableArities = [
             false,
           ];
-          obj1331.methods["forward"] = func1367;
-          func1367.definitionLine = 90;
+          obj1352.methods["jumpTo"] = func1367;
+          func1367.definitionLine = 72;
           func1367.definitionModule = "musical";
-          var func1400 = function(argcv) {
-            var curarg = 1;
-            if (argcv[0] !=  func1400.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (normaliseAngle)"));
-            var returnTarget = invocationCount;
-            invocationCount++;
-            moduleName = "musical";
-            try {
-              lineNumber = 97
-              var block1401 = Grace_allocObject();
-              block1401.methods["apply"] = function() {
-                var args = Array.prototype.slice.call(arguments, 1);
-                return this.real.apply(this.receiver, args);
-              }
-              block1401.methods["applyIndirectly"] = function(argcv, a) {
-                return this.real.apply(this.receiver, a._value);
-              }
-              block1401.methods["outer"] = function() {
-                return callmethod(this.receiver, 'outer', [0]);
-              }
-              block1401.methods["match"] = GraceBlock_match;
-              block1401.methods["prefix?"] = GraceBlock_lift;
-              block1401.receiver = this;
-              block1401.className = 'block<musical:97>';
-              block1401.real = function(
-              ) {
-                sourceObject = this;
-                onSelf = true;
-                var call1403 = callmethod(this, "angle", [0]);
-                var opresult1405 = callmethod(call1403, "<", [1], new GraceNum(0));
-                return opresult1405;
-              };
-              lineNumber = 100
-              var block1406 = Grace_allocObject();
-              block1406.methods["apply"] = function() {
-                var args = Array.prototype.slice.call(arguments, 1);
-                return this.real.apply(this.receiver, args);
-              }
-              block1406.methods["applyIndirectly"] = function(argcv, a) {
-                return this.real.apply(this.receiver, a._value);
-              }
-              block1406.methods["outer"] = function() {
-                return callmethod(this.receiver, 'outer', [0]);
-              }
-              block1406.methods["match"] = GraceBlock_match;
-              block1406.methods["prefix?"] = GraceBlock_lift;
-              block1406.receiver = this;
-              block1406.className = 'block<musical:100>';
-              block1406.real = function(
-              ) {
-                sourceObject = this;
-                lineNumber = 99
-                lineNumber = 86
-                lineNumber = 99
-                lineNumber = 98
-                onSelf = true;
-                var call1408 = callmethod(this, "angle", [0]);
-                var opresult1410 = callmethod(call1408, "+", [1], new GraceNum(360));
-                onSelf = true;
-                var call1411 = callmethod(this, "angle:=", [1], opresult1410);
-                return call1411;
-              };
-              var call1412 = callmethod(Grace_prelude,"while()do", [1, 1], block1401, block1406);
-              lineNumber = 100
-              var block1413 = Grace_allocObject();
-              block1413.methods["apply"] = function() {
-                var args = Array.prototype.slice.call(arguments, 1);
-                return this.real.apply(this.receiver, args);
-              }
-              block1413.methods["applyIndirectly"] = function(argcv, a) {
-                return this.real.apply(this.receiver, a._value);
-              }
-              block1413.methods["outer"] = function() {
-                return callmethod(this.receiver, 'outer', [0]);
-              }
-              block1413.methods["match"] = GraceBlock_match;
-              block1413.methods["prefix?"] = GraceBlock_lift;
-              block1413.receiver = this;
-              block1413.className = 'block<musical:100>';
-              block1413.real = function(
-              ) {
-                sourceObject = this;
-                onSelf = true;
-                var call1415 = callmethod(this, "angle", [0]);
-                var opresult1417 = callmethod(call1415, ">", [1], new GraceNum(360));
-                return opresult1417;
-              };
-              lineNumber = 103
-              var block1418 = Grace_allocObject();
-              block1418.methods["apply"] = function() {
-                var args = Array.prototype.slice.call(arguments, 1);
-                return this.real.apply(this.receiver, args);
-              }
-              block1418.methods["applyIndirectly"] = function(argcv, a) {
-                return this.real.apply(this.receiver, a._value);
-              }
-              block1418.methods["outer"] = function() {
-                return callmethod(this.receiver, 'outer', [0]);
-              }
-              block1418.methods["match"] = GraceBlock_match;
-              block1418.methods["prefix?"] = GraceBlock_lift;
-              block1418.receiver = this;
-              block1418.className = 'block<musical:103>';
-              block1418.real = function(
-              ) {
-                sourceObject = this;
-                lineNumber = 102
-                lineNumber = 86
-                lineNumber = 102
-                lineNumber = 101
-                onSelf = true;
-                var call1420 = callmethod(this, "angle", [0]);
-                var diff1422 = callmethod(call1420, "-", [1], new GraceNum(360));
-                onSelf = true;
-                var call1423 = callmethod(this, "angle:=", [1], diff1422);
-                return call1423;
-              };
-              var call1424 = callmethod(Grace_prelude,"while()do", [1, 1], block1413, block1418);
-              return call1424
-            } catch(e) {
-              if ((e.exctype == 'return') && (e.target == returnTarget)) {
-                return e.returnvalue;
-              } else {
-                throw e;
-              }
-            }
-          }
-          func1400.paramCounts = [
-            0,
-          ];
-          func1400.variableArities = [
-            false,
-          ];
-          obj1331.methods["normaliseAngle"] = func1400;
-          func1400.definitionLine = 96;
-          func1400.definitionModule = "musical";
-          var func1425 = function(argcv) {
-            var curarg = 1;
-            var var_degrees = arguments[curarg];
-            curarg++;
-            if (argcv[0] !=  func1425.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (turn)"));
-            var returnTarget = invocationCount;
-            invocationCount++;
-            moduleName = "musical";
-            try {
-              lineNumber = 106
-              lineNumber = 86
-              lineNumber = 106
-              lineNumber = 105
-              onSelf = true;
-              var call1427 = callmethod(this, "angle", [0]);
-              var opresult1429 = callmethod(call1427, "+", [1], var_degrees);
-              onSelf = true;
-              var call1430 = callmethod(this, "angle:=", [1], opresult1429);
-              lineNumber = 106
-              onSelf = true;
-              var call1431 = callmethod(this, "normaliseAngle", [0]);
-              return call1431
-            } catch(e) {
-              if ((e.exctype == 'return') && (e.target == returnTarget)) {
-                return e.returnvalue;
-              } else {
-                throw e;
-              }
-            }
-          }
-          func1425.paramCounts = [
-            1,
-          ];
-          func1425.variableArities = [
-            false,
-          ];
-          obj1331.methods["turn"] = func1425;
-          func1425.definitionLine = 104;
-          func1425.definitionModule = "musical";
-          var func1432 = function(argcv) {
-            var curarg = 1;
-            if (argcv[0] !=  func1432.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (touchingEdge)"));
-            var returnTarget = invocationCount;
-            invocationCount++;
-            moduleName = "musical";
-            try {
-              lineNumber = 112
-              var if1433 = var_done;
-              lineNumber = 109
-              onSelf = true;
-              var call1434 = callmethod(this, "x", [0]);
-              var call1435 = callmethod(var_point,"x()y", [1, 1], call1434, new GraceNum(0));
-              onSelf = true;
-              var call1436 = callmethod(this, "isPointOver", [1], call1435);
-              if (Grace_isTrue(call1436)) {
-                lineNumber = 111
-                lineNumber = 110
-                var bool1437 = new GraceBoolean(true)
-                return bool1437
-              }
-              lineNumber = 115
-              var if1438 = var_done;
-              lineNumber = 112
-              onSelf = true;
-              var call1439 = callmethod(this, "x", [0]);
-              var call1440 = callmethod(var_point,"x()y", [1, 1], call1439, var_canvasHeight);
-              onSelf = true;
-              var call1441 = callmethod(this, "isPointOver", [1], call1440);
-              if (Grace_isTrue(call1441)) {
-                lineNumber = 114
-                lineNumber = 113
-                var bool1442 = new GraceBoolean(true)
-                return bool1442
-              }
-              lineNumber = 118
-              var if1443 = var_done;
-              lineNumber = 115
-              onSelf = true;
-              var call1444 = callmethod(this, "y", [0]);
-              var call1445 = callmethod(var_point,"x()y", [1, 1], new GraceNum(0), call1444);
-              onSelf = true;
-              var call1446 = callmethod(this, "isPointOver", [1], call1445);
-              if (Grace_isTrue(call1446)) {
-                lineNumber = 117
-                lineNumber = 116
-                var bool1447 = new GraceBoolean(true)
-                return bool1447
-              }
-              lineNumber = 121
-              var if1448 = var_done;
-              lineNumber = 118
-              onSelf = true;
-              var call1449 = callmethod(this, "y", [0]);
-              var call1450 = callmethod(var_point,"x()y", [1, 1], var_canvasWidth, call1449);
-              onSelf = true;
-              var call1451 = callmethod(this, "isPointOver", [1], call1450);
-              if (Grace_isTrue(call1451)) {
-                lineNumber = 120
-                lineNumber = 119
-                var bool1452 = new GraceBoolean(true)
-                return bool1452
-              }
-              lineNumber = 122
-              lineNumber = 121
-              var bool1453 = new GraceBoolean(false)
-              return bool1453
-            } catch(e) {
-              if ((e.exctype == 'return') && (e.target == returnTarget)) {
-                return e.returnvalue;
-              } else {
-                throw e;
-              }
-            }
-          }
-          func1432.paramCounts = [
-            0,
-          ];
-          func1432.variableArities = [
-            false,
-          ];
-          obj1331.methods["touchingEdge"] = func1432;
-          func1432.definitionLine = 108;
-          func1432.definitionModule = "musical";
-          var func1454 = function(argcv) {
-            var curarg = 1;
-            if (argcv[0] !=  func1454.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (bounce)"));
-            var returnTarget = invocationCount;
-            invocationCount++;
-            moduleName = "musical";
-            try {
-              lineNumber = 125
-              lineNumber = 124
-              var var_dx = new GraceNum(0);
-              lineNumber = 125;
-              moduleName = "musical";
-              lineNumber = 124
-              if (!Grace_isTrue(callmethod(var_Unknown, "match",
-                [1], var_dx)))
-                  throw new GraceExceptionPacket(TypeErrorObject,
-                        new GraceString("expected "
-                        + "initial value of var 'dx' to be of type Unknown"))
-              lineNumber = 126
-              lineNumber = 125
-              var var_dy = new GraceNum(0);
-              lineNumber = 126;
-              moduleName = "musical";
-              lineNumber = 125
-              if (!Grace_isTrue(callmethod(var_Unknown, "match",
-                [1], var_dy)))
-                  throw new GraceExceptionPacket(TypeErrorObject,
-                        new GraceString("expected "
-                        + "initial value of var 'dy' to be of type Unknown"))
-              lineNumber = 129
-              var if1455 = var_done;
-              lineNumber = 126
-              onSelf = true;
-              var call1456 = callmethod(this, "x", [0]);
-              var call1457 = callmethod(var_point,"x()y", [1, 1], call1456, new GraceNum(0));
-              onSelf = true;
-              var call1458 = callmethod(this, "isPointOver", [1], call1457);
-              if (Grace_isTrue(call1458)) {
-                lineNumber = 127
-                onSelf = true;
-                var call1459 = callmethod(this, "bounceFrom", [1], var_top);
-                if1455 = call1459;
-              }
-              lineNumber = 132
-              var if1460 = var_done;
-              lineNumber = 129
-              onSelf = true;
-              var call1461 = callmethod(this, "x", [0]);
-              var call1462 = callmethod(var_point,"x()y", [1, 1], call1461, var_canvasHeight);
-              onSelf = true;
-              var call1463 = callmethod(this, "isPointOver", [1], call1462);
-              if (Grace_isTrue(call1463)) {
-                lineNumber = 130
-                onSelf = true;
-                var call1464 = callmethod(this, "bounceFrom", [1], var_bottom);
-                if1460 = call1464;
-              }
-              lineNumber = 135
-              var if1465 = var_done;
-              lineNumber = 132
-              onSelf = true;
-              var call1466 = callmethod(this, "y", [0]);
-              var call1467 = callmethod(var_point,"x()y", [1, 1], new GraceNum(0), call1466);
-              onSelf = true;
-              var call1468 = callmethod(this, "isPointOver", [1], call1467);
-              if (Grace_isTrue(call1468)) {
-                lineNumber = 133
-                onSelf = true;
-                var call1469 = callmethod(this, "bounceFrom", [1], var_left);
-                if1465 = call1469;
-              }
-              lineNumber = 138
-              var if1470 = var_done;
-              lineNumber = 135
-              onSelf = true;
-              var call1471 = callmethod(this, "y", [0]);
-              var call1472 = callmethod(var_point,"x()y", [1, 1], var_canvasWidth, call1471);
-              onSelf = true;
-              var call1473 = callmethod(this, "isPointOver", [1], call1472);
-              if (Grace_isTrue(call1473)) {
-                lineNumber = 136
-                onSelf = true;
-                var call1474 = callmethod(this, "bounceFrom", [1], var_right);
-                if1470 = call1474;
-              }
-              lineNumber = 138
-              var block1475 = Grace_allocObject();
-              block1475.methods["apply"] = function() {
-                var args = Array.prototype.slice.call(arguments, 1);
-                return this.real.apply(this.receiver, args);
-              }
-              block1475.methods["applyIndirectly"] = function(argcv, a) {
-                return this.real.apply(this.receiver, a._value);
-              }
-              block1475.methods["outer"] = function() {
-                return callmethod(this.receiver, 'outer', [0]);
-              }
-              block1475.methods["match"] = GraceBlock_match;
-              block1475.methods["prefix?"] = GraceBlock_lift;
-              block1475.receiver = this;
-              block1475.className = 'block<musical:138>';
-              block1475.real = function(
-              ) {
-                sourceObject = this;
-                onSelf = true;
-                var call1476 = callmethod(this, "touchingEdge", [0]);
-                return call1476;
-              };
-              lineNumber = 141
-              var block1477 = Grace_allocObject();
-              block1477.methods["apply"] = function() {
-                var args = Array.prototype.slice.call(arguments, 1);
-                return this.real.apply(this.receiver, args);
-              }
-              block1477.methods["applyIndirectly"] = function(argcv, a) {
-                return this.real.apply(this.receiver, a._value);
-              }
-              block1477.methods["outer"] = function() {
-                return callmethod(this.receiver, 'outer', [0]);
-              }
-              block1477.methods["match"] = GraceBlock_match;
-              block1477.methods["prefix?"] = GraceBlock_lift;
-              block1477.receiver = this;
-              block1477.className = 'block<musical:141>';
-              block1477.real = function(
-              ) {
-                sourceObject = this;
-                lineNumber = 139
-                onSelf = true;
-                var call1478 = callmethod(this, "forward", [1], new GraceNum(1));
-                return call1478;
-              };
-              var call1479 = callmethod(Grace_prelude,"while()do", [1, 1], block1475, block1477);
-              return call1479
-            } catch(e) {
-              if ((e.exctype == 'return') && (e.target == returnTarget)) {
-                return e.returnvalue;
-              } else {
-                throw e;
-              }
-            }
-          }
-          func1454.paramCounts = [
-            0,
-          ];
-          func1454.variableArities = [
-            false,
-          ];
-          obj1331.methods["bounce"] = func1454;
-          func1454.definitionLine = 123;
-          func1454.definitionModule = "musical";
-          var func1480 = function(argcv) {
-            var curarg = 1;
-            var var_dir = arguments[curarg];
-            curarg++;
-            if (argcv[0] !=  func1480.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (bounceFrom)"));
-            var returnTarget = invocationCount;
-            invocationCount++;
-            moduleName = "musical";
-            try {
-              lineNumber = 146
-              var if1481 = var_done;
-              lineNumber = 143
-              var string1482 = new GraceString("left");
-              var opresult1485 = callmethod(var_dir, "==", [1], string1482);
-              if (Grace_isTrue(opresult1485)) {
-                lineNumber = 145
-                lineNumber = 86
-                lineNumber = 145
-                lineNumber = 144
-                onSelf = true;
-                var call1486 = callmethod(this, "angle", [0]);
-                var diff1489 = callmethod(new GraceNum(360), "-", [1], call1486);
-                onSelf = true;
-                var call1490 = callmethod(this, "angle:=", [1], diff1489);
-                if1481 = call1490;
-              }
-              lineNumber = 149
-              var if1491 = var_done;
-              lineNumber = 146
-              var string1492 = new GraceString("right");
-              var opresult1495 = callmethod(var_dir, "==", [1], string1492);
-              if (Grace_isTrue(opresult1495)) {
-                lineNumber = 148
-                lineNumber = 86
-                lineNumber = 148
-                lineNumber = 147
-                onSelf = true;
-                var call1496 = callmethod(this, "angle", [0]);
-                var diff1499 = callmethod(new GraceNum(360), "-", [1], call1496);
-                onSelf = true;
-                var call1500 = callmethod(this, "angle:=", [1], diff1499);
-                if1491 = call1500;
-              }
-              lineNumber = 152
-              var if1501 = var_done;
-              lineNumber = 149
-              var string1502 = new GraceString("top");
-              var opresult1505 = callmethod(var_dir, "==", [1], string1502);
-              if (Grace_isTrue(opresult1505)) {
-                lineNumber = 151
-                lineNumber = 86
-                lineNumber = 151
-                lineNumber = 150
-                onSelf = true;
-                var call1506 = callmethod(this, "angle", [0]);
-                var diff1509 = callmethod(new GraceNum(180), "-", [1], call1506);
-                onSelf = true;
-                var call1510 = callmethod(this, "angle:=", [1], diff1509);
-                if1501 = call1510;
-              }
-              lineNumber = 155
-              var if1511 = var_done;
-              lineNumber = 152
-              var string1512 = new GraceString("bottom");
-              var opresult1515 = callmethod(var_dir, "==", [1], string1512);
-              if (Grace_isTrue(opresult1515)) {
-                lineNumber = 154
-                lineNumber = 86
-                lineNumber = 154
-                lineNumber = 153
-                onSelf = true;
-                var call1516 = callmethod(this, "angle", [0]);
-                var diff1519 = callmethod(new GraceNum(180), "-", [1], call1516);
-                onSelf = true;
-                var call1520 = callmethod(this, "angle:=", [1], diff1519);
-                if1511 = call1520;
-              }
-              lineNumber = 155
-              onSelf = true;
-              var call1521 = callmethod(this, "normaliseAngle", [0]);
-              lineNumber = 156
-              onSelf = true;
-              var call1522 = callmethod(this, "forward", [1], new GraceNum(2));
-              return call1522
-            } catch(e) {
-              if ((e.exctype == 'return') && (e.target == returnTarget)) {
-                return e.returnvalue;
-              } else {
-                throw e;
-              }
-            }
-          }
-          func1480.paramCounts = [
-            1,
-          ];
-          func1480.variableArities = [
-            false,
-          ];
-          obj1331.methods["bounceFrom"] = func1480;
-          func1480.definitionLine = 142;
-          func1480.definitionModule = "musical";
-          var func1523 = function(argcv) {
-            var curarg = 1;
-            var var_other = arguments[curarg];
-            curarg++;
-            if (argcv[0] !=  func1523.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (bounceOff)"));
-            var returnTarget = invocationCount;
-            invocationCount++;
-            moduleName = "musical";
-            try {
-              lineNumber = 162
-              var if1524 = var_done;
-              lineNumber = 159
-              var call1525 = callmethod(var_other,"x", [0]);
-              onSelf = true;
-              var call1527 = callmethod(this, "x", [0]);
-              var opresult1529 = callmethod(call1527, ">", [1], call1525);
-              if (Grace_isTrue(opresult1529)) {
-                lineNumber = 160
-                onSelf = true;
-                var call1530 = callmethod(this, "bounceFrom", [1], var_left);
-                if1524 = call1530;
-              }
-              lineNumber = 165
-              var if1531 = var_done;
-              lineNumber = 162
-              var call1532 = callmethod(var_other,"x", [0]);
-              onSelf = true;
-              var call1534 = callmethod(this, "x", [0]);
-              var opresult1536 = callmethod(call1534, "<", [1], call1532);
-              if (Grace_isTrue(opresult1536)) {
-                lineNumber = 163
-                onSelf = true;
-                var call1537 = callmethod(this, "bounceFrom", [1], var_right);
-                if1531 = call1537;
-              }
-              lineNumber = 165
-              var block1538 = Grace_allocObject();
-              block1538.methods["apply"] = function() {
-                var args = Array.prototype.slice.call(arguments, 1);
-                return this.real.apply(this.receiver, args);
-              }
-              block1538.methods["applyIndirectly"] = function(argcv, a) {
-                return this.real.apply(this.receiver, a._value);
-              }
-              block1538.methods["outer"] = function() {
-                return callmethod(this.receiver, 'outer', [0]);
-              }
-              block1538.methods["match"] = GraceBlock_match;
-              block1538.methods["prefix?"] = GraceBlock_lift;
-              block1538.receiver = this;
-              block1538.className = 'block<musical:165>';
-              block1538.real = function(
-              ) {
-                sourceObject = this;
-                onSelf = true;
-                var call1539 = callmethod(this, "touching", [1], var_other);
-                return call1539;
-              };
-              lineNumber = 168
-              var block1540 = Grace_allocObject();
-              block1540.methods["apply"] = function() {
-                var args = Array.prototype.slice.call(arguments, 1);
-                return this.real.apply(this.receiver, args);
-              }
-              block1540.methods["applyIndirectly"] = function(argcv, a) {
-                return this.real.apply(this.receiver, a._value);
-              }
-              block1540.methods["outer"] = function() {
-                return callmethod(this.receiver, 'outer', [0]);
-              }
-              block1540.methods["match"] = GraceBlock_match;
-              block1540.methods["prefix?"] = GraceBlock_lift;
-              block1540.receiver = this;
-              block1540.className = 'block<musical:168>';
-              block1540.real = function(
-              ) {
-                sourceObject = this;
-                lineNumber = 166
-                onSelf = true;
-                var call1541 = callmethod(this, "forward", [1], new GraceNum(1));
-                return call1541;
-              };
-              var call1542 = callmethod(Grace_prelude,"while()do", [1, 1], block1538, block1540);
-              return call1542
-            } catch(e) {
-              if ((e.exctype == 'return') && (e.target == returnTarget)) {
-                return e.returnvalue;
-              } else {
-                throw e;
-              }
-            }
-          }
-          func1523.paramCounts = [
-            1,
-          ];
-          func1523.variableArities = [
-            false,
-          ];
-          obj1331.methods["bounceOff"] = func1523;
-          func1523.definitionLine = 158;
-          func1523.definitionModule = "musical";
-          var func1543 = function(argcv) {
-            var curarg = 1;
-            var var_other = arguments[curarg];
-            curarg++;
-            if (argcv[0] !=  func1543.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (touching)"));
-            var returnTarget = invocationCount;
-            invocationCount++;
-            moduleName = "musical";
-            try {
-              lineNumber = 170
-              onSelf = true;
-              var call1544 = callmethod(this, "x", [0]);
-              onSelf = true;
-              var call1545 = callmethod(this, "y", [0]);
-              var call1546 = callmethod(var_point,"x()y", [1, 1], call1544, call1545);
-              var call1547 = callmethod(var_other,"isPointOver", [1], call1546);
-              return call1547
-            } catch(e) {
-              if ((e.exctype == 'return') && (e.target == returnTarget)) {
-                return e.returnvalue;
-              } else {
-                throw e;
-              }
-            }
-          }
-          func1543.paramCounts = [
-            1,
-          ];
-          func1543.variableArities = [
-            false,
-          ];
-          obj1331.methods["touching"] = func1543;
-          func1543.definitionLine = 169;
-          func1543.definitionModule = "musical";
-          var func1548 = function(argcv) {
-            var curarg = 1;
-            var var_other = arguments[curarg];
-            curarg++;
-            if (argcv[0] !=  func1548.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (face)"));
-            var returnTarget = invocationCount;
-            invocationCount++;
-            moduleName = "musical";
-            try {
-              lineNumber = 176
-              var if1549 = var_done;
-              lineNumber = 173
-              onSelf = true;
-              var call1550 = callmethod(this, "y", [0]);
-              var call1552 = callmethod(var_other,"y", [0]);
-              var opresult1554 = callmethod(call1552, "!=", [1], call1550);
-              onSelf = true;
-              var call1556 = callmethod(this, "x", [0]);
-              var call1558 = callmethod(var_other,"x", [0]);
-              var opresult1560 = callmethod(call1558, "!=", [1], call1556);
-              var opresult1562 = callmethod(opresult1560, "||", [1], opresult1554);
-              if (Grace_isTrue(opresult1562)) {
-                lineNumber = 175
-                lineNumber = 173
-                lineNumber = 175
-                lineNumber = 174
-                onSelf = true;
-                var call1565 = callmethod(this, "x", [0]);
-                var call1567 = callmethod(var_other,"x", [0]);
-                var diff1569 = callmethod(call1567, "-", [1], call1565);
-                onSelf = true;
-                var call1570 = callmethod(this, "y", [0]);
-                var call1572 = callmethod(var_other,"y", [0]);
-                var diff1574 = callmethod(call1572, "-", [1], call1570);
-                var call1575 = callmethod(var_trig,"atan2", [2], diff1569, diff1574);
-                var prod1577 = callmethod(call1575, "*", [1], new GraceNum(180));
-                var quotient1579 = callmethod(prod1577, "/", [1], new GraceNum(3.1415));
-                onSelf = true;
-                var call1580 = callmethod(this, "angle:=", [1], quotient1579);
-                if1549 = call1580;
-              }
-              lineNumber = 176
-              onSelf = true;
-              var call1581 = callmethod(this, "normaliseAngle", [0]);
-              return call1581
-            } catch(e) {
-              if ((e.exctype == 'return') && (e.target == returnTarget)) {
-                return e.returnvalue;
-              } else {
-                throw e;
-              }
-            }
-          }
-          func1548.paramCounts = [
-            1,
-          ];
-          func1548.variableArities = [
-            false,
-          ];
-          obj1331.methods["face"] = func1548;
-          func1548.definitionLine = 172;
-          func1548.definitionModule = "musical";
-          var func1582 = function(argcv) {
-            var curarg = 1;
-            if (argcv[0] !=  func1582.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (stamp)"));
-            var returnTarget = invocationCount;
-            invocationCount++;
-            moduleName = "musical";
-            try {
-              lineNumber = 179
-              var string1583 = new GraceString("2d");
-              var call1584 = callmethod(var_backingCanvas,"getContext", [1], string1583);
-              onSelf = true;
-              var call1585 = callmethod(this, "draw", [1], call1584);
-              return call1585
-            } catch(e) {
-              if ((e.exctype == 'return') && (e.target == returnTarget)) {
-                return e.returnvalue;
-              } else {
-                throw e;
-              }
-            }
-          }
-          func1582.paramCounts = [
-            0,
-          ];
-          func1582.variableArities = [
-            false,
-          ];
-          obj1331.methods["stamp"] = func1582;
-          func1582.definitionLine = 178;
-          func1582.definitionModule = "musical";
-          sourceObject = obj1331;
-          lineNumber = 49
-          var call1586 = callmethod(superDepth, "outer", [0]);
-          onOuter = true;
-          onSelf = true;
-          var call1587 = callmethod(call1586, "outer", [0]);
-          onOuter = true;
-          onSelf = true;
-          var call1588 = callmethod(call1587, "initialise", [0]);
-          sourceObject = obj1331;
-          lineNumber = 50
-          var call1589 = callmethod(var_registeredObjects,"push", [1], this);
-          sourceObject = obj1331;
-          lineNumber = 52
-          lineNumber = 51
-          var_above = this;
-          sourceObject = obj1331;
-          lineNumber = 53
-          lineNumber = 52
-          var___916__ = this;
-          sourceObject = obj1331;
-          lineNumber = 53
-          var call1590 = callmethod(var_collections,"list", [0]);
-          var call1591 = callmethod(call1590,"new", [0]);
-          obj1331.data["alwaysBlocks"] = call1591;
-          var reader_musical_alwaysBlocks_1592 = function() {
-            return this.data["alwaysBlocks"];
-          }
-          reader_musical_alwaysBlocks_1592.def = true;
-          reader_musical_alwaysBlocks_1592.confidential = true;
-          obj1331.methods["alwaysBlocks"] = reader_musical_alwaysBlocks_1592;
-          lineNumber = 54;
-          moduleName = "musical";
-          lineNumber = 53
-          if (!Grace_isTrue(callmethod(var_Unknown, "match",
-            [1], call1591)))
-              throw new GraceExceptionPacket(TypeErrorObject,
-                    new GraceString("expected "
-                    + "initial value of def 'alwaysBlocks' to be of type Unknown"))
-          sourceObject = obj1331;
-          lineNumber = 55
-          lineNumber = 54
-          var quotient1595 = callmethod(var_canvasWidth, "/", [1], new GraceNum(2));
-          obj1331.data["x"] = quotient1595;
-          var reader_musical_x_1596 = function() {
-            return this.data["x"];
-          }
-          obj1331.methods["x"] = reader_musical_x_1596;
-          obj1331.data["x"] = quotient1595;
-          var writer_musical_x_1596 = function(argcv, o) {
-            this.data["x"] = o;
-          }
-          obj1331.methods["x:="] = writer_musical_x_1596;
-          writer_musical_x_1596.confidential = true;
-          lineNumber = 55;
-          moduleName = "musical";
-          lineNumber = 54
-          if (!Grace_isTrue(callmethod(var_Unknown, "match",
-            [1], quotient1595)))
-              throw new GraceExceptionPacket(TypeErrorObject,
-                    new GraceString("expected "
-                    + "initial value of var 'x' to be of type Unknown"))
-          obj1331.mutable = true;
-          sourceObject = obj1331;
-          lineNumber = 56
-          lineNumber = 55
-          var quotient1599 = callmethod(var_canvasHeight, "/", [1], new GraceNum(2));
-          obj1331.data["y"] = quotient1599;
-          var reader_musical_y_1600 = function() {
-            return this.data["y"];
-          }
-          obj1331.methods["y"] = reader_musical_y_1600;
-          obj1331.data["y"] = quotient1599;
-          var writer_musical_y_1600 = function(argcv, o) {
-            this.data["y"] = o;
-          }
-          obj1331.methods["y:="] = writer_musical_y_1600;
-          writer_musical_y_1600.confidential = true;
-          lineNumber = 56;
-          moduleName = "musical";
-          lineNumber = 55
-          if (!Grace_isTrue(callmethod(var_Unknown, "match",
-            [1], quotient1599)))
-              throw new GraceExceptionPacket(TypeErrorObject,
-                    new GraceString("expected "
-                    + "initial value of var 'y' to be of type Unknown"))
-          obj1331.mutable = true;
-          sourceObject = obj1331;
-          lineNumber = 56
-          onSelf = true;
-          var call1601 = callmethod(this, "x", [0]);
-          obj1331.data["destX"] = call1601;
-          var reader_musical_destX_1602 = function() {
-            return this.data["destX"];
-          }
-          obj1331.methods["destX"] = reader_musical_destX_1602;
-          obj1331.data["destX"] = call1601;
-          var writer_musical_destX_1602 = function(argcv, o) {
-            this.data["destX"] = o;
-          }
-          obj1331.methods["destX:="] = writer_musical_destX_1602;
-          reader_musical_destX_1602.confidential = true;
-          writer_musical_destX_1602.confidential = true;
-          lineNumber = 57;
-          moduleName = "musical";
-          lineNumber = 56
-          if (!Grace_isTrue(callmethod(var_Unknown, "match",
-            [1], call1601)))
-              throw new GraceExceptionPacket(TypeErrorObject,
-                    new GraceString("expected "
-                    + "initial value of var 'destX' to be of type Unknown"))
-          obj1331.mutable = true;
-          sourceObject = obj1331;
-          lineNumber = 57
-          onSelf = true;
-          var call1603 = callmethod(this, "y", [0]);
-          obj1331.data["destY"] = call1603;
-          var reader_musical_destY_1604 = function() {
-            return this.data["destY"];
-          }
-          obj1331.methods["destY"] = reader_musical_destY_1604;
-          obj1331.data["destY"] = call1603;
-          var writer_musical_destY_1604 = function(argcv, o) {
-            this.data["destY"] = o;
-          }
-          obj1331.methods["destY:="] = writer_musical_destY_1604;
-          reader_musical_destY_1604.confidential = true;
-          writer_musical_destY_1604.confidential = true;
-          lineNumber = 58;
-          moduleName = "musical";
-          lineNumber = 57
-          if (!Grace_isTrue(callmethod(var_Unknown, "match",
-            [1], call1603)))
-              throw new GraceExceptionPacket(TypeErrorObject,
-                    new GraceString("expected "
-                    + "initial value of var 'destY' to be of type Unknown"))
-          obj1331.mutable = true;
-          sourceObject = obj1331;
-          lineNumber = 58
-          obj1331.data["angle"] = new GraceNum(180);
-          var reader_musical_angle_1605 = function() {
-            return this.data["angle"];
-          }
-          obj1331.methods["angle"] = reader_musical_angle_1605;
-          obj1331.data["angle"] = new GraceNum(180);
-          var writer_musical_angle_1605 = function(argcv, o) {
-            this.data["angle"] = o;
-          }
-          obj1331.methods["angle:="] = writer_musical_angle_1605;
-          reader_musical_angle_1605.confidential = true;
-          writer_musical_angle_1605.confidential = true;
-          lineNumber = 59;
-          moduleName = "musical";
-          lineNumber = 58
-          if (!Grace_isTrue(callmethod(var_Unknown, "match",
-            [1], new GraceNum(180))))
-              throw new GraceExceptionPacket(TypeErrorObject,
-                    new GraceString("expected "
-                    + "initial value of var 'angle' to be of type Unknown"))
-          obj1331.mutable = true;
-          sourceObject = obj1331;
-          sourceObject = obj1331;
-          sourceObject = obj1331;
-          sourceObject = obj1331;
-          sourceObject = obj1331;
-          sourceObject = obj1331;
-          sourceObject = obj1331;
-          sourceObject = obj1331;
-          sourceObject = obj1331;
-          sourceObject = obj1331;
-          sourceObject = obj1331;
-          sourceObject = obj1331;
-          sourceObject = obj1331;
-          sourceObject = obj1331;
-          sourceObject = obj1331;
-          sourceObject = obj1331;
-          sourceObject = obj1331;
-          sourceObject = obj1331;
-          sourceObject = obj1331;
-          superDepth = origSuperDepth;
-        }
-        obj_init_1331.apply(obj1331, []);
-        return obj1331
-      } catch(e) {
-        if ((e.exctype == 'return') && (e.target == returnTarget)) {
-          return e.returnvalue;
-        } else {
-          throw e;
-        }
-      }
-    }
-    func1330.paramCounts = [
-      0,
-    ];
-    func1330.variableArities = [
-      false,
-    ];
-    obj1328.methods["new"] = func1330;
-    func1330.definitionLine = 48;
-    func1330.definitionModule = "musical";
-    var func1606 = function(argcv) {
-      var curarg = 1;
-      var inheritingObject = arguments[curarg++];
-      var returnTarget = invocationCount;
-      invocationCount++;
-      try {
-        var obj1607 = Grace_allocObject();
-        obj1607.definitionModule = "musical";
-        obj1607.definitionLine = 48;
-        var inho1607 = inheritingObject;
-        while (inho1607.superobj) inho1607 = inho1607.superobj;
-        inho1607.superobj = obj1607;
-        obj1607.data = inheritingObject.data;
-        obj1607.outer = this;
-        var reader_musical_outer_1608 = function() {
-          return this.outer;
-        }
-        obj1607.methods["outer"] = reader_musical_outer_1608;
-        function obj_init_1607() {
-          var origSuperDepth = superDepth;
-          superDepth = obj1607;
-          obj1607.annotations = [];
-          var func1609 = function(argcv) {
-            var curarg = 1;
-            if (argcv[0] !=  func1609.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (step)"));
-            var returnTarget = invocationCount;
-            invocationCount++;
-            moduleName = "musical";
-            try {
-              lineNumber = 60
-              onSelf = true;
-              var call1610 = callmethod(this, "alwaysBlocks", [0]);
-              lineNumber = 63
-              var block1611 = Grace_allocObject();
-              block1611.methods["apply"] = function() {
-                var args = Array.prototype.slice.call(arguments, 1);
-                return this.real.apply(this.receiver, args);
-              }
-              block1611.methods["applyIndirectly"] = function(argcv, a) {
-                return this.real.apply(this.receiver, a._value);
-              }
-              block1611.methods["outer"] = function() {
-                return callmethod(this.receiver, 'outer', [0]);
-              }
-              block1611.methods["match"] = GraceBlock_match;
-              block1611.methods["prefix?"] = GraceBlock_lift;
-              block1611.receiver = this;
-              block1611.className = 'block<musical:63>';
-              block1611.real = function(
-                var_b
-              ) {
-                sourceObject = this;
-                lineNumber = 61
-                var call1612 = callmethod(var_b,"apply", [0]);
-                return call1612;
-              };
-              var call1613 = callmethod(Grace_prelude,"for()do", [1, 1], call1610, block1611);
-              lineNumber = 63
-              onSelf = true;
-              var call1614 = callmethod(this, "tick", [0]);
-              return call1614
-            } catch(e) {
-              if ((e.exctype == 'return') && (e.target == returnTarget)) {
-                return e.returnvalue;
-              } else {
-                throw e;
-              }
-            }
-          }
-          func1609.paramCounts = [
-            0,
-          ];
-          func1609.variableArities = [
-            false,
-          ];
-          obj1607.methods["step"] = func1609;
-          func1609.definitionLine = 59;
-          func1609.definitionModule = "musical";
-          var func1615 = function(argcv) {
-            var curarg = 1;
-            if (argcv[0] !=  func1615.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (tick)"));
-            var returnTarget = invocationCount;
-            invocationCount++;
-            moduleName = "musical";
-            try {
-              return var_done
-            } catch(e) {
-              if ((e.exctype == 'return') && (e.target == returnTarget)) {
-                return e.returnvalue;
-              } else {
-                throw e;
-              }
-            }
-          }
-          func1615.paramCounts = [
-            0,
-          ];
-          func1615.variableArities = [
-            false,
-          ];
-          obj1607.methods["tick"] = func1615;
-          func1615.definitionLine = 66;
-          func1615.definitionModule = "musical";
-          var func1616 = function(argcv) {
-            var curarg = 1;
-            var var_ctx = arguments[curarg];
-            curarg++;
-            if (argcv[0] !=  func1616.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (draw)"));
-            var returnTarget = invocationCount;
-            invocationCount++;
-            moduleName = "musical";
-            try {
-              return var_done
-            } catch(e) {
-              if ((e.exctype == 'return') && (e.target == returnTarget)) {
-                return e.returnvalue;
-              } else {
-                throw e;
-              }
-            }
-          }
-          func1616.paramCounts = [
-            1,
-          ];
-          func1616.variableArities = [
-            false,
-          ];
-          obj1607.methods["draw"] = func1616;
-          func1616.definitionLine = 67;
-          func1616.definitionModule = "musical";
-          var func1617 = function(argcv) {
+          var func1376 = function(argcv) {
             var curarg = 1;
             var var_p = arguments[curarg];
             curarg++;
-            if (argcv[0] !=  func1617.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (moveTo)"));
-            var returnTarget = invocationCount;
-            invocationCount++;
-            moduleName = "musical";
-            try {
-              lineNumber = 70
-              lineNumber = 61
-              lineNumber = 69
-              var call1618 = callmethod(var_p,"x", [0]);
-              onSelf = true;
-              var call1619 = callmethod(this, "destX:=", [1], call1618);
-              lineNumber = 71
-              lineNumber = 69
-              lineNumber = 70
-              var call1620 = callmethod(var_p,"y", [0]);
-              onSelf = true;
-              var call1621 = callmethod(this, "destY:=", [1], call1620);
-              return call1621
-            } catch(e) {
-              if ((e.exctype == 'return') && (e.target == returnTarget)) {
-                return e.returnvalue;
-              } else {
-                throw e;
-              }
-            }
-          }
-          func1617.paramCounts = [
-            1,
-          ];
-          func1617.variableArities = [
-            false,
-          ];
-          obj1607.methods["moveTo"] = func1617;
-          func1617.definitionLine = 68;
-          func1617.definitionModule = "musical";
-          var func1622 = function(argcv) {
-            var curarg = 1;
-            var var_p = arguments[curarg];
-            curarg++;
-            if (argcv[0] !=  func1622.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (jumpTo)"));
-            var returnTarget = invocationCount;
-            invocationCount++;
-            moduleName = "musical";
-            try {
-              lineNumber = 74
-              lineNumber = 70
-              lineNumber = 73
-              var call1623 = callmethod(var_p,"x", [0]);
-              onSelf = true;
-              var call1624 = callmethod(this, "x:=", [1], call1623);
-              lineNumber = 75
-              lineNumber = 73
-              lineNumber = 74
-              var call1625 = callmethod(var_p,"y", [0]);
-              onSelf = true;
-              var call1626 = callmethod(this, "y:=", [1], call1625);
-              lineNumber = 76
-              lineNumber = 74
-              lineNumber = 75
-              onSelf = true;
-              var call1627 = callmethod(this, "x", [0]);
-              onSelf = true;
-              var call1628 = callmethod(this, "destX:=", [1], call1627);
-              lineNumber = 77
-              lineNumber = 74
-              lineNumber = 76
-              onSelf = true;
-              var call1629 = callmethod(this, "y", [0]);
-              onSelf = true;
-              var call1630 = callmethod(this, "destY:=", [1], call1629);
-              return call1630
-            } catch(e) {
-              if ((e.exctype == 'return') && (e.target == returnTarget)) {
-                return e.returnvalue;
-              } else {
-                throw e;
-              }
-            }
-          }
-          func1622.paramCounts = [
-            1,
-          ];
-          func1622.variableArities = [
-            false,
-          ];
-          obj1607.methods["jumpTo"] = func1622;
-          func1622.definitionLine = 72;
-          func1622.definitionModule = "musical";
-          var func1631 = function(argcv) {
-            var curarg = 1;
-            var var_p = arguments[curarg];
-            curarg++;
-            if (argcv[0] !=  func1631.paramCounts[0])
+            if (argcv[0] !=  func1376.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (isPointOver)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "musical";
             try {
               lineNumber = 78
-              var bool1632 = new GraceBoolean(false)
-              return bool1632
+              var bool1377 = new GraceBoolean(false)
+              return bool1377
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -8039,18 +6660,18 @@ function gracecode_musical () {
               }
             }
           }
-          func1631.paramCounts = [
+          func1376.paramCounts = [
             1,
           ];
-          func1631.variableArities = [
+          func1376.variableArities = [
             false,
           ];
-          obj1607.methods["isPointOver"] = func1631;
-          func1631.definitionLine = 78;
-          func1631.definitionModule = "musical";
-          var func1633 = function(argcv) {
+          obj1352.methods["isPointOver"] = func1376;
+          func1376.definitionLine = 78;
+          func1376.definitionModule = "musical";
+          var func1378 = function(argcv) {
             var curarg = 1;
-            if (argcv[0] !=  func1633.paramCounts[0])
+            if (argcv[0] !=  func1378.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (mousedown)"));
             var returnTarget = invocationCount;
             invocationCount++;
@@ -8065,20 +6686,20 @@ function gracecode_musical () {
               }
             }
           }
-          func1633.paramCounts = [
+          func1378.paramCounts = [
             0,
           ];
-          func1633.variableArities = [
+          func1378.variableArities = [
             false,
           ];
-          obj1607.methods["mousedown"] = func1633;
-          func1633.definitionLine = 79;
-          func1633.definitionModule = "musical";
-          var func1634 = function(argcv) {
+          obj1352.methods["mousedown"] = func1378;
+          func1378.definitionLine = 79;
+          func1378.definitionModule = "musical";
+          var func1379 = function(argcv) {
             var curarg = 1;
             var var_b = arguments[curarg];
             curarg++;
-            if (argcv[0] !=  func1634.paramCounts[0])
+            if (argcv[0] !=  func1379.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (always)"));
             var returnTarget = invocationCount;
             invocationCount++;
@@ -8086,9 +6707,9 @@ function gracecode_musical () {
             try {
               lineNumber = 81
               onSelf = true;
-              var call1635 = callmethod(this, "alwaysBlocks", [0]);
-              var call1636 = callmethod(call1635,"push", [1], var_b);
-              return call1636
+              var call1380 = callmethod(this, "alwaysBlocks", [0]);
+              var call1381 = callmethod(call1380,"push", [1], var_b);
+              return call1381
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -8097,24 +6718,24 @@ function gracecode_musical () {
               }
             }
           }
-          func1634.paramCounts = [
+          func1379.paramCounts = [
             1,
           ];
-          func1634.variableArities = [
+          func1379.variableArities = [
             false,
           ];
-          obj1607.methods["always"] = func1634;
-          func1634.definitionLine = 80;
-          func1634.definitionModule = "musical";
-          var func1637 = function(argcv) {
+          obj1352.methods["always"] = func1379;
+          func1379.definitionLine = 80;
+          func1379.definitionModule = "musical";
+          var func1382 = function(argcv) {
             var curarg = 1;
             var var_cond = arguments[curarg];
             curarg++;
-            if (argcv[0] !=  func1637.paramCounts[0])
+            if (argcv[0] !=  func1382.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (whenever)"));
             var var_b = arguments[curarg];
             curarg++;
-            if (argcv[1] !=  func1637.paramCounts[1])
+            if (argcv[1] !=  func1382.paramCounts[1])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 2 (do)"));
             var returnTarget = invocationCount;
             invocationCount++;
@@ -8122,38 +6743,38 @@ function gracecode_musical () {
             try {
               lineNumber = 84
               lineNumber = 89
-              var block1638 = Grace_allocObject();
-              block1638.methods["apply"] = function() {
+              var block1383 = Grace_allocObject();
+              block1383.methods["apply"] = function() {
                 var args = Array.prototype.slice.call(arguments, 1);
                 return this.real.apply(this.receiver, args);
               }
-              block1638.methods["applyIndirectly"] = function(argcv, a) {
+              block1383.methods["applyIndirectly"] = function(argcv, a) {
                 return this.real.apply(this.receiver, a._value);
               }
-              block1638.methods["outer"] = function() {
+              block1383.methods["outer"] = function() {
                 return callmethod(this.receiver, 'outer', [0]);
               }
-              block1638.methods["match"] = GraceBlock_match;
-              block1638.methods["prefix?"] = GraceBlock_lift;
-              block1638.receiver = this;
-              block1638.className = 'block<musical:89>';
-              block1638.real = function(
+              block1383.methods["match"] = GraceBlock_match;
+              block1383.methods["prefix?"] = GraceBlock_lift;
+              block1383.receiver = this;
+              block1383.className = 'block<musical:89>';
+              block1383.real = function(
               ) {
                 sourceObject = this;
                 lineNumber = 88
-                var if1639 = var_done;
+                var if1384 = var_done;
                 lineNumber = 85
-                var call1640 = callmethod(var_cond,"apply", [0]);
-                if (Grace_isTrue(call1640)) {
+                var call1385 = callmethod(var_cond,"apply", [0]);
+                if (Grace_isTrue(call1385)) {
                   lineNumber = 86
-                  var call1641 = callmethod(var_b,"apply", [0]);
-                  if1639 = call1641;
+                  var call1386 = callmethod(var_b,"apply", [0]);
+                  if1384 = call1386;
                 }
-                return if1639;
+                return if1384;
               };
               onSelf = true;
-              var call1642 = callmethod(this, "always", [1], block1638);
-              return call1642
+              var call1387 = callmethod(this, "always", [1], block1383);
+              return call1387
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -8162,22 +6783,22 @@ function gracecode_musical () {
               }
             }
           }
-          func1637.paramCounts = [
+          func1382.paramCounts = [
             1,
             1,
           ];
-          func1637.variableArities = [
+          func1382.variableArities = [
             false,
             false,
           ];
-          obj1607.methods["whenever()do"] = func1637;
-          func1637.definitionLine = 83;
-          func1637.definitionModule = "musical";
-          var func1643 = function(argcv) {
+          obj1352.methods["whenever()do"] = func1382;
+          func1382.definitionLine = 83;
+          func1382.definitionModule = "musical";
+          var func1388 = function(argcv) {
             var curarg = 1;
             var var_dist = arguments[curarg];
             curarg++;
-            if (argcv[0] !=  func1643.paramCounts[0])
+            if (argcv[0] !=  func1388.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (forward)"));
             var returnTarget = invocationCount;
             invocationCount++;
@@ -8186,12 +6807,12 @@ function gracecode_musical () {
               lineNumber = 92
               lineNumber = 91
               onSelf = true;
-              var call1647 = callmethod(this, "angle", [0]);
-              var quotient1649 = callmethod(call1647, "/", [1], new GraceNum(180));
-              var prod1651 = callmethod(quotient1649, "*", [1], var_PI);
-              var call1652 = callmethod(var_trig,"cos", [1], prod1651);
-              var prod1654 = callmethod(call1652, "*", [1], var_dist);
-              var var_y__39__ = prod1654;
+              var call1392 = callmethod(this, "angle", [0]);
+              var quotient1394 = callmethod(call1392, "/", [1], new GraceNum(180));
+              var prod1396 = callmethod(quotient1394, "*", [1], var_PI);
+              var call1397 = callmethod(var_trig,"cos", [1], prod1396);
+              var prod1399 = callmethod(call1397, "*", [1], var_dist);
+              var var_y__39__ = prod1399;
               lineNumber = 92;
               moduleName = "musical";
               lineNumber = 91
@@ -8203,12 +6824,12 @@ function gracecode_musical () {
               lineNumber = 93
               lineNumber = 92
               onSelf = true;
-              var call1658 = callmethod(this, "angle", [0]);
-              var quotient1660 = callmethod(call1658, "/", [1], new GraceNum(180));
-              var prod1662 = callmethod(quotient1660, "*", [1], var_PI);
-              var call1663 = callmethod(var_trig,"sin", [1], prod1662);
-              var prod1665 = callmethod(call1663, "*", [1], var_dist);
-              var var_x__39__ = prod1665;
+              var call1403 = callmethod(this, "angle", [0]);
+              var quotient1405 = callmethod(call1403, "/", [1], new GraceNum(180));
+              var prod1407 = callmethod(quotient1405, "*", [1], var_PI);
+              var call1408 = callmethod(var_trig,"sin", [1], prod1407);
+              var prod1410 = callmethod(call1408, "*", [1], var_dist);
+              var var_x__39__ = prod1410;
               lineNumber = 93;
               moduleName = "musical";
               lineNumber = 92
@@ -8222,20 +6843,20 @@ function gracecode_musical () {
               lineNumber = 94
               lineNumber = 93
               onSelf = true;
-              var call1667 = callmethod(this, "x", [0]);
-              var opresult1669 = callmethod(call1667, "+", [1], var_x__39__);
+              var call1412 = callmethod(this, "x", [0]);
+              var opresult1414 = callmethod(call1412, "+", [1], var_x__39__);
               onSelf = true;
-              var call1670 = callmethod(this, "x:=", [1], opresult1669);
+              var call1415 = callmethod(this, "x:=", [1], opresult1414);
               lineNumber = 95
               lineNumber = 86
               lineNumber = 95
               lineNumber = 94
               onSelf = true;
-              var call1672 = callmethod(this, "y", [0]);
-              var opresult1674 = callmethod(call1672, "+", [1], var_y__39__);
+              var call1417 = callmethod(this, "y", [0]);
+              var opresult1419 = callmethod(call1417, "+", [1], var_y__39__);
               onSelf = true;
-              var call1675 = callmethod(this, "y:=", [1], opresult1674);
-              return call1675
+              var call1420 = callmethod(this, "y:=", [1], opresult1419);
+              return call1420
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -8244,64 +6865,64 @@ function gracecode_musical () {
               }
             }
           }
-          func1643.paramCounts = [
+          func1388.paramCounts = [
             1,
           ];
-          func1643.variableArities = [
+          func1388.variableArities = [
             false,
           ];
-          obj1607.methods["forward"] = func1643;
-          func1643.definitionLine = 90;
-          func1643.definitionModule = "musical";
-          var func1676 = function(argcv) {
+          obj1352.methods["forward"] = func1388;
+          func1388.definitionLine = 90;
+          func1388.definitionModule = "musical";
+          var func1421 = function(argcv) {
             var curarg = 1;
-            if (argcv[0] !=  func1676.paramCounts[0])
+            if (argcv[0] !=  func1421.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (normaliseAngle)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "musical";
             try {
               lineNumber = 97
-              var block1677 = Grace_allocObject();
-              block1677.methods["apply"] = function() {
+              var block1422 = Grace_allocObject();
+              block1422.methods["apply"] = function() {
                 var args = Array.prototype.slice.call(arguments, 1);
                 return this.real.apply(this.receiver, args);
               }
-              block1677.methods["applyIndirectly"] = function(argcv, a) {
+              block1422.methods["applyIndirectly"] = function(argcv, a) {
                 return this.real.apply(this.receiver, a._value);
               }
-              block1677.methods["outer"] = function() {
+              block1422.methods["outer"] = function() {
                 return callmethod(this.receiver, 'outer', [0]);
               }
-              block1677.methods["match"] = GraceBlock_match;
-              block1677.methods["prefix?"] = GraceBlock_lift;
-              block1677.receiver = this;
-              block1677.className = 'block<musical:97>';
-              block1677.real = function(
+              block1422.methods["match"] = GraceBlock_match;
+              block1422.methods["prefix?"] = GraceBlock_lift;
+              block1422.receiver = this;
+              block1422.className = 'block<musical:97>';
+              block1422.real = function(
               ) {
                 sourceObject = this;
                 onSelf = true;
-                var call1679 = callmethod(this, "angle", [0]);
-                var opresult1681 = callmethod(call1679, "<", [1], new GraceNum(0));
-                return opresult1681;
+                var call1424 = callmethod(this, "angle", [0]);
+                var opresult1426 = callmethod(call1424, "<", [1], new GraceNum(0));
+                return opresult1426;
               };
               lineNumber = 100
-              var block1682 = Grace_allocObject();
-              block1682.methods["apply"] = function() {
+              var block1427 = Grace_allocObject();
+              block1427.methods["apply"] = function() {
                 var args = Array.prototype.slice.call(arguments, 1);
                 return this.real.apply(this.receiver, args);
               }
-              block1682.methods["applyIndirectly"] = function(argcv, a) {
+              block1427.methods["applyIndirectly"] = function(argcv, a) {
                 return this.real.apply(this.receiver, a._value);
               }
-              block1682.methods["outer"] = function() {
+              block1427.methods["outer"] = function() {
                 return callmethod(this.receiver, 'outer', [0]);
               }
-              block1682.methods["match"] = GraceBlock_match;
-              block1682.methods["prefix?"] = GraceBlock_lift;
-              block1682.receiver = this;
-              block1682.className = 'block<musical:100>';
-              block1682.real = function(
+              block1427.methods["match"] = GraceBlock_match;
+              block1427.methods["prefix?"] = GraceBlock_lift;
+              block1427.receiver = this;
+              block1427.className = 'block<musical:100>';
+              block1427.real = function(
               ) {
                 sourceObject = this;
                 lineNumber = 99
@@ -8309,54 +6930,54 @@ function gracecode_musical () {
                 lineNumber = 99
                 lineNumber = 98
                 onSelf = true;
-                var call1684 = callmethod(this, "angle", [0]);
-                var opresult1686 = callmethod(call1684, "+", [1], new GraceNum(360));
+                var call1429 = callmethod(this, "angle", [0]);
+                var opresult1431 = callmethod(call1429, "+", [1], new GraceNum(360));
                 onSelf = true;
-                var call1687 = callmethod(this, "angle:=", [1], opresult1686);
-                return call1687;
+                var call1432 = callmethod(this, "angle:=", [1], opresult1431);
+                return call1432;
               };
-              var call1688 = callmethod(Grace_prelude,"while()do", [1, 1], block1677, block1682);
+              var call1433 = callmethod(Grace_prelude,"while()do", [1, 1], block1422, block1427);
               lineNumber = 100
-              var block1689 = Grace_allocObject();
-              block1689.methods["apply"] = function() {
+              var block1434 = Grace_allocObject();
+              block1434.methods["apply"] = function() {
                 var args = Array.prototype.slice.call(arguments, 1);
                 return this.real.apply(this.receiver, args);
               }
-              block1689.methods["applyIndirectly"] = function(argcv, a) {
+              block1434.methods["applyIndirectly"] = function(argcv, a) {
                 return this.real.apply(this.receiver, a._value);
               }
-              block1689.methods["outer"] = function() {
+              block1434.methods["outer"] = function() {
                 return callmethod(this.receiver, 'outer', [0]);
               }
-              block1689.methods["match"] = GraceBlock_match;
-              block1689.methods["prefix?"] = GraceBlock_lift;
-              block1689.receiver = this;
-              block1689.className = 'block<musical:100>';
-              block1689.real = function(
+              block1434.methods["match"] = GraceBlock_match;
+              block1434.methods["prefix?"] = GraceBlock_lift;
+              block1434.receiver = this;
+              block1434.className = 'block<musical:100>';
+              block1434.real = function(
               ) {
                 sourceObject = this;
                 onSelf = true;
-                var call1691 = callmethod(this, "angle", [0]);
-                var opresult1693 = callmethod(call1691, ">", [1], new GraceNum(360));
-                return opresult1693;
+                var call1436 = callmethod(this, "angle", [0]);
+                var opresult1438 = callmethod(call1436, ">", [1], new GraceNum(360));
+                return opresult1438;
               };
               lineNumber = 103
-              var block1694 = Grace_allocObject();
-              block1694.methods["apply"] = function() {
+              var block1439 = Grace_allocObject();
+              block1439.methods["apply"] = function() {
                 var args = Array.prototype.slice.call(arguments, 1);
                 return this.real.apply(this.receiver, args);
               }
-              block1694.methods["applyIndirectly"] = function(argcv, a) {
+              block1439.methods["applyIndirectly"] = function(argcv, a) {
                 return this.real.apply(this.receiver, a._value);
               }
-              block1694.methods["outer"] = function() {
+              block1439.methods["outer"] = function() {
                 return callmethod(this.receiver, 'outer', [0]);
               }
-              block1694.methods["match"] = GraceBlock_match;
-              block1694.methods["prefix?"] = GraceBlock_lift;
-              block1694.receiver = this;
-              block1694.className = 'block<musical:103>';
-              block1694.real = function(
+              block1439.methods["match"] = GraceBlock_match;
+              block1439.methods["prefix?"] = GraceBlock_lift;
+              block1439.receiver = this;
+              block1439.className = 'block<musical:103>';
+              block1439.real = function(
               ) {
                 sourceObject = this;
                 lineNumber = 102
@@ -8364,14 +6985,14 @@ function gracecode_musical () {
                 lineNumber = 102
                 lineNumber = 101
                 onSelf = true;
-                var call1696 = callmethod(this, "angle", [0]);
-                var diff1698 = callmethod(call1696, "-", [1], new GraceNum(360));
+                var call1441 = callmethod(this, "angle", [0]);
+                var diff1443 = callmethod(call1441, "-", [1], new GraceNum(360));
                 onSelf = true;
-                var call1699 = callmethod(this, "angle:=", [1], diff1698);
-                return call1699;
+                var call1444 = callmethod(this, "angle:=", [1], diff1443);
+                return call1444;
               };
-              var call1700 = callmethod(Grace_prelude,"while()do", [1, 1], block1689, block1694);
-              return call1700
+              var call1445 = callmethod(Grace_prelude,"while()do", [1, 1], block1434, block1439);
+              return call1445
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -8380,20 +7001,20 @@ function gracecode_musical () {
               }
             }
           }
-          func1676.paramCounts = [
+          func1421.paramCounts = [
             0,
           ];
-          func1676.variableArities = [
+          func1421.variableArities = [
             false,
           ];
-          obj1607.methods["normaliseAngle"] = func1676;
-          func1676.definitionLine = 96;
-          func1676.definitionModule = "musical";
-          var func1701 = function(argcv) {
+          obj1352.methods["normaliseAngle"] = func1421;
+          func1421.definitionLine = 96;
+          func1421.definitionModule = "musical";
+          var func1446 = function(argcv) {
             var curarg = 1;
             var var_degrees = arguments[curarg];
             curarg++;
-            if (argcv[0] !=  func1701.paramCounts[0])
+            if (argcv[0] !=  func1446.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (turn)"));
             var returnTarget = invocationCount;
             invocationCount++;
@@ -8404,14 +7025,14 @@ function gracecode_musical () {
               lineNumber = 106
               lineNumber = 105
               onSelf = true;
-              var call1703 = callmethod(this, "angle", [0]);
-              var opresult1705 = callmethod(call1703, "+", [1], var_degrees);
+              var call1448 = callmethod(this, "angle", [0]);
+              var opresult1450 = callmethod(call1448, "+", [1], var_degrees);
               onSelf = true;
-              var call1706 = callmethod(this, "angle:=", [1], opresult1705);
+              var call1451 = callmethod(this, "angle:=", [1], opresult1450);
               lineNumber = 106
               onSelf = true;
-              var call1707 = callmethod(this, "normaliseAngle", [0]);
-              return call1707
+              var call1452 = callmethod(this, "normaliseAngle", [0]);
+              return call1452
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -8420,83 +7041,83 @@ function gracecode_musical () {
               }
             }
           }
-          func1701.paramCounts = [
+          func1446.paramCounts = [
             1,
           ];
-          func1701.variableArities = [
+          func1446.variableArities = [
             false,
           ];
-          obj1607.methods["turn"] = func1701;
-          func1701.definitionLine = 104;
-          func1701.definitionModule = "musical";
-          var func1708 = function(argcv) {
+          obj1352.methods["turn"] = func1446;
+          func1446.definitionLine = 104;
+          func1446.definitionModule = "musical";
+          var func1453 = function(argcv) {
             var curarg = 1;
-            if (argcv[0] !=  func1708.paramCounts[0])
+            if (argcv[0] !=  func1453.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (touchingEdge)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "musical";
             try {
               lineNumber = 112
-              var if1709 = var_done;
+              var if1454 = var_done;
               lineNumber = 109
               onSelf = true;
-              var call1710 = callmethod(this, "x", [0]);
-              var call1711 = callmethod(var_point,"x()y", [1, 1], call1710, new GraceNum(0));
+              var call1455 = callmethod(this, "x", [0]);
+              var call1456 = callmethod(var_point,"x()y", [1, 1], call1455, new GraceNum(0));
               onSelf = true;
-              var call1712 = callmethod(this, "isPointOver", [1], call1711);
-              if (Grace_isTrue(call1712)) {
+              var call1457 = callmethod(this, "isPointOver", [1], call1456);
+              if (Grace_isTrue(call1457)) {
                 lineNumber = 111
                 lineNumber = 110
-                var bool1713 = new GraceBoolean(true)
-                return bool1713
+                var bool1458 = new GraceBoolean(true)
+                return bool1458
               }
               lineNumber = 115
-              var if1714 = var_done;
+              var if1459 = var_done;
               lineNumber = 112
               onSelf = true;
-              var call1715 = callmethod(this, "x", [0]);
-              var call1716 = callmethod(var_point,"x()y", [1, 1], call1715, var_canvasHeight);
+              var call1460 = callmethod(this, "x", [0]);
+              var call1461 = callmethod(var_point,"x()y", [1, 1], call1460, var_canvasHeight);
               onSelf = true;
-              var call1717 = callmethod(this, "isPointOver", [1], call1716);
-              if (Grace_isTrue(call1717)) {
+              var call1462 = callmethod(this, "isPointOver", [1], call1461);
+              if (Grace_isTrue(call1462)) {
                 lineNumber = 114
                 lineNumber = 113
-                var bool1718 = new GraceBoolean(true)
-                return bool1718
+                var bool1463 = new GraceBoolean(true)
+                return bool1463
               }
               lineNumber = 118
-              var if1719 = var_done;
+              var if1464 = var_done;
               lineNumber = 115
               onSelf = true;
-              var call1720 = callmethod(this, "y", [0]);
-              var call1721 = callmethod(var_point,"x()y", [1, 1], new GraceNum(0), call1720);
+              var call1465 = callmethod(this, "y", [0]);
+              var call1466 = callmethod(var_point,"x()y", [1, 1], new GraceNum(0), call1465);
               onSelf = true;
-              var call1722 = callmethod(this, "isPointOver", [1], call1721);
-              if (Grace_isTrue(call1722)) {
+              var call1467 = callmethod(this, "isPointOver", [1], call1466);
+              if (Grace_isTrue(call1467)) {
                 lineNumber = 117
                 lineNumber = 116
-                var bool1723 = new GraceBoolean(true)
-                return bool1723
+                var bool1468 = new GraceBoolean(true)
+                return bool1468
               }
               lineNumber = 121
-              var if1724 = var_done;
+              var if1469 = var_done;
               lineNumber = 118
               onSelf = true;
-              var call1725 = callmethod(this, "y", [0]);
-              var call1726 = callmethod(var_point,"x()y", [1, 1], var_canvasWidth, call1725);
+              var call1470 = callmethod(this, "y", [0]);
+              var call1471 = callmethod(var_point,"x()y", [1, 1], var_canvasWidth, call1470);
               onSelf = true;
-              var call1727 = callmethod(this, "isPointOver", [1], call1726);
-              if (Grace_isTrue(call1727)) {
+              var call1472 = callmethod(this, "isPointOver", [1], call1471);
+              if (Grace_isTrue(call1472)) {
                 lineNumber = 120
                 lineNumber = 119
-                var bool1728 = new GraceBoolean(true)
-                return bool1728
+                var bool1473 = new GraceBoolean(true)
+                return bool1473
               }
               lineNumber = 122
               lineNumber = 121
-              var bool1729 = new GraceBoolean(false)
-              return bool1729
+              var bool1474 = new GraceBoolean(false)
+              return bool1474
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -8505,18 +7126,18 @@ function gracecode_musical () {
               }
             }
           }
-          func1708.paramCounts = [
+          func1453.paramCounts = [
             0,
           ];
-          func1708.variableArities = [
+          func1453.variableArities = [
             false,
           ];
-          obj1607.methods["touchingEdge"] = func1708;
-          func1708.definitionLine = 108;
-          func1708.definitionModule = "musical";
-          var func1730 = function(argcv) {
+          obj1352.methods["touchingEdge"] = func1453;
+          func1453.definitionLine = 108;
+          func1453.definitionModule = "musical";
+          var func1475 = function(argcv) {
             var curarg = 1;
-            if (argcv[0] !=  func1730.paramCounts[0])
+            if (argcv[0] !=  func1475.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (bounce)"));
             var returnTarget = invocationCount;
             invocationCount++;
@@ -8545,110 +7166,110 @@ function gracecode_musical () {
                         new GraceString("expected "
                         + "initial value of var 'dy' to be of type Unknown"))
               lineNumber = 129
-              var if1731 = var_done;
+              var if1476 = var_done;
               lineNumber = 126
               onSelf = true;
-              var call1732 = callmethod(this, "x", [0]);
-              var call1733 = callmethod(var_point,"x()y", [1, 1], call1732, new GraceNum(0));
+              var call1477 = callmethod(this, "x", [0]);
+              var call1478 = callmethod(var_point,"x()y", [1, 1], call1477, new GraceNum(0));
               onSelf = true;
-              var call1734 = callmethod(this, "isPointOver", [1], call1733);
-              if (Grace_isTrue(call1734)) {
+              var call1479 = callmethod(this, "isPointOver", [1], call1478);
+              if (Grace_isTrue(call1479)) {
                 lineNumber = 127
                 onSelf = true;
-                var call1735 = callmethod(this, "bounceFrom", [1], var_top);
-                if1731 = call1735;
+                var call1480 = callmethod(this, "bounceFrom", [1], var_top);
+                if1476 = call1480;
               }
               lineNumber = 132
-              var if1736 = var_done;
+              var if1481 = var_done;
               lineNumber = 129
               onSelf = true;
-              var call1737 = callmethod(this, "x", [0]);
-              var call1738 = callmethod(var_point,"x()y", [1, 1], call1737, var_canvasHeight);
+              var call1482 = callmethod(this, "x", [0]);
+              var call1483 = callmethod(var_point,"x()y", [1, 1], call1482, var_canvasHeight);
               onSelf = true;
-              var call1739 = callmethod(this, "isPointOver", [1], call1738);
-              if (Grace_isTrue(call1739)) {
+              var call1484 = callmethod(this, "isPointOver", [1], call1483);
+              if (Grace_isTrue(call1484)) {
                 lineNumber = 130
                 onSelf = true;
-                var call1740 = callmethod(this, "bounceFrom", [1], var_bottom);
-                if1736 = call1740;
+                var call1485 = callmethod(this, "bounceFrom", [1], var_bottom);
+                if1481 = call1485;
               }
               lineNumber = 135
-              var if1741 = var_done;
+              var if1486 = var_done;
               lineNumber = 132
               onSelf = true;
-              var call1742 = callmethod(this, "y", [0]);
-              var call1743 = callmethod(var_point,"x()y", [1, 1], new GraceNum(0), call1742);
+              var call1487 = callmethod(this, "y", [0]);
+              var call1488 = callmethod(var_point,"x()y", [1, 1], new GraceNum(0), call1487);
               onSelf = true;
-              var call1744 = callmethod(this, "isPointOver", [1], call1743);
-              if (Grace_isTrue(call1744)) {
+              var call1489 = callmethod(this, "isPointOver", [1], call1488);
+              if (Grace_isTrue(call1489)) {
                 lineNumber = 133
                 onSelf = true;
-                var call1745 = callmethod(this, "bounceFrom", [1], var_left);
-                if1741 = call1745;
+                var call1490 = callmethod(this, "bounceFrom", [1], var_left);
+                if1486 = call1490;
               }
               lineNumber = 138
-              var if1746 = var_done;
+              var if1491 = var_done;
               lineNumber = 135
               onSelf = true;
-              var call1747 = callmethod(this, "y", [0]);
-              var call1748 = callmethod(var_point,"x()y", [1, 1], var_canvasWidth, call1747);
+              var call1492 = callmethod(this, "y", [0]);
+              var call1493 = callmethod(var_point,"x()y", [1, 1], var_canvasWidth, call1492);
               onSelf = true;
-              var call1749 = callmethod(this, "isPointOver", [1], call1748);
-              if (Grace_isTrue(call1749)) {
+              var call1494 = callmethod(this, "isPointOver", [1], call1493);
+              if (Grace_isTrue(call1494)) {
                 lineNumber = 136
                 onSelf = true;
-                var call1750 = callmethod(this, "bounceFrom", [1], var_right);
-                if1746 = call1750;
+                var call1495 = callmethod(this, "bounceFrom", [1], var_right);
+                if1491 = call1495;
               }
               lineNumber = 138
-              var block1751 = Grace_allocObject();
-              block1751.methods["apply"] = function() {
+              var block1496 = Grace_allocObject();
+              block1496.methods["apply"] = function() {
                 var args = Array.prototype.slice.call(arguments, 1);
                 return this.real.apply(this.receiver, args);
               }
-              block1751.methods["applyIndirectly"] = function(argcv, a) {
+              block1496.methods["applyIndirectly"] = function(argcv, a) {
                 return this.real.apply(this.receiver, a._value);
               }
-              block1751.methods["outer"] = function() {
+              block1496.methods["outer"] = function() {
                 return callmethod(this.receiver, 'outer', [0]);
               }
-              block1751.methods["match"] = GraceBlock_match;
-              block1751.methods["prefix?"] = GraceBlock_lift;
-              block1751.receiver = this;
-              block1751.className = 'block<musical:138>';
-              block1751.real = function(
+              block1496.methods["match"] = GraceBlock_match;
+              block1496.methods["prefix?"] = GraceBlock_lift;
+              block1496.receiver = this;
+              block1496.className = 'block<musical:138>';
+              block1496.real = function(
               ) {
                 sourceObject = this;
                 onSelf = true;
-                var call1752 = callmethod(this, "touchingEdge", [0]);
-                return call1752;
+                var call1497 = callmethod(this, "touchingEdge", [0]);
+                return call1497;
               };
               lineNumber = 141
-              var block1753 = Grace_allocObject();
-              block1753.methods["apply"] = function() {
+              var block1498 = Grace_allocObject();
+              block1498.methods["apply"] = function() {
                 var args = Array.prototype.slice.call(arguments, 1);
                 return this.real.apply(this.receiver, args);
               }
-              block1753.methods["applyIndirectly"] = function(argcv, a) {
+              block1498.methods["applyIndirectly"] = function(argcv, a) {
                 return this.real.apply(this.receiver, a._value);
               }
-              block1753.methods["outer"] = function() {
+              block1498.methods["outer"] = function() {
                 return callmethod(this.receiver, 'outer', [0]);
               }
-              block1753.methods["match"] = GraceBlock_match;
-              block1753.methods["prefix?"] = GraceBlock_lift;
-              block1753.receiver = this;
-              block1753.className = 'block<musical:141>';
-              block1753.real = function(
+              block1498.methods["match"] = GraceBlock_match;
+              block1498.methods["prefix?"] = GraceBlock_lift;
+              block1498.receiver = this;
+              block1498.className = 'block<musical:141>';
+              block1498.real = function(
               ) {
                 sourceObject = this;
                 lineNumber = 139
                 onSelf = true;
-                var call1754 = callmethod(this, "forward", [1], new GraceNum(1));
-                return call1754;
+                var call1499 = callmethod(this, "forward", [1], new GraceNum(1));
+                return call1499;
               };
-              var call1755 = callmethod(Grace_prelude,"while()do", [1, 1], block1751, block1753);
-              return call1755
+              var call1500 = callmethod(Grace_prelude,"while()do", [1, 1], block1496, block1498);
+              return call1500
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -8657,100 +7278,100 @@ function gracecode_musical () {
               }
             }
           }
-          func1730.paramCounts = [
+          func1475.paramCounts = [
             0,
           ];
-          func1730.variableArities = [
+          func1475.variableArities = [
             false,
           ];
-          obj1607.methods["bounce"] = func1730;
-          func1730.definitionLine = 123;
-          func1730.definitionModule = "musical";
-          var func1756 = function(argcv) {
+          obj1352.methods["bounce"] = func1475;
+          func1475.definitionLine = 123;
+          func1475.definitionModule = "musical";
+          var func1501 = function(argcv) {
             var curarg = 1;
             var var_dir = arguments[curarg];
             curarg++;
-            if (argcv[0] !=  func1756.paramCounts[0])
+            if (argcv[0] !=  func1501.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (bounceFrom)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "musical";
             try {
               lineNumber = 146
-              var if1757 = var_done;
+              var if1502 = var_done;
               lineNumber = 143
-              var string1758 = new GraceString("left");
-              var opresult1761 = callmethod(var_dir, "==", [1], string1758);
-              if (Grace_isTrue(opresult1761)) {
+              var string1503 = new GraceString("left");
+              var opresult1506 = callmethod(var_dir, "==", [1], string1503);
+              if (Grace_isTrue(opresult1506)) {
                 lineNumber = 145
                 lineNumber = 86
                 lineNumber = 145
                 lineNumber = 144
                 onSelf = true;
-                var call1762 = callmethod(this, "angle", [0]);
-                var diff1765 = callmethod(new GraceNum(360), "-", [1], call1762);
+                var call1507 = callmethod(this, "angle", [0]);
+                var diff1510 = callmethod(new GraceNum(360), "-", [1], call1507);
                 onSelf = true;
-                var call1766 = callmethod(this, "angle:=", [1], diff1765);
-                if1757 = call1766;
+                var call1511 = callmethod(this, "angle:=", [1], diff1510);
+                if1502 = call1511;
               }
               lineNumber = 149
-              var if1767 = var_done;
+              var if1512 = var_done;
               lineNumber = 146
-              var string1768 = new GraceString("right");
-              var opresult1771 = callmethod(var_dir, "==", [1], string1768);
-              if (Grace_isTrue(opresult1771)) {
+              var string1513 = new GraceString("right");
+              var opresult1516 = callmethod(var_dir, "==", [1], string1513);
+              if (Grace_isTrue(opresult1516)) {
                 lineNumber = 148
                 lineNumber = 86
                 lineNumber = 148
                 lineNumber = 147
                 onSelf = true;
-                var call1772 = callmethod(this, "angle", [0]);
-                var diff1775 = callmethod(new GraceNum(360), "-", [1], call1772);
+                var call1517 = callmethod(this, "angle", [0]);
+                var diff1520 = callmethod(new GraceNum(360), "-", [1], call1517);
                 onSelf = true;
-                var call1776 = callmethod(this, "angle:=", [1], diff1775);
-                if1767 = call1776;
+                var call1521 = callmethod(this, "angle:=", [1], diff1520);
+                if1512 = call1521;
               }
               lineNumber = 152
-              var if1777 = var_done;
+              var if1522 = var_done;
               lineNumber = 149
-              var string1778 = new GraceString("top");
-              var opresult1781 = callmethod(var_dir, "==", [1], string1778);
-              if (Grace_isTrue(opresult1781)) {
+              var string1523 = new GraceString("top");
+              var opresult1526 = callmethod(var_dir, "==", [1], string1523);
+              if (Grace_isTrue(opresult1526)) {
                 lineNumber = 151
                 lineNumber = 86
                 lineNumber = 151
                 lineNumber = 150
                 onSelf = true;
-                var call1782 = callmethod(this, "angle", [0]);
-                var diff1785 = callmethod(new GraceNum(180), "-", [1], call1782);
+                var call1527 = callmethod(this, "angle", [0]);
+                var diff1530 = callmethod(new GraceNum(180), "-", [1], call1527);
                 onSelf = true;
-                var call1786 = callmethod(this, "angle:=", [1], diff1785);
-                if1777 = call1786;
+                var call1531 = callmethod(this, "angle:=", [1], diff1530);
+                if1522 = call1531;
               }
               lineNumber = 155
-              var if1787 = var_done;
+              var if1532 = var_done;
               lineNumber = 152
-              var string1788 = new GraceString("bottom");
-              var opresult1791 = callmethod(var_dir, "==", [1], string1788);
-              if (Grace_isTrue(opresult1791)) {
+              var string1533 = new GraceString("bottom");
+              var opresult1536 = callmethod(var_dir, "==", [1], string1533);
+              if (Grace_isTrue(opresult1536)) {
                 lineNumber = 154
                 lineNumber = 86
                 lineNumber = 154
                 lineNumber = 153
                 onSelf = true;
-                var call1792 = callmethod(this, "angle", [0]);
-                var diff1795 = callmethod(new GraceNum(180), "-", [1], call1792);
+                var call1537 = callmethod(this, "angle", [0]);
+                var diff1540 = callmethod(new GraceNum(180), "-", [1], call1537);
                 onSelf = true;
-                var call1796 = callmethod(this, "angle:=", [1], diff1795);
-                if1787 = call1796;
+                var call1541 = callmethod(this, "angle:=", [1], diff1540);
+                if1532 = call1541;
               }
               lineNumber = 155
               onSelf = true;
-              var call1797 = callmethod(this, "normaliseAngle", [0]);
+              var call1542 = callmethod(this, "normaliseAngle", [0]);
               lineNumber = 156
               onSelf = true;
-              var call1798 = callmethod(this, "forward", [1], new GraceNum(2));
-              return call1798
+              var call1543 = callmethod(this, "forward", [1], new GraceNum(2));
+              return call1543
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -8759,100 +7380,100 @@ function gracecode_musical () {
               }
             }
           }
-          func1756.paramCounts = [
+          func1501.paramCounts = [
             1,
           ];
-          func1756.variableArities = [
+          func1501.variableArities = [
             false,
           ];
-          obj1607.methods["bounceFrom"] = func1756;
-          func1756.definitionLine = 142;
-          func1756.definitionModule = "musical";
-          var func1799 = function(argcv) {
+          obj1352.methods["bounceFrom"] = func1501;
+          func1501.definitionLine = 142;
+          func1501.definitionModule = "musical";
+          var func1544 = function(argcv) {
             var curarg = 1;
             var var_other = arguments[curarg];
             curarg++;
-            if (argcv[0] !=  func1799.paramCounts[0])
+            if (argcv[0] !=  func1544.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (bounceOff)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "musical";
             try {
               lineNumber = 162
-              var if1800 = var_done;
+              var if1545 = var_done;
               lineNumber = 159
-              var call1801 = callmethod(var_other,"x", [0]);
+              var call1546 = callmethod(var_other,"x", [0]);
               onSelf = true;
-              var call1803 = callmethod(this, "x", [0]);
-              var opresult1805 = callmethod(call1803, ">", [1], call1801);
-              if (Grace_isTrue(opresult1805)) {
+              var call1548 = callmethod(this, "x", [0]);
+              var opresult1550 = callmethod(call1548, ">", [1], call1546);
+              if (Grace_isTrue(opresult1550)) {
                 lineNumber = 160
                 onSelf = true;
-                var call1806 = callmethod(this, "bounceFrom", [1], var_left);
-                if1800 = call1806;
+                var call1551 = callmethod(this, "bounceFrom", [1], var_left);
+                if1545 = call1551;
               }
               lineNumber = 165
-              var if1807 = var_done;
+              var if1552 = var_done;
               lineNumber = 162
-              var call1808 = callmethod(var_other,"x", [0]);
+              var call1553 = callmethod(var_other,"x", [0]);
               onSelf = true;
-              var call1810 = callmethod(this, "x", [0]);
-              var opresult1812 = callmethod(call1810, "<", [1], call1808);
-              if (Grace_isTrue(opresult1812)) {
+              var call1555 = callmethod(this, "x", [0]);
+              var opresult1557 = callmethod(call1555, "<", [1], call1553);
+              if (Grace_isTrue(opresult1557)) {
                 lineNumber = 163
                 onSelf = true;
-                var call1813 = callmethod(this, "bounceFrom", [1], var_right);
-                if1807 = call1813;
+                var call1558 = callmethod(this, "bounceFrom", [1], var_right);
+                if1552 = call1558;
               }
               lineNumber = 165
-              var block1814 = Grace_allocObject();
-              block1814.methods["apply"] = function() {
+              var block1559 = Grace_allocObject();
+              block1559.methods["apply"] = function() {
                 var args = Array.prototype.slice.call(arguments, 1);
                 return this.real.apply(this.receiver, args);
               }
-              block1814.methods["applyIndirectly"] = function(argcv, a) {
+              block1559.methods["applyIndirectly"] = function(argcv, a) {
                 return this.real.apply(this.receiver, a._value);
               }
-              block1814.methods["outer"] = function() {
+              block1559.methods["outer"] = function() {
                 return callmethod(this.receiver, 'outer', [0]);
               }
-              block1814.methods["match"] = GraceBlock_match;
-              block1814.methods["prefix?"] = GraceBlock_lift;
-              block1814.receiver = this;
-              block1814.className = 'block<musical:165>';
-              block1814.real = function(
+              block1559.methods["match"] = GraceBlock_match;
+              block1559.methods["prefix?"] = GraceBlock_lift;
+              block1559.receiver = this;
+              block1559.className = 'block<musical:165>';
+              block1559.real = function(
               ) {
                 sourceObject = this;
                 onSelf = true;
-                var call1815 = callmethod(this, "touching", [1], var_other);
-                return call1815;
+                var call1560 = callmethod(this, "touching", [1], var_other);
+                return call1560;
               };
               lineNumber = 168
-              var block1816 = Grace_allocObject();
-              block1816.methods["apply"] = function() {
+              var block1561 = Grace_allocObject();
+              block1561.methods["apply"] = function() {
                 var args = Array.prototype.slice.call(arguments, 1);
                 return this.real.apply(this.receiver, args);
               }
-              block1816.methods["applyIndirectly"] = function(argcv, a) {
+              block1561.methods["applyIndirectly"] = function(argcv, a) {
                 return this.real.apply(this.receiver, a._value);
               }
-              block1816.methods["outer"] = function() {
+              block1561.methods["outer"] = function() {
                 return callmethod(this.receiver, 'outer', [0]);
               }
-              block1816.methods["match"] = GraceBlock_match;
-              block1816.methods["prefix?"] = GraceBlock_lift;
-              block1816.receiver = this;
-              block1816.className = 'block<musical:168>';
-              block1816.real = function(
+              block1561.methods["match"] = GraceBlock_match;
+              block1561.methods["prefix?"] = GraceBlock_lift;
+              block1561.receiver = this;
+              block1561.className = 'block<musical:168>';
+              block1561.real = function(
               ) {
                 sourceObject = this;
                 lineNumber = 166
                 onSelf = true;
-                var call1817 = callmethod(this, "forward", [1], new GraceNum(1));
-                return call1817;
+                var call1562 = callmethod(this, "forward", [1], new GraceNum(1));
+                return call1562;
               };
-              var call1818 = callmethod(Grace_prelude,"while()do", [1, 1], block1814, block1816);
-              return call1818
+              var call1563 = callmethod(Grace_prelude,"while()do", [1, 1], block1559, block1561);
+              return call1563
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -8861,20 +7482,20 @@ function gracecode_musical () {
               }
             }
           }
-          func1799.paramCounts = [
+          func1544.paramCounts = [
             1,
           ];
-          func1799.variableArities = [
+          func1544.variableArities = [
             false,
           ];
-          obj1607.methods["bounceOff"] = func1799;
-          func1799.definitionLine = 158;
-          func1799.definitionModule = "musical";
-          var func1819 = function(argcv) {
+          obj1352.methods["bounceOff"] = func1544;
+          func1544.definitionLine = 158;
+          func1544.definitionModule = "musical";
+          var func1564 = function(argcv) {
             var curarg = 1;
             var var_other = arguments[curarg];
             curarg++;
-            if (argcv[0] !=  func1819.paramCounts[0])
+            if (argcv[0] !=  func1564.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (touching)"));
             var returnTarget = invocationCount;
             invocationCount++;
@@ -8882,12 +7503,12 @@ function gracecode_musical () {
             try {
               lineNumber = 170
               onSelf = true;
-              var call1820 = callmethod(this, "x", [0]);
+              var call1565 = callmethod(this, "x", [0]);
               onSelf = true;
-              var call1821 = callmethod(this, "y", [0]);
-              var call1822 = callmethod(var_point,"x()y", [1, 1], call1820, call1821);
-              var call1823 = callmethod(var_other,"isPointOver", [1], call1822);
-              return call1823
+              var call1566 = callmethod(this, "y", [0]);
+              var call1567 = callmethod(var_point,"x()y", [1, 1], call1565, call1566);
+              var call1568 = callmethod(var_other,"isPointOver", [1], call1567);
+              return call1568
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -8896,61 +7517,61 @@ function gracecode_musical () {
               }
             }
           }
-          func1819.paramCounts = [
+          func1564.paramCounts = [
             1,
           ];
-          func1819.variableArities = [
+          func1564.variableArities = [
             false,
           ];
-          obj1607.methods["touching"] = func1819;
-          func1819.definitionLine = 169;
-          func1819.definitionModule = "musical";
-          var func1824 = function(argcv) {
+          obj1352.methods["touching"] = func1564;
+          func1564.definitionLine = 169;
+          func1564.definitionModule = "musical";
+          var func1569 = function(argcv) {
             var curarg = 1;
             var var_other = arguments[curarg];
             curarg++;
-            if (argcv[0] !=  func1824.paramCounts[0])
+            if (argcv[0] !=  func1569.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (face)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "musical";
             try {
               lineNumber = 176
-              var if1825 = var_done;
+              var if1570 = var_done;
               lineNumber = 173
               onSelf = true;
-              var call1826 = callmethod(this, "y", [0]);
-              var call1828 = callmethod(var_other,"y", [0]);
-              var opresult1830 = callmethod(call1828, "!=", [1], call1826);
+              var call1571 = callmethod(this, "y", [0]);
+              var call1573 = callmethod(var_other,"y", [0]);
+              var opresult1575 = callmethod(call1573, "!=", [1], call1571);
               onSelf = true;
-              var call1832 = callmethod(this, "x", [0]);
-              var call1834 = callmethod(var_other,"x", [0]);
-              var opresult1836 = callmethod(call1834, "!=", [1], call1832);
-              var opresult1838 = callmethod(opresult1836, "||", [1], opresult1830);
-              if (Grace_isTrue(opresult1838)) {
+              var call1577 = callmethod(this, "x", [0]);
+              var call1579 = callmethod(var_other,"x", [0]);
+              var opresult1581 = callmethod(call1579, "!=", [1], call1577);
+              var opresult1583 = callmethod(opresult1581, "||", [1], opresult1575);
+              if (Grace_isTrue(opresult1583)) {
                 lineNumber = 175
                 lineNumber = 173
                 lineNumber = 175
                 lineNumber = 174
                 onSelf = true;
-                var call1841 = callmethod(this, "x", [0]);
-                var call1843 = callmethod(var_other,"x", [0]);
-                var diff1845 = callmethod(call1843, "-", [1], call1841);
+                var call1586 = callmethod(this, "x", [0]);
+                var call1588 = callmethod(var_other,"x", [0]);
+                var diff1590 = callmethod(call1588, "-", [1], call1586);
                 onSelf = true;
-                var call1846 = callmethod(this, "y", [0]);
-                var call1848 = callmethod(var_other,"y", [0]);
-                var diff1850 = callmethod(call1848, "-", [1], call1846);
-                var call1851 = callmethod(var_trig,"atan2", [2], diff1845, diff1850);
-                var prod1853 = callmethod(call1851, "*", [1], new GraceNum(180));
-                var quotient1855 = callmethod(prod1853, "/", [1], new GraceNum(3.1415));
+                var call1591 = callmethod(this, "y", [0]);
+                var call1593 = callmethod(var_other,"y", [0]);
+                var diff1595 = callmethod(call1593, "-", [1], call1591);
+                var call1596 = callmethod(var_trig,"atan2", [2], diff1590, diff1595);
+                var prod1598 = callmethod(call1596, "*", [1], new GraceNum(180));
+                var quotient1600 = callmethod(prod1598, "/", [1], new GraceNum(3.1415));
                 onSelf = true;
-                var call1856 = callmethod(this, "angle:=", [1], quotient1855);
-                if1825 = call1856;
+                var call1601 = callmethod(this, "angle:=", [1], quotient1600);
+                if1570 = call1601;
               }
               lineNumber = 176
               onSelf = true;
-              var call1857 = callmethod(this, "normaliseAngle", [0]);
-              return call1857
+              var call1602 = callmethod(this, "normaliseAngle", [0]);
+              return call1602
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -8959,29 +7580,29 @@ function gracecode_musical () {
               }
             }
           }
-          func1824.paramCounts = [
+          func1569.paramCounts = [
             1,
           ];
-          func1824.variableArities = [
+          func1569.variableArities = [
             false,
           ];
-          obj1607.methods["face"] = func1824;
-          func1824.definitionLine = 172;
-          func1824.definitionModule = "musical";
-          var func1858 = function(argcv) {
+          obj1352.methods["face"] = func1569;
+          func1569.definitionLine = 172;
+          func1569.definitionModule = "musical";
+          var func1603 = function(argcv) {
             var curarg = 1;
-            if (argcv[0] !=  func1858.paramCounts[0])
+            if (argcv[0] !=  func1603.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (stamp)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "musical";
             try {
               lineNumber = 179
-              var string1859 = new GraceString("2d");
-              var call1860 = callmethod(var_backingCanvas,"getContext", [1], string1859);
+              var string1604 = new GraceString("2d");
+              var call1605 = callmethod(var_backingCanvas,"getContext", [1], string1604);
               onSelf = true;
-              var call1861 = callmethod(this, "draw", [1], call1860);
-              return call1861
+              var call1606 = callmethod(this, "draw", [1], call1605);
+              return call1606
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -8990,166 +7611,166 @@ function gracecode_musical () {
               }
             }
           }
-          func1858.paramCounts = [
+          func1603.paramCounts = [
             0,
           ];
-          func1858.variableArities = [
+          func1603.variableArities = [
             false,
           ];
-          obj1607.methods["stamp"] = func1858;
-          func1858.definitionLine = 178;
-          func1858.definitionModule = "musical";
-          sourceObject = obj1607;
+          obj1352.methods["stamp"] = func1603;
+          func1603.definitionLine = 178;
+          func1603.definitionModule = "musical";
+          sourceObject = obj1352;
           lineNumber = 49
-          var call1862 = callmethod(superDepth, "outer", [0]);
+          var call1607 = callmethod(superDepth, "outer", [0]);
           onOuter = true;
           onSelf = true;
-          var call1863 = callmethod(call1862, "outer", [0]);
+          var call1608 = callmethod(call1607, "outer", [0]);
           onOuter = true;
           onSelf = true;
-          var call1864 = callmethod(call1863, "initialise", [0]);
-          sourceObject = obj1607;
+          var call1609 = callmethod(call1608, "initialise", [0]);
+          sourceObject = obj1352;
           lineNumber = 50
-          var call1865 = callmethod(var_registeredObjects,"push", [1], this);
-          sourceObject = obj1607;
+          var call1610 = callmethod(var_registeredObjects,"push", [1], this);
+          sourceObject = obj1352;
           lineNumber = 52
           lineNumber = 51
           var_above = this;
-          sourceObject = obj1607;
+          sourceObject = obj1352;
           lineNumber = 53
           lineNumber = 52
           var___916__ = this;
-          sourceObject = obj1607;
+          sourceObject = obj1352;
           lineNumber = 53
-          var call1866 = callmethod(var_collections,"list", [0]);
-          var call1867 = callmethod(call1866,"new", [0]);
-          obj1607.data["alwaysBlocks"] = call1867;
-          var reader_musical_alwaysBlocks_1868 = function() {
+          var call1611 = callmethod(var_collections,"list", [0]);
+          var call1612 = callmethod(call1611,"new", [0]);
+          obj1352.data["alwaysBlocks"] = call1612;
+          var reader_musical_alwaysBlocks_1613 = function() {
             return this.data["alwaysBlocks"];
           }
-          reader_musical_alwaysBlocks_1868.def = true;
-          reader_musical_alwaysBlocks_1868.confidential = true;
-          obj1607.methods["alwaysBlocks"] = reader_musical_alwaysBlocks_1868;
+          reader_musical_alwaysBlocks_1613.def = true;
+          reader_musical_alwaysBlocks_1613.confidential = true;
+          obj1352.methods["alwaysBlocks"] = reader_musical_alwaysBlocks_1613;
           lineNumber = 54;
           moduleName = "musical";
           lineNumber = 53
           if (!Grace_isTrue(callmethod(var_Unknown, "match",
-            [1], call1867)))
+            [1], call1612)))
               throw new GraceExceptionPacket(TypeErrorObject,
                     new GraceString("expected "
                     + "initial value of def 'alwaysBlocks' to be of type Unknown"))
-          sourceObject = obj1607;
+          sourceObject = obj1352;
           lineNumber = 55
           lineNumber = 54
-          var quotient1871 = callmethod(var_canvasWidth, "/", [1], new GraceNum(2));
-          obj1607.data["x"] = quotient1871;
-          var reader_musical_x_1872 = function() {
+          var quotient1616 = callmethod(var_canvasWidth, "/", [1], new GraceNum(2));
+          obj1352.data["x"] = quotient1616;
+          var reader_musical_x_1617 = function() {
             return this.data["x"];
           }
-          obj1607.methods["x"] = reader_musical_x_1872;
-          obj1607.data["x"] = quotient1871;
-          var writer_musical_x_1872 = function(argcv, o) {
+          obj1352.methods["x"] = reader_musical_x_1617;
+          obj1352.data["x"] = quotient1616;
+          var writer_musical_x_1617 = function(argcv, o) {
             this.data["x"] = o;
           }
-          obj1607.methods["x:="] = writer_musical_x_1872;
-          writer_musical_x_1872.confidential = true;
+          obj1352.methods["x:="] = writer_musical_x_1617;
+          writer_musical_x_1617.confidential = true;
           lineNumber = 55;
           moduleName = "musical";
           lineNumber = 54
           if (!Grace_isTrue(callmethod(var_Unknown, "match",
-            [1], quotient1871)))
+            [1], quotient1616)))
               throw new GraceExceptionPacket(TypeErrorObject,
                     new GraceString("expected "
                     + "initial value of var 'x' to be of type Unknown"))
-          obj1607.mutable = true;
-          sourceObject = obj1607;
+          obj1352.mutable = true;
+          sourceObject = obj1352;
           lineNumber = 56
           lineNumber = 55
-          var quotient1875 = callmethod(var_canvasHeight, "/", [1], new GraceNum(2));
-          obj1607.data["y"] = quotient1875;
-          var reader_musical_y_1876 = function() {
+          var quotient1620 = callmethod(var_canvasHeight, "/", [1], new GraceNum(2));
+          obj1352.data["y"] = quotient1620;
+          var reader_musical_y_1621 = function() {
             return this.data["y"];
           }
-          obj1607.methods["y"] = reader_musical_y_1876;
-          obj1607.data["y"] = quotient1875;
-          var writer_musical_y_1876 = function(argcv, o) {
+          obj1352.methods["y"] = reader_musical_y_1621;
+          obj1352.data["y"] = quotient1620;
+          var writer_musical_y_1621 = function(argcv, o) {
             this.data["y"] = o;
           }
-          obj1607.methods["y:="] = writer_musical_y_1876;
-          writer_musical_y_1876.confidential = true;
+          obj1352.methods["y:="] = writer_musical_y_1621;
+          writer_musical_y_1621.confidential = true;
           lineNumber = 56;
           moduleName = "musical";
           lineNumber = 55
           if (!Grace_isTrue(callmethod(var_Unknown, "match",
-            [1], quotient1875)))
+            [1], quotient1620)))
               throw new GraceExceptionPacket(TypeErrorObject,
                     new GraceString("expected "
                     + "initial value of var 'y' to be of type Unknown"))
-          obj1607.mutable = true;
-          sourceObject = obj1607;
+          obj1352.mutable = true;
+          sourceObject = obj1352;
           lineNumber = 56
           onSelf = true;
-          var call1877 = callmethod(this, "x", [0]);
-          obj1607.data["destX"] = call1877;
-          var reader_musical_destX_1878 = function() {
+          var call1622 = callmethod(this, "x", [0]);
+          obj1352.data["destX"] = call1622;
+          var reader_musical_destX_1623 = function() {
             return this.data["destX"];
           }
-          obj1607.methods["destX"] = reader_musical_destX_1878;
-          obj1607.data["destX"] = call1877;
-          var writer_musical_destX_1878 = function(argcv, o) {
+          obj1352.methods["destX"] = reader_musical_destX_1623;
+          obj1352.data["destX"] = call1622;
+          var writer_musical_destX_1623 = function(argcv, o) {
             this.data["destX"] = o;
           }
-          obj1607.methods["destX:="] = writer_musical_destX_1878;
-          reader_musical_destX_1878.confidential = true;
-          writer_musical_destX_1878.confidential = true;
+          obj1352.methods["destX:="] = writer_musical_destX_1623;
+          reader_musical_destX_1623.confidential = true;
+          writer_musical_destX_1623.confidential = true;
           lineNumber = 57;
           moduleName = "musical";
           lineNumber = 56
           if (!Grace_isTrue(callmethod(var_Unknown, "match",
-            [1], call1877)))
+            [1], call1622)))
               throw new GraceExceptionPacket(TypeErrorObject,
                     new GraceString("expected "
                     + "initial value of var 'destX' to be of type Unknown"))
-          obj1607.mutable = true;
-          sourceObject = obj1607;
+          obj1352.mutable = true;
+          sourceObject = obj1352;
           lineNumber = 57
           onSelf = true;
-          var call1879 = callmethod(this, "y", [0]);
-          obj1607.data["destY"] = call1879;
-          var reader_musical_destY_1880 = function() {
+          var call1624 = callmethod(this, "y", [0]);
+          obj1352.data["destY"] = call1624;
+          var reader_musical_destY_1625 = function() {
             return this.data["destY"];
           }
-          obj1607.methods["destY"] = reader_musical_destY_1880;
-          obj1607.data["destY"] = call1879;
-          var writer_musical_destY_1880 = function(argcv, o) {
+          obj1352.methods["destY"] = reader_musical_destY_1625;
+          obj1352.data["destY"] = call1624;
+          var writer_musical_destY_1625 = function(argcv, o) {
             this.data["destY"] = o;
           }
-          obj1607.methods["destY:="] = writer_musical_destY_1880;
-          reader_musical_destY_1880.confidential = true;
-          writer_musical_destY_1880.confidential = true;
+          obj1352.methods["destY:="] = writer_musical_destY_1625;
+          reader_musical_destY_1625.confidential = true;
+          writer_musical_destY_1625.confidential = true;
           lineNumber = 58;
           moduleName = "musical";
           lineNumber = 57
           if (!Grace_isTrue(callmethod(var_Unknown, "match",
-            [1], call1879)))
+            [1], call1624)))
               throw new GraceExceptionPacket(TypeErrorObject,
                     new GraceString("expected "
                     + "initial value of var 'destY' to be of type Unknown"))
-          obj1607.mutable = true;
-          sourceObject = obj1607;
+          obj1352.mutable = true;
+          sourceObject = obj1352;
           lineNumber = 58
-          obj1607.data["angle"] = new GraceNum(180);
-          var reader_musical_angle_1881 = function() {
+          obj1352.data["angle"] = new GraceNum(180);
+          var reader_musical_angle_1626 = function() {
             return this.data["angle"];
           }
-          obj1607.methods["angle"] = reader_musical_angle_1881;
-          obj1607.data["angle"] = new GraceNum(180);
-          var writer_musical_angle_1881 = function(argcv, o) {
+          obj1352.methods["angle"] = reader_musical_angle_1626;
+          obj1352.data["angle"] = new GraceNum(180);
+          var writer_musical_angle_1626 = function(argcv, o) {
             this.data["angle"] = o;
           }
-          obj1607.methods["angle:="] = writer_musical_angle_1881;
-          reader_musical_angle_1881.confidential = true;
-          writer_musical_angle_1881.confidential = true;
+          obj1352.methods["angle:="] = writer_musical_angle_1626;
+          reader_musical_angle_1626.confidential = true;
+          writer_musical_angle_1626.confidential = true;
           lineNumber = 59;
           moduleName = "musical";
           lineNumber = 58
@@ -9158,30 +7779,30 @@ function gracecode_musical () {
               throw new GraceExceptionPacket(TypeErrorObject,
                     new GraceString("expected "
                     + "initial value of var 'angle' to be of type Unknown"))
-          obj1607.mutable = true;
-          sourceObject = obj1607;
-          sourceObject = obj1607;
-          sourceObject = obj1607;
-          sourceObject = obj1607;
-          sourceObject = obj1607;
-          sourceObject = obj1607;
-          sourceObject = obj1607;
-          sourceObject = obj1607;
-          sourceObject = obj1607;
-          sourceObject = obj1607;
-          sourceObject = obj1607;
-          sourceObject = obj1607;
-          sourceObject = obj1607;
-          sourceObject = obj1607;
-          sourceObject = obj1607;
-          sourceObject = obj1607;
-          sourceObject = obj1607;
-          sourceObject = obj1607;
-          sourceObject = obj1607;
+          obj1352.mutable = true;
+          sourceObject = obj1352;
+          sourceObject = obj1352;
+          sourceObject = obj1352;
+          sourceObject = obj1352;
+          sourceObject = obj1352;
+          sourceObject = obj1352;
+          sourceObject = obj1352;
+          sourceObject = obj1352;
+          sourceObject = obj1352;
+          sourceObject = obj1352;
+          sourceObject = obj1352;
+          sourceObject = obj1352;
+          sourceObject = obj1352;
+          sourceObject = obj1352;
+          sourceObject = obj1352;
+          sourceObject = obj1352;
+          sourceObject = obj1352;
+          sourceObject = obj1352;
+          sourceObject = obj1352;
           superDepth = origSuperDepth;
         }
-        obj_init_1607.apply(inheritingObject, []);
-        return obj1607
+        obj_init_1352.apply(obj1352, []);
+        return obj1352
       } catch(e) {
         if ((e.exctype == 'return') && (e.target == returnTarget)) {
           return e.returnvalue;
@@ -9190,16 +7811,1424 @@ function gracecode_musical () {
         }
       }
     }
-    obj1328.methods["new()object"] = func1606;
-    var func1882 = function(argcv) {
+    func1351.paramCounts = [
+      0,
+    ];
+    func1351.variableArities = [
+      false,
+    ];
+    obj1349.methods["new"] = func1351;
+    func1351.definitionLine = 48;
+    func1351.definitionModule = "musical";
+    var func1627 = function(argcv) {
+      var curarg = 1;
+      var inheritingObject = arguments[curarg++];
+      var returnTarget = invocationCount;
+      invocationCount++;
+      try {
+        var obj1628 = Grace_allocObject();
+        obj1628.definitionModule = "musical";
+        obj1628.definitionLine = 48;
+        var inho1628 = inheritingObject;
+        while (inho1628.superobj) inho1628 = inho1628.superobj;
+        inho1628.superobj = obj1628;
+        obj1628.data = inheritingObject.data;
+        obj1628.outer = this;
+        var reader_musical_outer_1629 = function() {
+          return this.outer;
+        }
+        obj1628.methods["outer"] = reader_musical_outer_1629;
+        function obj_init_1628() {
+          var origSuperDepth = superDepth;
+          superDepth = obj1628;
+          obj1628.annotations = [];
+          var func1630 = function(argcv) {
+            var curarg = 1;
+            if (argcv[0] !=  func1630.paramCounts[0])
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (step)"));
+            var returnTarget = invocationCount;
+            invocationCount++;
+            moduleName = "musical";
+            try {
+              lineNumber = 60
+              onSelf = true;
+              var call1631 = callmethod(this, "alwaysBlocks", [0]);
+              lineNumber = 63
+              var block1632 = Grace_allocObject();
+              block1632.methods["apply"] = function() {
+                var args = Array.prototype.slice.call(arguments, 1);
+                return this.real.apply(this.receiver, args);
+              }
+              block1632.methods["applyIndirectly"] = function(argcv, a) {
+                return this.real.apply(this.receiver, a._value);
+              }
+              block1632.methods["outer"] = function() {
+                return callmethod(this.receiver, 'outer', [0]);
+              }
+              block1632.methods["match"] = GraceBlock_match;
+              block1632.methods["prefix?"] = GraceBlock_lift;
+              block1632.receiver = this;
+              block1632.className = 'block<musical:63>';
+              block1632.real = function(
+                var_b
+              ) {
+                sourceObject = this;
+                lineNumber = 61
+                var call1633 = callmethod(var_b,"apply", [0]);
+                return call1633;
+              };
+              var call1634 = callmethod(Grace_prelude,"for()do", [1, 1], call1631, block1632);
+              lineNumber = 63
+              onSelf = true;
+              var call1635 = callmethod(this, "tick", [0]);
+              return call1635
+            } catch(e) {
+              if ((e.exctype == 'return') && (e.target == returnTarget)) {
+                return e.returnvalue;
+              } else {
+                throw e;
+              }
+            }
+          }
+          func1630.paramCounts = [
+            0,
+          ];
+          func1630.variableArities = [
+            false,
+          ];
+          obj1628.methods["step"] = func1630;
+          func1630.definitionLine = 59;
+          func1630.definitionModule = "musical";
+          var func1636 = function(argcv) {
+            var curarg = 1;
+            if (argcv[0] !=  func1636.paramCounts[0])
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (tick)"));
+            var returnTarget = invocationCount;
+            invocationCount++;
+            moduleName = "musical";
+            try {
+              return var_done
+            } catch(e) {
+              if ((e.exctype == 'return') && (e.target == returnTarget)) {
+                return e.returnvalue;
+              } else {
+                throw e;
+              }
+            }
+          }
+          func1636.paramCounts = [
+            0,
+          ];
+          func1636.variableArities = [
+            false,
+          ];
+          obj1628.methods["tick"] = func1636;
+          func1636.definitionLine = 66;
+          func1636.definitionModule = "musical";
+          var func1637 = function(argcv) {
+            var curarg = 1;
+            var var_ctx = arguments[curarg];
+            curarg++;
+            if (argcv[0] !=  func1637.paramCounts[0])
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (draw)"));
+            var returnTarget = invocationCount;
+            invocationCount++;
+            moduleName = "musical";
+            try {
+              return var_done
+            } catch(e) {
+              if ((e.exctype == 'return') && (e.target == returnTarget)) {
+                return e.returnvalue;
+              } else {
+                throw e;
+              }
+            }
+          }
+          func1637.paramCounts = [
+            1,
+          ];
+          func1637.variableArities = [
+            false,
+          ];
+          obj1628.methods["draw"] = func1637;
+          func1637.definitionLine = 67;
+          func1637.definitionModule = "musical";
+          var func1638 = function(argcv) {
+            var curarg = 1;
+            var var_p = arguments[curarg];
+            curarg++;
+            if (argcv[0] !=  func1638.paramCounts[0])
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (moveTo)"));
+            var returnTarget = invocationCount;
+            invocationCount++;
+            moduleName = "musical";
+            try {
+              lineNumber = 70
+              lineNumber = 61
+              lineNumber = 69
+              var call1639 = callmethod(var_p,"x", [0]);
+              onSelf = true;
+              var call1640 = callmethod(this, "destX:=", [1], call1639);
+              lineNumber = 71
+              lineNumber = 69
+              lineNumber = 70
+              var call1641 = callmethod(var_p,"y", [0]);
+              onSelf = true;
+              var call1642 = callmethod(this, "destY:=", [1], call1641);
+              return call1642
+            } catch(e) {
+              if ((e.exctype == 'return') && (e.target == returnTarget)) {
+                return e.returnvalue;
+              } else {
+                throw e;
+              }
+            }
+          }
+          func1638.paramCounts = [
+            1,
+          ];
+          func1638.variableArities = [
+            false,
+          ];
+          obj1628.methods["moveTo"] = func1638;
+          func1638.definitionLine = 68;
+          func1638.definitionModule = "musical";
+          var func1643 = function(argcv) {
+            var curarg = 1;
+            var var_p = arguments[curarg];
+            curarg++;
+            if (argcv[0] !=  func1643.paramCounts[0])
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (jumpTo)"));
+            var returnTarget = invocationCount;
+            invocationCount++;
+            moduleName = "musical";
+            try {
+              lineNumber = 74
+              lineNumber = 70
+              lineNumber = 73
+              var call1644 = callmethod(var_p,"x", [0]);
+              onSelf = true;
+              var call1645 = callmethod(this, "x:=", [1], call1644);
+              lineNumber = 75
+              lineNumber = 73
+              lineNumber = 74
+              var call1646 = callmethod(var_p,"y", [0]);
+              onSelf = true;
+              var call1647 = callmethod(this, "y:=", [1], call1646);
+              lineNumber = 76
+              lineNumber = 74
+              lineNumber = 75
+              onSelf = true;
+              var call1648 = callmethod(this, "x", [0]);
+              onSelf = true;
+              var call1649 = callmethod(this, "destX:=", [1], call1648);
+              lineNumber = 77
+              lineNumber = 74
+              lineNumber = 76
+              onSelf = true;
+              var call1650 = callmethod(this, "y", [0]);
+              onSelf = true;
+              var call1651 = callmethod(this, "destY:=", [1], call1650);
+              return call1651
+            } catch(e) {
+              if ((e.exctype == 'return') && (e.target == returnTarget)) {
+                return e.returnvalue;
+              } else {
+                throw e;
+              }
+            }
+          }
+          func1643.paramCounts = [
+            1,
+          ];
+          func1643.variableArities = [
+            false,
+          ];
+          obj1628.methods["jumpTo"] = func1643;
+          func1643.definitionLine = 72;
+          func1643.definitionModule = "musical";
+          var func1652 = function(argcv) {
+            var curarg = 1;
+            var var_p = arguments[curarg];
+            curarg++;
+            if (argcv[0] !=  func1652.paramCounts[0])
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (isPointOver)"));
+            var returnTarget = invocationCount;
+            invocationCount++;
+            moduleName = "musical";
+            try {
+              lineNumber = 78
+              var bool1653 = new GraceBoolean(false)
+              return bool1653
+            } catch(e) {
+              if ((e.exctype == 'return') && (e.target == returnTarget)) {
+                return e.returnvalue;
+              } else {
+                throw e;
+              }
+            }
+          }
+          func1652.paramCounts = [
+            1,
+          ];
+          func1652.variableArities = [
+            false,
+          ];
+          obj1628.methods["isPointOver"] = func1652;
+          func1652.definitionLine = 78;
+          func1652.definitionModule = "musical";
+          var func1654 = function(argcv) {
+            var curarg = 1;
+            if (argcv[0] !=  func1654.paramCounts[0])
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (mousedown)"));
+            var returnTarget = invocationCount;
+            invocationCount++;
+            moduleName = "musical";
+            try {
+              return var_done
+            } catch(e) {
+              if ((e.exctype == 'return') && (e.target == returnTarget)) {
+                return e.returnvalue;
+              } else {
+                throw e;
+              }
+            }
+          }
+          func1654.paramCounts = [
+            0,
+          ];
+          func1654.variableArities = [
+            false,
+          ];
+          obj1628.methods["mousedown"] = func1654;
+          func1654.definitionLine = 79;
+          func1654.definitionModule = "musical";
+          var func1655 = function(argcv) {
+            var curarg = 1;
+            var var_b = arguments[curarg];
+            curarg++;
+            if (argcv[0] !=  func1655.paramCounts[0])
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (always)"));
+            var returnTarget = invocationCount;
+            invocationCount++;
+            moduleName = "musical";
+            try {
+              lineNumber = 81
+              onSelf = true;
+              var call1656 = callmethod(this, "alwaysBlocks", [0]);
+              var call1657 = callmethod(call1656,"push", [1], var_b);
+              return call1657
+            } catch(e) {
+              if ((e.exctype == 'return') && (e.target == returnTarget)) {
+                return e.returnvalue;
+              } else {
+                throw e;
+              }
+            }
+          }
+          func1655.paramCounts = [
+            1,
+          ];
+          func1655.variableArities = [
+            false,
+          ];
+          obj1628.methods["always"] = func1655;
+          func1655.definitionLine = 80;
+          func1655.definitionModule = "musical";
+          var func1658 = function(argcv) {
+            var curarg = 1;
+            var var_cond = arguments[curarg];
+            curarg++;
+            if (argcv[0] !=  func1658.paramCounts[0])
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (whenever)"));
+            var var_b = arguments[curarg];
+            curarg++;
+            if (argcv[1] !=  func1658.paramCounts[1])
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 2 (do)"));
+            var returnTarget = invocationCount;
+            invocationCount++;
+            moduleName = "musical";
+            try {
+              lineNumber = 84
+              lineNumber = 89
+              var block1659 = Grace_allocObject();
+              block1659.methods["apply"] = function() {
+                var args = Array.prototype.slice.call(arguments, 1);
+                return this.real.apply(this.receiver, args);
+              }
+              block1659.methods["applyIndirectly"] = function(argcv, a) {
+                return this.real.apply(this.receiver, a._value);
+              }
+              block1659.methods["outer"] = function() {
+                return callmethod(this.receiver, 'outer', [0]);
+              }
+              block1659.methods["match"] = GraceBlock_match;
+              block1659.methods["prefix?"] = GraceBlock_lift;
+              block1659.receiver = this;
+              block1659.className = 'block<musical:89>';
+              block1659.real = function(
+              ) {
+                sourceObject = this;
+                lineNumber = 88
+                var if1660 = var_done;
+                lineNumber = 85
+                var call1661 = callmethod(var_cond,"apply", [0]);
+                if (Grace_isTrue(call1661)) {
+                  lineNumber = 86
+                  var call1662 = callmethod(var_b,"apply", [0]);
+                  if1660 = call1662;
+                }
+                return if1660;
+              };
+              onSelf = true;
+              var call1663 = callmethod(this, "always", [1], block1659);
+              return call1663
+            } catch(e) {
+              if ((e.exctype == 'return') && (e.target == returnTarget)) {
+                return e.returnvalue;
+              } else {
+                throw e;
+              }
+            }
+          }
+          func1658.paramCounts = [
+            1,
+            1,
+          ];
+          func1658.variableArities = [
+            false,
+            false,
+          ];
+          obj1628.methods["whenever()do"] = func1658;
+          func1658.definitionLine = 83;
+          func1658.definitionModule = "musical";
+          var func1664 = function(argcv) {
+            var curarg = 1;
+            var var_dist = arguments[curarg];
+            curarg++;
+            if (argcv[0] !=  func1664.paramCounts[0])
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (forward)"));
+            var returnTarget = invocationCount;
+            invocationCount++;
+            moduleName = "musical";
+            try {
+              lineNumber = 92
+              lineNumber = 91
+              onSelf = true;
+              var call1668 = callmethod(this, "angle", [0]);
+              var quotient1670 = callmethod(call1668, "/", [1], new GraceNum(180));
+              var prod1672 = callmethod(quotient1670, "*", [1], var_PI);
+              var call1673 = callmethod(var_trig,"cos", [1], prod1672);
+              var prod1675 = callmethod(call1673, "*", [1], var_dist);
+              var var_y__39__ = prod1675;
+              lineNumber = 92;
+              moduleName = "musical";
+              lineNumber = 91
+              if (!Grace_isTrue(callmethod(var_Unknown, "match",
+                [1], var_y__39__)))
+                  throw new GraceExceptionPacket(TypeErrorObject,
+                        new GraceString("expected "
+                        + "initial value of def 'y'' to be of type Unknown"))
+              lineNumber = 93
+              lineNumber = 92
+              onSelf = true;
+              var call1679 = callmethod(this, "angle", [0]);
+              var quotient1681 = callmethod(call1679, "/", [1], new GraceNum(180));
+              var prod1683 = callmethod(quotient1681, "*", [1], var_PI);
+              var call1684 = callmethod(var_trig,"sin", [1], prod1683);
+              var prod1686 = callmethod(call1684, "*", [1], var_dist);
+              var var_x__39__ = prod1686;
+              lineNumber = 93;
+              moduleName = "musical";
+              lineNumber = 92
+              if (!Grace_isTrue(callmethod(var_Unknown, "match",
+                [1], var_x__39__)))
+                  throw new GraceExceptionPacket(TypeErrorObject,
+                        new GraceString("expected "
+                        + "initial value of def 'x'' to be of type Unknown"))
+              lineNumber = 94
+              lineNumber = 86
+              lineNumber = 94
+              lineNumber = 93
+              onSelf = true;
+              var call1688 = callmethod(this, "x", [0]);
+              var opresult1690 = callmethod(call1688, "+", [1], var_x__39__);
+              onSelf = true;
+              var call1691 = callmethod(this, "x:=", [1], opresult1690);
+              lineNumber = 95
+              lineNumber = 86
+              lineNumber = 95
+              lineNumber = 94
+              onSelf = true;
+              var call1693 = callmethod(this, "y", [0]);
+              var opresult1695 = callmethod(call1693, "+", [1], var_y__39__);
+              onSelf = true;
+              var call1696 = callmethod(this, "y:=", [1], opresult1695);
+              return call1696
+            } catch(e) {
+              if ((e.exctype == 'return') && (e.target == returnTarget)) {
+                return e.returnvalue;
+              } else {
+                throw e;
+              }
+            }
+          }
+          func1664.paramCounts = [
+            1,
+          ];
+          func1664.variableArities = [
+            false,
+          ];
+          obj1628.methods["forward"] = func1664;
+          func1664.definitionLine = 90;
+          func1664.definitionModule = "musical";
+          var func1697 = function(argcv) {
+            var curarg = 1;
+            if (argcv[0] !=  func1697.paramCounts[0])
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (normaliseAngle)"));
+            var returnTarget = invocationCount;
+            invocationCount++;
+            moduleName = "musical";
+            try {
+              lineNumber = 97
+              var block1698 = Grace_allocObject();
+              block1698.methods["apply"] = function() {
+                var args = Array.prototype.slice.call(arguments, 1);
+                return this.real.apply(this.receiver, args);
+              }
+              block1698.methods["applyIndirectly"] = function(argcv, a) {
+                return this.real.apply(this.receiver, a._value);
+              }
+              block1698.methods["outer"] = function() {
+                return callmethod(this.receiver, 'outer', [0]);
+              }
+              block1698.methods["match"] = GraceBlock_match;
+              block1698.methods["prefix?"] = GraceBlock_lift;
+              block1698.receiver = this;
+              block1698.className = 'block<musical:97>';
+              block1698.real = function(
+              ) {
+                sourceObject = this;
+                onSelf = true;
+                var call1700 = callmethod(this, "angle", [0]);
+                var opresult1702 = callmethod(call1700, "<", [1], new GraceNum(0));
+                return opresult1702;
+              };
+              lineNumber = 100
+              var block1703 = Grace_allocObject();
+              block1703.methods["apply"] = function() {
+                var args = Array.prototype.slice.call(arguments, 1);
+                return this.real.apply(this.receiver, args);
+              }
+              block1703.methods["applyIndirectly"] = function(argcv, a) {
+                return this.real.apply(this.receiver, a._value);
+              }
+              block1703.methods["outer"] = function() {
+                return callmethod(this.receiver, 'outer', [0]);
+              }
+              block1703.methods["match"] = GraceBlock_match;
+              block1703.methods["prefix?"] = GraceBlock_lift;
+              block1703.receiver = this;
+              block1703.className = 'block<musical:100>';
+              block1703.real = function(
+              ) {
+                sourceObject = this;
+                lineNumber = 99
+                lineNumber = 86
+                lineNumber = 99
+                lineNumber = 98
+                onSelf = true;
+                var call1705 = callmethod(this, "angle", [0]);
+                var opresult1707 = callmethod(call1705, "+", [1], new GraceNum(360));
+                onSelf = true;
+                var call1708 = callmethod(this, "angle:=", [1], opresult1707);
+                return call1708;
+              };
+              var call1709 = callmethod(Grace_prelude,"while()do", [1, 1], block1698, block1703);
+              lineNumber = 100
+              var block1710 = Grace_allocObject();
+              block1710.methods["apply"] = function() {
+                var args = Array.prototype.slice.call(arguments, 1);
+                return this.real.apply(this.receiver, args);
+              }
+              block1710.methods["applyIndirectly"] = function(argcv, a) {
+                return this.real.apply(this.receiver, a._value);
+              }
+              block1710.methods["outer"] = function() {
+                return callmethod(this.receiver, 'outer', [0]);
+              }
+              block1710.methods["match"] = GraceBlock_match;
+              block1710.methods["prefix?"] = GraceBlock_lift;
+              block1710.receiver = this;
+              block1710.className = 'block<musical:100>';
+              block1710.real = function(
+              ) {
+                sourceObject = this;
+                onSelf = true;
+                var call1712 = callmethod(this, "angle", [0]);
+                var opresult1714 = callmethod(call1712, ">", [1], new GraceNum(360));
+                return opresult1714;
+              };
+              lineNumber = 103
+              var block1715 = Grace_allocObject();
+              block1715.methods["apply"] = function() {
+                var args = Array.prototype.slice.call(arguments, 1);
+                return this.real.apply(this.receiver, args);
+              }
+              block1715.methods["applyIndirectly"] = function(argcv, a) {
+                return this.real.apply(this.receiver, a._value);
+              }
+              block1715.methods["outer"] = function() {
+                return callmethod(this.receiver, 'outer', [0]);
+              }
+              block1715.methods["match"] = GraceBlock_match;
+              block1715.methods["prefix?"] = GraceBlock_lift;
+              block1715.receiver = this;
+              block1715.className = 'block<musical:103>';
+              block1715.real = function(
+              ) {
+                sourceObject = this;
+                lineNumber = 102
+                lineNumber = 86
+                lineNumber = 102
+                lineNumber = 101
+                onSelf = true;
+                var call1717 = callmethod(this, "angle", [0]);
+                var diff1719 = callmethod(call1717, "-", [1], new GraceNum(360));
+                onSelf = true;
+                var call1720 = callmethod(this, "angle:=", [1], diff1719);
+                return call1720;
+              };
+              var call1721 = callmethod(Grace_prelude,"while()do", [1, 1], block1710, block1715);
+              return call1721
+            } catch(e) {
+              if ((e.exctype == 'return') && (e.target == returnTarget)) {
+                return e.returnvalue;
+              } else {
+                throw e;
+              }
+            }
+          }
+          func1697.paramCounts = [
+            0,
+          ];
+          func1697.variableArities = [
+            false,
+          ];
+          obj1628.methods["normaliseAngle"] = func1697;
+          func1697.definitionLine = 96;
+          func1697.definitionModule = "musical";
+          var func1722 = function(argcv) {
+            var curarg = 1;
+            var var_degrees = arguments[curarg];
+            curarg++;
+            if (argcv[0] !=  func1722.paramCounts[0])
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (turn)"));
+            var returnTarget = invocationCount;
+            invocationCount++;
+            moduleName = "musical";
+            try {
+              lineNumber = 106
+              lineNumber = 86
+              lineNumber = 106
+              lineNumber = 105
+              onSelf = true;
+              var call1724 = callmethod(this, "angle", [0]);
+              var opresult1726 = callmethod(call1724, "+", [1], var_degrees);
+              onSelf = true;
+              var call1727 = callmethod(this, "angle:=", [1], opresult1726);
+              lineNumber = 106
+              onSelf = true;
+              var call1728 = callmethod(this, "normaliseAngle", [0]);
+              return call1728
+            } catch(e) {
+              if ((e.exctype == 'return') && (e.target == returnTarget)) {
+                return e.returnvalue;
+              } else {
+                throw e;
+              }
+            }
+          }
+          func1722.paramCounts = [
+            1,
+          ];
+          func1722.variableArities = [
+            false,
+          ];
+          obj1628.methods["turn"] = func1722;
+          func1722.definitionLine = 104;
+          func1722.definitionModule = "musical";
+          var func1729 = function(argcv) {
+            var curarg = 1;
+            if (argcv[0] !=  func1729.paramCounts[0])
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (touchingEdge)"));
+            var returnTarget = invocationCount;
+            invocationCount++;
+            moduleName = "musical";
+            try {
+              lineNumber = 112
+              var if1730 = var_done;
+              lineNumber = 109
+              onSelf = true;
+              var call1731 = callmethod(this, "x", [0]);
+              var call1732 = callmethod(var_point,"x()y", [1, 1], call1731, new GraceNum(0));
+              onSelf = true;
+              var call1733 = callmethod(this, "isPointOver", [1], call1732);
+              if (Grace_isTrue(call1733)) {
+                lineNumber = 111
+                lineNumber = 110
+                var bool1734 = new GraceBoolean(true)
+                return bool1734
+              }
+              lineNumber = 115
+              var if1735 = var_done;
+              lineNumber = 112
+              onSelf = true;
+              var call1736 = callmethod(this, "x", [0]);
+              var call1737 = callmethod(var_point,"x()y", [1, 1], call1736, var_canvasHeight);
+              onSelf = true;
+              var call1738 = callmethod(this, "isPointOver", [1], call1737);
+              if (Grace_isTrue(call1738)) {
+                lineNumber = 114
+                lineNumber = 113
+                var bool1739 = new GraceBoolean(true)
+                return bool1739
+              }
+              lineNumber = 118
+              var if1740 = var_done;
+              lineNumber = 115
+              onSelf = true;
+              var call1741 = callmethod(this, "y", [0]);
+              var call1742 = callmethod(var_point,"x()y", [1, 1], new GraceNum(0), call1741);
+              onSelf = true;
+              var call1743 = callmethod(this, "isPointOver", [1], call1742);
+              if (Grace_isTrue(call1743)) {
+                lineNumber = 117
+                lineNumber = 116
+                var bool1744 = new GraceBoolean(true)
+                return bool1744
+              }
+              lineNumber = 121
+              var if1745 = var_done;
+              lineNumber = 118
+              onSelf = true;
+              var call1746 = callmethod(this, "y", [0]);
+              var call1747 = callmethod(var_point,"x()y", [1, 1], var_canvasWidth, call1746);
+              onSelf = true;
+              var call1748 = callmethod(this, "isPointOver", [1], call1747);
+              if (Grace_isTrue(call1748)) {
+                lineNumber = 120
+                lineNumber = 119
+                var bool1749 = new GraceBoolean(true)
+                return bool1749
+              }
+              lineNumber = 122
+              lineNumber = 121
+              var bool1750 = new GraceBoolean(false)
+              return bool1750
+            } catch(e) {
+              if ((e.exctype == 'return') && (e.target == returnTarget)) {
+                return e.returnvalue;
+              } else {
+                throw e;
+              }
+            }
+          }
+          func1729.paramCounts = [
+            0,
+          ];
+          func1729.variableArities = [
+            false,
+          ];
+          obj1628.methods["touchingEdge"] = func1729;
+          func1729.definitionLine = 108;
+          func1729.definitionModule = "musical";
+          var func1751 = function(argcv) {
+            var curarg = 1;
+            if (argcv[0] !=  func1751.paramCounts[0])
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (bounce)"));
+            var returnTarget = invocationCount;
+            invocationCount++;
+            moduleName = "musical";
+            try {
+              lineNumber = 125
+              lineNumber = 124
+              var var_dx = new GraceNum(0);
+              lineNumber = 125;
+              moduleName = "musical";
+              lineNumber = 124
+              if (!Grace_isTrue(callmethod(var_Unknown, "match",
+                [1], var_dx)))
+                  throw new GraceExceptionPacket(TypeErrorObject,
+                        new GraceString("expected "
+                        + "initial value of var 'dx' to be of type Unknown"))
+              lineNumber = 126
+              lineNumber = 125
+              var var_dy = new GraceNum(0);
+              lineNumber = 126;
+              moduleName = "musical";
+              lineNumber = 125
+              if (!Grace_isTrue(callmethod(var_Unknown, "match",
+                [1], var_dy)))
+                  throw new GraceExceptionPacket(TypeErrorObject,
+                        new GraceString("expected "
+                        + "initial value of var 'dy' to be of type Unknown"))
+              lineNumber = 129
+              var if1752 = var_done;
+              lineNumber = 126
+              onSelf = true;
+              var call1753 = callmethod(this, "x", [0]);
+              var call1754 = callmethod(var_point,"x()y", [1, 1], call1753, new GraceNum(0));
+              onSelf = true;
+              var call1755 = callmethod(this, "isPointOver", [1], call1754);
+              if (Grace_isTrue(call1755)) {
+                lineNumber = 127
+                onSelf = true;
+                var call1756 = callmethod(this, "bounceFrom", [1], var_top);
+                if1752 = call1756;
+              }
+              lineNumber = 132
+              var if1757 = var_done;
+              lineNumber = 129
+              onSelf = true;
+              var call1758 = callmethod(this, "x", [0]);
+              var call1759 = callmethod(var_point,"x()y", [1, 1], call1758, var_canvasHeight);
+              onSelf = true;
+              var call1760 = callmethod(this, "isPointOver", [1], call1759);
+              if (Grace_isTrue(call1760)) {
+                lineNumber = 130
+                onSelf = true;
+                var call1761 = callmethod(this, "bounceFrom", [1], var_bottom);
+                if1757 = call1761;
+              }
+              lineNumber = 135
+              var if1762 = var_done;
+              lineNumber = 132
+              onSelf = true;
+              var call1763 = callmethod(this, "y", [0]);
+              var call1764 = callmethod(var_point,"x()y", [1, 1], new GraceNum(0), call1763);
+              onSelf = true;
+              var call1765 = callmethod(this, "isPointOver", [1], call1764);
+              if (Grace_isTrue(call1765)) {
+                lineNumber = 133
+                onSelf = true;
+                var call1766 = callmethod(this, "bounceFrom", [1], var_left);
+                if1762 = call1766;
+              }
+              lineNumber = 138
+              var if1767 = var_done;
+              lineNumber = 135
+              onSelf = true;
+              var call1768 = callmethod(this, "y", [0]);
+              var call1769 = callmethod(var_point,"x()y", [1, 1], var_canvasWidth, call1768);
+              onSelf = true;
+              var call1770 = callmethod(this, "isPointOver", [1], call1769);
+              if (Grace_isTrue(call1770)) {
+                lineNumber = 136
+                onSelf = true;
+                var call1771 = callmethod(this, "bounceFrom", [1], var_right);
+                if1767 = call1771;
+              }
+              lineNumber = 138
+              var block1772 = Grace_allocObject();
+              block1772.methods["apply"] = function() {
+                var args = Array.prototype.slice.call(arguments, 1);
+                return this.real.apply(this.receiver, args);
+              }
+              block1772.methods["applyIndirectly"] = function(argcv, a) {
+                return this.real.apply(this.receiver, a._value);
+              }
+              block1772.methods["outer"] = function() {
+                return callmethod(this.receiver, 'outer', [0]);
+              }
+              block1772.methods["match"] = GraceBlock_match;
+              block1772.methods["prefix?"] = GraceBlock_lift;
+              block1772.receiver = this;
+              block1772.className = 'block<musical:138>';
+              block1772.real = function(
+              ) {
+                sourceObject = this;
+                onSelf = true;
+                var call1773 = callmethod(this, "touchingEdge", [0]);
+                return call1773;
+              };
+              lineNumber = 141
+              var block1774 = Grace_allocObject();
+              block1774.methods["apply"] = function() {
+                var args = Array.prototype.slice.call(arguments, 1);
+                return this.real.apply(this.receiver, args);
+              }
+              block1774.methods["applyIndirectly"] = function(argcv, a) {
+                return this.real.apply(this.receiver, a._value);
+              }
+              block1774.methods["outer"] = function() {
+                return callmethod(this.receiver, 'outer', [0]);
+              }
+              block1774.methods["match"] = GraceBlock_match;
+              block1774.methods["prefix?"] = GraceBlock_lift;
+              block1774.receiver = this;
+              block1774.className = 'block<musical:141>';
+              block1774.real = function(
+              ) {
+                sourceObject = this;
+                lineNumber = 139
+                onSelf = true;
+                var call1775 = callmethod(this, "forward", [1], new GraceNum(1));
+                return call1775;
+              };
+              var call1776 = callmethod(Grace_prelude,"while()do", [1, 1], block1772, block1774);
+              return call1776
+            } catch(e) {
+              if ((e.exctype == 'return') && (e.target == returnTarget)) {
+                return e.returnvalue;
+              } else {
+                throw e;
+              }
+            }
+          }
+          func1751.paramCounts = [
+            0,
+          ];
+          func1751.variableArities = [
+            false,
+          ];
+          obj1628.methods["bounce"] = func1751;
+          func1751.definitionLine = 123;
+          func1751.definitionModule = "musical";
+          var func1777 = function(argcv) {
+            var curarg = 1;
+            var var_dir = arguments[curarg];
+            curarg++;
+            if (argcv[0] !=  func1777.paramCounts[0])
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (bounceFrom)"));
+            var returnTarget = invocationCount;
+            invocationCount++;
+            moduleName = "musical";
+            try {
+              lineNumber = 146
+              var if1778 = var_done;
+              lineNumber = 143
+              var string1779 = new GraceString("left");
+              var opresult1782 = callmethod(var_dir, "==", [1], string1779);
+              if (Grace_isTrue(opresult1782)) {
+                lineNumber = 145
+                lineNumber = 86
+                lineNumber = 145
+                lineNumber = 144
+                onSelf = true;
+                var call1783 = callmethod(this, "angle", [0]);
+                var diff1786 = callmethod(new GraceNum(360), "-", [1], call1783);
+                onSelf = true;
+                var call1787 = callmethod(this, "angle:=", [1], diff1786);
+                if1778 = call1787;
+              }
+              lineNumber = 149
+              var if1788 = var_done;
+              lineNumber = 146
+              var string1789 = new GraceString("right");
+              var opresult1792 = callmethod(var_dir, "==", [1], string1789);
+              if (Grace_isTrue(opresult1792)) {
+                lineNumber = 148
+                lineNumber = 86
+                lineNumber = 148
+                lineNumber = 147
+                onSelf = true;
+                var call1793 = callmethod(this, "angle", [0]);
+                var diff1796 = callmethod(new GraceNum(360), "-", [1], call1793);
+                onSelf = true;
+                var call1797 = callmethod(this, "angle:=", [1], diff1796);
+                if1788 = call1797;
+              }
+              lineNumber = 152
+              var if1798 = var_done;
+              lineNumber = 149
+              var string1799 = new GraceString("top");
+              var opresult1802 = callmethod(var_dir, "==", [1], string1799);
+              if (Grace_isTrue(opresult1802)) {
+                lineNumber = 151
+                lineNumber = 86
+                lineNumber = 151
+                lineNumber = 150
+                onSelf = true;
+                var call1803 = callmethod(this, "angle", [0]);
+                var diff1806 = callmethod(new GraceNum(180), "-", [1], call1803);
+                onSelf = true;
+                var call1807 = callmethod(this, "angle:=", [1], diff1806);
+                if1798 = call1807;
+              }
+              lineNumber = 155
+              var if1808 = var_done;
+              lineNumber = 152
+              var string1809 = new GraceString("bottom");
+              var opresult1812 = callmethod(var_dir, "==", [1], string1809);
+              if (Grace_isTrue(opresult1812)) {
+                lineNumber = 154
+                lineNumber = 86
+                lineNumber = 154
+                lineNumber = 153
+                onSelf = true;
+                var call1813 = callmethod(this, "angle", [0]);
+                var diff1816 = callmethod(new GraceNum(180), "-", [1], call1813);
+                onSelf = true;
+                var call1817 = callmethod(this, "angle:=", [1], diff1816);
+                if1808 = call1817;
+              }
+              lineNumber = 155
+              onSelf = true;
+              var call1818 = callmethod(this, "normaliseAngle", [0]);
+              lineNumber = 156
+              onSelf = true;
+              var call1819 = callmethod(this, "forward", [1], new GraceNum(2));
+              return call1819
+            } catch(e) {
+              if ((e.exctype == 'return') && (e.target == returnTarget)) {
+                return e.returnvalue;
+              } else {
+                throw e;
+              }
+            }
+          }
+          func1777.paramCounts = [
+            1,
+          ];
+          func1777.variableArities = [
+            false,
+          ];
+          obj1628.methods["bounceFrom"] = func1777;
+          func1777.definitionLine = 142;
+          func1777.definitionModule = "musical";
+          var func1820 = function(argcv) {
+            var curarg = 1;
+            var var_other = arguments[curarg];
+            curarg++;
+            if (argcv[0] !=  func1820.paramCounts[0])
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (bounceOff)"));
+            var returnTarget = invocationCount;
+            invocationCount++;
+            moduleName = "musical";
+            try {
+              lineNumber = 162
+              var if1821 = var_done;
+              lineNumber = 159
+              var call1822 = callmethod(var_other,"x", [0]);
+              onSelf = true;
+              var call1824 = callmethod(this, "x", [0]);
+              var opresult1826 = callmethod(call1824, ">", [1], call1822);
+              if (Grace_isTrue(opresult1826)) {
+                lineNumber = 160
+                onSelf = true;
+                var call1827 = callmethod(this, "bounceFrom", [1], var_left);
+                if1821 = call1827;
+              }
+              lineNumber = 165
+              var if1828 = var_done;
+              lineNumber = 162
+              var call1829 = callmethod(var_other,"x", [0]);
+              onSelf = true;
+              var call1831 = callmethod(this, "x", [0]);
+              var opresult1833 = callmethod(call1831, "<", [1], call1829);
+              if (Grace_isTrue(opresult1833)) {
+                lineNumber = 163
+                onSelf = true;
+                var call1834 = callmethod(this, "bounceFrom", [1], var_right);
+                if1828 = call1834;
+              }
+              lineNumber = 165
+              var block1835 = Grace_allocObject();
+              block1835.methods["apply"] = function() {
+                var args = Array.prototype.slice.call(arguments, 1);
+                return this.real.apply(this.receiver, args);
+              }
+              block1835.methods["applyIndirectly"] = function(argcv, a) {
+                return this.real.apply(this.receiver, a._value);
+              }
+              block1835.methods["outer"] = function() {
+                return callmethod(this.receiver, 'outer', [0]);
+              }
+              block1835.methods["match"] = GraceBlock_match;
+              block1835.methods["prefix?"] = GraceBlock_lift;
+              block1835.receiver = this;
+              block1835.className = 'block<musical:165>';
+              block1835.real = function(
+              ) {
+                sourceObject = this;
+                onSelf = true;
+                var call1836 = callmethod(this, "touching", [1], var_other);
+                return call1836;
+              };
+              lineNumber = 168
+              var block1837 = Grace_allocObject();
+              block1837.methods["apply"] = function() {
+                var args = Array.prototype.slice.call(arguments, 1);
+                return this.real.apply(this.receiver, args);
+              }
+              block1837.methods["applyIndirectly"] = function(argcv, a) {
+                return this.real.apply(this.receiver, a._value);
+              }
+              block1837.methods["outer"] = function() {
+                return callmethod(this.receiver, 'outer', [0]);
+              }
+              block1837.methods["match"] = GraceBlock_match;
+              block1837.methods["prefix?"] = GraceBlock_lift;
+              block1837.receiver = this;
+              block1837.className = 'block<musical:168>';
+              block1837.real = function(
+              ) {
+                sourceObject = this;
+                lineNumber = 166
+                onSelf = true;
+                var call1838 = callmethod(this, "forward", [1], new GraceNum(1));
+                return call1838;
+              };
+              var call1839 = callmethod(Grace_prelude,"while()do", [1, 1], block1835, block1837);
+              return call1839
+            } catch(e) {
+              if ((e.exctype == 'return') && (e.target == returnTarget)) {
+                return e.returnvalue;
+              } else {
+                throw e;
+              }
+            }
+          }
+          func1820.paramCounts = [
+            1,
+          ];
+          func1820.variableArities = [
+            false,
+          ];
+          obj1628.methods["bounceOff"] = func1820;
+          func1820.definitionLine = 158;
+          func1820.definitionModule = "musical";
+          var func1840 = function(argcv) {
+            var curarg = 1;
+            var var_other = arguments[curarg];
+            curarg++;
+            if (argcv[0] !=  func1840.paramCounts[0])
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (touching)"));
+            var returnTarget = invocationCount;
+            invocationCount++;
+            moduleName = "musical";
+            try {
+              lineNumber = 170
+              onSelf = true;
+              var call1841 = callmethod(this, "x", [0]);
+              onSelf = true;
+              var call1842 = callmethod(this, "y", [0]);
+              var call1843 = callmethod(var_point,"x()y", [1, 1], call1841, call1842);
+              var call1844 = callmethod(var_other,"isPointOver", [1], call1843);
+              return call1844
+            } catch(e) {
+              if ((e.exctype == 'return') && (e.target == returnTarget)) {
+                return e.returnvalue;
+              } else {
+                throw e;
+              }
+            }
+          }
+          func1840.paramCounts = [
+            1,
+          ];
+          func1840.variableArities = [
+            false,
+          ];
+          obj1628.methods["touching"] = func1840;
+          func1840.definitionLine = 169;
+          func1840.definitionModule = "musical";
+          var func1845 = function(argcv) {
+            var curarg = 1;
+            var var_other = arguments[curarg];
+            curarg++;
+            if (argcv[0] !=  func1845.paramCounts[0])
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (face)"));
+            var returnTarget = invocationCount;
+            invocationCount++;
+            moduleName = "musical";
+            try {
+              lineNumber = 176
+              var if1846 = var_done;
+              lineNumber = 173
+              onSelf = true;
+              var call1847 = callmethod(this, "y", [0]);
+              var call1849 = callmethod(var_other,"y", [0]);
+              var opresult1851 = callmethod(call1849, "!=", [1], call1847);
+              onSelf = true;
+              var call1853 = callmethod(this, "x", [0]);
+              var call1855 = callmethod(var_other,"x", [0]);
+              var opresult1857 = callmethod(call1855, "!=", [1], call1853);
+              var opresult1859 = callmethod(opresult1857, "||", [1], opresult1851);
+              if (Grace_isTrue(opresult1859)) {
+                lineNumber = 175
+                lineNumber = 173
+                lineNumber = 175
+                lineNumber = 174
+                onSelf = true;
+                var call1862 = callmethod(this, "x", [0]);
+                var call1864 = callmethod(var_other,"x", [0]);
+                var diff1866 = callmethod(call1864, "-", [1], call1862);
+                onSelf = true;
+                var call1867 = callmethod(this, "y", [0]);
+                var call1869 = callmethod(var_other,"y", [0]);
+                var diff1871 = callmethod(call1869, "-", [1], call1867);
+                var call1872 = callmethod(var_trig,"atan2", [2], diff1866, diff1871);
+                var prod1874 = callmethod(call1872, "*", [1], new GraceNum(180));
+                var quotient1876 = callmethod(prod1874, "/", [1], new GraceNum(3.1415));
+                onSelf = true;
+                var call1877 = callmethod(this, "angle:=", [1], quotient1876);
+                if1846 = call1877;
+              }
+              lineNumber = 176
+              onSelf = true;
+              var call1878 = callmethod(this, "normaliseAngle", [0]);
+              return call1878
+            } catch(e) {
+              if ((e.exctype == 'return') && (e.target == returnTarget)) {
+                return e.returnvalue;
+              } else {
+                throw e;
+              }
+            }
+          }
+          func1845.paramCounts = [
+            1,
+          ];
+          func1845.variableArities = [
+            false,
+          ];
+          obj1628.methods["face"] = func1845;
+          func1845.definitionLine = 172;
+          func1845.definitionModule = "musical";
+          var func1879 = function(argcv) {
+            var curarg = 1;
+            if (argcv[0] !=  func1879.paramCounts[0])
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (stamp)"));
+            var returnTarget = invocationCount;
+            invocationCount++;
+            moduleName = "musical";
+            try {
+              lineNumber = 179
+              var string1880 = new GraceString("2d");
+              var call1881 = callmethod(var_backingCanvas,"getContext", [1], string1880);
+              onSelf = true;
+              var call1882 = callmethod(this, "draw", [1], call1881);
+              return call1882
+            } catch(e) {
+              if ((e.exctype == 'return') && (e.target == returnTarget)) {
+                return e.returnvalue;
+              } else {
+                throw e;
+              }
+            }
+          }
+          func1879.paramCounts = [
+            0,
+          ];
+          func1879.variableArities = [
+            false,
+          ];
+          obj1628.methods["stamp"] = func1879;
+          func1879.definitionLine = 178;
+          func1879.definitionModule = "musical";
+          sourceObject = obj1628;
+          lineNumber = 49
+          var call1883 = callmethod(superDepth, "outer", [0]);
+          onOuter = true;
+          onSelf = true;
+          var call1884 = callmethod(call1883, "outer", [0]);
+          onOuter = true;
+          onSelf = true;
+          var call1885 = callmethod(call1884, "initialise", [0]);
+          sourceObject = obj1628;
+          lineNumber = 50
+          var call1886 = callmethod(var_registeredObjects,"push", [1], this);
+          sourceObject = obj1628;
+          lineNumber = 52
+          lineNumber = 51
+          var_above = this;
+          sourceObject = obj1628;
+          lineNumber = 53
+          lineNumber = 52
+          var___916__ = this;
+          sourceObject = obj1628;
+          lineNumber = 53
+          var call1887 = callmethod(var_collections,"list", [0]);
+          var call1888 = callmethod(call1887,"new", [0]);
+          obj1628.data["alwaysBlocks"] = call1888;
+          var reader_musical_alwaysBlocks_1889 = function() {
+            return this.data["alwaysBlocks"];
+          }
+          reader_musical_alwaysBlocks_1889.def = true;
+          reader_musical_alwaysBlocks_1889.confidential = true;
+          obj1628.methods["alwaysBlocks"] = reader_musical_alwaysBlocks_1889;
+          lineNumber = 54;
+          moduleName = "musical";
+          lineNumber = 53
+          if (!Grace_isTrue(callmethod(var_Unknown, "match",
+            [1], call1888)))
+              throw new GraceExceptionPacket(TypeErrorObject,
+                    new GraceString("expected "
+                    + "initial value of def 'alwaysBlocks' to be of type Unknown"))
+          sourceObject = obj1628;
+          lineNumber = 55
+          lineNumber = 54
+          var quotient1892 = callmethod(var_canvasWidth, "/", [1], new GraceNum(2));
+          obj1628.data["x"] = quotient1892;
+          var reader_musical_x_1893 = function() {
+            return this.data["x"];
+          }
+          obj1628.methods["x"] = reader_musical_x_1893;
+          obj1628.data["x"] = quotient1892;
+          var writer_musical_x_1893 = function(argcv, o) {
+            this.data["x"] = o;
+          }
+          obj1628.methods["x:="] = writer_musical_x_1893;
+          writer_musical_x_1893.confidential = true;
+          lineNumber = 55;
+          moduleName = "musical";
+          lineNumber = 54
+          if (!Grace_isTrue(callmethod(var_Unknown, "match",
+            [1], quotient1892)))
+              throw new GraceExceptionPacket(TypeErrorObject,
+                    new GraceString("expected "
+                    + "initial value of var 'x' to be of type Unknown"))
+          obj1628.mutable = true;
+          sourceObject = obj1628;
+          lineNumber = 56
+          lineNumber = 55
+          var quotient1896 = callmethod(var_canvasHeight, "/", [1], new GraceNum(2));
+          obj1628.data["y"] = quotient1896;
+          var reader_musical_y_1897 = function() {
+            return this.data["y"];
+          }
+          obj1628.methods["y"] = reader_musical_y_1897;
+          obj1628.data["y"] = quotient1896;
+          var writer_musical_y_1897 = function(argcv, o) {
+            this.data["y"] = o;
+          }
+          obj1628.methods["y:="] = writer_musical_y_1897;
+          writer_musical_y_1897.confidential = true;
+          lineNumber = 56;
+          moduleName = "musical";
+          lineNumber = 55
+          if (!Grace_isTrue(callmethod(var_Unknown, "match",
+            [1], quotient1896)))
+              throw new GraceExceptionPacket(TypeErrorObject,
+                    new GraceString("expected "
+                    + "initial value of var 'y' to be of type Unknown"))
+          obj1628.mutable = true;
+          sourceObject = obj1628;
+          lineNumber = 56
+          onSelf = true;
+          var call1898 = callmethod(this, "x", [0]);
+          obj1628.data["destX"] = call1898;
+          var reader_musical_destX_1899 = function() {
+            return this.data["destX"];
+          }
+          obj1628.methods["destX"] = reader_musical_destX_1899;
+          obj1628.data["destX"] = call1898;
+          var writer_musical_destX_1899 = function(argcv, o) {
+            this.data["destX"] = o;
+          }
+          obj1628.methods["destX:="] = writer_musical_destX_1899;
+          reader_musical_destX_1899.confidential = true;
+          writer_musical_destX_1899.confidential = true;
+          lineNumber = 57;
+          moduleName = "musical";
+          lineNumber = 56
+          if (!Grace_isTrue(callmethod(var_Unknown, "match",
+            [1], call1898)))
+              throw new GraceExceptionPacket(TypeErrorObject,
+                    new GraceString("expected "
+                    + "initial value of var 'destX' to be of type Unknown"))
+          obj1628.mutable = true;
+          sourceObject = obj1628;
+          lineNumber = 57
+          onSelf = true;
+          var call1900 = callmethod(this, "y", [0]);
+          obj1628.data["destY"] = call1900;
+          var reader_musical_destY_1901 = function() {
+            return this.data["destY"];
+          }
+          obj1628.methods["destY"] = reader_musical_destY_1901;
+          obj1628.data["destY"] = call1900;
+          var writer_musical_destY_1901 = function(argcv, o) {
+            this.data["destY"] = o;
+          }
+          obj1628.methods["destY:="] = writer_musical_destY_1901;
+          reader_musical_destY_1901.confidential = true;
+          writer_musical_destY_1901.confidential = true;
+          lineNumber = 58;
+          moduleName = "musical";
+          lineNumber = 57
+          if (!Grace_isTrue(callmethod(var_Unknown, "match",
+            [1], call1900)))
+              throw new GraceExceptionPacket(TypeErrorObject,
+                    new GraceString("expected "
+                    + "initial value of var 'destY' to be of type Unknown"))
+          obj1628.mutable = true;
+          sourceObject = obj1628;
+          lineNumber = 58
+          obj1628.data["angle"] = new GraceNum(180);
+          var reader_musical_angle_1902 = function() {
+            return this.data["angle"];
+          }
+          obj1628.methods["angle"] = reader_musical_angle_1902;
+          obj1628.data["angle"] = new GraceNum(180);
+          var writer_musical_angle_1902 = function(argcv, o) {
+            this.data["angle"] = o;
+          }
+          obj1628.methods["angle:="] = writer_musical_angle_1902;
+          reader_musical_angle_1902.confidential = true;
+          writer_musical_angle_1902.confidential = true;
+          lineNumber = 59;
+          moduleName = "musical";
+          lineNumber = 58
+          if (!Grace_isTrue(callmethod(var_Unknown, "match",
+            [1], new GraceNum(180))))
+              throw new GraceExceptionPacket(TypeErrorObject,
+                    new GraceString("expected "
+                    + "initial value of var 'angle' to be of type Unknown"))
+          obj1628.mutable = true;
+          sourceObject = obj1628;
+          sourceObject = obj1628;
+          sourceObject = obj1628;
+          sourceObject = obj1628;
+          sourceObject = obj1628;
+          sourceObject = obj1628;
+          sourceObject = obj1628;
+          sourceObject = obj1628;
+          sourceObject = obj1628;
+          sourceObject = obj1628;
+          sourceObject = obj1628;
+          sourceObject = obj1628;
+          sourceObject = obj1628;
+          sourceObject = obj1628;
+          sourceObject = obj1628;
+          sourceObject = obj1628;
+          sourceObject = obj1628;
+          sourceObject = obj1628;
+          sourceObject = obj1628;
+          superDepth = origSuperDepth;
+        }
+        obj_init_1628.apply(inheritingObject, []);
+        return obj1628
+      } catch(e) {
+        if ((e.exctype == 'return') && (e.target == returnTarget)) {
+          return e.returnvalue;
+        } else {
+          throw e;
+        }
+      }
+    }
+    obj1349.methods["new()object"] = func1627;
+    var func1903 = function(argcv) {
       var curarg = 1;
       var returnTarget = invocationCount;
       invocationCount++;
       moduleName = "musical";
       try {
         lineNumber = 48
-        var string1883 = new GraceString("class drawable");
-        return string1883
+        var string1904 = new GraceString("class drawable");
+        return string1904
       } catch(e) {
         if ((e.exctype == 'return') && (e.target == returnTarget)) {
           return e.returnvalue;
@@ -9208,39 +9237,39 @@ function gracecode_musical () {
         }
       }
     }
-    func1882.paramCounts = [
+    func1903.paramCounts = [
     ];
-    func1882.variableArities = [
+    func1903.variableArities = [
     ];
-    obj1328.methods["asDebugString"] = func1882;
-    func1882.definitionLine = 48;
-    func1882.definitionModule = "musical";
-    sourceObject = obj1328;
-    sourceObject = obj1328;
+    obj1349.methods["asDebugString"] = func1903;
+    func1903.definitionLine = 48;
+    func1903.definitionModule = "musical";
+    sourceObject = obj1349;
+    sourceObject = obj1349;
     superDepth = origSuperDepth;
   }
-  obj_init_1328.apply(obj1328, []);
-  var var_drawable = obj1328;
+  obj_init_1349.apply(obj1349, []);
+  var var_drawable = obj1349;
   lineNumber = 183
   lineNumber = 220
   lineNumber = 256
   lineNumber = 299
   lineNumber = 316
-  var obj1884 = Grace_allocObject();
-  obj1884.definitionModule = "musical";
-  obj1884.definitionLine = 316;
-  obj1884.outer = this;
-  var reader_musical_outer_1885 = function() {
+  var obj1905 = Grace_allocObject();
+  obj1905.definitionModule = "musical";
+  obj1905.definitionLine = 316;
+  obj1905.outer = this;
+  var reader_musical_outer_1906 = function() {
     return this.outer;
   }
-  obj1884.methods["outer"] = reader_musical_outer_1885;
-  function obj_init_1884() {
+  obj1905.methods["outer"] = reader_musical_outer_1906;
+  function obj_init_1905() {
     var origSuperDepth = superDepth;
-    superDepth = obj1884;
-    obj1884.annotations = [];
-    var func1886 = function(argcv) {
+    superDepth = obj1905;
+    obj1905.annotations = [];
+    var func1907 = function(argcv) {
       var curarg = 1;
-      if (argcv[0] !=  func1886.paramCounts[0])
+      if (argcv[0] !=  func1907.paramCounts[0])
         callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (x)"));
       var returnTarget = invocationCount;
       invocationCount++;
@@ -9248,9 +9277,9 @@ function gracecode_musical () {
       try {
         lineNumber = 319
         onSelf = true;
-        var call1887 = callmethod(this, "position", [0]);
-        var call1888 = callmethod(call1887,"x", [0]);
-        return call1888
+        var call1908 = callmethod(this, "position", [0]);
+        var call1909 = callmethod(call1908,"x", [0]);
+        return call1909
       } catch(e) {
         if ((e.exctype == 'return') && (e.target == returnTarget)) {
           return e.returnvalue;
@@ -9259,18 +9288,18 @@ function gracecode_musical () {
         }
       }
     }
-    func1886.paramCounts = [
+    func1907.paramCounts = [
       0,
     ];
-    func1886.variableArities = [
+    func1907.variableArities = [
       false,
     ];
-    obj1884.methods["x"] = func1886;
-    func1886.definitionLine = 318;
-    func1886.definitionModule = "musical";
-    var func1889 = function(argcv) {
+    obj1905.methods["x"] = func1907;
+    func1907.definitionLine = 318;
+    func1907.definitionModule = "musical";
+    var func1910 = function(argcv) {
       var curarg = 1;
-      if (argcv[0] !=  func1889.paramCounts[0])
+      if (argcv[0] !=  func1910.paramCounts[0])
         callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (y)"));
       var returnTarget = invocationCount;
       invocationCount++;
@@ -9278,9 +9307,9 @@ function gracecode_musical () {
       try {
         lineNumber = 322
         onSelf = true;
-        var call1890 = callmethod(this, "position", [0]);
-        var call1891 = callmethod(call1890,"y", [0]);
-        return call1891
+        var call1911 = callmethod(this, "position", [0]);
+        var call1912 = callmethod(call1911,"y", [0]);
+        return call1912
       } catch(e) {
         if ((e.exctype == 'return') && (e.target == returnTarget)) {
           return e.returnvalue;
@@ -9289,18 +9318,18 @@ function gracecode_musical () {
         }
       }
     }
-    func1889.paramCounts = [
+    func1910.paramCounts = [
       0,
     ];
-    func1889.variableArities = [
+    func1910.variableArities = [
       false,
     ];
-    obj1884.methods["y"] = func1889;
-    func1889.definitionLine = 321;
-    func1889.definitionModule = "musical";
-    var func1892 = function(argcv) {
+    obj1905.methods["y"] = func1910;
+    func1910.definitionLine = 321;
+    func1910.definitionModule = "musical";
+    var func1913 = function(argcv) {
       var curarg = 1;
-      if (argcv[0] !=  func1892.paramCounts[0])
+      if (argcv[0] !=  func1913.paramCounts[0])
         callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (location)"));
       var returnTarget = invocationCount;
       invocationCount++;
@@ -9308,8 +9337,8 @@ function gracecode_musical () {
       try {
         lineNumber = 325
         onSelf = true;
-        var call1893 = callmethod(this, "position", [0]);
-        return call1893
+        var call1914 = callmethod(this, "position", [0]);
+        return call1914
       } catch(e) {
         if ((e.exctype == 'return') && (e.target == returnTarget)) {
           return e.returnvalue;
@@ -9318,47 +9347,47 @@ function gracecode_musical () {
         }
       }
     }
-    func1892.paramCounts = [
+    func1913.paramCounts = [
       0,
     ];
-    func1892.variableArities = [
+    func1913.variableArities = [
       false,
     ];
-    obj1884.methods["location"] = func1892;
-    func1892.definitionLine = 324;
-    func1892.definitionModule = "musical";
-    sourceObject = obj1884;
+    obj1905.methods["location"] = func1913;
+    func1913.definitionLine = 324;
+    func1913.definitionModule = "musical";
+    sourceObject = obj1905;
     lineNumber = 317
-    var call1894 = callmethod(var_point,"x()y", [1, 1], new GraceNum(0), new GraceNum(0));
-    obj1884.data["position"] = call1894;
-    var reader_musical_position_1895 = function() {
+    var call1915 = callmethod(var_point,"x()y", [1, 1], new GraceNum(0), new GraceNum(0));
+    obj1905.data["position"] = call1915;
+    var reader_musical_position_1916 = function() {
       return this.data["position"];
     }
-    obj1884.methods["position"] = reader_musical_position_1895;
-    obj1884.data["position"] = call1894;
-    var writer_musical_position_1895 = function(argcv, o) {
+    obj1905.methods["position"] = reader_musical_position_1916;
+    obj1905.data["position"] = call1915;
+    var writer_musical_position_1916 = function(argcv, o) {
       this.data["position"] = o;
     }
-    obj1884.methods["position:="] = writer_musical_position_1895;
+    obj1905.methods["position:="] = writer_musical_position_1916;
     lineNumber = 317;
     moduleName = "musical";
     if (!Grace_isTrue(callmethod(var_Unknown, "match",
-      [1], call1894)))
+      [1], call1915)))
         throw new GraceExceptionPacket(TypeErrorObject,
               new GraceString("expected "
               + "initial value of var 'position' to be of type Unknown"))
-    obj1884.mutable = true;
-    sourceObject = obj1884;
-    sourceObject = obj1884;
-    sourceObject = obj1884;
+    obj1905.mutable = true;
+    sourceObject = obj1905;
+    sourceObject = obj1905;
+    sourceObject = obj1905;
     superDepth = origSuperDepth;
   }
-  obj_init_1884.apply(obj1884, []);
-  var var_mouse = obj1884;
+  obj_init_1905.apply(obj1905, []);
+  var var_mouse = obj1905;
   lineNumber = 322
-  var func1896 = function(argcv) {
+  var func1917 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func1896.paramCounts[0])
+    if (argcv[0] !=  func1917.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (mouse)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -9374,15 +9403,15 @@ function gracecode_musical () {
       }
     }
   }
-  func1896.paramCounts = [
+  func1917.paramCounts = [
     0,
   ];
-  func1896.variableArities = [
+  func1917.variableArities = [
     false,
   ];
-  this.methods["mouse"] = func1896;
-  func1896.definitionLine = 322;
-  func1896.definitionModule = "musical";
+  this.methods["mouse"] = func1917;
+  func1917.definitionLine = 322;
+  func1917.definitionModule = "musical";
   lineNumber = 316;
   moduleName = "musical";
   if (!Grace_isTrue(callmethod(var_Unknown, "match",
@@ -9390,20 +9419,20 @@ function gracecode_musical () {
       throw new GraceExceptionPacket(TypeErrorObject,
             new GraceString("expected "
             + "initial value of def 'mouse' to be of type Unknown"))
-  lineNumber = 409
-  lineNumber = 468
-  lineNumber = 491
+  lineNumber = 426
+  lineNumber = 489
+  lineNumber = 522
   var var_octave = new GraceNum(4);
   lineNumber = 322
-  var func1897 = function(argcv) {
+  var func1918 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func1897.paramCounts[0])
+    if (argcv[0] !=  func1918.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (octave)"));
     var returnTarget = invocationCount;
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 491
+      lineNumber = 522
       return var_octave
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -9413,21 +9442,21 @@ function gracecode_musical () {
       }
     }
   }
-  func1897.paramCounts = [
+  func1918.paramCounts = [
     0,
   ];
-  func1897.variableArities = [
+  func1918.variableArities = [
     false,
   ];
-  this.methods["octave"] = func1897;
-  func1897.definitionLine = 322;
-  func1897.definitionModule = "musical";
+  this.methods["octave"] = func1918;
+  func1918.definitionLine = 322;
+  func1918.definitionModule = "musical";
   lineNumber = 322
-  var func1898 = function(argcv) {
+  var func1919 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1898.paramCounts[0])
+    if (argcv[0] !=  func1919.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (octave:=)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -9443,37 +9472,37 @@ function gracecode_musical () {
       }
     }
   }
-  func1898.paramCounts = [
+  func1919.paramCounts = [
     1,
   ];
-  func1898.variableArities = [
+  func1919.variableArities = [
     false,
   ];
-  this.methods["octave:="] = func1898;
-  func1898.definitionLine = 322;
-  func1898.definitionModule = "musical";
-  lineNumber = 491;
+  this.methods["octave:="] = func1919;
+  func1919.definitionLine = 322;
+  func1919.definitionModule = "musical";
+  lineNumber = 522;
   moduleName = "musical";
   if (!Grace_isTrue(callmethod(var_Unknown, "match",
     [1], var_octave)))
       throw new GraceExceptionPacket(TypeErrorObject,
             new GraceString("expected "
             + "initial value of var 'octave' to be of type Unknown"))
-  lineNumber = 493
-  lineNumber = 494
-  lineNumber = 493
-  var bool1899 = new GraceBoolean(false)
-  var var_applyFlat = bool1899;
+  lineNumber = 524
+  lineNumber = 525
+  lineNumber = 524
+  var bool1920 = new GraceBoolean(false)
+  var var_applyFlat = bool1920;
   lineNumber = 322
-  var func1900 = function(argcv) {
+  var func1921 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func1900.paramCounts[0])
+    if (argcv[0] !=  func1921.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (applyFlat)"));
     var returnTarget = invocationCount;
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 493
+      lineNumber = 524
       return var_applyFlat
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -9483,21 +9512,21 @@ function gracecode_musical () {
       }
     }
   }
-  func1900.paramCounts = [
+  func1921.paramCounts = [
     0,
   ];
-  func1900.variableArities = [
+  func1921.variableArities = [
     false,
   ];
-  this.methods["applyFlat"] = func1900;
-  func1900.definitionLine = 322;
-  func1900.definitionModule = "musical";
+  this.methods["applyFlat"] = func1921;
+  func1921.definitionLine = 322;
+  func1921.definitionModule = "musical";
   lineNumber = 322
-  var func1901 = function(argcv) {
+  var func1922 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1901.paramCounts[0])
+    if (argcv[0] !=  func1922.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (applyFlat:=)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -9513,37 +9542,37 @@ function gracecode_musical () {
       }
     }
   }
-  func1901.paramCounts = [
+  func1922.paramCounts = [
     1,
   ];
-  func1901.variableArities = [
+  func1922.variableArities = [
     false,
   ];
-  this.methods["applyFlat:="] = func1901;
-  func1901.definitionLine = 322;
-  func1901.definitionModule = "musical";
-  lineNumber = 494;
+  this.methods["applyFlat:="] = func1922;
+  func1922.definitionLine = 322;
+  func1922.definitionModule = "musical";
+  lineNumber = 525;
   moduleName = "musical";
-  lineNumber = 493
+  lineNumber = 524
   if (!Grace_isTrue(callmethod(var_Unknown, "match",
     [1], var_applyFlat)))
       throw new GraceExceptionPacket(TypeErrorObject,
             new GraceString("expected "
             + "initial value of var 'applyFlat' to be of type Unknown"))
-  lineNumber = 496
-  lineNumber = 494
-  var bool1902 = new GraceBoolean(false)
-  var var_applySharp = bool1902;
+  lineNumber = 527
+  lineNumber = 525
+  var bool1923 = new GraceBoolean(false)
+  var var_applySharp = bool1923;
   lineNumber = 322
-  var func1903 = function(argcv) {
+  var func1924 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func1903.paramCounts[0])
+    if (argcv[0] !=  func1924.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (applySharp)"));
     var returnTarget = invocationCount;
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 494
+      lineNumber = 525
       return var_applySharp
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -9553,21 +9582,21 @@ function gracecode_musical () {
       }
     }
   }
-  func1903.paramCounts = [
+  func1924.paramCounts = [
     0,
   ];
-  func1903.variableArities = [
+  func1924.variableArities = [
     false,
   ];
-  this.methods["applySharp"] = func1903;
-  func1903.definitionLine = 322;
-  func1903.definitionModule = "musical";
+  this.methods["applySharp"] = func1924;
+  func1924.definitionLine = 322;
+  func1924.definitionModule = "musical";
   lineNumber = 322
-  var func1904 = function(argcv) {
+  var func1925 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1904.paramCounts[0])
+    if (argcv[0] !=  func1925.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (applySharp:=)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -9583,38 +9612,38 @@ function gracecode_musical () {
       }
     }
   }
-  func1904.paramCounts = [
+  func1925.paramCounts = [
     1,
   ];
-  func1904.variableArities = [
+  func1925.variableArities = [
     false,
   ];
-  this.methods["applySharp:="] = func1904;
-  func1904.definitionLine = 322;
-  func1904.definitionModule = "musical";
-  lineNumber = 496;
+  this.methods["applySharp:="] = func1925;
+  func1925.definitionLine = 322;
+  func1925.definitionModule = "musical";
+  lineNumber = 527;
   moduleName = "musical";
-  lineNumber = 494
+  lineNumber = 525
   if (!Grace_isTrue(callmethod(var_Unknown, "match",
     [1], var_applySharp)))
       throw new GraceExceptionPacket(TypeErrorObject,
             new GraceString("expected "
             + "initial value of var 'applySharp' to be of type Unknown"))
-  lineNumber = 496
-  lineNumber = 497
-  lineNumber = 496
-  var bool1905 = new GraceBoolean(false)
-  var var_applyChorus = bool1905;
+  lineNumber = 527
+  lineNumber = 528
+  lineNumber = 527
+  var bool1926 = new GraceBoolean(false)
+  var var_applyChorus = bool1926;
   lineNumber = 322
-  var func1906 = function(argcv) {
+  var func1927 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func1906.paramCounts[0])
+    if (argcv[0] !=  func1927.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (applyChorus)"));
     var returnTarget = invocationCount;
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 496
+      lineNumber = 527
       return var_applyChorus
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -9624,21 +9653,21 @@ function gracecode_musical () {
       }
     }
   }
-  func1906.paramCounts = [
+  func1927.paramCounts = [
     0,
   ];
-  func1906.variableArities = [
+  func1927.variableArities = [
     false,
   ];
-  this.methods["applyChorus"] = func1906;
-  func1906.definitionLine = 322;
-  func1906.definitionModule = "musical";
+  this.methods["applyChorus"] = func1927;
+  func1927.definitionLine = 322;
+  func1927.definitionModule = "musical";
   lineNumber = 322
-  var func1907 = function(argcv) {
+  var func1928 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1907.paramCounts[0])
+    if (argcv[0] !=  func1928.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (applyChorus:=)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -9654,37 +9683,37 @@ function gracecode_musical () {
       }
     }
   }
-  func1907.paramCounts = [
+  func1928.paramCounts = [
     1,
   ];
-  func1907.variableArities = [
+  func1928.variableArities = [
     false,
   ];
-  this.methods["applyChorus:="] = func1907;
-  func1907.definitionLine = 322;
-  func1907.definitionModule = "musical";
-  lineNumber = 497;
+  this.methods["applyChorus:="] = func1928;
+  func1928.definitionLine = 322;
+  func1928.definitionModule = "musical";
+  lineNumber = 528;
   moduleName = "musical";
-  lineNumber = 496
+  lineNumber = 527
   if (!Grace_isTrue(callmethod(var_Unknown, "match",
     [1], var_applyChorus)))
       throw new GraceExceptionPacket(TypeErrorObject,
             new GraceString("expected "
             + "initial value of var 'applyChorus' to be of type Unknown"))
-  lineNumber = 498
-  lineNumber = 497
-  var bool1908 = new GraceBoolean(false)
-  var var_applyReverb = bool1908;
+  lineNumber = 529
+  lineNumber = 528
+  var bool1929 = new GraceBoolean(false)
+  var var_applyReverb = bool1929;
   lineNumber = 322
-  var func1909 = function(argcv) {
+  var func1930 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func1909.paramCounts[0])
+    if (argcv[0] !=  func1930.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (applyReverb)"));
     var returnTarget = invocationCount;
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 497
+      lineNumber = 528
       return var_applyReverb
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -9694,21 +9723,21 @@ function gracecode_musical () {
       }
     }
   }
-  func1909.paramCounts = [
+  func1930.paramCounts = [
     0,
   ];
-  func1909.variableArities = [
+  func1930.variableArities = [
     false,
   ];
-  this.methods["applyReverb"] = func1909;
-  func1909.definitionLine = 322;
-  func1909.definitionModule = "musical";
+  this.methods["applyReverb"] = func1930;
+  func1930.definitionLine = 322;
+  func1930.definitionModule = "musical";
   lineNumber = 322
-  var func1910 = function(argcv) {
+  var func1931 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1910.paramCounts[0])
+    if (argcv[0] !=  func1931.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (applyReverb:=)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -9724,37 +9753,37 @@ function gracecode_musical () {
       }
     }
   }
-  func1910.paramCounts = [
+  func1931.paramCounts = [
     1,
   ];
-  func1910.variableArities = [
+  func1931.variableArities = [
     false,
   ];
-  this.methods["applyReverb:="] = func1910;
-  func1910.definitionLine = 322;
-  func1910.definitionModule = "musical";
-  lineNumber = 498;
+  this.methods["applyReverb:="] = func1931;
+  func1931.definitionLine = 322;
+  func1931.definitionModule = "musical";
+  lineNumber = 529;
   moduleName = "musical";
-  lineNumber = 497
+  lineNumber = 528
   if (!Grace_isTrue(callmethod(var_Unknown, "match",
     [1], var_applyReverb)))
       throw new GraceExceptionPacket(TypeErrorObject,
             new GraceString("expected "
             + "initial value of var 'applyReverb' to be of type Unknown"))
-  lineNumber = 499
-  lineNumber = 498
-  var bool1911 = new GraceBoolean(false)
-  var var_applyAutowah = bool1911;
+  lineNumber = 530
+  lineNumber = 529
+  var bool1932 = new GraceBoolean(false)
+  var var_applyAutowah = bool1932;
   lineNumber = 322
-  var func1912 = function(argcv) {
+  var func1933 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func1912.paramCounts[0])
+    if (argcv[0] !=  func1933.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (applyAutowah)"));
     var returnTarget = invocationCount;
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 498
+      lineNumber = 529
       return var_applyAutowah
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -9764,21 +9793,21 @@ function gracecode_musical () {
       }
     }
   }
-  func1912.paramCounts = [
+  func1933.paramCounts = [
     0,
   ];
-  func1912.variableArities = [
+  func1933.variableArities = [
     false,
   ];
-  this.methods["applyAutowah"] = func1912;
-  func1912.definitionLine = 322;
-  func1912.definitionModule = "musical";
+  this.methods["applyAutowah"] = func1933;
+  func1933.definitionLine = 322;
+  func1933.definitionModule = "musical";
   lineNumber = 322
-  var func1913 = function(argcv) {
+  var func1934 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1913.paramCounts[0])
+    if (argcv[0] !=  func1934.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (applyAutowah:=)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -9794,37 +9823,37 @@ function gracecode_musical () {
       }
     }
   }
-  func1913.paramCounts = [
+  func1934.paramCounts = [
     1,
   ];
-  func1913.variableArities = [
+  func1934.variableArities = [
     false,
   ];
-  this.methods["applyAutowah:="] = func1913;
-  func1913.definitionLine = 322;
-  func1913.definitionModule = "musical";
-  lineNumber = 499;
+  this.methods["applyAutowah:="] = func1934;
+  func1934.definitionLine = 322;
+  func1934.definitionModule = "musical";
+  lineNumber = 530;
   moduleName = "musical";
-  lineNumber = 498
+  lineNumber = 529
   if (!Grace_isTrue(callmethod(var_Unknown, "match",
     [1], var_applyAutowah)))
       throw new GraceExceptionPacket(TypeErrorObject,
             new GraceString("expected "
             + "initial value of var 'applyAutowah' to be of type Unknown"))
-  lineNumber = 501
-  lineNumber = 499
-  var bool1914 = new GraceBoolean(false)
-  var var_applyCheby = bool1914;
+  lineNumber = 532
+  lineNumber = 530
+  var bool1935 = new GraceBoolean(false)
+  var var_applyCheby = bool1935;
   lineNumber = 322
-  var func1915 = function(argcv) {
+  var func1936 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func1915.paramCounts[0])
+    if (argcv[0] !=  func1936.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (applyCheby)"));
     var returnTarget = invocationCount;
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 499
+      lineNumber = 530
       return var_applyCheby
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -9834,21 +9863,21 @@ function gracecode_musical () {
       }
     }
   }
-  func1915.paramCounts = [
+  func1936.paramCounts = [
     0,
   ];
-  func1915.variableArities = [
+  func1936.variableArities = [
     false,
   ];
-  this.methods["applyCheby"] = func1915;
-  func1915.definitionLine = 322;
-  func1915.definitionModule = "musical";
+  this.methods["applyCheby"] = func1936;
+  func1936.definitionLine = 322;
+  func1936.definitionModule = "musical";
   lineNumber = 322
-  var func1916 = function(argcv) {
+  var func1937 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1916.paramCounts[0])
+    if (argcv[0] !=  func1937.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (applyCheby:=)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -9864,38 +9893,38 @@ function gracecode_musical () {
       }
     }
   }
-  func1916.paramCounts = [
+  func1937.paramCounts = [
     1,
   ];
-  func1916.variableArities = [
+  func1937.variableArities = [
     false,
   ];
-  this.methods["applyCheby:="] = func1916;
-  func1916.definitionLine = 322;
-  func1916.definitionModule = "musical";
-  lineNumber = 501;
+  this.methods["applyCheby:="] = func1937;
+  func1937.definitionLine = 322;
+  func1937.definitionModule = "musical";
+  lineNumber = 532;
   moduleName = "musical";
-  lineNumber = 499
+  lineNumber = 530
   if (!Grace_isTrue(callmethod(var_Unknown, "match",
     [1], var_applyCheby)))
       throw new GraceExceptionPacket(TypeErrorObject,
             new GraceString("expected "
             + "initial value of var 'applyCheby' to be of type Unknown"))
-  lineNumber = 501
-  lineNumber = 506
-  lineNumber = 501
-  var bool1917 = new GraceBoolean(true)
-  var var_firstPass = bool1917;
+  lineNumber = 532
+  lineNumber = 537
+  lineNumber = 532
+  var bool1938 = new GraceBoolean(true)
+  var var_firstPass = bool1938;
   lineNumber = 322
-  var func1918 = function(argcv) {
+  var func1939 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func1918.paramCounts[0])
+    if (argcv[0] !=  func1939.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (firstPass)"));
     var returnTarget = invocationCount;
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 501
+      lineNumber = 532
       return var_firstPass
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -9905,21 +9934,21 @@ function gracecode_musical () {
       }
     }
   }
-  func1918.paramCounts = [
+  func1939.paramCounts = [
     0,
   ];
-  func1918.variableArities = [
+  func1939.variableArities = [
     false,
   ];
-  this.methods["firstPass"] = func1918;
-  func1918.definitionLine = 322;
-  func1918.definitionModule = "musical";
+  this.methods["firstPass"] = func1939;
+  func1939.definitionLine = 322;
+  func1939.definitionModule = "musical";
   lineNumber = 322
-  var func1919 = function(argcv) {
+  var func1940 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
     curarg++;
-    if (argcv[0] !=  func1919.paramCounts[0])
+    if (argcv[0] !=  func1940.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (firstPass:=)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -9935,41 +9964,40 @@ function gracecode_musical () {
       }
     }
   }
-  func1919.paramCounts = [
+  func1940.paramCounts = [
     1,
   ];
-  func1919.variableArities = [
+  func1940.variableArities = [
     false,
   ];
-  this.methods["firstPass:="] = func1919;
-  func1919.definitionLine = 322;
-  func1919.definitionModule = "musical";
-  lineNumber = 506;
+  this.methods["firstPass:="] = func1940;
+  func1940.definitionLine = 322;
+  func1940.definitionModule = "musical";
+  lineNumber = 537;
   moduleName = "musical";
-  lineNumber = 501
+  lineNumber = 532
   if (!Grace_isTrue(callmethod(var_Unknown, "match",
     [1], var_firstPass)))
       throw new GraceExceptionPacket(TypeErrorObject,
             new GraceString("expected "
             + "initial value of var 'firstPass' to be of type Unknown"))
-  lineNumber = 506
   lineNumber = 537
-  lineNumber = 547
-  lineNumber = 554
-  lineNumber = 565
-  lineNumber = 574
-  lineNumber = 579
-  lineNumber = 584
-  lineNumber = 589
-  lineNumber = 594
-  lineNumber = 599
-  lineNumber = 604
-  lineNumber = 611
-  lineNumber = 628
-  lineNumber = 634
-  lineNumber = 640
-  lineNumber = 646
-  lineNumber = 654
+  lineNumber = 568
+  lineNumber = 578
+  lineNumber = 585
+  lineNumber = 596
+  lineNumber = 605
+  lineNumber = 610
+  lineNumber = 615
+  lineNumber = 620
+  lineNumber = 625
+  lineNumber = 630
+  lineNumber = 635
+  lineNumber = 642
+  lineNumber = 659
+  lineNumber = 665
+  lineNumber = 671
+  lineNumber = 677
   return this;
 }
 gracecode_musical.imports = [
@@ -9979,7 +10007,7 @@ gracecode_musical.imports = [
 'StandardPrelude',
 ];
 if (gctCache)
-  gctCache['musical'] = "public:\n document\n document:=\n canvas\n canvas:=\n backingCanvas\n backingCanvas:=\n backingContext\n backingContext:=\n mouseDownListener\n mouseDownListener:=\n mouseMoveListener\n mouseMoveListener:=\n trig\n PI\n stopRunning\n stopRunning:=\n initialised\n initialised:=\n backgroundColour\n backgroundColour:=\n registeredObjects\n stepBlocks\n audioTags\n canvasWidth\n canvasWidth:=\n canvasHeight\n canvasHeight:=\n left\n right\n top\n bottom\n centre\n centre:=\n leftCentre\n leftCentre:=\n rightCentre\n rightCentre:=\n above\n above:=\n \u0394\n \u0394:=\n point\n drawable\n rectangle\n SniffCircle\n circle\n image\n value\n mouse\n clear\n always\n whenever()do\n hue()saturation()lightness\n h()s()l\n initialise\n background\n random\n playSound\n stopSound\n start\n stop\n atModuleEnd\n octave\n octave:=\n applyFlat\n applyFlat:=\n applySharp\n applySharp:=\n applyChorus\n applyChorus:=\n applyReverb\n applyReverb:=\n applyAutowah\n applyAutowah:=\n applyCheby\n applyCheby:=\n firstPass\n firstPass:=\n Note\n C\n D\n E\n F\n G\n A\n B\n flat\n sharp\n octave()on\n Instrument\n monoSynth\n pluckSynth\n polySynth\n fmSynth\n membraneSynth\n duoSynth\n arpeggio\n Effect\n Chorus\n Reverb\n Autowah\n Cheby\n SetBPM\nconstructors-of:point:\n x()y\nmethods-of:point.x()y:\n down\n up\n x\n y\n left\n right\nfresh:circle:\n destY:=\n whenever()do\n colour:=\n x:=\n normaliseAngle\n colour\n x\n y\n turn\n radius:=\n stamp\n angle\n bounceOff\n bounce\n destX:=\n touching\n destX\n destY\n tick\n draw\n alwaysBlocks\n y:=\n forward\n moveTo\n angle:=\n jumpTo\n mousedown\n isPointOver\n radius\n face\n bounceFrom\n always\n touchingEdge\n step\nfresh-methods:\n rectangle\n circle\n image\n value\nfresh:rectangle:\n destY:=\n whenever()do\n colour:=\n x:=\n height:=\n normaliseAngle\n colour\n width:=\n x\n y\n turn\n width\n asString\n stamp\n angle\n bounceOff\n bounce\n destX:=\n touching\n destX\n destY\n tick\n draw\n alwaysBlocks\n y:=\n forward\n height\n moveTo\n angle:=\n jumpTo\n mousedown\n isPointOver\n face\n bounceFrom\n always\n touchingEdge\n step\nmethods-of:drawable.new:\n destX:=\n destY:=\n touching\n destX\n destY\n tick\n draw\n alwaysBlocks\n y:=\n normaliseAngle\n bounceFrom\n forward\n x\n y\n moveTo\n whenever()do\n turn\n angle:=\n jumpTo\n mousedown\n isPointOver\n stamp\n angle\n bounceOff\n face\n x:=\n always\n touchingEdge\n bounce\n step\npath:\n musical\nclasses:\n point\n drawable\nfresh:value:\n destY:=\n whenever()do\n colour:=\n x:=\n normaliseAngle\n colour\n label:=\n x\n y\n turn\n label\n stamp\n angle\n bounceOff\n bounce\n destX:=\n touching\n destX\n destY\n tick\n draw\n alwaysBlocks\n y:=\n forward\n moveTo\n angle:=\n jumpTo\n mousedown\n isPointOver\n face\n bounceFrom\n always\n touchingEdge\n step\nconfidential:\nfresh:image:\n destY:=\n whenever()do\n x:=\n height:=\n normaliseAngle\n width:=\n x\n y\n turn\n width\n stamp\n angle\n url\n bounceOff\n bounce\n destX:=\n touching\n destX\n destY\n tick\n draw\n alwaysBlocks\n y:=\n forward\n height\n moveTo\n angle:=\n jumpTo\n mousedown\n isPointOver\n url:=\n face\n bounceFrom\n always\n touchingEdge\n imgTag\n step\nconstructors-of:drawable:\n new\nmodules:\n StandardPrelude\n mgcollections\n";
+  gctCache['musical'] = "fresh:image:\n always\n url\n touchingEdge\n bounceOff\n imgTag\n step\n destX:=\n whenever()do\n destY\n x:=\n y:=\n normaliseAngle\n forward\n url:=\n angle:=\n mousedown\n isPointOver\n height\n destX\n bounce\n destY:=\n touching\n height:=\n turn\n tick\n draw\n alwaysBlocks\n width:=\n x\n y\n moveTo\n jumpTo\n width\n stamp\n angle\n face\n bounceFrom\nfresh-methods:\n rectangle\n circle\n image\n value\nconstructors-of:drawable:\n new\nmodules:\n StandardPrelude\n mgcollections\nconstructors-of:point:\n x()y\nmethods-of:point.x()y:\n up\n down\n x\n y\n left\n right\npublic:\n document\n document:=\n canvas\n canvas:=\n backingCanvas\n backingCanvas:=\n backingContext\n backingContext:=\n mouseDownListener\n mouseDownListener:=\n mouseMoveListener\n mouseMoveListener:=\n trig\n PI\n stopRunning\n stopRunning:=\n initialised\n initialised:=\n backgroundColour\n backgroundColour:=\n registeredObjects\n stepBlocks\n audioTags\n canvasWidth\n canvasWidth:=\n canvasHeight\n canvasHeight:=\n left\n right\n top\n bottom\n centre\n centre:=\n leftCentre\n leftCentre:=\n rightCentre\n rightCentre:=\n above\n above:=\n \u0394\n \u0394:=\n point\n drawable\n rectangle\n SniffCircle\n circle\n image\n value\n mouse\n clear\n always\n whenever()do\n hue()saturation()lightness\n h()s()l\n initialise\n background\n random\n playSound\n stopSound\n start\n stop\n atModuleEnd\n octave\n octave:=\n applyFlat\n applyFlat:=\n applySharp\n applySharp:=\n applyChorus\n applyChorus:=\n applyReverb\n applyReverb:=\n applyAutowah\n applyAutowah:=\n applyCheby\n applyCheby:=\n firstPass\n firstPass:=\n Note\n C\n D\n E\n F\n G\n A\n B\n flat\n sharp\n octave()on\n Instrument\n monoSynth\n pluckSynth\n polySynth\n fmSynth\n membraneSynth\n duoSynth\n arpeggio\n Effect\n Chorus\n Reverb\n Autowah\n Cheby\n SetBPM\nfresh:circle:\n always\n touchingEdge\n bounceOff\n step\n destX:=\n whenever()do\n destY\n colour:=\n x:=\n y:=\n normaliseAngle\n colour\n forward\n angle:=\n mousedown\n isPointOver\n destX\n bounce\n destY:=\n touching\n turn\n tick\n draw\n alwaysBlocks\n jumpTo\n x\n y\n moveTo\n radius:=\n stamp\n angle\n radius\n face\n bounceFrom\nfresh:rectangle:\n always\n touchingEdge\n bounceOff\n step\n destX:=\n whenever()do\n destY\n colour:=\n x:=\n y:=\n normaliseAngle\n colour\n forward\n angle:=\n mousedown\n isPointOver\n height\n destX\n bounce\n destY:=\n touching\n height:=\n turn\n tick\n draw\n alwaysBlocks\n asString\n width:=\n x\n y\n moveTo\n jumpTo\n width\n stamp\n angle\n face\n bounceFrom\nmethods-of:drawable.new:\n always\n touchingEdge\n whenever()do\n turn\n step\n destX:=\n destY:=\n touching\n bounceOff\n destX\n destY\n tick\n alwaysBlocks\n draw\n x:=\n y:=\n normaliseAngle\n bounce\n forward\n x\n y\n moveTo\n angle:=\n jumpTo\n mousedown\n isPointOver\n stamp\n angle\n face\n bounceFrom\npath:\n musical\nclasses:\n point\n drawable\nfresh:value:\n always\n touchingEdge\n bounceOff\n step\n destX:=\n whenever()do\n destY\n colour:=\n x:=\n y:=\n normaliseAngle\n colour\n forward\n angle:=\n mousedown\n isPointOver\n destX\n bounce\n destY:=\n touching\n turn\n tick\n draw\n alwaysBlocks\n label:=\n x\n y\n moveTo\n jumpTo\n label\n stamp\n angle\n face\n bounceFrom\nconfidential:\n";
 if (originalSourceLines) {
   originalSourceLines["musical"] = [
     "import \"mgcollections\" as collections",
@@ -10349,7 +10377,7 @@ if (originalSourceLines) {
     "    hue(h)saturation(s)lightness(l)",
     "}",
     "method initialise {",
-    "    dom.window.console.log(\"initialise\")",
+    "    // dom.window.console.log(\"initialise\")",
     "    if (initialised) then {",
     "        return false",
     "    }",
@@ -10373,10 +10401,27 @@ if (originalSourceLines) {
     "    mouseDownListener := { ev ->",
     "        def x = (ev.clientX - canvas.offsetLeft) / canvas.offsetWidth * canvasHeight",
     "        def y = (ev.clientY - canvas.offsetTop) / canvas.offsetHeight * canvasHeight",
-    "        if ((x > (canvasWidth - 20)) && (y < 20)) then {",
+    "        // if ((x > (canvasWidth - 20)) && (y < 20)) then {",
+    "        // ev.preventDefault",
+    "        // stop",
+    "        // }",
+    "",
+    "        if(stopRunning) then {",
+    "            dom.window.console.log(\"if stopRunning\");",
+    "",
+    "            ev.preventDefault",
+    "            stopRunning := false",
+    "            start",
+    "            dom.window.t_play();",
+    "        } else {",
+    "            dom.window.console.log(\"if !stopRunning\");",
     "            ev.preventDefault",
     "            stop",
     "        }",
+    "",
+    "",
+    "        dom.window.console.log(\"mousedown\");",
+    "",
     "        def p = point.x(x)y(y)",
     "        for (registeredObjects) do {obj->",
     "            if (obj.isPointOver(p)) then {",
@@ -10416,7 +10461,7 @@ if (originalSourceLines) {
     "method start {",
     "    initialise",
     "    // dom.window.console.log(\"start\");",
-    "    dom.window.console.log(\"start\");",
+    "    // dom.window.console.log(\"start\");",
     "",
     "    stopRunning := false",
     "    backingCanvas := dom.document.createElement(\"canvas\")",
@@ -10438,16 +10483,20 @@ if (originalSourceLines) {
     "            obj.draw(mctx)",
     "        }",
     "        mctx.fillStyle := \"red\"",
-    "        mctx.fillRect(canvasWidth - 20, 0, 20, 20)",
+    "        mctx.fillRect(canvasWidth/4, canvasHeight/4, canvasWidth/2, canvasHeight/2)",
     "    }",
+    "    mctx.fillStyle := \"green\"",
+    "    mctx.fillRect(canvasWidth/4, canvasHeight/4, canvasWidth/2, canvasHeight/2)",
     "",
     "}",
     "method stop {",
     "    stopRunning := true",
-    "    canvas.removeEventListener(\"mousedown\", mouseDownListener)",
-    "    canvas.removeEventListener(\"mousemove\", mouseMoveListener)",
+    "    // canvas.removeEventListener(\"mousedown\", mouseDownListener)",
+    "    // canvas.removeEventListener(\"mousemove\", mouseMoveListener)",
+    "",
     "    //Graceful Music",
-    "    // dom.window.t_stop();",
+    "    dom.window.t_stop();",
+    "    dom.window.t_reset();",
     "}",
     "method atModuleEnd(module) {",
     "    start",
@@ -10464,9 +10513,19 @@ if (originalSourceLines) {
     "",
     "// * Improvements",
     "// ******************",
-    "//  - Can I change tile Colours?",
     "//  - Should rouge notes be played by a default instrument or just ignored?",
     "//  - Can I contrain number parameters? For example, from 0 - 100?",
+    "//  - Adjust amount of Effect",
+    "//  - Allowing picking of instruments for arpeggio ",
+    "//  - Volume",
+    "//  - Add timing of instruments 4n/8n/16n",
+    "//  - Can't get pre configured grace files to load properly",
+    "//  - Constraints, making sure can't make bad code",
+    "//  - Stretch Goal: Being able to run individual components",
+    "//  - numbers automatically in there??",
+    "//  - a number input already in there??",
+    "//  - can i stop people putting things into holes",
+    "",
     "",
     "",
     "// * Variables",
@@ -10639,540 +10698,6 @@ if (originalSourceLines) {
     "    dom.window.t_bpm(bpm);",
     "}",
     "",
-    "",
-    "// method bass(blocks) {",
-    "//     dom.window.t_init()",
-    "//     playing := true",
-    "//     blocks.apply",
-    "//     playing := false",
-    "",
-    "//     dom.window.t_bass()",
-    "    ",
-    "//     dom.window.console.log(\"func: play\")",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "    // var count := 0",
-    "    // dom.window.console.log(count)",
-    "    // count := count + 1",
-    "    // dom.window.console.log(count)",
-    "    // dom.window.console.log(test.apply)",
-    "    // for (test) do {t->",
-    "    //     count := count + 1",
-    "    //     dom.window.console.log(\"blocks\")",
-    "    //     dom.window.console.log(count)",
-    "    // }",
-    "    // blocks.apply",
-    "    // dom.window.Tone.Transport.start();",
-    "// }",
-    "",
-    "//Effects",
-    "",
-    "",
-    "// method note {",
-    "//     dom.window.console.log(\"note\")",
-    "// }",
-    "",
-    "// method sequence(){",
-    "    ",
-    "// }",
-    "",
-    "",
-    "",
-    "// import \"mgcollections\" as collections",
-    "// import \"dom\" as dom",
-    "// import \"math\" as randomModule",
-    "",
-    "// import \"StandardPrelude\" as sp",
-    "// inherits sp.new",
-    "",
-    "// var document",
-    "// var canvas",
-    "// var backingCanvas",
-    "// var backingContext",
-    "// var mouseDownListener",
-    "// var mouseMoveListener",
-    "",
-    "// def trig = dom.window.Math",
-    "// def PI = 3.14159",
-    "",
-    "// var stopRunning := false",
-    "// var initialised := false",
-    "// var backgroundColour := \"white\"",
-    "// def registeredObjects = collections.list.new",
-    "// def stepBlocks = collections.list.new",
-    "// def audioTags = collections.map.new",
-    "",
-    "// var canvasWidth",
-    "// var canvasHeight",
-    "",
-    "// def left = \"left\"",
-    "// def right = \"right\"",
-    "// def top = \"top\"",
-    "// def bottom = \"bottom\"",
-    "",
-    "// var centre",
-    "// var leftCentre",
-    "// var rightCentre",
-    "",
-    "// var above",
-    "// var Δ",
-    "",
-    "// class point.x(x')y(y') {",
-    "//     def x is public = x'",
-    "//     def y is public = y'",
-    "//     method left(dx) { point.x(x - dx)y(y) }",
-    "//     method right(dx) { point.x(x + dx)y(y) }",
-    "//     method up(dy) { point.x(x)y(y - dy) }",
-    "//     method down(dy) { point.x(x)y(y + dy) }",
-    "// }",
-    "// class drawable.new {",
-    "//     initialise",
-    "//     registeredObjects.push(self)",
-    "//     above := self",
-    "//     Δ := self",
-    "//     def alwaysBlocks = collections.list.new",
-    "//     var x is readable := canvasWidth / 2",
-    "//     var y is readable := canvasHeight / 2",
-    "//     var destX := x",
-    "//     var destY := y",
-    "//     var angle := 180",
-    "//     method step {",
-    "//         for (alwaysBlocks) do {b->",
-    "//             b.apply",
-    "//         }",
-    "//         tick",
-    "//     }",
-    "//     method tick {}",
-    "//     method draw(ctx) {}",
-    "//     method moveTo(p) {",
-    "//         destX := p.x",
-    "//         destY := p.y",
-    "//     }",
-    "//     method jumpTo(p) {",
-    "//         x := p.x",
-    "//         y := p.y",
-    "//         destX := x",
-    "//         destY := y",
-    "//     }",
-    "//     method isPointOver(p) { false }",
-    "//     method mousedown {}",
-    "//     method always(b) {",
-    "//         alwaysBlocks.push(b)",
-    "//     }",
-    "//     method whenever(cond)do(b) {",
-    "//         always {",
-    "//             if (cond.apply) then {",
-    "//                 b.apply",
-    "//             }",
-    "//         }",
-    "//     }",
-    "//     method forward(dist) {",
-    "//         def y' = trig.cos(angle / 180 * PI) * dist",
-    "//         def x' = trig.sin(angle / 180 * PI) * dist",
-    "//         x := x + x'",
-    "//         y := y + y'",
-    "//     }",
-    "//     method normaliseAngle {",
-    "//         while {angle < 0} do {",
-    "//             angle := angle + 360",
-    "//         }",
-    "//         while {angle > 360} do {",
-    "//             angle := angle - 360",
-    "//         }",
-    "//     }",
-    "//     method turn(degrees) {",
-    "//         angle := angle + degrees",
-    "//         normaliseAngle",
-    "//     }",
-    "//     method touchingEdge {",
-    "//         if (isPointOver(point.x(x)y(0))) then {",
-    "//             return true",
-    "//         }",
-    "//         if (isPointOver(point.x(x)y(canvasHeight))) then {",
-    "//             return true",
-    "//         }",
-    "//         if (isPointOver(point.x(0)y(y))) then {",
-    "//             return true",
-    "//         }",
-    "//         if (isPointOver(point.x(canvasWidth)y(y))) then {",
-    "//             return true",
-    "//         }",
-    "//         return false",
-    "//     }",
-    "//     method bounce {",
-    "//         var dx := 0",
-    "//         var dy := 0",
-    "//         if (isPointOver(point.x(x)y(0))) then {",
-    "//             bounceFrom(top)",
-    "//         }",
-    "//         if (isPointOver(point.x(x)y(canvasHeight))) then {",
-    "//             bounceFrom(bottom)",
-    "//         }",
-    "//         if (isPointOver(point.x(0)y(y))) then {",
-    "//             bounceFrom(left)",
-    "//         }",
-    "//         if (isPointOver(point.x(canvasWidth)y(y))) then {",
-    "//             bounceFrom(right)",
-    "//         }",
-    "//         while { touchingEdge } do {",
-    "//             forward 1",
-    "//         }",
-    "//     }",
-    "//     method bounceFrom(dir) {",
-    "//         if (dir == \"left\") then {",
-    "//             angle := 360 - angle",
-    "//         }",
-    "//         if (dir == \"right\") then {",
-    "//             angle := 360 - angle",
-    "//         }",
-    "//         if (dir == \"top\") then {",
-    "//             angle := 180 - angle",
-    "//         }",
-    "//         if (dir == \"bottom\") then {",
-    "//             angle := 180 - angle",
-    "//         }",
-    "//         normaliseAngle",
-    "//         forward 2",
-    "//     }",
-    "//     method bounceOff(other) {",
-    "//         if (x > other.x) then {",
-    "//             bounceFrom(left)",
-    "//         }",
-    "//         if (x < other.x) then {",
-    "//             bounceFrom(right)",
-    "//         }",
-    "//         while { touching(other) } do {",
-    "//             forward 1",
-    "//         }",
-    "//     }",
-    "//     method touching(other) {",
-    "//         other.isPointOver(point.x(x)y(y))",
-    "//     }",
-    "//     method face(other) {",
-    "//         if ((other.x != x) || (other.y != y)) then {",
-    "//             angle := trig.atan2(other.x - x, other.y - y) * 180 / 3.1415",
-    "//         }",
-    "//         normaliseAngle",
-    "//     }",
-    "//     method stamp {",
-    "//         draw(backingCanvas.getContext(\"2d\"))",
-    "//     }",
-    "// }",
-    "",
-    "// method rectangle {",
-    "//     object {",
-    "//         inherits drawable.new",
-    "//         var width := 100",
-    "//         var height := 50",
-    "//         var colour := \"blue\"",
-    "//         method draw(ctx) {",
-    "//             ctx.fillStyle := colour",
-    "//             ctx.fillRect(x - width / 2, y - height / 2, width, height)",
-    "//         }",
-    "//         method isPointOver(p) {",
-    "//             if (p.x < (x - width / 2)) then {",
-    "//                 return false",
-    "//             }",
-    "//             if (p.x > (x + width / 2)) then {",
-    "//                 return false",
-    "//             }",
-    "//             if (p.y < (y - height / 2)) then {",
-    "//                 return false",
-    "//             }",
-    "//             if (p.y > (y + height / 2)) then {",
-    "//                 return false",
-    "//             }",
-    "//             return true",
-    "//         }",
-    "//         method asString {",
-    "//             return \"rectangle\"",
-    "//         }",
-    "//     }",
-    "// }",
-    "",
-    "// type SniffCircle = {",
-    "//     x -> Number",
-    "//     y -> Number",
-    "//     radius -> Number",
-    "//     colour -> String",
-    "// }",
-    "// method circle {",
-    "//     object {",
-    "//         inherits drawable.new",
-    "//         var radius is readable := 25",
-    "//         var colour is readable := \"green\"",
-    "//         method draw(ctx) {",
-    "//             ctx.fillStyle := colour",
-    "//             ctx.beginPath",
-    "//             ctx.arc(x, y, radius, 0, 6.283)",
-    "//             ctx.fill",
-    "//         }",
-    "//         method isPointOver(p) {",
-    "//             def dx = (p.x - x)",
-    "//             def dy = (p.y - y)",
-    "//             def dist = (dx * dx + dy * dy) ^ 0.5",
-    "//             if (dist <= radius) then {",
-    "//                 return true",
-    "//             }",
-    "//             return false",
-    "//         }",
-    "//         method touching(other) {",
-    "//             if (SniffCircle.match(other)) then {",
-    "//                 def n2 = (((x - other.x) ^ 2) + ((y - other.y) ^ 2))",
-    "//                 if (n2 == 0) then {",
-    "//                     return true",
-    "//                 }",
-    "//                 if ((n2 ^ 0.5) < (other.radius + radius)) then {",
-    "//                     return true",
-    "//                 }",
-    "//                 return false",
-    "//             }",
-    "//             super.touching(other)",
-    "//         }",
-    "//     }",
-    "// }",
-    "",
-    "// method image {",
-    "//     object {",
-    "//         inherits drawable.new",
-    "//         var width := 64",
-    "//         var height := 64",
-    "//         def imgTag = dom.document.createElement(\"img\")",
-    "//         method url {",
-    "//             imgTag.src",
-    "//         }",
-    "//         method url:=(s) {",
-    "//             imgTag.src := s",
-    "//         }",
-    "//         method draw(ctx) {",
-    "//             ctx.save",
-    "//             ctx.translate(x, y)",
-    "//             ctx.rotate(-(angle + 180) / 180 * 3.1415)",
-    "//             ctx.drawImage(imgTag, -width / 2, -height / 2, width, height)",
-    "//             ctx.restore",
-    "//         }",
-    "//         method isPointOver(p) {",
-    "//             // Rotate p and express it relative to (x, y), then just",
-    "//             // check whether it's within the bounds of the rectangle.",
-    "//             def c = trig.cos(-(angle + 180) / 180 * 3.1415)",
-    "//             def s = trig.sin(-(angle + 180) / 180 * 3.1415)",
-    "//             def rotatedX = c * (p.x - x) - s * (p.y - y)",
-    "//             def rotatedY = s * (p.x - x) + c * (p.y - y)",
-    "//             if (rotatedX < (-width / 2)) then {",
-    "//                 return false",
-    "//             }",
-    "//             if (rotatedX > (width / 2)) then {",
-    "//                 return false",
-    "//             }",
-    "//             if (rotatedY < (-height / 2)) then {",
-    "//                 return false",
-    "//             }",
-    "//             if (rotatedY > (height / 2)) then {",
-    "//                 return false",
-    "//             }",
-    "//             return true",
-    "//         }",
-    "//     }",
-    "// }",
-    "",
-    "// method value(b) {",
-    "//     object {",
-    "//         inherits drawable.new",
-    "//         var colour := \"blue\"",
-    "//         var label := \"\"",
-    "//         method draw(ctx) {",
-    "//             ctx.fillStyle := colour",
-    "//             ctx.font := \"20px sans-serif\"",
-    "//             if (label != \"\") then {",
-    "//                 ctx.fillText(\"{label} {b.apply}\", x, y)",
-    "//             } else {",
-    "//                 ctx.fillText(\"{b.apply}\", x, y)",
-    "//             }",
-    "//         }",
-    "//     }",
-    "// }",
-    "",
-    "// def mouse = object {",
-    "//     var position is public := point.x(0)y(0)",
-    "//     method x {",
-    "//         position.x",
-    "//     }",
-    "//     method y {",
-    "//         position.y",
-    "//     }",
-    "//     method location {",
-    "//         position",
-    "//     }",
-    "// }",
-    "",
-    "// method clear {",
-    "//     def ctx = backingCanvas.getContext(\"2d\")",
-    "//     ctx.fillStyle := backgroundColour",
-    "//     ctx.fillRect(0, 0, canvasWidth, canvasHeight)",
-    "// }",
-    "",
-    "// //Graceful Music",
-    "",
-    "// //plays a timbre note",
-    "// method note {",
-    "//     dom.window.console.log(\"note\")",
-    "// }",
-    "",
-    "// method play(block) {",
-    "//     def playBlocks = collections.list.new",
-    "//     playBlocks.push(block)",
-    "//     for (playBlocks) do {b->",
-    "//         b.apply",
-    "//     }",
-    "//     dom.window.console.log(\"play\");",
-    "// }",
-    "",
-    "// method note2 (note){",
-    "//     dom.window.t_note(note);",
-    "// }",
-    "",
-    "// // method instrument(i)note(n){",
-    "// //     return \"{i},{n}\";",
-    "// // }",
-    "",
-    "// //plays a timbre sin",
-    "// // method sin (freq_mul) {",
-    "// //     dom.window.console.log(freq_mul);",
-    "// //     dom.window.t_sin(freq_mul);",
-    "// // }",
-    "",
-    "// // method freq(f)mul(m) {",
-    "// //     dom.window.console.log(\"HI\");",
-    "// //     return \"{f},{m}\";",
-    "// // } ",
-    "",
-    "// // method gymnopedie {",
-    "// //     dom.window.t_gymnopedie();",
-    "// // }",
-    "",
-    "// // method always(b) {",
-    "// //     stepBlocks.push(b)",
-    "// // }",
-    "// // method whenever(c)do(b) {",
-    "// //     stepBlocks.push({",
-    "// //         if (c.apply) then { b.apply }",
-    "// //     })",
-    "// // }",
-    "",
-    "",
-    "",
-    "// method hue(h)saturation(s)lightness(l) {",
-    "//     return \"hsl({h}, {s}%, {l}%)\"",
-    "// }",
-    "// method h(h)s(s)l(l) {",
-    "//     hue(h)saturation(s)lightness(l)",
-    "// }",
-    "// method initialise {",
-    "//     if (initialised) then {",
-    "//         return false",
-    "//     }",
-    "//     initialised := true",
-    "//     document := dom.document",
-    "//     canvas := document.getElementById(\"standard-canvas\")",
-    "//     canvasWidth := canvas.width",
-    "//     canvasHeight := canvas.height",
-    "//     centre := point.x(canvasWidth / 2)y(canvasHeight / 2)",
-    "//     leftCentre := point.x(0)y(canvasHeight / 2)",
-    "//     rightCentre := point.x(canvasWidth)y(canvasHeight / 2)",
-    "//     mouse.position := centre",
-    "//     // Save the listener functions so that we can remove them",
-    "//     // later on.",
-    "//     mouseMoveListener := { ev ->",
-    "//         def x = (ev.clientX - canvas.offsetLeft) / canvas.offsetWidth * canvasHeight",
-    "//         def y = (ev.clientY - canvas.offsetTop - 7) / canvas.offsetHeight * canvasHeight",
-    "//         mouse.position := point.x(x)y(y)",
-    "//     }",
-    "//     canvas.addEventListener(\"mousemove\", mouseMoveListener)",
-    "//     mouseDownListener := { ev ->",
-    "//         def x = (ev.clientX - canvas.offsetLeft) / canvas.offsetWidth * canvasHeight",
-    "//         def y = (ev.clientY - canvas.offsetTop) / canvas.offsetHeight * canvasHeight",
-    "//         if ((x > (canvasWidth - 20)) && (y < 20)) then {",
-    "//             ev.preventDefault",
-    "//             stop",
-    "//         }",
-    "//         def p = point.x(x)y(y)",
-    "//         for (registeredObjects) do {obj->",
-    "//             if (obj.isPointOver(p)) then {",
-    "//                 obj.mousedown",
-    "//                 ev.preventDefault",
-    "//             }",
-    "//         }",
-    "//     }",
-    "//     canvas.addEventListener(\"mousedown\", mouseDownListener)",
-    "// }",
-    "// method background(col) {",
-    "//     backgroundColour := col",
-    "// }",
-    "// method random(n) {",
-    "//     (n * randomModule.random).truncate",
-    "// }",
-    "// method randomPoint {",
-    "//     point.x(canvasWidth / 10 + random(canvasWidth * 0.8))",
-    "//         y(canvasHeight / 10 + random(canvasHeight * 0.8))",
-    "// }",
-    "// method playSound {",
-    "//     dom.window.T(\"sin\").play()",
-    "//     // if (audioTags.contains(url)) then {",
-    "//     //     def audio = audioTags.get(url)",
-    "//     //     audio.currentTime := 0",
-    "//     //     audio.play",
-    "//     // } else {",
-    "//     //     def audio = dom.document.createElement \"audio\"",
-    "//     //     audioTags.put(url, audio)",
-    "//     //     audio.src := url",
-    "//     //     audio.load",
-    "//     //     audio.play",
-    "//     // }",
-    "// }",
-    "// method stopSound(url) {",
-    "//     if (audioTags.contains(url)) then {",
-    "//         def audio = audioTags.get(url)",
-    "//         audio.pause",
-    "//     }",
-    "// }",
-    "// method start {",
-    "//     initialise",
-    "//     stopRunning := false",
-    "//     backingCanvas := dom.document.createElement(\"canvas\")",
-    "//     backingCanvas.height := canvasHeight",
-    "//     backingCanvas.width := canvasWidth",
-    "//     backingContext := backingCanvas.getContext(\"2d\")",
-    "//     def mctx = canvas.getContext(\"2d\")",
-    "//     dom.while { !stopRunning } waiting 10 do {",
-    "//         for (registeredObjects) do {obj->",
-    "//             obj.step",
-    "//         }",
-    "//         for (stepBlocks) do {step->",
-    "//             step.apply",
-    "//         }",
-    "//         mctx.fillStyle := backgroundColour",
-    "//         mctx.fillRect(0, 0, canvasWidth, canvasHeight)",
-    "//         mctx.drawImage(backingCanvas, 0, 0)",
-    "//         for (registeredObjects) do {obj->",
-    "//             obj.draw(mctx)",
-    "//         }",
-    "//         mctx.fillStyle := \"red\"",
-    "//         mctx.fillRect(canvasWidth - 20, 0, 20, 20)",
-    "//     }",
-    "// }",
-    "// method stop {",
-    "//     stopRunning := true",
-    "//     dom.window.t_reset();",
-    "//     canvas.removeEventListener(\"mousedown\", mouseDownListener)",
-    "//     canvas.removeEventListener(\"mousemove\", mouseMoveListener)",
-    "",
-    "// }",
-    "// method atModuleEnd(module) {",
-    "//     start",
-    "// }",
     "",
   ];
 }

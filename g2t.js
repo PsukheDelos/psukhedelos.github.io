@@ -63,6 +63,7 @@ function t_add(note){
 }
 
 function t_play() {
+	Tone.Transport.pause();
 	Tone.Transport.start();
 }
 
@@ -154,7 +155,6 @@ function t_synth_duo(){
 }
 
 function t_reset(){
-	
 	if(instruments.length > 0){
 		for (var i = instruments.length - 1; i >= 0; i--) {
 			instruments[i].disconnect();
