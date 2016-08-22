@@ -5,13 +5,13 @@ console.clear();
 // ************************
 // * Grace to Tone.js Shim 
 // ************************
-
 // * Variables  
 // ******************
 var debug = false;
 
 var sequence = [];
 var instruments = [];
+var sequences = [];
 
 Tone.Transport.bpm.value = 90;
 
@@ -95,6 +95,7 @@ function t_synth_pluck(){
 	}, sequence ).start(0);
 
 	instruments.push(pluck);
+	sequences.push(pluckSeq);
 
 	applyEffects(pluck);
 }
@@ -104,9 +105,12 @@ function t_synth_poly(){
 
 	var polySeq = new Tone.Sequence(function(time, note){
 		poly.triggerAttackRelease(note, "8n", time);
+		console.log(note);
 	}, sequence ).start(0);
 	
 	instruments.push(poly);
+	sequences.push(polySeq);
+	console.log(instruments.length);
 
 	applyEffects(poly);
 
@@ -150,10 +154,21 @@ function t_synth_duo(){
 }
 
 function t_reset(){
-	// for (var i = instruments.length - 1; i >= 0; i--) {
-	// 	instruments[i].dispose();
-	// }
-	// instruments = [];
+	
+	if(instruments.length > 0){
+		for (var i = instruments.length - 1; i >= 0; i--) {
+			instruments[i].disconnect();
+		}
+	}
+
+	if(sequences.length > 0){
+		for (var i = sequences.length - 1; i >= 0; i--) {
+			sequences[i].removeAll();
+		}
+	}
+
+	instruments = [];
+	sequences = [];
 }
 
 // * Effects 
