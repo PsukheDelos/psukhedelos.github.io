@@ -107,7 +107,6 @@ function t_synth_poly(){
 
 	var polySeq = new Tone.Sequence(function(time, note){
 		poly.triggerAttackRelease(note, "8n", time);
-		console.log(note);
 	}, sequence ).start(0);
 	
 	instruments.push(poly);
@@ -122,7 +121,6 @@ function t_synth_fm(){
 
 	var fmSeq = new Tone.Sequence(function(time, note){
 		fm.triggerAttackRelease(note, "8n", time);
-		console.log(note);
 	}, sequence ).start(0);
 
 	instruments.push(fm);
