@@ -633,7 +633,7 @@ function t_synth_arpeggio(note){
 	fx.reverb.wet.value = 0.2;
 	fx.delay.wet.value = 0.3;
 	// gain levels
-	channel.master.toMaster();
+	channel.master.fan(fft, waveform).toMaster();
 	channel.treb.connect(channel.master);
 	channel.bass.connect(channel.master);
 	// fx chains
