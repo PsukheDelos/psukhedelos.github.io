@@ -15,10 +15,17 @@ var sequences = [];
 
 Tone.Transport.bpm.value = 90;
 
+//Effects
 var applyChorus = false;
 var applyReverb = false;
 var applyAutowah = false;
 var applyCheby = false;
+
+//Visualiser
+//analyse the frequency/amplitude of the incoming signal  
+var fft = new Tone.Analyser("fft", 32);
+//get the waveform data for the audio
+var waveform = new Tone.Analyser("waveform", 1024);
 
 // * Declarations
 // ******************
@@ -67,6 +74,8 @@ function t_add(note){
 }
 
 function t_play() {
+  // player.start();
+
 	Tone.Transport.pause();
 	Tone.Transport.start();
 }
@@ -82,7 +91,7 @@ function t_stop(){
 // ******************
 
 function t_synth_mono(){
-	var mono = new Tone.MonoSynth().toMaster();
+	var mono = new Tone.MonoSynth().fan(fft, waveform).toMaster();
 
 	var monoSeq = new Tone.Sequence(function(time, note){
 		mono.triggerAttackRelease(note, "8n", time);
@@ -95,7 +104,7 @@ function t_synth_mono(){
 }
 
 function t_synth_pluck(){
-	var pluck = new Tone.PluckSynth().toMaster();
+	var pluck = new Tone.PluckSynth().fan(fft, waveform).toMaster();
 
 	var pluckSeq = new Tone.Sequence(function(time, note){
 		pluck.triggerAttackRelease(note, "8n", time);
@@ -108,7 +117,7 @@ function t_synth_pluck(){
 }
 
 function t_synth_poly(){
-	var poly = new Tone.PolySynth().toMaster();
+	var poly = new Tone.PolySynth().fan(fft, waveform).toMaster();
 
 	var polySeq = new Tone.Sequence(function(time, note){
 		poly.triggerAttackRelease(note, "8n", time);
@@ -122,7 +131,7 @@ function t_synth_poly(){
 }
 
 function t_synth_fm(){
-	var fm = new Tone.FMSynth().toMaster();
+	var fm = new Tone.FMSynth().fan(fft, waveform).toMaster();
 
 	var fmSeq = new Tone.Sequence(function(time, note){
 		fm.triggerAttackRelease(note, "8n", time);
@@ -135,7 +144,7 @@ function t_synth_fm(){
 }
 
 function t_synth_membrane(){
-	var membrane = new Tone.MembraneSynth().toMaster();
+	var membrane = new Tone.MembraneSynth().fan(fft, waveform).toMaster();
 
 	var membraneSeq = new Tone.Sequence(function(time, note){
 		membrane.triggerAttackRelease(note, "8n", time);
@@ -148,7 +157,7 @@ function t_synth_membrane(){
 }
 
 function t_synth_duo(){
-	var duo = new Tone.DuoSynth().toMaster();
+	var duo = new Tone.DuoSynth().fan(fft, waveform).toMaster();
 
 	var duoSeq = new Tone.Sequence(function(time, note){
 		duo.triggerAttackRelease(note, "8n", time);
@@ -690,10 +699,77 @@ function t_synth_arpeggio(note){
 
 
 
+//drawing the FFT
+var fftContext = $("<canvas>",{
+  "id" : "fft"
+}).insertAfter("#canvas").get(0).getContext("2d");
 
+function drawFFT(values){
+  fftContext.clearRect(0, 0, canvasWidth, canvasHeight);
+  var barWidth = canvasWidth / fft.size;
+  for (var i = 0, len = values.length; i < len; i++){
+    var val = values[i] / 255;
+    var x = canvasWidth * (i / len);
+    var y = val * canvasHeight;
+    fftContext.fillStyle = "rgba(255, 0, 0, " + val + ")";
+    fftContext.fillRect(x, canvasHeight - y, barWidth, canvasHeight);
+  }
+}
 
+//the waveform data
+var waveContext = $("<canvas>", {
+  "id" : "waveform"
+}).insertAfter("#canvas").get(0).getContext("2d");
+var waveformGradient;
 
+function drawWaveform(values){
+  //draw the waveform
+  waveContext.clearRect(0, 0, canvasWidth, canvasHeight);
+  var values = waveform.analyse();
+  waveContext.beginPath();
+  waveContext.lineJoin = "round";
+  waveContext.lineWidth = 6;
+  waveContext.strokeStyle = waveformGradient;
+  waveContext.moveTo(0, (values[0] / 255) * canvasHeight);
+  for (var i = 1, len = values.length; i < len; i++){
+    var val = values[i] / 255;
+    var x = canvasWidth * (i / len);
+    var y = val * canvasHeight;
+    waveContext.lineTo(x, y);
+  }
+  waveContext.stroke();
+}
 
+//size the canvases
+var canvasWidth, canvasHeight;
+
+function sizeCanvases(){
+  canvasWidth = $("#fft").width();
+  canvasHeight = $("#fft").height();
+  waveContext.canvas.width = canvasWidth;
+  fftContext.canvas.width = canvasWidth;
+  waveContext.canvas.height = canvasHeight;
+  fftContext.canvas.height = canvasHeight;
+
+  //make the gradient
+  waveformGradient = waveContext.createLinearGradient(0, 0, canvasWidth, canvasHeight);
+  waveformGradient.addColorStop(0, "#ff0000");
+  waveformGradient.addColorStop(1, "#ffff00");   
+}
+
+sizeCanvases();
+$(window).resize(sizeCanvases);
+
+function loop(){
+  requestAnimationFrame(loop);
+  //get the fft data and draw it
+  var fftValues = fft.analyse();
+  drawFFT(fftValues);
+  //get the waveform valeus and draw it
+  var waveformValues = waveform.analyse();
+  drawWaveform(waveformValues);
+}
+loop();
 
 
 
