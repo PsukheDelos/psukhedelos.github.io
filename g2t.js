@@ -59,7 +59,11 @@ function t_init(){
 }
 
 function t_add(note){
-	sequence.push(note);
+	if(note=="null"){
+		sequence.push(null);
+	} else {
+		sequence.push(note);
+	}
 }
 
 function t_play() {

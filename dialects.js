@@ -807,6 +807,18 @@ dialects.musical = {
             description: "Play B Note",
             type: "note"
         },
+        "Rest": {
+            name: "Rest",
+            parts: [
+                {
+                    name: 'Rest',
+                    args: [],
+                }
+            ],
+            returns: "Done",
+            description: "Rest a beat",
+            type: "note"
+        },
         "flat": {
             name: "flat",
             parts: [
@@ -818,7 +830,7 @@ dialects.musical = {
                 }
             ],
             returns: "Done",
-            description: "Play Music",
+            description: "Takes in notes and returns them as flats",
             multiline: true,
             type: "note"
         },
@@ -833,7 +845,7 @@ dialects.musical = {
                 }
             ],
             returns: "Done",
-            description: "Play Music",
+            description: "Takes in notes and returns them as sharps",
             multiline: true,
             type: "note"
         },
@@ -847,7 +859,7 @@ dialects.musical = {
             returns: "Done",
             multiline: true,
             selfcall: true,
-            description: "Any time a condition is true, do something.",
+            description: "Takes in notes and adjusts their octave",
             toplevel: true,
             type: "note"
         },
@@ -862,7 +874,7 @@ dialects.musical = {
                 }
             ],
             returns: "Done",
-            description: "Play Music",
+            description: "Plays notes with a monoSynth",
             multiline: true,
             type: "instrument"
         },
@@ -878,7 +890,7 @@ dialects.musical = {
                 }
             ],
             returns: "Done",
-            description: "Play Music",
+            description: "Plays notes with a pluckSynth",
             multiline: true,
             type: "instrument"
         },
@@ -894,7 +906,7 @@ dialects.musical = {
                 }
             ],
             returns: "Done",
-            description: "Play Music",
+            description: "Plays notes with a polySynth",
             multiline: true,
             type: "instrument"
         },
@@ -910,7 +922,7 @@ dialects.musical = {
                 }
             ],
             returns: "Done",
-            description: "Play Music",
+            description: "Plays notes with a fmSynth",
             multiline: true,
             type: "instrument"
         },
@@ -926,7 +938,7 @@ dialects.musical = {
                 }
             ],
             returns: "Done",
-            description: "Play Music",
+            description: "Plays notes with a membraneSynth",
             multiline: true,
             type: "instrument"
         },
@@ -942,7 +954,7 @@ dialects.musical = {
                 }
             ],
             returns: "Done",
-            description: "Play Music",
+            description: "Plays notes with a duoSynth",
             multiline: true,
             type: "instrument"
         },
@@ -950,7 +962,7 @@ dialects.musical = {
             name: "arpeggio",
             parts: [{name: "arpeggio", args: [String]}],
             returns: "Done",
-            description: "Play a sound.",
+            description: "Plays an arpeggio based on a given note",
             type: "instrument"
         },
         "Chorus": {
@@ -965,7 +977,7 @@ dialects.musical = {
                 }
             ],
             returns: "Done",
-            description: "Play Music",
+            description: "Adds a Chorus effect",
             multiline: true,
             type: "effect"
         },
@@ -981,7 +993,7 @@ dialects.musical = {
                 }
             ],
             returns: "Done",
-            description: "Play Music",
+            description: "Adds a Reverb effect",
             multiline: true,
             type: "effect"
         },
@@ -997,7 +1009,7 @@ dialects.musical = {
                 }
             ],
             returns: "Done",
-            description: "Play Music",
+            description: "Adds an Autowah effect",
             multiline: true,
             type: "effect"
         },
@@ -1013,14 +1025,14 @@ dialects.musical = {
                 }
             ],
             returns: "Done",
-            description: "Play Music",
+            description: "Adds a Cheby effect",
             multiline: true,
             type: "effect"
         },
         "SetBPM": {
             name: "SetBPM",
             parts: [{name: "SetBPM", args: [Number]}],
-            description: "Set Tone BPM",
+            description: "Sets the Beats Per Minute",
             returns: "Done",
             type: "timing"
         },
