@@ -74,6 +74,7 @@ function t_play() {
 function t_stop(){
 	Tone.Transport.stop();
 	sequence = [];
+  t_reset();
 }
 
 
