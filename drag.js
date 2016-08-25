@@ -193,11 +193,23 @@ function dragstart(ev) {
             checkpointSave();
             clearPopouts();
             document.getElementById('overlay-canvas').style.display = 'none';
+            // This is the way to do if you want it to carry on if compilation error after bin toss
             if(playing==true){
+                if (!codearea.classList.contains('shrink')) {
+                    if (highlightTileErrors())
+                        return;
+                    }
                 t_stop();
                 t_reset();
                 go();
             }
+
+            //This way just stops the program if compilation failure on bin toss
+            // if(playing==true){
+            //     t_stop();
+            //     t_reset();
+            //     go();
+            // }
             return;
         }
         var tmp = obj;
