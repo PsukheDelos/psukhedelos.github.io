@@ -107,6 +107,9 @@ function t_synth_mono(timing, vol, rate){
 		mono.triggerAttackRelease(note, timing, time);
 	}, sequence ).start(0);
 	
+  monoSeq.playbackRate = rate;
+
+
 	instruments.push(mono);
 	sequences.push(monoSeq);
 
@@ -121,6 +124,9 @@ function t_synth_pluck(timing, vol, rate){
 		pluck.triggerAttackRelease(note, timing, time);
 	}, sequence ).start(0);
 
+  pluckSeq.playbackRate = rate;
+
+
 	instruments.push(pluck);
 	sequences.push(pluckSeq);
 
@@ -134,6 +140,8 @@ function t_synth_poly(timing, vol, rate){
 	var polySeq = new Tone.Sequence(function(time, note){
 		poly.triggerAttackRelease(note, timing, time);
 	}, sequence).start(0);
+
+  polySeq.playbackRate = rate;
 	
 	instruments.push(poly);
 	sequences.push(polySeq);
@@ -166,6 +174,9 @@ function t_synth_membrane(timing, vol, rate){
 		membrane.triggerAttackRelease(note, timing, time);
 	}, sequence ).start(0);
 
+  membraneSeq.playbackRate = rate;
+
+
 	instruments.push(membrane);
 	sequences.push(membraneSeq);
 
@@ -179,6 +190,8 @@ function t_synth_duo(timing, vol, rate){
 	var duoSeq = new Tone.Sequence(function(time, note){
 		duo.triggerAttackRelease(note, timing, time);
 	}, sequence ).start(0);
+
+  duoSeq.playbackRate = rate;
 
 	instruments.push(duo);
 	sequences.push(duoSeq);
