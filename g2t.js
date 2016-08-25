@@ -15,7 +15,9 @@ var sequences = [];
 
 var playing = false;
 
+//Timing
 Tone.Transport.bpm.value = 90;
+var timing = "4n";
 
 //Effects
 var applyChorus = false;
@@ -98,7 +100,7 @@ function t_synth_mono(){
 	var mono = new Tone.MonoSynth().fan(fft, waveform).toMaster();
 
 	var monoSeq = new Tone.Sequence(function(time, note){
-		mono.triggerAttackRelease(note, "8n", time);
+		mono.triggerAttackRelease(note, timing, time);
 	}, sequence ).start(0);
 	
 	instruments.push(mono);
@@ -111,7 +113,7 @@ function t_synth_pluck(){
 	var pluck = new Tone.PluckSynth().fan(fft, waveform).toMaster();
 
 	var pluckSeq = new Tone.Sequence(function(time, note){
-		pluck.triggerAttackRelease(note, "8n", time);
+		pluck.triggerAttackRelease(note, timing, time);
 	}, sequence ).start(0);
 
 	instruments.push(pluck);
@@ -124,7 +126,7 @@ function t_synth_poly(){
 	var poly = new Tone.PolySynth().fan(fft, waveform).toMaster();
 
 	var polySeq = new Tone.Sequence(function(time, note){
-		poly.triggerAttackRelease(note, "8n", time);
+		poly.triggerAttackRelease(note, timing, time);
 	}, sequence ).start(0);
 	
 	instruments.push(poly);
@@ -138,7 +140,7 @@ function t_synth_fm(){
 	var fm = new Tone.FMSynth().fan(fft, waveform).toMaster();
 
 	var fmSeq = new Tone.Sequence(function(time, note){
-		fm.triggerAttackRelease(note, "8n", time);
+		fm.triggerAttackRelease(note, timing, time);
 	}, sequence ).start(0);
 
 	instruments.push(fm);
@@ -151,7 +153,7 @@ function t_synth_membrane(){
 	var membrane = new Tone.MembraneSynth().fan(fft, waveform).toMaster();
 
 	var membraneSeq = new Tone.Sequence(function(time, note){
-		membrane.triggerAttackRelease(note, "8n", time);
+		membrane.triggerAttackRelease(note, timing, time);
 	}, sequence ).start(0);
 
 	instruments.push(membrane);
@@ -164,7 +166,7 @@ function t_synth_duo(){
 	var duo = new Tone.DuoSynth().fan(fft, waveform).toMaster();
 
 	var duoSeq = new Tone.Sequence(function(time, note){
-		duo.triggerAttackRelease(note, "8n", time);
+		duo.triggerAttackRelease(note, timing, time);
 	}, sequence ).start(0);
 
 	instruments.push(duo);
