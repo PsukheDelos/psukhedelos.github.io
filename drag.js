@@ -196,7 +196,7 @@ function dragstart(ev) {
             if(playing==true){
                 t_stop();
                 t_reset();
-                    go();
+                go();
             }
             return;
         }
@@ -300,6 +300,16 @@ function dragstart(ev) {
         }
         generateCode();
         checkpointSave();
+        //This continues to add music in realtime if already playing
+        if (!codearea.classList.contains('shrink')) {
+            if (highlightTileErrors())
+                return;
+        }
+        if(playing==true){
+            t_stop();
+            t_reset();
+            go();
+        }
     }
     d.addEventListener('mousemove', dragcontinue)
     d.addEventListener('mouseup', dragend)
