@@ -29,14 +29,7 @@ var StandardGrace = {
             returns: 'String',
             description: "Join two strings together.",
             operators: ["++"]
-        },
-        {
-            lhs: 'String',
-            rhs: 'String',
-            returns: 'String',
-            description: "Join two strings together.",
-            operators: ["++"]
-        },
+        }
     ],
     methods: {
         "print": {
@@ -104,7 +97,9 @@ var StandardGrace = {
             parts: [
                 {
                     name: 'if',
-                    args: ["Boolean"],
+                    args: [
+                        {type: 'Boolean', returns: 'Boolean', multiline: false,description: "Condition."}
+                    ],
                     description: "Condition.",
                 },
                 {
@@ -738,7 +733,7 @@ dialects.musical = {
                     args: [],
                 }
             ],
-            returns: "Done",
+            returns: "Note",
             description: "Play C Note",
             type: "note"
         },
@@ -967,7 +962,7 @@ dialects.musical = {
         },
         "arpeggio": {
             name: "arpeggio",
-            parts: [{name: "arpeggio", args: [String]}],
+            parts: [{name: "arpeggio", args: ["Note"]}],
             returns: "Done",
             description: "Plays an arpeggio based on a given note",
             type: "instrument"
@@ -1151,7 +1146,7 @@ function createOperatorTile(op) {
     var lhs = document.createElement("div");
     lhs.classList.add("hole");
     var rhs = document.createElement("div");
-    rhs.classList.add("hole");
+        rhs.classList.add("hole");
     lhs.dataset.accepts = op.lhs;
     rhs.dataset.accepts = op.rhs;
     tile.dataset.returns = op.returns;
@@ -1175,6 +1170,7 @@ function createDialectRequestTile(req) {
     tile.classList.add("tile");
     tile.classList.add("dialect-method");
     tile.dataset.category = req.category;
+    console.log(req);
     if (req.constant)
         tile.classList.add('constant');
     var line = tile;
