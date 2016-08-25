@@ -100,20 +100,19 @@ function t_stop(){
 // ******************
 
 function t_synth_mono(timing, vol, rate){
-	var mono = new Tone.MonoSynth().fan(fft, waveform).toMaster();
+  var mono = new Tone.MonoSynth().fan(fft, waveform).toMaster();
   mono.volume.value = vol;
 
-	var monoSeq = new Tone.Sequence(function(time, note){
-		mono.triggerAttackRelease(note, timing, time);
-	}, sequence ).start(0);
-	
+  var monoSeq = new Tone.Sequence(function(time, note){
+  	mono.triggerAttackRelease(note, timing, time);
+  }, sequence ).start(0);
+
   monoSeq.playbackRate = rate;
 
+  instruments.push(mono);
+  sequences.push(monoSeq);
 
-	instruments.push(mono);
-	sequences.push(monoSeq);
-
-	applyEffects(mono);
+  applyEffects(mono);
 }
 
 function t_synth_pluck(timing, vol, rate){
@@ -740,7 +739,6 @@ var fftContext = $("<canvas>",{
 function drawFFT(values){
   fftContext.clearRect(0, 0, canvasWidth, canvasHeight);
   var barWidth = canvasWidth / fft.size;
-  console.log(values.length);
   for (var i = 0, len = values.length; i < len; i++){
     var val = values[i] / 255;
     var x = canvasWidth * (i / len);
