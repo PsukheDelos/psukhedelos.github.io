@@ -32,7 +32,6 @@ function changeDialect() {
         tb.removeChild(dialectMethods[0]);
     }
     addDialectMethods(document.getElementById('dialect').value);
-    console.log(document.getElementById('dialect').value);
     var cb = document.getElementById('category-bar');
     while (cb.childNodes.length > 0)
         cb.removeChild(cb.lastChild);
