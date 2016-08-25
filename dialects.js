@@ -29,7 +29,14 @@ var StandardGrace = {
             returns: 'String',
             description: "Join two strings together.",
             operators: ["++"]
-        }
+        },
+        {
+            lhs: 'String',
+            rhs: 'String',
+            returns: 'String',
+            description: "Join two strings together.",
+            operators: ["++"]
+        },
     ],
     methods: {
         "print": {
@@ -146,7 +153,7 @@ var StandardGrace = {
 var currentDialect = StandardGrace;
 var dialects = {
     "StandardGrace": StandardGrace,
-    "": StandardGrace
+    "standard": StandardGrace
 };
 function extendDialect(sub, sup) {
     sub = dialects[sub];
@@ -1036,6 +1043,85 @@ dialects.musical = {
             returns: "Done",
             type: "timing"
         },
+        // "Time()on": {
+        //     name: "Time()on",
+        //     parts: [{name: "Time", args: [Number]},
+        //         {name: "on", args: [
+        //             {type: 'Block', returns: 'Any', multiline: true,
+        //                 description: "Elements whose time will be adjusted"}
+        //             ]}],
+        //     returns: "Done",
+        //     multiline: true,
+        //     selfcall: true,
+        //     description: "Adjust timing",
+        //     toplevel: true,
+        //     type: "timing"
+        // },
+        // "quarter": {
+        //     name: "quarter",
+        //     parts: [
+        //         {
+        //             name: 'quarter',
+        //             args: [],
+        //         }
+        //     ],
+        //     returns: "Done",
+        //     description: "Quarter Notes",
+        //     type: "timing"
+        // },
+        // "eighth": {
+        //     name: "eighth",
+        //     parts: [
+        //         {
+        //             name: 'eighth',
+        //             args: [],
+        //         }
+        //     ],
+        //     returns: "Done",
+        //     description: "Eighth Notes",
+        //     type: "timing"
+        // },
+        // "sixteenth": {
+        //     name: "sixteenth",
+        //     parts: [
+        //         {
+        //             name: 'sixteenth',
+        //             args: [],
+        //         }
+        //     ],
+        //     returns: "Done",
+        //     description: "Sixteenth Notes",
+        //     type: "timing"
+        // },
+        "PlayBackRatePercentage()on": {
+            name: "PlayBackRatePercentage()on",
+            parts: [{name: "PlayBackRatePercentage", args: [Number]},
+                {name: "on", args: [
+                    {type: 'Block', returns: 'Any', multiline: true,
+                        description: "Elements whose playback rate will be adjusted"}
+                    ]}],
+            returns: "Done",
+            multiline: true,
+            selfcall: true,
+            description: "Adjust playback rate",
+            toplevel: true,
+            type: "timing"
+        },
+        "VolumePercentage()on": {
+            name: "VolumePercentage()on",
+            parts: [{name: "VolumePercentage", args: [Number]},
+                {name: "on", args: [
+                    {type: 'Block', returns: 'Any', multiline: true,
+                        description: "Elements whose volume will be adjusted"}
+                    ]}],
+            returns: "Done",
+            multiline: true,
+            selfcall: true,
+            description: "Adjust volume",
+            toplevel: true,
+            type: "timing"
+        },
+
     }
 };
 for (var k in dialects.musical.methods){

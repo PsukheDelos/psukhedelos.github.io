@@ -517,6 +517,9 @@ method atModuleEnd(module) {
 // ******************
 
 var octave := 4;
+var timing := "4n";
+var volume := -25;
+var playbackrate := 1;
 
 var applyFlat := false
 var applySharp := false
@@ -605,32 +608,32 @@ method Instrument(blocks){
 
 method monoSynth(blocks){
     Instrument(blocks)
-    dom.window.t_synth_mono()
+    dom.window.t_synth_mono(timing, volume, playbackrate)
 }
 
 method pluckSynth(blocks){
     Instrument(blocks)
-    dom.window.t_synth_pluck()
+    dom.window.t_synth_pluck(timing, volume, playbackrate)
 }
 
 method polySynth(blocks){
     Instrument(blocks)
-    dom.window.t_synth_poly()
+    dom.window.t_synth_poly(timing, volume, playbackrate)
 }
 
 method fmSynth(blocks){
     Instrument(blocks)
-    dom.window.t_synth_fm()
+    dom.window.t_synth_fm(timing, volume, playbackrate)
 }
 
 method membraneSynth(blocks){
     Instrument(blocks)
-    dom.window.t_synth_membrane()
+    dom.window.t_synth_membrane(timing, volume, playbackrate)
 }
 
 method duoSynth(blocks){
     Instrument(blocks)
-    dom.window.t_synth_duo()
+    dom.window.t_synth_duo(timing, volume, playbackrate)
 }
 
 method arpeggio(note){
@@ -691,12 +694,55 @@ method SetBPM(bpm){
     dom.window.t_bpm(bpm);
 }
 
-method time(num)on(notes){
+method PlayBackRatePercentage(rate)on(blocks){
+    var oldRate := playbackrate
     
-    // var oldOctave := octave
-    // octave := num
-    // var ret := notes.apply
-    // octave := oldOctave
-    // return ret
+    playbackrate := rate / 100
+ 
+    var ret := blocks.apply
+    playbackrate := oldRate
+    return ret
 }
+
+// Removed these methods from project for now, did not feel right
+method Time(t)on(blocks){
+    var oldTiming := timing
+    timing := t
+    var ret := blocks.apply
+    timing := oldTiming
+    return ret
+}
+
+method quarter(){
+    return "4n"
+}
+
+method eighth(){
+    return "8n"
+}
+
+method sixteenth(){
+    return "16n"
+}
+
+// * Volume
+// ******************
+method VolumePercentage(v)on(blocks){
+    var oldVolume := volume
+    
+    //constrain max volume
+    if(v > 100) then {
+        //max volume: 0dB
+        volume := 0 
+    } else {
+        //constrain dB between -50 and 0
+        volume := -80 + (v/100)*50        
+    }
+ 
+    var ret := blocks.apply
+    volume := oldVolume
+    return ret
+}
+
+
 

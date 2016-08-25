@@ -17,7 +17,10 @@ var playing = false;
 
 //Timing
 Tone.Transport.bpm.value = 90;
-var timing = "4n";
+// var timing = "4n";
+
+// //Volume
+// var volume = 0;
 
 //Effects
 var applyChorus = false;
@@ -96,8 +99,9 @@ function t_stop(){
 // * Instruments 
 // ******************
 
-function t_synth_mono(){
+function t_synth_mono(timing, vol, rate){
 	var mono = new Tone.MonoSynth().fan(fft, waveform).toMaster();
+  mono.volume.value = vol;
 
 	var monoSeq = new Tone.Sequence(function(time, note){
 		mono.triggerAttackRelease(note, timing, time);
@@ -109,8 +113,9 @@ function t_synth_mono(){
 	applyEffects(mono);
 }
 
-function t_synth_pluck(){
+function t_synth_pluck(timing, vol, rate){
 	var pluck = new Tone.PluckSynth().fan(fft, waveform).toMaster();
+  pluck.volume.value = vol;
 
 	var pluckSeq = new Tone.Sequence(function(time, note){
 		pluck.triggerAttackRelease(note, timing, time);
@@ -122,12 +127,13 @@ function t_synth_pluck(){
 	applyEffects(pluck);
 }
 
-function t_synth_poly(){
+function t_synth_poly(timing, vol, rate){
 	var poly = new Tone.PolySynth().fan(fft, waveform).toMaster();
+  poly.volume.value = vol;
 
 	var polySeq = new Tone.Sequence(function(time, note){
 		poly.triggerAttackRelease(note, timing, time);
-	}, sequence ).start(0);
+	}, sequence).start(0);
 	
 	instruments.push(poly);
 	sequences.push(polySeq);
@@ -136,12 +142,15 @@ function t_synth_poly(){
 
 }
 
-function t_synth_fm(){
+function t_synth_fm(timing, vol, rate){
 	var fm = new Tone.FMSynth().fan(fft, waveform).toMaster();
+  fm.volume.value = vol;
 
 	var fmSeq = new Tone.Sequence(function(time, note){
 		fm.triggerAttackRelease(note, timing, time);
 	}, sequence ).start(0);
+
+  fmSeq.playbackRate = rate;
 
 	instruments.push(fm);
 	sequences.push(fmSeq);
@@ -149,8 +158,9 @@ function t_synth_fm(){
 	applyEffects(fm);
 }
 
-function t_synth_membrane(){
+function t_synth_membrane(timing, vol, rate){
 	var membrane = new Tone.MembraneSynth().fan(fft, waveform).toMaster();
+  membrane.volume.value = vol;
 
 	var membraneSeq = new Tone.Sequence(function(time, note){
 		membrane.triggerAttackRelease(note, timing, time);
@@ -162,8 +172,9 @@ function t_synth_membrane(){
 	applyEffects(membrane);
 }
 
-function t_synth_duo(){
+function t_synth_duo(timing, vol, rate){
 	var duo = new Tone.DuoSynth().fan(fft, waveform).toMaster();
+  duo.volume.value = vol;
 
 	var duoSeq = new Tone.Sequence(function(time, note){
 		duo.triggerAttackRelease(note, timing, time);
@@ -247,6 +258,9 @@ function t_bpm(bpm){
 	Tone.Transport.bpm.value = bpm;
 }
 
+// function t_timing(t){
+//   timing = t;
+// }
 
 // * Arpeggios
 // ******************
