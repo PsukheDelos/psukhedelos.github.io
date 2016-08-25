@@ -509,6 +509,7 @@ function findErroneousTiles(reasons) {
     return tiles;
 }
 function holeCanHoldTile(hole, tile, extra) {
+
     if (!tile)
         return true;
     if (!extra) extra = {};
@@ -528,18 +529,26 @@ function holeCanHoldTile(hole, tile, extra) {
             return false;
         }
     }
+    //This is the area to work in to mess with type checking
     if (!hole.dataset || !hole.dataset.accepts)
         return true;
-    var accepts = hole.dataset.accepts;
+    //modified accepts to be a space divided list of acceptable types
+    var accepts = hole.dataset.accepts.split(' ');
     if (accepts == "Any")
         return true;
-    if (!tile.dataset || !tile.dataset.types)
+    if (!tile.dataset || !tile.dataset.types){
         return true;
+    }
     var types = tile.dataset.types.split(' ');
-    for (var j=0; j<types.length; j++)
-        if (accepts == types[j])
-            return true;
-    extra.error = "Only " + accepts + " can go here, not " + types[0] + ".";
+
+    for (var j=0; j<types.length; j++){
+        for (var i = accepts.length - 1; i >= 0; i--) {
+            if (accepts[i] == types[j]){
+                return true;
+            }
+        }
+    }
+    extra.error = "Only " + accepts.join().toUpperCase().replace(",", " or ") + " can go here, not " + types[0].toUpperCase() + ".";
     return false;
 }
 function arrowOffscreenTiles(tiles) {
