@@ -50,9 +50,9 @@ var StandardGrace = {
                 {
                     name: 'while',
                     args: [
-                        {type: 'Block', returns: 'Boolean', multiline: false,
-                            description: "Condition."}
+                        {type: 'Boolean', returns: 'Boolean', multiline: false,description: "Condition"}
                     ],
+                    description: "Condition.",
                 },
                 {
                     name: 'do',
@@ -72,7 +72,10 @@ var StandardGrace = {
             parts: [
                 {
                     name: 'for',
-                    args: ["Iterable"],
+                    args: [
+                        {type: 'Iterable', returns: 'Iterable', multiline: false,description: "Iterable"}
+                    ],
+                    description: "Iterable",
                 },
                 {
                     name: 'do',
@@ -98,9 +101,9 @@ var StandardGrace = {
                 {
                     name: 'if',
                     args: [
-                        {type: 'Boolean', returns: 'Boolean', multiline: false,description: "Condition."}
+                        {type: 'Boolean', returns: 'Boolean', multiline: false,description: "Condition"}
                     ],
-                    description: "Condition.",
+                    description: "If a condition is true, do something.",
                 },
                 {
                     name: 'then',
@@ -120,7 +123,9 @@ var StandardGrace = {
             parts: [
                 {
                     name: 'if',
-                    args: ["Boolean"],
+                    args: [
+                        {type: 'Boolean', returns: 'Boolean', multiline: false,description: "Condition."}
+                    ],
                     description: "Condition.",
                 },
                 {
