@@ -63,7 +63,7 @@ var StandardGrace = {
                 }
             ],
             category: "Control",
-            returns: "Done",
+            returns: "Control",
             description: "While a condition is true, do something.",
             multiline: true,
         },
@@ -91,7 +91,7 @@ var StandardGrace = {
                 }
             ],
             category: "Control",
-            returns: "Done",
+            returns: "Control",
             description: "For each item, do something.",
             multiline: true,
         },
@@ -101,7 +101,7 @@ var StandardGrace = {
                 {
                     name: 'if',
                     args: [
-                        {type: 'Boolean', returns: 'Boolean', multiline: false,description: "Condition"}
+                        {type: 'Boolean', returns: 'Boolean', multiline: false, description: "Condition"}
                     ],
                     description: "If a condition is true, do something.",
                 },
@@ -114,7 +114,7 @@ var StandardGrace = {
                 }
             ],
             category: "Control",
-            returns: "Done",
+            returns: "Control",
             description: "If a condition is true, do something.",
             multiline: true,
         },
@@ -144,7 +144,7 @@ var StandardGrace = {
                 }
             ],
             category: "Control",
-            returns: "Done",
+            returns: "Control",
             description: "If a condition is true, do something, otherwise do something else.",
             multiline: true,
         },
@@ -750,7 +750,7 @@ dialects.musical = {
                     args: [],
                 }
             ],
-            returns: "Done",
+            returns: "Note",
             description: "Play D Note",
             type: "note"
         },
@@ -762,7 +762,7 @@ dialects.musical = {
                     args: [],
                 }
             ],
-            returns: "Done",
+            returns: "Note",
             description: "Play E Note",
             type: "note"
         },
@@ -774,7 +774,7 @@ dialects.musical = {
                     args: [],
                 }
             ],
-            returns: "Done",
+            returns: "Note",
             description: "Play F Note",
             type: "note"
         },
@@ -786,7 +786,7 @@ dialects.musical = {
                     args: [],
                 }
             ],
-            returns: "Done",
+            returns: "Note",
             description: "Play G Note",
             type: "note"
         },
@@ -798,7 +798,7 @@ dialects.musical = {
                     args: [],
                 }
             ],
-            returns: "Done",
+            returns: "Note",
             description: "Play A Note",
             type: "note"
         },
@@ -810,7 +810,7 @@ dialects.musical = {
                     args: [],
                 }
             ],
-            returns: "Done",
+            returns: "Note",
             description: "Play B Note",
             type: "note"
         },
@@ -822,7 +822,7 @@ dialects.musical = {
                     args: [],
                 }
             ],
-            returns: "Done",
+            returns: "Note",
             description: "Rest a beat",
             type: "note"
         },
@@ -832,11 +832,11 @@ dialects.musical = {
                 {
                     name: 'flat',
                     args: [
-                        {type: 'Block', returns: 'Any', multiline: true, description: "Something to play"}
+                        {type: 'Block', returns: 'Note Instrument Effect Adjustment', multiline: true, description: "Enter NOTES to be FLATTENED"}
                     ],
                 }
             ],
-            returns: "Done",
+            returns: "Note Effect",
             description: "Takes in notes and returns them as flats",
             multiline: true,
             type: "note"
@@ -847,23 +847,32 @@ dialects.musical = {
                 {
                     name: 'sharp',
                     args: [
-                        {type: 'Block', returns: 'Any', multiline: true, description: "Something to play"}
+                        {type: 'Block', returns: 'Note Instrument Effect Adjustment', multiline: true, description: "Enter NOTES to be SHARPENED"}
                     ],
                 }
             ],
-            returns: "Done",
+            returns: "Note Effect",
             description: "Takes in notes and returns them as sharps",
             multiline: true,
             type: "note"
         },
         "octave()on": {
             name: "octave()on",
-            parts: [{name: "octave", args: [Number]},
-                {name: "on", args: [
-                    {type: 'Block', returns: 'Any', multiline: true,
-                        description: "Something to do when true."}
-                    ]}],
-            returns: "Done",
+            parts: [
+                {
+                    name: 'octave',
+                    args: [
+                        {type: 'Number', returns: 'Number', multiline: false, description: "Enter NUMBER of desired octave to shift NOTES to"}
+                    ],
+                },
+                {
+                    name: 'on',
+                    args: [
+                        {type: 'Block', returns: 'Note Instrument Effect Adjustment', multiline: true, description: "NOTES to be SHIFTED"}
+                    ],
+                }
+            ],
+            returns: "Note Effect",
             multiline: true,
             selfcall: true,
             description: "Takes in notes and adjusts their octave",
@@ -876,11 +885,11 @@ dialects.musical = {
                 {
                     name: 'monoSynth',
                     args: [
-                        {type: 'Block', returns: 'Any', multiline: true, description: "Something to play"}
+                        {type: 'Block', returns: 'Note Control', multiline: true, description: "Something to play"}
                     ],
                 }
             ],
-            returns: "Done",
+            returns: "Instrument",
             description: "Plays notes with a monoSynth",
             multiline: true,
             type: "instrument"
@@ -891,12 +900,11 @@ dialects.musical = {
                 {
                     name: 'pluckSynth',
                     args: [
-                        {type: 'Block', returns: 'Any', multiline: true,
-                            description: "Something to play"}
+                        {type: 'Block', returns: 'Note Control', multiline: true, description: "Something to play"}
                     ],
                 }
             ],
-            returns: "Done",
+            returns: "Instrument",
             description: "Plays notes with a pluckSynth",
             multiline: true,
             type: "instrument"
@@ -907,12 +915,11 @@ dialects.musical = {
                 {
                     name: 'polySynth',
                     args: [
-                        {type: 'Block', returns: 'Any', multiline: true,
-                            description: "Something to play"}
+                        {type: 'Block', returns: 'Note Control', multiline: true, description: "Something to play"}
                     ],
                 }
             ],
-            returns: "Done",
+            returns: "Instrument",
             description: "Plays notes with a polySynth",
             multiline: true,
             type: "instrument"
@@ -923,12 +930,11 @@ dialects.musical = {
                 {
                     name: 'fmSynth',
                     args: [
-                        {type: 'Block', returns: 'Any', multiline: true,
-                            description: "Something to play"}
+                        {type: 'Block', returns: 'Note Control', multiline: true, description: "Something to play"}
                     ],
                 }
             ],
-            returns: "Done",
+            returns: "Instrument",
             description: "Plays notes with a fmSynth",
             multiline: true,
             type: "instrument"
@@ -939,12 +945,11 @@ dialects.musical = {
                 {
                     name: 'membraneSynth',
                     args: [
-                        {type: 'Block', returns: 'Any', multiline: true,
-                            description: "Something to play"}
+                        {type: 'Block', returns: 'Note Control', multiline: true, description: "Something to play"}
                     ],
                 }
             ],
-            returns: "Done",
+            returns: "Instrument",
             description: "Plays notes with a membraneSynth",
             multiline: true,
             type: "instrument"
@@ -955,35 +960,33 @@ dialects.musical = {
                 {
                     name: 'duoSynth',
                     args: [
-                        {type: 'Block', returns: 'Any', multiline: true,
-                            description: "Something to play"}
+                        {type: 'Block', returns: 'Note Control', multiline: true, description: "Something to play"}
                     ],
                 }
             ],
-            returns: "Done",
+            returns: "Instrument",
             description: "Plays notes with a duoSynth",
             multiline: true,
             type: "instrument"
         },
-        "arpeggio": {
-            name: "arpeggio",
-            parts: [{name: "arpeggio", args: ["Note"]}],
-            returns: "Done",
-            description: "Plays an arpeggio based on a given note",
-            type: "instrument"
-        },
+        // "arpeggio": {
+        //     name: "arpeggio",
+        //     parts: [{name: "arpeggio", args: ["Note"]}],
+        //     returns: "Done",
+        //     description: "Plays an arpeggio based on a given note",
+        //     type: "instrument"
+        // },
         "Chorus": {
             name: "Chorus",
             parts: [
                 {
                     name: 'Chorus',
                     args: [
-                        {type: 'Block', returns: 'Any', multiline: true,
-                            description: "Something to play"}
+                        {type: 'Block', returns: 'Instrument Effect', multiline: true, description: "Something to play"}
                     ],
                 }
             ],
-            returns: "Done",
+            returns: "Effect",
             description: "Adds a Chorus effect",
             multiline: true,
             type: "effect"
@@ -994,12 +997,11 @@ dialects.musical = {
                 {
                     name: 'Reverb',
                     args: [
-                        {type: 'Block', returns: 'Any', multiline: true,
-                            description: "Something to play"}
+                        {type: 'Block', returns: 'Instrument Effect', multiline: true, description: "Something to play"}
                     ],
                 }
             ],
-            returns: "Done",
+            returns: "Effect",
             description: "Adds a Reverb effect",
             multiline: true,
             type: "effect"
@@ -1010,12 +1012,11 @@ dialects.musical = {
                 {
                     name: 'Autowah',
                     args: [
-                        {type: 'Block', returns: 'Any', multiline: true,
-                            description: "Something to play"}
+                        {type: 'Block', returns: 'Instrument Effect', multiline: true, description: "Something to play"}
                     ],
                 }
             ],
-            returns: "Done",
+            returns: "Effect",
             description: "Adds an Autowah effect",
             multiline: true,
             type: "effect"
@@ -1026,21 +1027,27 @@ dialects.musical = {
                 {
                     name: 'Cheby',
                     args: [
-                        {type: 'Block', returns: 'Any', multiline: true,
-                            description: "Something to play"}
+                        {type: 'Block', returns: 'Instrument Effect', multiline: true, description: "Something to play"}
                     ],
                 }
             ],
-            returns: "Done",
+            returns: "Effect",
             description: "Adds a Cheby effect",
             multiline: true,
             type: "effect"
         },
         "SetBPM": {
             name: "SetBPM",
-            parts: [{name: "SetBPM", args: [Number]}],
+            parts: [
+                {
+                    name: "SetBPM", 
+                    args: [
+                        {type: Number, returns: "Number", multiline: false, description: "Enter NUMBER of desired BPM for WHOLE SONG"}
+                    ]
+                }
+            ],
             description: "Sets the Beats Per Minute",
-            returns: "Done",
+            returns: "Global",
             type: "timing"
         },
         // "Time()on": {
@@ -1095,12 +1102,21 @@ dialects.musical = {
         // },
         "PlayBackRatePercentage()on": {
             name: "PlayBackRatePercentage()on",
-            parts: [{name: "PlayBackRatePercentage", args: [Number]},
-                {name: "on", args: [
-                    {type: 'Block', returns: 'Any', multiline: true,
-                        description: "Elements whose playback rate will be adjusted"}
-                    ]}],
-            returns: "Done",
+            parts: [
+                {
+                    name: "PlayBackRatePercentage", 
+                    args: [
+                        {type: Number, returns: "Number", multiline: false, description: "Enter NUMBER percentage of BPM for SECTION"}
+                    ]
+                },
+                {
+                    name: "on", 
+                    args: [
+                        {type: 'Block', returns: 'Instrument Effect Adjustment', multiline: true, description: "Elements whose PLAYBACK RATE will be ADJUSTED"}
+                    ]
+                }
+            ],
+            returns: "Adjustment",
             multiline: true,
             selfcall: true,
             description: "Adjust playback rate",
@@ -1109,12 +1125,21 @@ dialects.musical = {
         },
         "VolumePercentage()on": {
             name: "VolumePercentage()on",
-            parts: [{name: "VolumePercentage", args: [Number]},
-                {name: "on", args: [
-                    {type: 'Block', returns: 'Any', multiline: true,
-                        description: "Elements whose volume will be adjusted"}
-                    ]}],
-            returns: "Done",
+            parts: [
+                {
+                    name: "VolumePercentage", 
+                    args: [
+                        {type: Number, returns: "Number", multiline: false, description: "Enter NUMBER percentage of VOLUME for SECTION"}
+                    ]
+                },
+                {
+                    name: "on", 
+                    args: [
+                        {type: 'Block', returns: 'Instrument Effect Adjustment', multiline: true, description: "Elements whose VOLUME will be ADJUSTED"}
+                    ]
+                }
+            ],
+            returns: "Adjustment",
             multiline: true,
             selfcall: true,
             description: "Adjust volume",

@@ -548,7 +548,7 @@ function holeCanHoldTile(hole, tile, extra) {
             }
         }
     }
-    extra.error = "Only " + accepts.join().toUpperCase().replace(",", " or ") + " can go here, not " + types[0].toUpperCase();
+    extra.error = "Only " + accepts.join().toUpperCase().split(",").join(" or ") + " can go here, not " + types[0].toUpperCase();
     return false;
 }
 function arrowOffscreenTiles(tiles) {
