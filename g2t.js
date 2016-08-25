@@ -740,12 +740,13 @@ var fftContext = $("<canvas>",{
 function drawFFT(values){
   fftContext.clearRect(0, 0, canvasWidth, canvasHeight);
   var barWidth = canvasWidth / fft.size;
+  console.log(values.length);
   for (var i = 0, len = values.length; i < len; i++){
     var val = values[i] / 255;
     var x = canvasWidth * (i / len);
-    var y = val * canvasHeight;
+    var y = val * canvasHeight * 2;
     fftContext.fillStyle = "rgba(255, 0, 0, " + val + ")";
-    fftContext.fillRect(x, canvasHeight - y, barWidth, canvasHeight);
+    fftContext.fillRect(x, canvasHeight - y, barWidth, canvasHeight * 2);
   }
 }
 
@@ -761,7 +762,7 @@ function drawWaveform(values){
   var values = waveform.analyse();
   waveContext.beginPath();
   waveContext.lineJoin = "round";
-  waveContext.lineWidth = 6;
+  waveContext.lineWidth = 3;
   waveContext.strokeStyle = waveformGradient;
   waveContext.moveTo(0, (values[0] / 255) * canvasHeight);
   for (var i = 1, len = values.length; i < len; i++){
