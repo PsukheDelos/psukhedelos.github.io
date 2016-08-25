@@ -13,6 +13,8 @@ var sequence = [];
 var instruments = [];
 var sequences = [];
 
+var playing = false;
+
 Tone.Transport.bpm.value = 90;
 
 //Effects
@@ -78,12 +80,14 @@ function t_play() {
 
 	Tone.Transport.pause();
 	Tone.Transport.start();
+  playing = true;
 }
 
 function t_stop(){
 	Tone.Transport.stop();
 	sequence = [];
   t_reset();
+  playing = false;
 }
 
 
