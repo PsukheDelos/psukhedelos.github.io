@@ -31,117 +31,117 @@ var StandardGrace = {
             operators: ["++"]
         }
     ],
-    // methods: {
-    //     "print": {
-    //         name: "print",
-    //         parts: [
-    //             {
-    //                 name: 'print',
-    //                 args: ["Any"]
-    //             },
-    //         ],
-    //         category: "Input/Output",
-    //         description: "Write a string to the text area.",
-    //         returns: "Done"
-    //     },
-    //     "while()do": {
-    //         name: "while()do",
-    //         parts: [
-    //             {
-    //                 name: 'while',
-    //                 args: [
-    //                     {type: 'Block', returns: 'Boolean', multiline: false,
-    //                         description: "Condition."}
-    //                 ],
-    //             },
-    //             {
-    //                 name: 'do',
-    //                 args: [
-    //                     {type: 'Block', returns: 'Any', multiline: true,
-    //                         description: "Something to do."}
-    //                 ],
-    //             }
-    //         ],
-    //         category: "Control",
-    //         returns: "Done",
-    //         description: "While a condition is true, do something.",
-    //         multiline: true,
-    //     },
-    //     "for()do": {
-    //         name: "for()do",
-    //         parts: [
-    //             {
-    //                 name: 'for',
-    //                 args: ["Iterable"],
-    //             },
-    //             {
-    //                 name: 'do',
-    //                 args: [
-    //                     {
-    //                         type: 'Block',
-    //                         returns: 'Any',
-    //                         multiline: true,
-    //                         params: 1,
-    //                         description: "Something to do for each item.",
-    //                     }
-    //                 ],
-    //             }
-    //         ],
-    //         category: "Control",
-    //         returns: "Done",
-    //         description: "For each item, do something.",
-    //         multiline: true,
-    //     },
-    //     "if()then": {
-    //         name: "if()then",
-    //         parts: [
-    //             {
-    //                 name: 'if',
-    //                 args: ["Boolean"],
-    //                 description: "Condition.",
-    //             },
-    //             {
-    //                 name: 'then',
-    //                 args: [
-    //                     {type: 'Block', returns: 'Any', multiline: true,
-    //                         description: "Something to do if true."}
-    //                 ],
-    //             }
-    //         ],
-    //         category: "Control",
-    //         returns: "Done",
-    //         description: "If a condition is true, do something.",
-    //         multiline: true,
-    //     },
-    //     "if()then()else": {
-    //         name: "if()then()else",
-    //         parts: [
-    //             {
-    //                 name: 'if',
-    //                 args: ["Boolean"],
-    //                 description: "Condition.",
-    //             },
-    //             {
-    //                 name: 'then',
-    //                 args: [
-    //                     {type: 'Block', returns: 'Any', multiline: true,
-    //                         description: "Something to do if true."}
-    //                 ],
-    //             },
-    //             {
-    //                 name: 'else',
-    //                 args: [
-    //                     {type: 'Block', returns: 'Any', multiline: true,
-    //                         description: "Something to do if false."}
-    //                 ],
-    //             }
-    //         ],
-    //         category: "Control",
-    //         returns: "Done",
-    //         description: "If a condition is true, do something, otherwise do something else.",
-    //         multiline: true,
-    //     },
-    // },
+    methods: {
+        "print": {
+            name: "print",
+            parts: [
+                {
+                    name: 'print',
+                    args: ["Any"]
+                },
+            ],
+            category: "Input/Output",
+            description: "Write a string to the text area.",
+            returns: "Done"
+        },
+        "while()do": {
+            name: "while()do",
+            parts: [
+                {
+                    name: 'while',
+                    args: [
+                        {type: 'Block', returns: 'Boolean', multiline: false,
+                            description: "Condition."}
+                    ],
+                },
+                {
+                    name: 'do',
+                    args: [
+                        {type: 'Block', returns: 'Any', multiline: true,
+                            description: "Something to do."}
+                    ],
+                }
+            ],
+            category: "Control",
+            returns: "Done",
+            description: "While a condition is true, do something.",
+            multiline: true,
+        },
+        "for()do": {
+            name: "for()do",
+            parts: [
+                {
+                    name: 'for',
+                    args: ["Iterable"],
+                },
+                {
+                    name: 'do',
+                    args: [
+                        {
+                            type: 'Block',
+                            returns: 'Any',
+                            multiline: true,
+                            params: 1,
+                            description: "Something to do for each item.",
+                        }
+                    ],
+                }
+            ],
+            category: "Control",
+            returns: "Done",
+            description: "For each item, do something.",
+            multiline: true,
+        },
+        "if()then": {
+            name: "if()then",
+            parts: [
+                {
+                    name: 'if',
+                    args: ["Boolean"],
+                    description: "Condition.",
+                },
+                {
+                    name: 'then',
+                    args: [
+                        {type: 'Block', returns: 'Any', multiline: true,
+                            description: "Something to do if true."}
+                    ],
+                }
+            ],
+            category: "Control",
+            returns: "Done",
+            description: "If a condition is true, do something.",
+            multiline: true,
+        },
+        "if()then()else": {
+            name: "if()then()else",
+            parts: [
+                {
+                    name: 'if',
+                    args: ["Boolean"],
+                    description: "Condition.",
+                },
+                {
+                    name: 'then',
+                    args: [
+                        {type: 'Block', returns: 'Any', multiline: true,
+                            description: "Something to do if true."}
+                    ],
+                },
+                {
+                    name: 'else',
+                    args: [
+                        {type: 'Block', returns: 'Any', multiline: true,
+                            description: "Something to do if false."}
+                    ],
+                }
+            ],
+            category: "Control",
+            returns: "Done",
+            description: "If a condition is true, do something, otherwise do something else.",
+            multiline: true,
+        },
+    },
 };
 var currentDialect = StandardGrace;
 var dialects = {
