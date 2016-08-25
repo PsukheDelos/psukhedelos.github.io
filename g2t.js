@@ -16,7 +16,7 @@ var sequences = [];
 var playing = false;
 
 //Timing
-Tone.Transport.bpm.value = 90;
+Tone.Transport.bpm.value = 300;
 // var timing = "4n";
 
 // //Volume
@@ -83,7 +83,7 @@ function t_add(note){
 function t_play() {
   // player.start();
 
-	Tone.Transport.pause();
+	// Tone.Transport.pause();
 	Tone.Transport.start();
   playing = true;
 }
@@ -93,6 +93,7 @@ function t_stop(){
 	sequence = [];
   t_reset();
   playing = false;
+  Tone.Transport.bpm.value = 300;
 }
 
 
