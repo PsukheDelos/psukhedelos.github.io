@@ -484,25 +484,19 @@ method atModuleEnd(module) {
 
 // * Improvements
 // ******************
-//  - Should rouge notes be played by a default instrument or just ignored?
+
 //  - Can I contrain number parameters? For example, from 0 - 100?
 //  - Adjust amount of Effect
-//  - Allowing picking of instruments for arpeggio 
-//  - Volume
-//  - Add timing of instruments 4n/8n/16n
-//  - Can't get pre configured grace files to load properly
-//  - Constraints, making sure can't make bad code
 //  - Stretch Goal: Being able to run individual components
-//  - numbers automatically in there??
-//  - a number input already in there??
-//  - can i stop people putting things into holes
 
+//DONE: 
 //  - rests: this can be accopmlished with null
 //  - live editing: adding in and changes happen in realtime if compiler
 //  - on delete, don't start playing if not already playing
 //  - dialects, checker see if we can check blocks, type checking, in dialect.js
 //  - volume/timing
 
+//TODO: 
 // - look at engineering requirements, sample reports, and evaluation story
 // - justify why you're doing these things
 // - match scratch music 

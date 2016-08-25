@@ -3360,7 +3360,7 @@ function gracecode_musical () {
   this.methods["atModuleEnd"] = func957;
   func957.definitionLine = 472;
   func957.definitionModule = "musical";
-  lineNumber = 537
+  lineNumber = 531
   var func961 = function(argcv) {
     var curarg = 1;
     var var_note = arguments[curarg];
@@ -3371,13 +3371,13 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 542
+      lineNumber = 536
       var if962 = var_done;
-      lineNumber = 538
+      lineNumber = 532
       var bool963 = new GraceBoolean(true)
       var opresult966 = callmethod(var_applyFlat, "==", [1], bool963);
       if (Grace_isTrue(opresult966)) {
-        lineNumber = 539
+        lineNumber = 533
         var string967 = new GraceString("");
         var string970 = new GraceString("b");
         var string973 = new GraceString("");
@@ -3387,21 +3387,21 @@ function gracecode_musical () {
         var opresult981 = callmethod(opresult979, "++", [1], string967);
         var call982 = callmethod(var_dom,"window", [0]);
         var call983 = callmethod(call982,"t_add", [1], opresult981);
-        lineNumber = 541
-        lineNumber = 540
+        lineNumber = 535
+        lineNumber = 534
         var string984 = new GraceString("b");
         var string987 = new GraceString("");
         var opresult989 = callmethod(string987, "++", [1], var_note);
         var opresult991 = callmethod(opresult989, "++", [1], string984);
         return opresult991
       }
-      lineNumber = 546
+      lineNumber = 540
       var if992 = var_done;
-      lineNumber = 542
+      lineNumber = 536
       var bool993 = new GraceBoolean(true)
       var opresult996 = callmethod(var_applySharp, "==", [1], bool993);
       if (Grace_isTrue(opresult996)) {
-        lineNumber = 543
+        lineNumber = 537
         var string997 = new GraceString("");
         var string1000 = new GraceString("#");
         var string1003 = new GraceString("");
@@ -3411,15 +3411,15 @@ function gracecode_musical () {
         var opresult1011 = callmethod(opresult1009, "++", [1], string997);
         var call1012 = callmethod(var_dom,"window", [0]);
         var call1013 = callmethod(call1012,"t_add", [1], opresult1011);
-        lineNumber = 545
-        lineNumber = 544
+        lineNumber = 539
+        lineNumber = 538
         var string1014 = new GraceString("#");
         var string1017 = new GraceString("");
         var opresult1019 = callmethod(string1017, "++", [1], var_note);
         var opresult1021 = callmethod(opresult1019, "++", [1], string1014);
         return opresult1021
       }
-      lineNumber = 546
+      lineNumber = 540
       var string1022 = new GraceString("");
       var string1025 = new GraceString("");
       var string1028 = new GraceString("");
@@ -3429,8 +3429,8 @@ function gracecode_musical () {
       var opresult1036 = callmethod(opresult1034, "++", [1], string1022);
       var call1037 = callmethod(var_dom,"window", [0]);
       var call1038 = callmethod(call1037,"t_add", [1], opresult1036);
-      lineNumber = 548
-      lineNumber = 547
+      lineNumber = 542
+      lineNumber = 541
       var string1039 = new GraceString("");
       var string1042 = new GraceString("");
       var opresult1044 = callmethod(string1042, "++", [1], var_note);
@@ -3451,9 +3451,9 @@ function gracecode_musical () {
     false,
   ];
   this.methods["Note"] = func961;
-  func961.definitionLine = 537;
+  func961.definitionLine = 531;
   func961.definitionModule = "musical";
-  lineNumber = 550
+  lineNumber = 544
   var func1047 = function(argcv) {
     var curarg = 1;
     if (argcv[0] !=  func1047.paramCounts[0])
@@ -3462,7 +3462,7 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 551
+      lineNumber = 545
       var string1048 = new GraceString("C");
       onSelf = true;
       var call1049 = callmethod(this, "Note", [1], string1048);
@@ -3482,9 +3482,9 @@ function gracecode_musical () {
     false,
   ];
   this.methods["C"] = func1047;
-  func1047.definitionLine = 550;
+  func1047.definitionLine = 544;
   func1047.definitionModule = "musical";
-  lineNumber = 553
+  lineNumber = 547
   var func1050 = function(argcv) {
     var curarg = 1;
     if (argcv[0] !=  func1050.paramCounts[0])
@@ -3493,7 +3493,7 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 554
+      lineNumber = 548
       var string1051 = new GraceString("D");
       onSelf = true;
       var call1052 = callmethod(this, "Note", [1], string1051);
@@ -3513,9 +3513,9 @@ function gracecode_musical () {
     false,
   ];
   this.methods["D"] = func1050;
-  func1050.definitionLine = 553;
+  func1050.definitionLine = 547;
   func1050.definitionModule = "musical";
-  lineNumber = 556
+  lineNumber = 550
   var func1053 = function(argcv) {
     var curarg = 1;
     if (argcv[0] !=  func1053.paramCounts[0])
@@ -3524,7 +3524,7 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 557
+      lineNumber = 551
       var string1054 = new GraceString("E");
       onSelf = true;
       var call1055 = callmethod(this, "Note", [1], string1054);
@@ -3544,9 +3544,9 @@ function gracecode_musical () {
     false,
   ];
   this.methods["E"] = func1053;
-  func1053.definitionLine = 556;
+  func1053.definitionLine = 550;
   func1053.definitionModule = "musical";
-  lineNumber = 559
+  lineNumber = 553
   var func1056 = function(argcv) {
     var curarg = 1;
     if (argcv[0] !=  func1056.paramCounts[0])
@@ -3555,7 +3555,7 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 560
+      lineNumber = 554
       var string1057 = new GraceString("F");
       onSelf = true;
       var call1058 = callmethod(this, "Note", [1], string1057);
@@ -3575,9 +3575,9 @@ function gracecode_musical () {
     false,
   ];
   this.methods["F"] = func1056;
-  func1056.definitionLine = 559;
+  func1056.definitionLine = 553;
   func1056.definitionModule = "musical";
-  lineNumber = 562
+  lineNumber = 556
   var func1059 = function(argcv) {
     var curarg = 1;
     if (argcv[0] !=  func1059.paramCounts[0])
@@ -3586,7 +3586,7 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 563
+      lineNumber = 557
       var string1060 = new GraceString("G");
       onSelf = true;
       var call1061 = callmethod(this, "Note", [1], string1060);
@@ -3606,9 +3606,9 @@ function gracecode_musical () {
     false,
   ];
   this.methods["G"] = func1059;
-  func1059.definitionLine = 562;
+  func1059.definitionLine = 556;
   func1059.definitionModule = "musical";
-  lineNumber = 565
+  lineNumber = 559
   var func1062 = function(argcv) {
     var curarg = 1;
     if (argcv[0] !=  func1062.paramCounts[0])
@@ -3617,7 +3617,7 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 566
+      lineNumber = 560
       var string1063 = new GraceString("A");
       onSelf = true;
       var call1064 = callmethod(this, "Note", [1], string1063);
@@ -3637,9 +3637,9 @@ function gracecode_musical () {
     false,
   ];
   this.methods["A"] = func1062;
-  func1062.definitionLine = 565;
+  func1062.definitionLine = 559;
   func1062.definitionModule = "musical";
-  lineNumber = 568
+  lineNumber = 562
   var func1065 = function(argcv) {
     var curarg = 1;
     if (argcv[0] !=  func1065.paramCounts[0])
@@ -3648,7 +3648,7 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 569
+      lineNumber = 563
       var string1066 = new GraceString("B");
       onSelf = true;
       var call1067 = callmethod(this, "Note", [1], string1066);
@@ -3668,9 +3668,9 @@ function gracecode_musical () {
     false,
   ];
   this.methods["B"] = func1065;
-  func1065.definitionLine = 568;
+  func1065.definitionLine = 562;
   func1065.definitionModule = "musical";
-  lineNumber = 571
+  lineNumber = 565
   var func1068 = function(argcv) {
     var curarg = 1;
     if (argcv[0] !=  func1068.paramCounts[0])
@@ -3679,12 +3679,12 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 572
+      lineNumber = 566
       var string1069 = new GraceString("null");
       var call1070 = callmethod(var_dom,"window", [0]);
       var call1071 = callmethod(call1070,"t_add", [1], string1069);
-      lineNumber = 574
-      lineNumber = 573
+      lineNumber = 568
+      lineNumber = 567
       var string1072 = new GraceString("Rest");
       return string1072
     } catch(e) {
@@ -3702,9 +3702,9 @@ function gracecode_musical () {
     false,
   ];
   this.methods["Rest"] = func1068;
-  func1068.definitionLine = 571;
+  func1068.definitionLine = 565;
   func1068.definitionModule = "musical";
-  lineNumber = 576
+  lineNumber = 570
   var func1073 = function(argcv) {
     var curarg = 1;
     var var_note = arguments[curarg];
@@ -3715,28 +3715,28 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 578
-      lineNumber = 577
+      lineNumber = 572
+      lineNumber = 571
       var bool1074 = new GraceBoolean(true)
       var_applyFlat = bool1074;
-      lineNumber = 579
-      lineNumber = 578
+      lineNumber = 573
+      lineNumber = 572
       var call1075 = callmethod(var_note,"apply", [0]);
       var var_ret = call1075;
-      lineNumber = 579;
+      lineNumber = 573;
       moduleName = "musical";
-      lineNumber = 578
+      lineNumber = 572
       if (!Grace_isTrue(callmethod(var_Unknown, "match",
         [1], var_ret)))
           throw new GraceExceptionPacket(TypeErrorObject,
                 new GraceString("expected "
                 + "initial value of var 'ret' to be of type Unknown"))
-      lineNumber = 580
-      lineNumber = 579
+      lineNumber = 574
+      lineNumber = 573
       var bool1076 = new GraceBoolean(false)
       var_applyFlat = bool1076;
-      lineNumber = 581
-      lineNumber = 580
+      lineNumber = 575
+      lineNumber = 574
       return var_ret
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -3753,9 +3753,9 @@ function gracecode_musical () {
     false,
   ];
   this.methods["flat"] = func1073;
-  func1073.definitionLine = 576;
+  func1073.definitionLine = 570;
   func1073.definitionModule = "musical";
-  lineNumber = 582
+  lineNumber = 576
   var func1077 = function(argcv) {
     var curarg = 1;
     var var_note = arguments[curarg];
@@ -3766,28 +3766,28 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 584
-      lineNumber = 583
+      lineNumber = 578
+      lineNumber = 577
       var bool1078 = new GraceBoolean(true)
       var_applySharp = bool1078;
-      lineNumber = 585
-      lineNumber = 584
+      lineNumber = 579
+      lineNumber = 578
       var call1079 = callmethod(var_note,"apply", [0]);
       var var_ret = call1079;
-      lineNumber = 585;
+      lineNumber = 579;
       moduleName = "musical";
-      lineNumber = 584
+      lineNumber = 578
       if (!Grace_isTrue(callmethod(var_Unknown, "match",
         [1], var_ret)))
           throw new GraceExceptionPacket(TypeErrorObject,
                 new GraceString("expected "
                 + "initial value of var 'ret' to be of type Unknown"))
-      lineNumber = 586
-      lineNumber = 585
+      lineNumber = 580
+      lineNumber = 579
       var bool1080 = new GraceBoolean(false)
       var_applySharp = bool1080;
-      lineNumber = 587
-      lineNumber = 586
+      lineNumber = 581
+      lineNumber = 580
       return var_ret
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -3804,9 +3804,9 @@ function gracecode_musical () {
     false,
   ];
   this.methods["sharp"] = func1077;
-  func1077.definitionLine = 582;
+  func1077.definitionLine = 576;
   func1077.definitionModule = "musical";
-  lineNumber = 589
+  lineNumber = 583
   var func1081 = function(argcv) {
     var curarg = 1;
     var var_num = arguments[curarg];
@@ -3821,37 +3821,37 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 591
-      lineNumber = 590
+      lineNumber = 585
+      lineNumber = 584
       var var_oldOctave = var_octave;
-      lineNumber = 591;
+      lineNumber = 585;
       moduleName = "musical";
-      lineNumber = 590
+      lineNumber = 584
       if (!Grace_isTrue(callmethod(var_Unknown, "match",
         [1], var_oldOctave)))
           throw new GraceExceptionPacket(TypeErrorObject,
                 new GraceString("expected "
                 + "initial value of var 'oldOctave' to be of type Unknown"))
-      lineNumber = 592
-      lineNumber = 591
+      lineNumber = 586
+      lineNumber = 585
       var_octave = var_num;
-      lineNumber = 593
-      lineNumber = 592
+      lineNumber = 587
+      lineNumber = 586
       var call1082 = callmethod(var_notes,"apply", [0]);
       var var_ret = call1082;
-      lineNumber = 593;
+      lineNumber = 587;
       moduleName = "musical";
-      lineNumber = 592
+      lineNumber = 586
       if (!Grace_isTrue(callmethod(var_Unknown, "match",
         [1], var_ret)))
           throw new GraceExceptionPacket(TypeErrorObject,
                 new GraceString("expected "
                 + "initial value of var 'ret' to be of type Unknown"))
-      lineNumber = 594
-      lineNumber = 593
+      lineNumber = 588
+      lineNumber = 587
       var_octave = var_oldOctave;
-      lineNumber = 595
-      lineNumber = 594
+      lineNumber = 589
+      lineNumber = 588
       return var_ret
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -3870,9 +3870,9 @@ function gracecode_musical () {
     false,
   ];
   this.methods["octave()on"] = func1081;
-  func1081.definitionLine = 589;
+  func1081.definitionLine = 583;
   func1081.definitionModule = "musical";
-  lineNumber = 600
+  lineNumber = 594
   var func1083 = function(argcv) {
     var curarg = 1;
     var var_blocks = arguments[curarg];
@@ -3883,25 +3883,25 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 605
+      lineNumber = 599
       var if1084 = var_done;
-      lineNumber = 601
+      lineNumber = 595
       var bool1085 = new GraceBoolean(true)
       var opresult1088 = callmethod(var_firstPass, "==", [1], bool1085);
       if (Grace_isTrue(opresult1088)) {
-        lineNumber = 602
+        lineNumber = 596
         var call1089 = callmethod(var_dom,"window", [0]);
         var call1090 = callmethod(call1089,"t_reset", [0]);
-        lineNumber = 604
-        lineNumber = 603
+        lineNumber = 598
+        lineNumber = 597
         var bool1091 = new GraceBoolean(false)
         var_firstPass = bool1091;
         if1084 = bool1091;
       }
-      lineNumber = 605
+      lineNumber = 599
       var call1092 = callmethod(var_dom,"window", [0]);
       var call1093 = callmethod(call1092,"t_init", [0]);
-      lineNumber = 606
+      lineNumber = 600
       var call1094 = callmethod(var_blocks,"apply", [0]);
       return call1094
     } catch(e) {
@@ -3919,9 +3919,9 @@ function gracecode_musical () {
     false,
   ];
   this.methods["Instrument"] = func1083;
-  func1083.definitionLine = 600;
+  func1083.definitionLine = 594;
   func1083.definitionModule = "musical";
-  lineNumber = 609
+  lineNumber = 603
   var func1095 = function(argcv) {
     var curarg = 1;
     var var_blocks = arguments[curarg];
@@ -3932,10 +3932,10 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 610
+      lineNumber = 604
       onSelf = true;
       var call1096 = callmethod(this, "Instrument", [1], var_blocks);
-      lineNumber = 611
+      lineNumber = 605
       var call1097 = callmethod(var_dom,"window", [0]);
       var call1098 = callmethod(call1097,"t_synth_mono", [3], var_timing, var_volume, var_playbackrate);
       return call1098
@@ -3954,9 +3954,9 @@ function gracecode_musical () {
     false,
   ];
   this.methods["monoSynth"] = func1095;
-  func1095.definitionLine = 609;
+  func1095.definitionLine = 603;
   func1095.definitionModule = "musical";
-  lineNumber = 614
+  lineNumber = 608
   var func1099 = function(argcv) {
     var curarg = 1;
     var var_blocks = arguments[curarg];
@@ -3967,10 +3967,10 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 615
+      lineNumber = 609
       onSelf = true;
       var call1100 = callmethod(this, "Instrument", [1], var_blocks);
-      lineNumber = 616
+      lineNumber = 610
       var call1101 = callmethod(var_dom,"window", [0]);
       var call1102 = callmethod(call1101,"t_synth_pluck", [3], var_timing, var_volume, var_playbackrate);
       return call1102
@@ -3989,9 +3989,9 @@ function gracecode_musical () {
     false,
   ];
   this.methods["pluckSynth"] = func1099;
-  func1099.definitionLine = 614;
+  func1099.definitionLine = 608;
   func1099.definitionModule = "musical";
-  lineNumber = 619
+  lineNumber = 613
   var func1103 = function(argcv) {
     var curarg = 1;
     var var_blocks = arguments[curarg];
@@ -4002,10 +4002,10 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 620
+      lineNumber = 614
       onSelf = true;
       var call1104 = callmethod(this, "Instrument", [1], var_blocks);
-      lineNumber = 621
+      lineNumber = 615
       var call1105 = callmethod(var_dom,"window", [0]);
       var call1106 = callmethod(call1105,"t_synth_poly", [3], var_timing, var_volume, var_playbackrate);
       return call1106
@@ -4024,9 +4024,9 @@ function gracecode_musical () {
     false,
   ];
   this.methods["polySynth"] = func1103;
-  func1103.definitionLine = 619;
+  func1103.definitionLine = 613;
   func1103.definitionModule = "musical";
-  lineNumber = 624
+  lineNumber = 618
   var func1107 = function(argcv) {
     var curarg = 1;
     var var_blocks = arguments[curarg];
@@ -4037,10 +4037,10 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 625
+      lineNumber = 619
       onSelf = true;
       var call1108 = callmethod(this, "Instrument", [1], var_blocks);
-      lineNumber = 626
+      lineNumber = 620
       var call1109 = callmethod(var_dom,"window", [0]);
       var call1110 = callmethod(call1109,"t_synth_fm", [3], var_timing, var_volume, var_playbackrate);
       return call1110
@@ -4059,9 +4059,9 @@ function gracecode_musical () {
     false,
   ];
   this.methods["fmSynth"] = func1107;
-  func1107.definitionLine = 624;
+  func1107.definitionLine = 618;
   func1107.definitionModule = "musical";
-  lineNumber = 629
+  lineNumber = 623
   var func1111 = function(argcv) {
     var curarg = 1;
     var var_blocks = arguments[curarg];
@@ -4072,10 +4072,10 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 630
+      lineNumber = 624
       onSelf = true;
       var call1112 = callmethod(this, "Instrument", [1], var_blocks);
-      lineNumber = 631
+      lineNumber = 625
       var call1113 = callmethod(var_dom,"window", [0]);
       var call1114 = callmethod(call1113,"t_synth_membrane", [3], var_timing, var_volume, var_playbackrate);
       return call1114
@@ -4094,9 +4094,9 @@ function gracecode_musical () {
     false,
   ];
   this.methods["membraneSynth"] = func1111;
-  func1111.definitionLine = 629;
+  func1111.definitionLine = 623;
   func1111.definitionModule = "musical";
-  lineNumber = 634
+  lineNumber = 628
   var func1115 = function(argcv) {
     var curarg = 1;
     var var_blocks = arguments[curarg];
@@ -4107,10 +4107,10 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 635
+      lineNumber = 629
       onSelf = true;
       var call1116 = callmethod(this, "Instrument", [1], var_blocks);
-      lineNumber = 636
+      lineNumber = 630
       var call1117 = callmethod(var_dom,"window", [0]);
       var call1118 = callmethod(call1117,"t_synth_duo", [3], var_timing, var_volume, var_playbackrate);
       return call1118
@@ -4129,9 +4129,9 @@ function gracecode_musical () {
     false,
   ];
   this.methods["duoSynth"] = func1115;
-  func1115.definitionLine = 634;
+  func1115.definitionLine = 628;
   func1115.definitionModule = "musical";
-  lineNumber = 639
+  lineNumber = 633
   var func1119 = function(argcv) {
     var curarg = 1;
     var var_note = arguments[curarg];
@@ -4142,22 +4142,22 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 644
+      lineNumber = 638
       var if1120 = var_done;
-      lineNumber = 640
+      lineNumber = 634
       var bool1121 = new GraceBoolean(true)
       var opresult1124 = callmethod(var_firstPass, "==", [1], bool1121);
       if (Grace_isTrue(opresult1124)) {
-        lineNumber = 641
+        lineNumber = 635
         var call1125 = callmethod(var_dom,"window", [0]);
         var call1126 = callmethod(call1125,"t_reset", [0]);
-        lineNumber = 643
-        lineNumber = 642
+        lineNumber = 637
+        lineNumber = 636
         var bool1127 = new GraceBoolean(false)
         var_firstPass = bool1127;
         if1120 = bool1127;
       }
-      lineNumber = 644
+      lineNumber = 638
       var call1128 = callmethod(var_dom,"window", [0]);
       var call1129 = callmethod(call1128,"t_synth_arpeggio", [1], var_note);
       return call1129
@@ -4176,9 +4176,9 @@ function gracecode_musical () {
     false,
   ];
   this.methods["arpeggio"] = func1119;
-  func1119.definitionLine = 639;
+  func1119.definitionLine = 633;
   func1119.definitionModule = "musical";
-  lineNumber = 650
+  lineNumber = 644
   var func1130 = function(argcv) {
     var curarg = 1;
     var var_blocks = arguments[curarg];
@@ -4189,53 +4189,53 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 654
+      lineNumber = 648
       var if1131 = var_done;
-      lineNumber = 651
+      lineNumber = 645
       var bool1132 = new GraceBoolean(true)
       var opresult1135 = callmethod(var_applyChorus, "==", [1], bool1132);
       if (Grace_isTrue(opresult1135)) {
-        lineNumber = 652
+        lineNumber = 646
         var call1136 = callmethod(var_dom,"window", [0]);
         var call1137 = callmethod(call1136,"t_effect_chorus", [0]);
         if1131 = call1137;
       }
-      lineNumber = 657
+      lineNumber = 651
       var if1138 = var_done;
-      lineNumber = 654
+      lineNumber = 648
       var bool1139 = new GraceBoolean(true)
       var opresult1142 = callmethod(var_applyReverb, "==", [1], bool1139);
       if (Grace_isTrue(opresult1142)) {
-        lineNumber = 655
+        lineNumber = 649
         var call1143 = callmethod(var_dom,"window", [0]);
         var call1144 = callmethod(call1143,"t_effect_reverb", [0]);
         if1138 = call1144;
       }
-      lineNumber = 660
+      lineNumber = 654
       var if1145 = var_done;
-      lineNumber = 657
+      lineNumber = 651
       var bool1146 = new GraceBoolean(true)
       var opresult1149 = callmethod(var_applyAutowah, "==", [1], bool1146);
       if (Grace_isTrue(opresult1149)) {
-        lineNumber = 658
+        lineNumber = 652
         var call1150 = callmethod(var_dom,"window", [0]);
         var call1151 = callmethod(call1150,"t_effect_autowah", [0]);
         if1145 = call1151;
       }
-      lineNumber = 663
+      lineNumber = 657
       var if1152 = var_done;
-      lineNumber = 660
+      lineNumber = 654
       var bool1153 = new GraceBoolean(true)
       var opresult1156 = callmethod(var_applyCheby, "==", [1], bool1153);
       if (Grace_isTrue(opresult1156)) {
-        lineNumber = 661
+        lineNumber = 655
         var call1157 = callmethod(var_dom,"window", [0]);
         var call1158 = callmethod(call1157,"t_effect_cheby", [0]);
         if1152 = call1158;
       }
-      lineNumber = 663
+      lineNumber = 657
       var call1159 = callmethod(var_blocks,"apply", [0]);
-      lineNumber = 664
+      lineNumber = 658
       var call1160 = callmethod(var_dom,"window", [0]);
       var call1161 = callmethod(call1160,"t_effect_reset", [0]);
       return call1161
@@ -4254,9 +4254,9 @@ function gracecode_musical () {
     false,
   ];
   this.methods["Effect"] = func1130;
-  func1130.definitionLine = 650;
+  func1130.definitionLine = 644;
   func1130.definitionModule = "musical";
-  lineNumber = 667
+  lineNumber = 661
   var func1162 = function(argcv) {
     var curarg = 1;
     var var_blocks = arguments[curarg];
@@ -4267,15 +4267,15 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 669
-      lineNumber = 668
+      lineNumber = 663
+      lineNumber = 662
       var bool1163 = new GraceBoolean(true)
       var_applyChorus = bool1163;
-      lineNumber = 669
+      lineNumber = 663
       onSelf = true;
       var call1164 = callmethod(this, "Effect", [1], var_blocks);
-      lineNumber = 671
-      lineNumber = 670
+      lineNumber = 665
+      lineNumber = 664
       var bool1165 = new GraceBoolean(false)
       var_applyChorus = bool1165;
       return bool1165
@@ -4294,9 +4294,9 @@ function gracecode_musical () {
     false,
   ];
   this.methods["Chorus"] = func1162;
-  func1162.definitionLine = 667;
+  func1162.definitionLine = 661;
   func1162.definitionModule = "musical";
-  lineNumber = 673
+  lineNumber = 667
   var func1166 = function(argcv) {
     var curarg = 1;
     var var_blocks = arguments[curarg];
@@ -4307,15 +4307,15 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 675
-      lineNumber = 674
+      lineNumber = 669
+      lineNumber = 668
       var bool1167 = new GraceBoolean(true)
       var_applyReverb = bool1167;
-      lineNumber = 675
+      lineNumber = 669
       onSelf = true;
       var call1168 = callmethod(this, "Effect", [1], var_blocks);
-      lineNumber = 677
-      lineNumber = 676
+      lineNumber = 671
+      lineNumber = 670
       var bool1169 = new GraceBoolean(false)
       var_applyReverb = bool1169;
       return bool1169
@@ -4334,9 +4334,9 @@ function gracecode_musical () {
     false,
   ];
   this.methods["Reverb"] = func1166;
-  func1166.definitionLine = 673;
+  func1166.definitionLine = 667;
   func1166.definitionModule = "musical";
-  lineNumber = 679
+  lineNumber = 673
   var func1170 = function(argcv) {
     var curarg = 1;
     var var_blocks = arguments[curarg];
@@ -4347,15 +4347,15 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 681
-      lineNumber = 680
+      lineNumber = 675
+      lineNumber = 674
       var bool1171 = new GraceBoolean(true)
       var_applyAutowah = bool1171;
-      lineNumber = 681
+      lineNumber = 675
       onSelf = true;
       var call1172 = callmethod(this, "Effect", [1], var_blocks);
-      lineNumber = 683
-      lineNumber = 682
+      lineNumber = 677
+      lineNumber = 676
       var bool1173 = new GraceBoolean(false)
       var_applyAutowah = bool1173;
       return bool1173
@@ -4374,9 +4374,9 @@ function gracecode_musical () {
     false,
   ];
   this.methods["Autowah"] = func1170;
-  func1170.definitionLine = 679;
+  func1170.definitionLine = 673;
   func1170.definitionModule = "musical";
-  lineNumber = 685
+  lineNumber = 679
   var func1174 = function(argcv) {
     var curarg = 1;
     var var_blocks = arguments[curarg];
@@ -4387,15 +4387,15 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 687
-      lineNumber = 686
+      lineNumber = 681
+      lineNumber = 680
       var bool1175 = new GraceBoolean(true)
       var_applyCheby = bool1175;
-      lineNumber = 687
+      lineNumber = 681
       onSelf = true;
       var call1176 = callmethod(this, "Effect", [1], var_blocks);
-      lineNumber = 689
-      lineNumber = 688
+      lineNumber = 683
+      lineNumber = 682
       var bool1177 = new GraceBoolean(false)
       var_applyCheby = bool1177;
       return bool1177
@@ -4414,9 +4414,9 @@ function gracecode_musical () {
     false,
   ];
   this.methods["Cheby"] = func1174;
-  func1174.definitionLine = 685;
+  func1174.definitionLine = 679;
   func1174.definitionModule = "musical";
-  lineNumber = 693
+  lineNumber = 687
   var func1178 = function(argcv) {
     var curarg = 1;
     var var_bpm = arguments[curarg];
@@ -4427,7 +4427,7 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 694
+      lineNumber = 688
       var call1179 = callmethod(var_dom,"window", [0]);
       var call1180 = callmethod(call1179,"t_bpm", [1], var_bpm);
       return call1180
@@ -4446,9 +4446,9 @@ function gracecode_musical () {
     false,
   ];
   this.methods["SetBPM"] = func1178;
-  func1178.definitionLine = 693;
+  func1178.definitionLine = 687;
   func1178.definitionModule = "musical";
-  lineNumber = 697
+  lineNumber = 691
   var func1181 = function(argcv) {
     var curarg = 1;
     var var_rate = arguments[curarg];
@@ -4463,38 +4463,38 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 700
-      lineNumber = 698
+      lineNumber = 694
+      lineNumber = 692
       var var_oldRate = var_playbackrate;
-      lineNumber = 700;
+      lineNumber = 694;
       moduleName = "musical";
-      lineNumber = 698
+      lineNumber = 692
       if (!Grace_isTrue(callmethod(var_Unknown, "match",
         [1], var_oldRate)))
           throw new GraceExceptionPacket(TypeErrorObject,
                 new GraceString("expected "
                 + "initial value of var 'oldRate' to be of type Unknown"))
-      lineNumber = 702
-      lineNumber = 700
+      lineNumber = 696
+      lineNumber = 694
       var quotient1184 = callmethod(var_rate, "/", [1], new GraceNum(100));
       var_playbackrate = quotient1184;
-      lineNumber = 703
-      lineNumber = 702
+      lineNumber = 697
+      lineNumber = 696
       var call1185 = callmethod(var_blocks,"apply", [0]);
       var var_ret = call1185;
-      lineNumber = 703;
+      lineNumber = 697;
       moduleName = "musical";
-      lineNumber = 702
+      lineNumber = 696
       if (!Grace_isTrue(callmethod(var_Unknown, "match",
         [1], var_ret)))
           throw new GraceExceptionPacket(TypeErrorObject,
                 new GraceString("expected "
                 + "initial value of var 'ret' to be of type Unknown"))
-      lineNumber = 704
-      lineNumber = 703
+      lineNumber = 698
+      lineNumber = 697
       var_playbackrate = var_oldRate;
-      lineNumber = 705
-      lineNumber = 704
+      lineNumber = 699
+      lineNumber = 698
       return var_ret
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -4513,9 +4513,9 @@ function gracecode_musical () {
     false,
   ];
   this.methods["PlayBackRatePercentage()on"] = func1181;
-  func1181.definitionLine = 697;
+  func1181.definitionLine = 691;
   func1181.definitionModule = "musical";
-  lineNumber = 708
+  lineNumber = 702
   var func1186 = function(argcv) {
     var curarg = 1;
     var var_t = arguments[curarg];
@@ -4530,37 +4530,37 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 710
-      lineNumber = 709
+      lineNumber = 704
+      lineNumber = 703
       var var_oldTiming = var_timing;
-      lineNumber = 710;
+      lineNumber = 704;
       moduleName = "musical";
-      lineNumber = 709
+      lineNumber = 703
       if (!Grace_isTrue(callmethod(var_Unknown, "match",
         [1], var_oldTiming)))
           throw new GraceExceptionPacket(TypeErrorObject,
                 new GraceString("expected "
                 + "initial value of var 'oldTiming' to be of type Unknown"))
-      lineNumber = 711
-      lineNumber = 710
+      lineNumber = 705
+      lineNumber = 704
       var_timing = var_t;
-      lineNumber = 712
-      lineNumber = 711
+      lineNumber = 706
+      lineNumber = 705
       var call1187 = callmethod(var_blocks,"apply", [0]);
       var var_ret = call1187;
-      lineNumber = 712;
+      lineNumber = 706;
       moduleName = "musical";
-      lineNumber = 711
+      lineNumber = 705
       if (!Grace_isTrue(callmethod(var_Unknown, "match",
         [1], var_ret)))
           throw new GraceExceptionPacket(TypeErrorObject,
                 new GraceString("expected "
                 + "initial value of var 'ret' to be of type Unknown"))
-      lineNumber = 713
-      lineNumber = 712
+      lineNumber = 707
+      lineNumber = 706
       var_timing = var_oldTiming;
-      lineNumber = 714
-      lineNumber = 713
+      lineNumber = 708
+      lineNumber = 707
       return var_ret
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -4579,9 +4579,9 @@ function gracecode_musical () {
     false,
   ];
   this.methods["Time()on"] = func1186;
-  func1186.definitionLine = 708;
+  func1186.definitionLine = 702;
   func1186.definitionModule = "musical";
-  lineNumber = 716
+  lineNumber = 710
   var func1188 = function(argcv) {
     var curarg = 1;
     if (argcv[0] !=  func1188.paramCounts[0])
@@ -4590,8 +4590,8 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 718
-      lineNumber = 717
+      lineNumber = 712
+      lineNumber = 711
       var string1189 = new GraceString("4n");
       return string1189
     } catch(e) {
@@ -4609,9 +4609,9 @@ function gracecode_musical () {
     false,
   ];
   this.methods["quarter"] = func1188;
-  func1188.definitionLine = 716;
+  func1188.definitionLine = 710;
   func1188.definitionModule = "musical";
-  lineNumber = 720
+  lineNumber = 714
   var func1190 = function(argcv) {
     var curarg = 1;
     if (argcv[0] !=  func1190.paramCounts[0])
@@ -4620,8 +4620,8 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 722
-      lineNumber = 721
+      lineNumber = 716
+      lineNumber = 715
       var string1191 = new GraceString("8n");
       return string1191
     } catch(e) {
@@ -4639,9 +4639,9 @@ function gracecode_musical () {
     false,
   ];
   this.methods["eighth"] = func1190;
-  func1190.definitionLine = 720;
+  func1190.definitionLine = 714;
   func1190.definitionModule = "musical";
-  lineNumber = 724
+  lineNumber = 718
   var func1192 = function(argcv) {
     var curarg = 1;
     if (argcv[0] !=  func1192.paramCounts[0])
@@ -4650,8 +4650,8 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 726
-      lineNumber = 725
+      lineNumber = 720
+      lineNumber = 719
       var string1193 = new GraceString("16n");
       return string1193
     } catch(e) {
@@ -4669,9 +4669,9 @@ function gracecode_musical () {
     false,
   ];
   this.methods["sixteenth"] = func1192;
-  func1192.definitionLine = 724;
+  func1192.definitionLine = 718;
   func1192.definitionModule = "musical";
-  lineNumber = 730
+  lineNumber = 724
   var func1194 = function(argcv) {
     var curarg = 1;
     var var_v = arguments[curarg];
@@ -4686,29 +4686,29 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 734
-      lineNumber = 731
+      lineNumber = 728
+      lineNumber = 725
       var var_oldVolume = var_volume;
-      lineNumber = 734;
+      lineNumber = 728;
       moduleName = "musical";
-      lineNumber = 731
+      lineNumber = 725
       if (!Grace_isTrue(callmethod(var_Unknown, "match",
         [1], var_oldVolume)))
           throw new GraceExceptionPacket(TypeErrorObject,
                 new GraceString("expected "
                 + "initial value of var 'oldVolume' to be of type Unknown"))
-      lineNumber = 742
+      lineNumber = 736
       var if1195 = var_done;
-      lineNumber = 734
+      lineNumber = 728
       var opresult1198 = callmethod(var_v, ">", [1], new GraceNum(100));
       if (Grace_isTrue(opresult1198)) {
-        lineNumber = 737
-        lineNumber = 736
+        lineNumber = 731
+        lineNumber = 730
         var_volume = new GraceNum(0);
         if1195 = new GraceNum(0);
       } else {
-        lineNumber = 740
-        lineNumber = 739
+        lineNumber = 734
+        lineNumber = 733
         var quotient1202 = callmethod(var_v, "/", [1], new GraceNum(100));
         var prod1204 = callmethod(quotient1202, "*", [1], new GraceNum(50));
         var call1206 = callmethod(new GraceNum(80),"prefix-", [0]);
@@ -4716,23 +4716,23 @@ function gracecode_musical () {
         var_volume = opresult1208;
         if1195 = opresult1208;
       }
-      lineNumber = 743
-      lineNumber = 742
+      lineNumber = 737
+      lineNumber = 736
       var call1209 = callmethod(var_blocks,"apply", [0]);
       var var_ret = call1209;
-      lineNumber = 743;
+      lineNumber = 737;
       moduleName = "musical";
-      lineNumber = 742
+      lineNumber = 736
       if (!Grace_isTrue(callmethod(var_Unknown, "match",
         [1], var_ret)))
           throw new GraceExceptionPacket(TypeErrorObject,
                 new GraceString("expected "
                 + "initial value of var 'ret' to be of type Unknown"))
-      lineNumber = 744
-      lineNumber = 743
+      lineNumber = 738
+      lineNumber = 737
       var_volume = var_oldVolume;
-      lineNumber = 745
-      lineNumber = 744
+      lineNumber = 739
+      lineNumber = 738
       return var_ret
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -4751,7 +4751,7 @@ function gracecode_musical () {
     false,
   ];
   this.methods["VolumePercentage()on"] = func1194;
-  func1194.definitionLine = 730;
+  func1194.definitionLine = 724;
   func1194.definitionModule = "musical";
   lineNumber = 1
   // Import of mgcollections
@@ -4785,7 +4785,7 @@ function gracecode_musical () {
   lineNumber = 8
   lineNumber = 9
   var var_document;
-  lineNumber = 742
+  lineNumber = 736
   var func1211 = function(argcv) {
     var curarg = 1;
     if (argcv[0] !=  func1211.paramCounts[0])
@@ -4811,9 +4811,9 @@ function gracecode_musical () {
     false,
   ];
   this.methods["document"] = func1211;
-  func1211.definitionLine = 742;
+  func1211.definitionLine = 736;
   func1211.definitionModule = "musical";
-  lineNumber = 742
+  lineNumber = 736
   var func1212 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
@@ -4841,11 +4841,11 @@ function gracecode_musical () {
     false,
   ];
   this.methods["document:="] = func1212;
-  func1212.definitionLine = 742;
+  func1212.definitionLine = 736;
   func1212.definitionModule = "musical";
   lineNumber = 10
   var var_canvas;
-  lineNumber = 742
+  lineNumber = 736
   var func1213 = function(argcv) {
     var curarg = 1;
     if (argcv[0] !=  func1213.paramCounts[0])
@@ -4871,9 +4871,9 @@ function gracecode_musical () {
     false,
   ];
   this.methods["canvas"] = func1213;
-  func1213.definitionLine = 742;
+  func1213.definitionLine = 736;
   func1213.definitionModule = "musical";
-  lineNumber = 742
+  lineNumber = 736
   var func1214 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
@@ -4901,11 +4901,11 @@ function gracecode_musical () {
     false,
   ];
   this.methods["canvas:="] = func1214;
-  func1214.definitionLine = 742;
+  func1214.definitionLine = 736;
   func1214.definitionModule = "musical";
   lineNumber = 11
   var var_backingCanvas;
-  lineNumber = 742
+  lineNumber = 736
   var func1215 = function(argcv) {
     var curarg = 1;
     if (argcv[0] !=  func1215.paramCounts[0])
@@ -4931,9 +4931,9 @@ function gracecode_musical () {
     false,
   ];
   this.methods["backingCanvas"] = func1215;
-  func1215.definitionLine = 742;
+  func1215.definitionLine = 736;
   func1215.definitionModule = "musical";
-  lineNumber = 742
+  lineNumber = 736
   var func1216 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
@@ -4961,11 +4961,11 @@ function gracecode_musical () {
     false,
   ];
   this.methods["backingCanvas:="] = func1216;
-  func1216.definitionLine = 742;
+  func1216.definitionLine = 736;
   func1216.definitionModule = "musical";
   lineNumber = 12
   var var_backingContext;
-  lineNumber = 742
+  lineNumber = 736
   var func1217 = function(argcv) {
     var curarg = 1;
     if (argcv[0] !=  func1217.paramCounts[0])
@@ -4991,9 +4991,9 @@ function gracecode_musical () {
     false,
   ];
   this.methods["backingContext"] = func1217;
-  func1217.definitionLine = 742;
+  func1217.definitionLine = 736;
   func1217.definitionModule = "musical";
-  lineNumber = 742
+  lineNumber = 736
   var func1218 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
@@ -5021,11 +5021,11 @@ function gracecode_musical () {
     false,
   ];
   this.methods["backingContext:="] = func1218;
-  func1218.definitionLine = 742;
+  func1218.definitionLine = 736;
   func1218.definitionModule = "musical";
   lineNumber = 13
   var var_mouseDownListener;
-  lineNumber = 742
+  lineNumber = 736
   var func1219 = function(argcv) {
     var curarg = 1;
     if (argcv[0] !=  func1219.paramCounts[0])
@@ -5051,9 +5051,9 @@ function gracecode_musical () {
     false,
   ];
   this.methods["mouseDownListener"] = func1219;
-  func1219.definitionLine = 742;
+  func1219.definitionLine = 736;
   func1219.definitionModule = "musical";
-  lineNumber = 742
+  lineNumber = 736
   var func1220 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
@@ -5081,11 +5081,11 @@ function gracecode_musical () {
     false,
   ];
   this.methods["mouseDownListener:="] = func1220;
-  func1220.definitionLine = 742;
+  func1220.definitionLine = 736;
   func1220.definitionModule = "musical";
   lineNumber = 15
   var var_mouseMoveListener;
-  lineNumber = 742
+  lineNumber = 736
   var func1221 = function(argcv) {
     var curarg = 1;
     if (argcv[0] !=  func1221.paramCounts[0])
@@ -5111,9 +5111,9 @@ function gracecode_musical () {
     false,
   ];
   this.methods["mouseMoveListener"] = func1221;
-  func1221.definitionLine = 742;
+  func1221.definitionLine = 736;
   func1221.definitionModule = "musical";
-  lineNumber = 742
+  lineNumber = 736
   var func1222 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
@@ -5141,7 +5141,7 @@ function gracecode_musical () {
     false,
   ];
   this.methods["mouseMoveListener:="] = func1222;
-  func1222.definitionLine = 742;
+  func1222.definitionLine = 736;
   func1222.definitionModule = "musical";
   lineNumber = 15
   lineNumber = 16
@@ -9689,7 +9689,7 @@ function gracecode_musical () {
             + "initial value of def 'mouse' to be of type Unknown"))
   lineNumber = 409
   lineNumber = 472
-  lineNumber = 519
+  lineNumber = 513
   var var_octave = new GraceNum(4);
   lineNumber = 322
   var func1908 = function(argcv) {
@@ -9700,7 +9700,7 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 519
+      lineNumber = 513
       return var_octave
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -9749,14 +9749,14 @@ function gracecode_musical () {
   this.methods["octave:="] = func1909;
   func1909.definitionLine = 322;
   func1909.definitionModule = "musical";
-  lineNumber = 519;
+  lineNumber = 513;
   moduleName = "musical";
   if (!Grace_isTrue(callmethod(var_Unknown, "match",
     [1], var_octave)))
       throw new GraceExceptionPacket(TypeErrorObject,
             new GraceString("expected "
             + "initial value of var 'octave' to be of type Unknown"))
-  lineNumber = 520
+  lineNumber = 514
   var string1910 = new GraceString("4n");
   var var_timing = string1910;
   lineNumber = 322
@@ -9768,7 +9768,7 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 520
+      lineNumber = 514
       return var_timing
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -9817,14 +9817,14 @@ function gracecode_musical () {
   this.methods["timing:="] = func1912;
   func1912.definitionLine = 322;
   func1912.definitionModule = "musical";
-  lineNumber = 520;
+  lineNumber = 514;
   moduleName = "musical";
   if (!Grace_isTrue(callmethod(var_Unknown, "match",
     [1], var_timing)))
       throw new GraceExceptionPacket(TypeErrorObject,
             new GraceString("expected "
             + "initial value of var 'timing' to be of type Unknown"))
-  lineNumber = 521
+  lineNumber = 515
   var call1913 = callmethod(new GraceNum(25),"prefix-", [0]);
   var var_volume = call1913;
   lineNumber = 322
@@ -9836,7 +9836,7 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 521
+      lineNumber = 515
       return var_volume
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -9885,14 +9885,14 @@ function gracecode_musical () {
   this.methods["volume:="] = func1915;
   func1915.definitionLine = 322;
   func1915.definitionModule = "musical";
-  lineNumber = 521;
+  lineNumber = 515;
   moduleName = "musical";
   if (!Grace_isTrue(callmethod(var_Unknown, "match",
     [1], var_volume)))
       throw new GraceExceptionPacket(TypeErrorObject,
             new GraceString("expected "
             + "initial value of var 'volume' to be of type Unknown"))
-  lineNumber = 522
+  lineNumber = 516
   var var_playbackrate = new GraceNum(1);
   lineNumber = 322
   var func1916 = function(argcv) {
@@ -9903,7 +9903,7 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 522
+      lineNumber = 516
       return var_playbackrate
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -9952,16 +9952,16 @@ function gracecode_musical () {
   this.methods["playbackrate:="] = func1917;
   func1917.definitionLine = 322;
   func1917.definitionModule = "musical";
-  lineNumber = 522;
+  lineNumber = 516;
   moduleName = "musical";
   if (!Grace_isTrue(callmethod(var_Unknown, "match",
     [1], var_playbackrate)))
       throw new GraceExceptionPacket(TypeErrorObject,
             new GraceString("expected "
             + "initial value of var 'playbackrate' to be of type Unknown"))
-  lineNumber = 524
-  lineNumber = 525
-  lineNumber = 524
+  lineNumber = 518
+  lineNumber = 519
+  lineNumber = 518
   var bool1918 = new GraceBoolean(false)
   var var_applyFlat = bool1918;
   lineNumber = 322
@@ -9973,7 +9973,7 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 524
+      lineNumber = 518
       return var_applyFlat
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -10022,16 +10022,16 @@ function gracecode_musical () {
   this.methods["applyFlat:="] = func1920;
   func1920.definitionLine = 322;
   func1920.definitionModule = "musical";
-  lineNumber = 525;
+  lineNumber = 519;
   moduleName = "musical";
-  lineNumber = 524
+  lineNumber = 518
   if (!Grace_isTrue(callmethod(var_Unknown, "match",
     [1], var_applyFlat)))
       throw new GraceExceptionPacket(TypeErrorObject,
             new GraceString("expected "
             + "initial value of var 'applyFlat' to be of type Unknown"))
-  lineNumber = 527
-  lineNumber = 525
+  lineNumber = 521
+  lineNumber = 519
   var bool1921 = new GraceBoolean(false)
   var var_applySharp = bool1921;
   lineNumber = 322
@@ -10043,7 +10043,7 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 525
+      lineNumber = 519
       return var_applySharp
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -10092,17 +10092,17 @@ function gracecode_musical () {
   this.methods["applySharp:="] = func1923;
   func1923.definitionLine = 322;
   func1923.definitionModule = "musical";
-  lineNumber = 527;
+  lineNumber = 521;
   moduleName = "musical";
-  lineNumber = 525
+  lineNumber = 519
   if (!Grace_isTrue(callmethod(var_Unknown, "match",
     [1], var_applySharp)))
       throw new GraceExceptionPacket(TypeErrorObject,
             new GraceString("expected "
             + "initial value of var 'applySharp' to be of type Unknown"))
-  lineNumber = 527
-  lineNumber = 528
-  lineNumber = 527
+  lineNumber = 521
+  lineNumber = 522
+  lineNumber = 521
   var bool1924 = new GraceBoolean(false)
   var var_applyChorus = bool1924;
   lineNumber = 322
@@ -10114,7 +10114,7 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 527
+      lineNumber = 521
       return var_applyChorus
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -10163,16 +10163,16 @@ function gracecode_musical () {
   this.methods["applyChorus:="] = func1926;
   func1926.definitionLine = 322;
   func1926.definitionModule = "musical";
-  lineNumber = 528;
+  lineNumber = 522;
   moduleName = "musical";
-  lineNumber = 527
+  lineNumber = 521
   if (!Grace_isTrue(callmethod(var_Unknown, "match",
     [1], var_applyChorus)))
       throw new GraceExceptionPacket(TypeErrorObject,
             new GraceString("expected "
             + "initial value of var 'applyChorus' to be of type Unknown"))
-  lineNumber = 529
-  lineNumber = 528
+  lineNumber = 523
+  lineNumber = 522
   var bool1927 = new GraceBoolean(false)
   var var_applyReverb = bool1927;
   lineNumber = 322
@@ -10184,7 +10184,7 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 528
+      lineNumber = 522
       return var_applyReverb
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -10233,16 +10233,16 @@ function gracecode_musical () {
   this.methods["applyReverb:="] = func1929;
   func1929.definitionLine = 322;
   func1929.definitionModule = "musical";
-  lineNumber = 529;
+  lineNumber = 523;
   moduleName = "musical";
-  lineNumber = 528
+  lineNumber = 522
   if (!Grace_isTrue(callmethod(var_Unknown, "match",
     [1], var_applyReverb)))
       throw new GraceExceptionPacket(TypeErrorObject,
             new GraceString("expected "
             + "initial value of var 'applyReverb' to be of type Unknown"))
-  lineNumber = 530
-  lineNumber = 529
+  lineNumber = 524
+  lineNumber = 523
   var bool1930 = new GraceBoolean(false)
   var var_applyAutowah = bool1930;
   lineNumber = 322
@@ -10254,7 +10254,7 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 529
+      lineNumber = 523
       return var_applyAutowah
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -10303,16 +10303,16 @@ function gracecode_musical () {
   this.methods["applyAutowah:="] = func1932;
   func1932.definitionLine = 322;
   func1932.definitionModule = "musical";
-  lineNumber = 530;
+  lineNumber = 524;
   moduleName = "musical";
-  lineNumber = 529
+  lineNumber = 523
   if (!Grace_isTrue(callmethod(var_Unknown, "match",
     [1], var_applyAutowah)))
       throw new GraceExceptionPacket(TypeErrorObject,
             new GraceString("expected "
             + "initial value of var 'applyAutowah' to be of type Unknown"))
-  lineNumber = 532
-  lineNumber = 530
+  lineNumber = 526
+  lineNumber = 524
   var bool1933 = new GraceBoolean(false)
   var var_applyCheby = bool1933;
   lineNumber = 322
@@ -10324,7 +10324,7 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 530
+      lineNumber = 524
       return var_applyCheby
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -10373,17 +10373,17 @@ function gracecode_musical () {
   this.methods["applyCheby:="] = func1935;
   func1935.definitionLine = 322;
   func1935.definitionModule = "musical";
-  lineNumber = 532;
+  lineNumber = 526;
   moduleName = "musical";
-  lineNumber = 530
+  lineNumber = 524
   if (!Grace_isTrue(callmethod(var_Unknown, "match",
     [1], var_applyCheby)))
       throw new GraceExceptionPacket(TypeErrorObject,
             new GraceString("expected "
             + "initial value of var 'applyCheby' to be of type Unknown"))
-  lineNumber = 532
-  lineNumber = 537
-  lineNumber = 532
+  lineNumber = 526
+  lineNumber = 531
+  lineNumber = 526
   var bool1936 = new GraceBoolean(true)
   var var_firstPass = bool1936;
   lineNumber = 322
@@ -10395,7 +10395,7 @@ function gracecode_musical () {
     invocationCount++;
     moduleName = "musical";
     try {
-      lineNumber = 532
+      lineNumber = 526
       return var_firstPass
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -10444,37 +10444,37 @@ function gracecode_musical () {
   this.methods["firstPass:="] = func1938;
   func1938.definitionLine = 322;
   func1938.definitionModule = "musical";
-  lineNumber = 537;
+  lineNumber = 531;
   moduleName = "musical";
-  lineNumber = 532
+  lineNumber = 526
   if (!Grace_isTrue(callmethod(var_Unknown, "match",
     [1], var_firstPass)))
       throw new GraceExceptionPacket(TypeErrorObject,
             new GraceString("expected "
             + "initial value of var 'firstPass' to be of type Unknown"))
-  lineNumber = 537
-  lineNumber = 571
-  lineNumber = 582
-  lineNumber = 589
-  lineNumber = 600
-  lineNumber = 609
-  lineNumber = 614
-  lineNumber = 619
-  lineNumber = 624
-  lineNumber = 629
-  lineNumber = 634
-  lineNumber = 639
-  lineNumber = 650
+  lineNumber = 531
+  lineNumber = 565
+  lineNumber = 576
+  lineNumber = 583
+  lineNumber = 594
+  lineNumber = 603
+  lineNumber = 608
+  lineNumber = 613
+  lineNumber = 618
+  lineNumber = 623
+  lineNumber = 628
+  lineNumber = 633
+  lineNumber = 644
+  lineNumber = 661
   lineNumber = 667
   lineNumber = 673
   lineNumber = 679
-  lineNumber = 685
-  lineNumber = 693
-  lineNumber = 697
-  lineNumber = 708
-  lineNumber = 716
-  lineNumber = 720
-  lineNumber = 724
+  lineNumber = 687
+  lineNumber = 691
+  lineNumber = 702
+  lineNumber = 710
+  lineNumber = 714
+  lineNumber = 718
   return this;
 }
 gracecode_musical.imports = [
@@ -10484,7 +10484,7 @@ gracecode_musical.imports = [
 'StandardPrelude',
 ];
 if (gctCache)
-  gctCache['musical'] = "fresh:circle:\n radius\n face\n bounceFrom\n always\n touchingEdge\n step\n destY:=\n whenever()do\n colour:=\n x:=\n normaliseAngle\n colour\n turn\n x\n y\n stamp\n angle\n bounceOff\n bounce\n destX:=\n touching\n destX\n destY\n tick\n draw\n alwaysBlocks\n y:=\n forward\n jumpTo\n moveTo\n angle:=\n radius:=\n mousedown\n isPointOver\nmethods-of:point.x()y:\n down\n up\n x\n y\n left\n right\nfresh:rectangle:\n face\n bounceFrom\n always\n touchingEdge\n step\n destY:=\n whenever()do\n colour:=\n x:=\n height:=\n normaliseAngle\n colour\n turn\n width:=\n x\n y\n width\n stamp\n angle\n bounceOff\n bounce\n destX:=\n touching\n destX\n destY\n tick\n draw\n alwaysBlocks\n y:=\n forward\n height\n moveTo\n asString\n angle:=\n jumpTo\n mousedown\n isPointOver\nmethods-of:drawable.new:\n stamp\n angle\n x:=\n bounce\n bounceFrom\n always\n face\n touchingEdge\n bounceOff\n step\n destX:=\n destY:=\n touching\n destX\n destY\n tick\n draw\n alwaysBlocks\n y:=\n normaliseAngle\n whenever()do\n forward\n turn\n x\n y\n moveTo\n angle:=\n jumpTo\n mousedown\n isPointOver\npath:\n musical\nclasses:\n point\n drawable\nfresh:value:\n face\n bounceFrom\n always\n touchingEdge\n step\n destY:=\n whenever()do\n colour:=\n x:=\n normaliseAngle\n colour\n turn\n label:=\n x\n y\n label\n stamp\n angle\n bounceOff\n bounce\n destX:=\n touching\n destX\n destY\n tick\n draw\n alwaysBlocks\n y:=\n forward\n moveTo\n angle:=\n jumpTo\n mousedown\n isPointOver\nconfidential:\nfresh:image:\n url:=\n face\n bounceFrom\n always\n touchingEdge\n imgTag\n step\n destY:=\n whenever()do\n x:=\n height:=\n normaliseAngle\n turn\n width:=\n x\n y\n width\n stamp\n angle\n url\n bounceOff\n bounce\n destX:=\n touching\n destX\n destY\n tick\n draw\n alwaysBlocks\n y:=\n forward\n height\n moveTo\n angle:=\n jumpTo\n mousedown\n isPointOver\nconstructors-of:drawable:\n new\nconstructors-of:point:\n x()y\nmodules:\n mgcollections\n StandardPrelude\npublic:\n document\n document:=\n canvas\n canvas:=\n backingCanvas\n backingCanvas:=\n backingContext\n backingContext:=\n mouseDownListener\n mouseDownListener:=\n mouseMoveListener\n mouseMoveListener:=\n trig\n PI\n stopRunning\n stopRunning:=\n initialised\n initialised:=\n backgroundColour\n backgroundColour:=\n registeredObjects\n stepBlocks\n audioTags\n canvasWidth\n canvasWidth:=\n canvasHeight\n canvasHeight:=\n left\n right\n top\n bottom\n centre\n centre:=\n leftCentre\n leftCentre:=\n rightCentre\n rightCentre:=\n above\n above:=\n \u0394\n \u0394:=\n point\n drawable\n rectangle\n SniffCircle\n circle\n image\n value\n mouse\n clear\n always\n whenever()do\n hue()saturation()lightness\n h()s()l\n initialise\n background\n random\n playSound\n stopSound\n start\n stop\n atModuleEnd\n octave\n octave:=\n timing\n timing:=\n volume\n volume:=\n playbackrate\n playbackrate:=\n applyFlat\n applyFlat:=\n applySharp\n applySharp:=\n applyChorus\n applyChorus:=\n applyReverb\n applyReverb:=\n applyAutowah\n applyAutowah:=\n applyCheby\n applyCheby:=\n firstPass\n firstPass:=\n Note\n C\n D\n E\n F\n G\n A\n B\n Rest\n flat\n sharp\n octave()on\n Instrument\n monoSynth\n pluckSynth\n polySynth\n fmSynth\n membraneSynth\n duoSynth\n arpeggio\n Effect\n Chorus\n Reverb\n Autowah\n Cheby\n SetBPM\n PlayBackRatePercentage()on\n Time()on\n quarter\n eighth\n sixteenth\n VolumePercentage()on\nfresh-methods:\n rectangle\n circle\n image\n value\n";
+  gctCache['musical'] = "methods-of:point.x()y:\n up\n x\n y\n left\n right\n down\nfresh:image:\n touchingEdge\n bounceOff\n imgTag\n step\n isPointOver\n destX:=\n x:=\n destX\n destY\n y:=\n normaliseAngle\n forward\n angle:=\n mousedown\n y\n url:=\n whenever()do\n bounce\n destY:=\n touching\n height:=\n turn\n tick\n draw\n alwaysBlocks\n width:=\n x\n height\n moveTo\n jumpTo\n width\n stamp\n angle\n face\n bounceFrom\n always\n url\nconstructors-of:drawable:\n new\nmodules:\n StandardPrelude\n mgcollections\npublic:\n document\n document:=\n canvas\n canvas:=\n backingCanvas\n backingCanvas:=\n backingContext\n backingContext:=\n mouseDownListener\n mouseDownListener:=\n mouseMoveListener\n mouseMoveListener:=\n trig\n PI\n stopRunning\n stopRunning:=\n initialised\n initialised:=\n backgroundColour\n backgroundColour:=\n registeredObjects\n stepBlocks\n audioTags\n canvasWidth\n canvasWidth:=\n canvasHeight\n canvasHeight:=\n left\n right\n top\n bottom\n centre\n centre:=\n leftCentre\n leftCentre:=\n rightCentre\n rightCentre:=\n above\n above:=\n \u0394\n \u0394:=\n point\n drawable\n rectangle\n SniffCircle\n circle\n image\n value\n mouse\n clear\n always\n whenever()do\n hue()saturation()lightness\n h()s()l\n initialise\n background\n random\n playSound\n stopSound\n start\n stop\n atModuleEnd\n octave\n octave:=\n timing\n timing:=\n volume\n volume:=\n playbackrate\n playbackrate:=\n applyFlat\n applyFlat:=\n applySharp\n applySharp:=\n applyChorus\n applyChorus:=\n applyReverb\n applyReverb:=\n applyAutowah\n applyAutowah:=\n applyCheby\n applyCheby:=\n firstPass\n firstPass:=\n Note\n C\n D\n E\n F\n G\n A\n B\n Rest\n flat\n sharp\n octave()on\n Instrument\n monoSynth\n pluckSynth\n polySynth\n fmSynth\n membraneSynth\n duoSynth\n arpeggio\n Effect\n Chorus\n Reverb\n Autowah\n Cheby\n SetBPM\n PlayBackRatePercentage()on\n Time()on\n quarter\n eighth\n sixteenth\n VolumePercentage()on\nfresh-methods:\n rectangle\n circle\n image\n value\nfresh:circle:\n touchingEdge\n bounceOff\n step\n destX:=\n x:=\n destX\n destY\n colour:=\n y:=\n normaliseAngle\n colour\n forward\n angle:=\n mousedown\n isPointOver\n whenever()do\n radius:=\n bounce\n destY:=\n touching\n turn\n tick\n draw\n alwaysBlocks\n x\n y\n moveTo\n jumpTo\n stamp\n angle\n radius\n face\n bounceFrom\n always\nfresh:rectangle:\n touchingEdge\n bounceOff\n step\n isPointOver\n destX:=\n x:=\n destX\n destY\n colour:=\n y:=\n normaliseAngle\n colour\n forward\n angle:=\n mousedown\n y\n whenever()do\n asString\n bounce\n destY:=\n touching\n height:=\n turn\n tick\n draw\n alwaysBlocks\n width:=\n x\n height\n moveTo\n jumpTo\n width\n stamp\n angle\n face\n bounceFrom\n always\nmethods-of:drawable.new:\n touchingEdge\n bounceOff\n bounce\n step\n destX:=\n destY:=\n touching\n alwaysBlocks\n destX\n destY\n tick\n draw\n x:=\n y:=\n normaliseAngle\n forward\n x\n y\n moveTo\n angle:=\n jumpTo\n mousedown\n isPointOver\n face\n stamp\n angle\n whenever()do\n bounceFrom\n always\n turn\npath:\n musical\nclasses:\n point\n drawable\nfresh:value:\n touchingEdge\n bounceOff\n step\n destX:=\n x:=\n destX\n destY\n colour:=\n y:=\n normaliseAngle\n colour\n forward\n angle:=\n mousedown\n isPointOver\n whenever()do\n bounce\n destY:=\n touching\n turn\n tick\n draw\n alwaysBlocks\n label:=\n x\n y\n moveTo\n jumpTo\n label\n stamp\n angle\n face\n bounceFrom\n always\nconfidential:\nconstructors-of:point:\n x()y\n";
 if (originalSourceLines) {
   originalSourceLines["musical"] = [
     "import \"mgcollections\" as collections",
@@ -10973,25 +10973,19 @@ if (originalSourceLines) {
     "",
     "// * Improvements",
     "// ******************",
-    "//  - Should rouge notes be played by a default instrument or just ignored?",
+    "",
     "//  - Can I contrain number parameters? For example, from 0 - 100?",
     "//  - Adjust amount of Effect",
-    "//  - Allowing picking of instruments for arpeggio ",
-    "//  - Volume",
-    "//  - Add timing of instruments 4n/8n/16n",
-    "//  - Can't get pre configured grace files to load properly",
-    "//  - Constraints, making sure can't make bad code",
     "//  - Stretch Goal: Being able to run individual components",
-    "//  - numbers automatically in there??",
-    "//  - a number input already in there??",
-    "//  - can i stop people putting things into holes",
     "",
+    "//DONE: ",
     "//  - rests: this can be accopmlished with null",
     "//  - live editing: adding in and changes happen in realtime if compiler",
     "//  - on delete, don't start playing if not already playing",
     "//  - dialects, checker see if we can check blocks, type checking, in dialect.js",
     "//  - volume/timing",
     "",
+    "//TODO: ",
     "// - look at engineering requirements, sample reports, and evaluation story",
     "// - justify why you're doing these things",
     "// - match scratch music ",
