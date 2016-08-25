@@ -323,5 +323,6 @@ setInterval(function() {
 
 }, 1000);
 setTimeout(function() {
+    dialect.selectedIndex = 1;
     changeDialect();
 }, 250);
