@@ -1,11 +1,15 @@
 "use strict"
 var jsonLoadFuncs = [];
+var grace_id = 0;
 function generateNodeJSON(n) {
     if (n == null)
         return null;
     if (typeof n == 'undefined' || typeof n == 'boolean')
         return null;
     if (n.dataset && n.dataset.serialiserIndex !== undefined)
+        // $(n).uniqueId();
+        // $(n).attr("grace-id",grace_id++);
+        // console.log(n);
         return jsonSerialiser(n);
     if (n.classList.contains('hole')) {
         if (n.childNodes.length)

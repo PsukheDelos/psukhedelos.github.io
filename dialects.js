@@ -1193,6 +1193,7 @@ function createOperatorTile(op) {
     return tile;
 }
 
+
 function createDialectRequestTile(req) {
     var tile = document.createElement("div");
     if (!tile.dataset)
@@ -1328,8 +1329,21 @@ function getVarInputs(n) {
             vars.push(n.childNodes[i]);
     return vars;
 }
+
+
+// var glen = 0;
 function codeSerialiser(n) {
     var req = serialisers[n.dataset.serialiserIndex];
+    // console.log(n);
+    // console.log(grace_id);
+    // req.test = 5;
+    // console.log(req);
+    // console.log(n.database.serialiserIndex);
+    // console.log(req);
+    // console.log(glen++);
+    // console.log(req);
+    // console.log(grace_id);
+    // console.log(n);
     var out = "";
     var line = n;
     if (req.multiline) {
@@ -1345,7 +1359,16 @@ function codeSerialiser(n) {
         if (i > 0)
             out += " ";
         out += part.name;
+        // console.log(n);
         if (part.args.length == 0) {
+            if($(n).attr('data-types')=='Note'){
+                $(n).attr("grace-id",grace_id);
+                out += " (" + grace_id + ")";
+                // console.log(n);
+                // console.log(grace_id);
+                grace_id++;
+                // console.log($(n).attr('grace-id'));
+            }
         } else if (part.args.length == 1) {
             var arg = part.args[0];
             if (arg.type == "Block" && arg.multiline) {
@@ -1392,11 +1415,14 @@ function codeSerialiser(n) {
             ho += j;
         }
     }
+    // console.log(out);
     return out;
 }
 
 function jsonSerialiser(n) {
     var req = serialisers[n.dataset.serialiserIndex];
+
+    // console.log(req);
     var line = n;
     if (req.multiline) {
         line = n.childNodes[0];
@@ -1448,6 +1474,7 @@ function jsonSerialiser(n) {
             }
         }
     }
+    // console.log(overallObject);
     return overallObject;
 }
 
@@ -1463,6 +1490,9 @@ function jsonDeserialiser(obj) {
     if (!req)
         return null;
     var tile = createDialectRequestTile(req);
+
+    // console.log(tile);
+
     var line = tile;
     if (req.multiline) {
         line = tile.childNodes[0];

@@ -13,6 +13,8 @@ var sequence = [];
 var instruments = [];
 var sequences = [];
 
+// var seq_id = 0;
+
 var playing = false;
 
 //Timing
@@ -72,12 +74,18 @@ function t_init(){
 	sequence = [];
 }
 
-function t_add(note){
+function t_add(note,id){
+  // console.log("hi");
+    // console.log(n.dataset.serialiserIndex);
+  // console.log(note);
+  // console.log($('[data-serialiser-index][data-types="Note"]').attr('data-serialiser-index'));
+  // console.log(grace_id++);
 	if(note=="null"){
-		sequence.push(null);
+		sequence.push({id:id});
 	} else {
-		sequence.push(note);
+		sequence.push({note:note, id:id});
 	}
+  // console.log(sequence);
 }
 
 function t_play() {
@@ -103,9 +111,22 @@ function t_stop(){
 function t_synth_mono(timing, vol, rate){
   var mono = new Tone.MonoSynth().fan(fft, waveform).toMaster();
   mono.volume.value = vol;
+  var seq_id = sequences.length;
 
   var monoSeq = new Tone.Sequence(function(time, note){
-  	mono.triggerAttackRelease(note, timing, time);
+    
+    var d = $('[grace-id='+note.id+']');
+
+    if(note.seq==null){
+      note.seq = seq_id;
+    } 
+
+    $('.highlighted[seq="'+note.seq+'"]').removeClass('highlighted');
+
+    d.attr('seq',note.seq);
+    d.addClass('highlighted');
+
+  	mono.triggerAttackRelease(note.note, timing, time);
   }, sequence ).start(0);
 
   monoSeq.playbackRate = rate;
@@ -119,26 +140,49 @@ function t_synth_mono(timing, vol, rate){
 function t_synth_pluck(timing, vol, rate){
 	var pluck = new Tone.PluckSynth().fan(fft, waveform).toMaster();
   pluck.volume.value = vol;
-
+  var seq_id = sequences.length;
 	var pluckSeq = new Tone.Sequence(function(time, note){
-		pluck.triggerAttackRelease(note, timing, time);
+
+    var d = $('[grace-id='+note.id+']');
+
+    if(note.seq==null){
+      note.seq = seq_id;
+    } 
+
+    $('.highlighted[seq="'+note.seq+'"]').removeClass('highlighted');
+
+    d.attr('seq',note.seq);
+    d.addClass('highlighted');
+
+		pluck.triggerAttackRelease(note.note, timing, time);
 	}, sequence ).start(0);
 
   pluckSeq.playbackRate = rate;
 
-
 	instruments.push(pluck);
 	sequences.push(pluckSeq);
-
 	applyEffects(pluck);
 }
 
 function t_synth_poly(timing, vol, rate){
 	var poly = new Tone.PolySynth().fan(fft, waveform).toMaster();
   poly.volume.value = vol;
+  var seq_id = sequences.length;
 
 	var polySeq = new Tone.Sequence(function(time, note){
-		poly.triggerAttackRelease(note, timing, time);
+
+    var d = $('[grace-id='+note.id+']');
+
+    if(note.seq==null){
+      note.seq = seq_id;
+    } 
+
+    $('.highlighted[seq="'+note.seq+'"]').removeClass('highlighted');
+
+    d.attr('seq',note.seq);
+    d.addClass('highlighted');
+
+		poly.triggerAttackRelease(note.note, timing, time);
 	}, sequence).start(0);
 
   polySeq.playbackRate = rate;
@@ -153,9 +197,22 @@ function t_synth_poly(timing, vol, rate){
 function t_synth_fm(timing, vol, rate){
 	var fm = new Tone.FMSynth().fan(fft, waveform).toMaster();
   fm.volume.value = vol;
+  var seq_id = sequences.length;
 
 	var fmSeq = new Tone.Sequence(function(time, note){
-		fm.triggerAttackRelease(note, timing, time);
+
+    var d = $('[grace-id='+note.id+']');
+
+    if(note.seq==null){
+      note.seq = seq_id;
+    } 
+
+    $('.highlighted[seq="'+note.seq+'"]').removeClass('highlighted');
+
+    d.attr('seq',note.seq);
+    d.addClass('highlighted');
+
+		fm.triggerAttackRelease(note.note, timing, time);
 	}, sequence ).start(0);
 
   fmSeq.playbackRate = rate;
@@ -169,9 +226,22 @@ function t_synth_fm(timing, vol, rate){
 function t_synth_membrane(timing, vol, rate){
 	var membrane = new Tone.MembraneSynth().fan(fft, waveform).toMaster();
   membrane.volume.value = vol;
+  var seq_id = sequences.length;
 
 	var membraneSeq = new Tone.Sequence(function(time, note){
-		membrane.triggerAttackRelease(note, timing, time);
+
+    var d = $('[grace-id='+note.id+']');
+
+    if(note.seq==null){
+      note.seq = seq_id;
+    } 
+
+    $('.highlighted[seq="'+note.seq+'"]').removeClass('highlighted');
+
+    d.attr('seq',note.seq);
+    d.addClass('highlighted');
+
+		membrane.triggerAttackRelease(note.note, timing, time);
 	}, sequence ).start(0);
 
   membraneSeq.playbackRate = rate;
@@ -186,9 +256,22 @@ function t_synth_membrane(timing, vol, rate){
 function t_synth_duo(timing, vol, rate){
 	var duo = new Tone.DuoSynth().fan(fft, waveform).toMaster();
   duo.volume.value = vol;
+  var seq_id = sequences.length;
 
 	var duoSeq = new Tone.Sequence(function(time, note){
-		duo.triggerAttackRelease(note, timing, time);
+
+    var d = $('[grace-id='+note.id+']');
+
+    if(note.seq==null){
+      note.seq = seq_id;
+    } 
+
+    $('.highlighted[seq="'+note.seq+'"]').removeClass('highlighted');
+
+    d.attr('seq',note.seq);
+    d.addClass('highlighted');
+
+		duo.triggerAttackRelease(note.note, timing, time);
 	}, sequence ).start(0);
 
   duoSeq.playbackRate = rate;

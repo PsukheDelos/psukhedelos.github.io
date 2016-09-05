@@ -324,6 +324,7 @@ function generateCode() {
         var child = chunks[i];
         chunkLine += " " + child.style.left + "," + child.style.top;
         while (child) {
+            // console.log(child);
             tb.value = tb.value + generateNodeCode(child, 'assignment') + '\n';
             child = child.next;
         }

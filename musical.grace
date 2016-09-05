@@ -488,6 +488,7 @@ method atModuleEnd(module) {
 //  - Can I contrain number parameters? For example, from 0 - 100?
 //  - Adjust amount of Effect
 //  - Stretch Goal: Being able to run individual components
+//  - is there a way to get access to data-serialiser-index, this would allow highlighting individual notes
 
 //DONE: 
 //  - rests: this can be accopmlished with null
@@ -528,42 +529,42 @@ var firstPass := true
 // * Notes
 // ******************
 
-method Note(note){
+method Note(note,id){
     if (applyFlat == true) then {
-        dom.window.t_add("{note}b{octave}")
+        dom.window.t_add("{note}b{octave}",id)
         return "{note}b"
     }
     if (applySharp == true) then {
-        dom.window.t_add("{note}#{octave}")
+        dom.window.t_add("{note}#{octave}",id)
         return "{note}#"
     }
-    dom.window.t_add("{note}{octave}")
+    dom.window.t_add("{note}{octave}",id)
     return "{note}"
 }
 
-method C(){
-    Note("C")
+method C(id){
+    Note("C",id)
 }
-method D(){
-    Note("D")
+method D(id){
+    Note("D",id)
 }
-method E(){
-    Note("E")
+method E(id){
+    Note("E",id)
 }
-method F(){
-    Note("F")
+method F(id){
+    Note("F",id)
 }
-method G(){
-    Note("G")
+method G(id){
+    Note("G",id)
 }
-method A(){
-    Note("A")
+method A(id){
+    Note("A",id)
 }
-method B(){
-    Note("B")
+method B(id){
+    Note("B",id)
 }
-method Rest(){
-    dom.window.t_add("null")
+method Rest(id){
+    dom.window.t_add("null",id)
     return "Rest"
 }
 
