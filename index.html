@@ -16,7 +16,7 @@
          <div id="bin">&#59177;</div>
          <div id="desaturator"></div>
      </div>
-     <div id="toolbox">
+     <div class="toolbox" id="toolbox">
          
          <div class="tile vardec" data-category="Variables"><span style="margin-right: 1ex; color: blue;">var</span><input type="text" value="" size="1" class="variable-name"><span class="assop">:=</span><div class="hole"></div></div>
          
@@ -89,6 +89,8 @@
      <textarea id="gracecode" cols="100" rows="10"></textarea>
      <canvas id="overlay-canvas" width="500" height="500"></canvas>
     <div id="acknowledgements"><a href="https://github.com/mwh/minigrace">Minigrace</a> is distributed under the GNU GPL version 3. <a href="http://www.entypo.com/">Entypo</a> pictograms by Daniel Bruce.</div>
+    <div id="boo">hi</div>
+
     <script type="text/javascript" src="lib/jquery.min.js"></script>
 
 
@@ -107,9 +109,12 @@
 
      <!-- Graceful Music Libraries -->
      <script type="text/javascript" src="lib/tone.js"></script>
+     <script src="http://www.verovio.org/javascript/latest/verovio-toolkit.js"></script>
+
+     <script type="text/javascript" src="https://unpkg.com/vexflow/releases/vexflow-min.js"></script>
+     <script type="text/javascript" src="https://github.com/0xfe/vextab/blob/master/releases/vextab-div.js"></script>
      <script type="text/javascript" src="musical.js"></script>
      <script type="text/javascript" src="g2t.js"></script>
-     
     <div id="code_txt_real"></div>
     <script src="ace/ace.js"></script>
     <script src="ace/mode-grace.js" type="text/javascript" charset="utf-8"></script>

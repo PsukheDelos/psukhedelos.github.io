@@ -740,7 +740,9 @@ dialects.musical = {
             ],
             returns: "Note",
             description: "Play C Note",
-            type: "note"
+            type: "note",
+            tooltiptext: "Represents a 'C' Note.  Needs to be placed within an Instrument to be played.",
+            tooltiptitle: "'C' Note"
         },
         "D": {
             name: "D",
@@ -752,7 +754,9 @@ dialects.musical = {
             ],
             returns: "Note",
             description: "Play D Note",
-            type: "note"
+            type: "note",
+            tooltiptext: "Represents a 'D' Note.  Needs to be placed within an Instrument to be played.",
+            tooltiptitle: "'D' Note"
         },
         "E": {
             name: "E",
@@ -764,7 +768,9 @@ dialects.musical = {
             ],
             returns: "Note",
             description: "Play E Note",
-            type: "note"
+            type: "note",
+            tooltiptext: "Represents a 'E' Note.  Needs to be placed within an Instrument to be played.",
+            tooltiptitle: "'E' Note"
         },
         "F": {
             name: "F",
@@ -776,7 +782,9 @@ dialects.musical = {
             ],
             returns: "Note",
             description: "Play F Note",
-            type: "note"
+            type: "note",
+            tooltiptext: "Represents a 'F' Note.  Needs to be placed within an Instrument to be played.",
+            tooltiptitle: "'F' Note"
         },
         "G": {
             name: "G",
@@ -788,7 +796,9 @@ dialects.musical = {
             ],
             returns: "Note",
             description: "Play G Note",
-            type: "note"
+            type: "note",
+            tooltiptext: "Represents a 'G' Note.  Needs to be placed within an Instrument to be played.",
+            tooltiptitle: "'G' Note"
         },
         "A": {
             name: "A",
@@ -800,7 +810,9 @@ dialects.musical = {
             ],
             returns: "Note",
             description: "Play A Note",
-            type: "note"
+            type: "note",
+            tooltiptext: "Represents a 'A' Note.  Needs to be placed within an Instrument to be played.",
+            tooltiptitle: "'A' Note"
         },
         "B": {
             name: "B",
@@ -812,7 +824,9 @@ dialects.musical = {
             ],
             returns: "Note",
             description: "Play B Note",
-            type: "note"
+            type: "note",
+            tooltiptext: "Represents a 'B' Note.  Needs to be placed within an Instrument to be played.",
+            tooltiptitle: "'B' Note"
         },
         "Rest": {
             name: "Rest",
@@ -949,7 +963,7 @@ dialects.musical = {
                     ],
                 }
             ],
-            returns: "Instrument",
+            returns: "Instrument Membrane",
             description: "Plays notes with a membraneSynth",
             multiline: true,
             type: "instrument"
@@ -1047,7 +1061,7 @@ dialects.musical = {
                 }
             ],
             description: "Sets the Beats Per Minute",
-            returns: "Global",
+            returns: "Global BPM",
             type: "timing"
         },
         // "Time()on": {
@@ -1196,10 +1210,36 @@ function createOperatorTile(op) {
 
 function createDialectRequestTile(req) {
     var tile = document.createElement("div");
+
     if (!tile.dataset)
         tile.dataset = {};
     tile.classList.add("tile");
     tile.classList.add("dialect-method");
+            // console.log(tile);
+    
+    //create Tool Tips for displaying useful information
+    if(req.tooltiptitle || req.tooltiptext){
+
+        var tooltip = document.createElement("div")
+        tooltip.classList.add("tooltip");
+        tooltip.classList.add(req.name);
+        
+        var tooltiptitle = document.createElement("div");
+        tooltiptitle.classList.add("tooltiptitle");
+        if(req.tooltiptitle){
+            tooltiptitle.appendChild(document.createTextNode(req.tooltiptitle));
+        }
+        var tooltiptext = document.createElement("div");
+        tooltiptext.classList.add("tooltiptext");
+        if(req.tooltiptext){
+            tooltiptext.appendChild(document.createTextNode(req.tooltiptext));
+        }
+
+        tooltip.appendChild(tooltiptitle);
+        tooltip.appendChild(tooltiptext);
+        tile.appendChild(tooltip);
+    }
+    console.log(tile);
     tile.dataset.category = req.category;
     if (req.constant)
         tile.classList.add('constant');

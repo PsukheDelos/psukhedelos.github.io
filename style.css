@@ -60,6 +60,7 @@ html, body {
     font-family: 'Monaco','Menlo','Ubuntu Mono','Droid Sans Mono','Consolas',monospace;
 }
 #overlay-canvas {
+    visibility: hidden;
     position: absolute;
     height: 90vh; /* Work around Chrome bug 168840*/
     height: calc(99vh - 40px);
@@ -170,6 +171,42 @@ input {
 }
 .tile.string input {
     color: #080;
+}
+.tooltip {
+    visibility: hidden;
+    /*width: 120px;*/
+    background-color: blue;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    opacity: .50;
+
+    /* Position the tooltip */
+    z-index: 1;
+    position: absolute;
+    right: 470px;
+    /*top: 1%;*/
+    white-space:normal;
+    margin-top: 3%;
+    width: 300px;
+    overflow-x: hidden;
+    word-wrap:break-word;
+    /*word-wrap:break-word;*/
+    /*display:inline;*/
+}
+.tooltiptext{
+/*    width: 300px;
+    overflow-x: hidden;
+    word-wrap:break-word;*/
+}
+.tooltiptitle{
+    font-size: large;
+    font-weight: bolder;
+    background: black;
+}
+#toolbox .tile:hover .tooltip {
+    visibility: visible;
 }
 .tile.if {
     background: #88c;
@@ -307,6 +344,10 @@ input {
 .tile.dialect-method[data-category="Instruments"] {
     background: lightyellow;
     border: 2px outset hsl(90, 25%, 25%);
+}
+
+#toolbox .tile.dialect-method[data-types="Instrument Membrane"] { 
+    /*background-color: yellow;*/
 }
 
 .tile.dialect-method[data-category="Effects"] {

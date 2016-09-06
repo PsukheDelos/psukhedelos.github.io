@@ -292,6 +292,11 @@ function attachInputEvents(el) {
     el.addEventListener('keyup', function(ev) {
         this.size = this.value.length + 1;
         coddleBrowser('blink', blinkCoddleInputs, this);
+        // var dt = $(el).parent().parent().parent().attr('data-types');
+        // if(dt == 'Global BPM'){
+        //     console.log($(el));
+        //     console.log('BPM');
+        // }
         generateCode();
     });
     el.addEventListener('blur', function(ev) {

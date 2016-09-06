@@ -125,8 +125,9 @@ function t_synth_mono(timing, vol, rate){
 
     d.attr('seq',note.seq);
     d.addClass('highlighted');
-
-  	mono.triggerAttackRelease(note.note, timing, time);
+    if(note.note){
+  	 mono.triggerAttackRelease(note.note, timing, time);
+    }
   }, sequence ).start(0);
 
   monoSeq.playbackRate = rate;
@@ -153,8 +154,9 @@ function t_synth_pluck(timing, vol, rate){
 
     d.attr('seq',note.seq);
     d.addClass('highlighted');
-
-		pluck.triggerAttackRelease(note.note, timing, time);
+    if(note.note){
+      pluck.triggerAttackRelease(note.note, timing, time);
+    }
 	}, sequence ).start(0);
 
   pluckSeq.playbackRate = rate;
@@ -181,12 +183,13 @@ function t_synth_poly(timing, vol, rate){
 
     d.attr('seq',note.seq);
     d.addClass('highlighted');
-
-		poly.triggerAttackRelease(note.note, timing, time);
+    if(note.note){
+		  poly.triggerAttackRelease(note.note, timing, time);
+    }
 	}, sequence).start(0);
 
   polySeq.playbackRate = rate;
-	
+	// polySeq.loop = 1;
 	instruments.push(poly);
 	sequences.push(polySeq);
 
@@ -211,12 +214,18 @@ function t_synth_fm(timing, vol, rate){
 
     d.attr('seq',note.seq);
     d.addClass('highlighted');
-
-		fm.triggerAttackRelease(note.note, timing, time);
-	}, sequence ).start(0);
+    if(note.note){
+		  fm.triggerAttackRelease(note.note, timing, time);
+    }
+	}, sequence );
+  // .start(0);
 
   fmSeq.playbackRate = rate;
-
+  // fmSeq.loop = true;
+  fmSeq.start(0);
+  // fmSeq.start(2);
+  // fmSeq.stop(2);
+  // fmSeq.loopStart = Tone.TransportTime(1);
 	instruments.push(fm);
 	sequences.push(fmSeq);
 
@@ -240,8 +249,9 @@ function t_synth_membrane(timing, vol, rate){
 
     d.attr('seq',note.seq);
     d.addClass('highlighted');
-
-		membrane.triggerAttackRelease(note.note, timing, time);
+    if(note.note){
+		  membrane.triggerAttackRelease(note.note, timing, time);
+    }
 	}, sequence ).start(0);
 
   membraneSeq.playbackRate = rate;
@@ -270,8 +280,10 @@ function t_synth_duo(timing, vol, rate){
 
     d.attr('seq',note.seq);
     d.addClass('highlighted');
-
-		duo.triggerAttackRelease(note.note, timing, time);
+    
+    if(note.note){
+		  duo.triggerAttackRelease(note.note, timing, time);
+    }
 	}, sequence ).start(0);
 
   duoSeq.playbackRate = rate;
@@ -351,7 +363,11 @@ function t_effect_reset(){
 // * Timing
 // ******************
 function t_bpm(bpm){
-	Tone.Transport.bpm.value = bpm;
+  if(bpm==0){
+    Tone.Transport.bpm.value = null;
+  } else {
+    Tone.Transport.bpm.value = bpm;
+  }
 }
 
 // function t_timing(t){
@@ -887,24 +903,159 @@ function loop(){
 }
 loop();
 
+/*
+ * Extra Functionality
+ */
+
+var timer = 0;
+$(document).ready(function () {
+
+  //recompile when someone changes text in a text field
+   $('[type="text"]').keyup(function () { 
+      if(playing){
+        timer++;
+        //only recompile if someone has not typed for 500ms
+        setTimeout(function() {
+             timer--;
+             if(timer==0){
+              t_stop();
+              t_reset();
+              go();
+             }
+        }, 500);
+      }
+   });
+   $('#toolbox .tile.dialect-method[data-types="Instrument Membrane"]').append("div");
+   // var test2 = test.first();
+   // test2 = test2.append("<div>test</div>");
+   // console.log(test2);
+   // test.append("<div>hey</div>");
+// $('#toolbox.tile.dialect-method[data-types="Instrument Membrane"]:first').append("<div>hey</div>");
+// var test2 = $('#toolbox.tile.dialect-method[data-types="Instrument Membrane"]:first');
+// console.log(test); //console.log(test2); console.log(test==test2);
+// $('#toolbox .tile.dialect-method[data-types="Instrument Membrane"]').append("<div>hey</div>");
+   // .append("<p>Test</p>");
+
+  //Constrain BPM to being 1 and above
+  // $("[data-types='Global BPM']" ).find('input').each(function(index){
+  //   console.log($(this));
+  // });;
+
+});
+// $('#toolbox .tile.dialect-method[data-types="Instrument Membrane"]').append("<div>hey</div>");
+
+// console.log($('#toolbox .tile.dialect-method[data-types="Instrument Membrane"]'));
+// $( "input" ).each(function()
+// {
+//   console.log($(this));
+//   $(this).on('input',function(e){
+//      alert('Changed!')
+//     });
+// });
+// $(".tile.number").children().on('input',function(e){
+//      alert('Changed!')
+//     });
+//  // .on('input',function(e){
+//  //     alert('Changed!')
+//  //    });
+
+// var vf = new Vex.Flow.Factory({
+//   renderer: {selector: 'boo', width: 500, height: 200}
+// });
+
+// var score = vf.EasyScore();
+// var system = vf.System();
+
+// system.addStave({
+//   voices: [
+//     score.voice(score.notes('C#5, B4, A4, G#4', {stem: 'up'}))
+//   ]
+// }).addClef('treble').addTimeSignature('4/4');
+
+// vf.draw();
 
 
+// var notes = [
+//   // A quarter-note C.
+//   new VF.StaveNote({ keys: ["c/4"], duration: "q" }),
+
+//   // A quarter-note D.
+//   new VF.StaveNote({ keys: ["d/4"], duration: "q" }),
+
+//   // A quarter-note rest. Note that the key (b/4) specifies the vertical
+//   // position of the rest.
+//   new VF.StaveNote({ keys: ["b/4"], duration: "qr" }),
+
+//   // A C-Major chord.
+//   new VF.StaveNote({ keys: ["c/4", "e/4", "g/4"], duration: "q" })
+// ];
+
+// // Create a voice in 4/4 and add above notes
+// var voice = new VF.Voice({num_beats: 4,  beat_value: 4});
+// voice.addTickables(notes);
+
+// // Format and justify the notes to 400 pixels.
+// var formatter = new VF.Formatter().joinVoices([voice]).format([voice], 400);
+
+// // Render voice
+// voice.draw(context, stave);
 
 
+    /* The Plain and Easy code to be rendered */
+    // var data = "@data:'BFGA/";
+    // /* Create the Verovio toolkit instance */
+    // var vrvToolkit = new verovio.toolkit();
+    //  Render the data and insert it as content of the #output div 
+    // document.getElementById("output").innerHTML = vrvToolkit.renderData( 
+    //     data, 
+    //     JSON.stringify({ inputFormat: 'pae' }) 
+    // );
 
 
+//       var canvas = $("#boo")[0];
+//       var renderer = new Vex.Flow.Renderer(canvas, Vex.Flow.Renderer.Backends.CANVAS);
 
+//       var ctx = renderer.getContext();
+//       var stave = new Vex.Flow.Stave(10, 0, 500);
+//       stave.addClef("treble").setContext(ctx).draw();
 
+//       //notes
+//       // Create the notes
+//       var notesA = [
+//         new Vex.Flow.StaveNote({ keys: ["c/1"], duration: "q" }),
+//         new Vex.Flow.StaveNote({ keys: ["c/2"], duration: "q" }),
+//         new Vex.Flow.StaveNote({ keys: ["c/3"], duration: "q" }),
+//         new Vex.Flow.StaveNote({ keys: ["f/4"], duration: "q" }),
+//         new Vex.Flow.StaveNote({ keys: ["g/4"], duration: "q" }),
+//         new Vex.Flow.StaveNote({ keys: ["a/4"], duration: "q" }),
+//         new Vex.Flow.StaveNote({ keys: ["b/4"], duration: "q" }),
+//         new Vex.Flow.StaveNote({ keys: ["c/5"], duration: "q" }),
+//       ];
 
+//       var voiceA = getVoice(notesA);
 
+//       // Create a voice in 4/4
+     
+//       // Format and justify the notes to 500 pixels
+//       var formatter = new Vex.Flow.Formatter().
+//         joinVoices([voiceA]).format([voiceA], 250);
 
+//       // Render voice
+//       voiceA.draw(ctx, stave);
 
+// function getVoice(notes)
+// {
+//       var voice = new Vex.Flow.Voice({
+//         num_beats: 8,
+//         beat_value: 4,
+//         resolution: Vex.Flow.RESOLUTION
+//       });
 
+//       // Add notes to voice
+//       voice.addTickables(notes);  
+//       return voice;
 
-
-
-
-
+// }
 
 
 
