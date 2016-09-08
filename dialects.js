@@ -855,7 +855,7 @@ dialects.musical = {
                 {
                     name: 'flat',
                     args: [
-                        {type: 'Block', returns: 'Note Instrument Effect Adjustment', multiline: true, description: "Enter NOTES to be FLATTENED"}
+                        {type: 'Block', returns: 'Any', multiline: true, description: "Enter NOTES to be FLATTENED"}
                     ],
                 }
             ],
@@ -863,8 +863,8 @@ dialects.musical = {
             description: "Takes in notes and returns them as flats",
             multiline: true,
             type: "note",
-            tooltiptext: "Method that takes in notes and lowers each note by a half step (semitone).",
-            tooltiptitle: "♭ Flat { Notes }"
+            // tooltiptext: "Method that takes in notes and lowers each note by a half step (semitone).",
+            // tooltiptitle: "♭ Flat { Notes }"
         },
         "sharp": {
             name: "sharp",
@@ -1232,39 +1232,39 @@ function createDialectRequestTile(req) {
     tile.classList.add("dialect-method");
             // console.log(tile);
     
-    //create Tool Tips for displaying useful information
-    if(req.tooltiptitle || req.tooltiptext || req.tooltipimage){
+    // //create Tool Tips for displaying useful information
+    // if(req.tooltiptitle || req.tooltiptext || req.tooltipimage){
 
-        var tooltip = document.createElement("div")
-        tooltip.classList.add("tooltip");
-        tooltip.classList.add(req.name);
+    //     var tooltip = document.createElement("div")
+    //     tooltip.classList.add("tooltip");
+    //     tooltip.classList.add(req.name);
         
-        var tooltiptitle = document.createElement("div");
-        tooltiptitle.classList.add("tooltiptitle");
-        if(req.tooltiptitle){
-            tooltiptitle.appendChild(document.createTextNode(req.tooltiptitle));
-        }
-        var tooltiptext = document.createElement("div");
-        tooltiptext.classList.add("tooltiptext");
-        if(req.tooltiptext){
-            tooltiptext.appendChild(document.createTextNode(req.tooltiptext));
-        }
+    //     var tooltiptitle = document.createElement("div");
+    //     tooltiptitle.classList.add("tooltiptitle");
+    //     if(req.tooltiptitle){
+    //         tooltiptitle.appendChild(document.createTextNode(req.tooltiptitle));
+    //     }
+    //     var tooltiptext = document.createElement("div");
+    //     tooltiptext.classList.add("tooltiptext");
+    //     if(req.tooltiptext){
+    //         tooltiptext.appendChild(document.createTextNode(req.tooltiptext));
+    //     }
 
-        var tooltipimage = document.createElement("img");
-        tooltipimage.classList.add("tooltipimage");
-        tooltipimage.src = req.tooltipimage;
-        if(req.tooltiptitle){
-            tooltip.appendChild(tooltiptitle);
-        }
-        if(req.tooltiptext){
-            tooltip.appendChild(tooltiptext);
-        }
-        if(req.tooltipimage){
-            tooltip.appendChild(tooltipimage);
-        }
+    //     var tooltipimage = document.createElement("img");
+    //     tooltipimage.classList.add("tooltipimage");
+    //     tooltipimage.src = req.tooltipimage;
+    //     if(req.tooltiptitle){
+    //         tooltip.appendChild(tooltiptitle);
+    //     }
+    //     if(req.tooltiptext){
+    //         tooltip.appendChild(tooltiptext);
+    //     }
+    //     if(req.tooltipimage){
+    //         tooltip.appendChild(tooltipimage);
+    //     }
 
-        tile.appendChild(tooltip);
-    }
+    //     tile.appendChild(tooltip);
+    // }
     // console.log(tile);
     tile.dataset.category = req.category;
     if (req.constant)
@@ -1365,6 +1365,40 @@ function createDialectRequestTile(req) {
         tile.dataset.onlyInObject = "y";
     if (req.returns)
         tile.dataset.types = req.returns;
+
+    //create Tool Tips for displaying useful information
+    if(req.tooltiptitle || req.tooltiptext || req.tooltipimage){
+
+        var tooltip = document.createElement("div")
+        tooltip.classList.add("tooltip");
+        tooltip.classList.add(req.name);
+        
+        var tooltiptitle = document.createElement("div");
+        tooltiptitle.classList.add("tooltiptitle");
+        if(req.tooltiptitle){
+            tooltiptitle.appendChild(document.createTextNode(req.tooltiptitle));
+        }
+        var tooltiptext = document.createElement("div");
+        tooltiptext.classList.add("tooltiptext");
+        if(req.tooltiptext){
+            tooltiptext.appendChild(document.createTextNode(req.tooltiptext));
+        }
+
+        var tooltipimage = document.createElement("img");
+        tooltipimage.classList.add("tooltipimage");
+        tooltipimage.src = req.tooltipimage;
+        if(req.tooltiptitle){
+            tooltip.appendChild(tooltiptitle);
+        }
+        if(req.tooltiptext){
+            tooltip.appendChild(tooltiptext);
+        }
+        if(req.tooltipimage){
+            tooltip.appendChild(tooltipimage);
+        }
+
+        tile.appendChild(tooltip);
+    }
     return tile;
 }
 function createHole(arg) {
@@ -1415,6 +1449,7 @@ function codeSerialiser(n) {
             out += " ";
         out += part.name;
         if (part.args.length == 0) {
+            // console.log("hi");
             //add in a grace-id attribute so we can follow music while playing
             if($(n).attr('data-types')=='Note'){
                 $(n).attr("grace-id",grace_id);
