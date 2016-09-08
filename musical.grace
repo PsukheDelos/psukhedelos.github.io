@@ -646,16 +646,10 @@ method Rest(id){
 }
 
 method flat(note){
-    dom.window.console.log("flat");
-    dom.window.console.log(note.length);
-    // for (note) do {step->
-    //     dom.window.console.log(step);
-    //     // step.apply
-    // }
-    // applyFlat := true
-    // var ret := note.apply
-    // applyFlat := false
-    // return ret 
+    applyFlat := true
+    var ret := note.apply
+    applyFlat := false
+    return ret 
 }
 method sharp(note){
     applySharp := true
