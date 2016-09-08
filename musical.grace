@@ -20,6 +20,7 @@ var initialised := false
 var backgroundColour := "white"
 def registeredObjects = collections.list.new
 def stepBlocks = collections.list.new
+// def alwaysBlocks = collections.list.new
 def audioTags = collections.map.new
 
 var canvasWidth
@@ -331,33 +332,33 @@ method clear {
     ctx.fillStyle := backgroundColour
     ctx.fillRect(0, 0, canvasWidth, canvasHeight)
 }
-method always(blocks) {
-    // dom.window.console.log("always")
-    // blocks.apply
-    var count := 0
-    for (blocks) do {b->
-        count := count + 1
-        dom.window.console.log("blocks")
-        dom.window.console.log(count)
-    }
-    // stopRunning := false
-    // dom.while { !stopRunning } waiting 10 do {
-    //     dom.window.console.log("dom.while")
-    //     for (registeredObjects) do {obj->
-    //         dom.window.console.log("registeredObjects")
-    //         obj.step
-    //     }
-    //     for (blocks) do {step->
-    //         dom.window.console.log("blocks");
-    //         step.apply
-    //     }
-    // }
-}
-method whenever(c)do(b) {
-    stepBlocks.push({
-        if (c.apply) then { b.apply }
-    })
-}
+// method always(blocks) {
+//     // dom.window.console.log("always")
+//     // blocks.apply
+//     var count := 0
+//     for (blocks) do {b->
+//         count := count + 1
+//         dom.window.console.log("blocks")
+//         dom.window.console.log(count)
+//     }
+//     // stopRunning := false
+//     // dom.while { !stopRunning } waiting 10 do {
+//     //     dom.window.console.log("dom.while")
+//     //     for (registeredObjects) do {obj->
+//     //         dom.window.console.log("registeredObjects")
+//     //         obj.step
+//     //     }
+//     //     for (blocks) do {step->
+//     //         dom.window.console.log("blocks");
+//     //         step.apply
+//     //     }
+//     // }
+// }
+// method whenever(c)do(b) {
+//     stepBlocks.push({
+//         if (c.apply) then { b.apply }
+//     })
+// }
 method hue(h)saturation(s)lightness(l) {
     return "hsl({h}, {s}%, {l}%)"
 }
@@ -473,7 +474,6 @@ method atModuleEnd(module) {
     start
     //Graceful Music
     dom.window.t_play();
-    // dom.window.console.log("moduleend")
 }
 
 
@@ -487,8 +487,7 @@ method atModuleEnd(module) {
 
 //  - Can I contrain number parameters? For example, from 0 - 100?
 //  - Adjust amount of Effect
-//  - Stretch Goal: Being able to run individual components
-//  - is there a way to get access to data-serialiser-index, this would allow highlighting individual notes
+//  - Stretch Goal: Being able to run individual components - this was noted by Rahul as well
 
 //DONE: 
 //  - rests: this can be accopmlished with null
@@ -496,6 +495,8 @@ method atModuleEnd(module) {
 //  - on delete, don't start playing if not already playing
 //  - dialects, checker see if we can check blocks, type checking, in dialect.js
 //  - volume/timing
+//  - is there a way to get access to data-serialiser-index, this would allow highlighting individual notes
+
 
 //TODO: 
 // - look at engineering requirements, sample reports, and evaluation story
@@ -530,6 +531,7 @@ var firstPass := true
 // ******************
 
 method Note(note,id){
+    // dom.window.console.log(note);
     if (applyFlat == true) then {
         dom.window.t_add("{note}b{octave}",id)
         return "{note}b"
@@ -541,6 +543,81 @@ method Note(note,id){
     dom.window.t_add("{note}{octave}",id)
     return "{note}"
 }
+
+// def alwaysBlocks = collections.list.new
+
+// method step {
+//     for (alwaysBlocks) do {b->
+//         b.apply
+//     }
+//     tick
+
+// }
+// method always(b) {
+//     alwaysBlocks.push(b)
+// }
+// method whenever(cond)do(b) {
+//     always {
+//         if (cond.apply) then {
+//             b.apply
+//         }
+//     }
+// }
+
+method while(cond)do(b){
+    // dom.window.console.log("while");
+    // if (cond) then {
+    //     b.apply
+    // }
+    // for (registeredObjects) do {obj->
+    //     obj.step
+    // }
+    // for (stepBlocks) do {step->
+    //     step.apply
+    // }
+
+    // for (b) do {step->
+    //     dom.window.console.log(step);
+    //     step.apply
+    // }
+        //     for (stepBlocks) do {step->
+        //     step.apply
+        // }
+    // dom.window.console.log("HI");
+    // dom.window.console.log(cond);
+    // dom.window.console.log(b);
+    // while(cond) do {
+    //     dom.window.console.log("while")
+    //     for (b) do {step->
+    //         dom.window.console.log(step);
+    //         step.apply
+    //     }
+    //     cond = false;
+    // }
+}
+
+// method always(b) {
+//     stepBlocks.push(b)
+// }
+// method while(c)do(b) {
+
+
+//     dom.window.console.log(c);
+//     stepBlocks.push({
+//         if (c.apply) then { b.apply }
+//     })
+// }
+
+//     method always(b) {
+//         alwaysBlocks.push(b)
+//     }
+//     method whenever(cond)do(b) {
+//         always {
+//             if (cond.apply) then {
+//                 b.apply
+//             }
+//         }
+//     }
 
 method C(id){
     Note("C",id)
@@ -569,10 +646,16 @@ method Rest(id){
 }
 
 method flat(note){
-    applyFlat := true
-    var ret := note.apply
-    applyFlat := false
-    return ret 
+    dom.window.console.log("flat");
+    dom.window.console.log(note.length);
+    // for (note) do {step->
+    //     dom.window.console.log(step);
+    //     // step.apply
+    // }
+    // applyFlat := true
+    // var ret := note.apply
+    // applyFlat := false
+    // return ret 
 }
 method sharp(note){
     applySharp := true

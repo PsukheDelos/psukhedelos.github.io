@@ -32,41 +32,41 @@ var StandardGrace = {
         }
     ],
     methods: {
-        "print": {
-            name: "print",
-            parts: [
-                {
-                    name: 'print',
-                    args: ["Any"]
-                },
-            ],
-            category: "Input/Output",
-            description: "Write a string to the text area.",
-            returns: "Done"
-        },
-        "while()do": {
-            name: "while()do",
-            parts: [
-                {
-                    name: 'while',
-                    args: [
-                        {type: 'Boolean', returns: 'Boolean', multiline: false,description: "Condition"}
-                    ],
-                    description: "Condition.",
-                },
-                {
-                    name: 'do',
-                    args: [
-                        {type: 'Block', returns: 'Any', multiline: true,
-                            description: "Something to do."}
-                    ],
-                }
-            ],
-            category: "Control",
-            returns: "Control",
-            description: "While a condition is true, do something.",
-            multiline: true,
-        },
+        // "print": {
+        //     name: "print",
+        //     parts: [
+        //         {
+        //             name: 'print',
+        //             args: ["Any"]
+        //         },
+        //     ],
+        //     category: "Input/Output",
+        //     description: "Write a string to the text area.",
+        //     returns: "Done"
+        // },
+        // "while()do": {
+        //     name: "while()do",
+        //     parts: [
+        //         {
+        //             name: 'while',
+        //             args: [
+        //                 {type: 'Boolean', returns: 'Boolean', multiline: false,description: "Condition"}
+        //             ],
+        //             description: "Condition.",
+        //         },
+        //         {
+        //             name: 'do',
+        //             args: [
+        //                 {type: 'Block', returns: 'Note Control', multiline: true,
+        //                     description: "Something to do."}
+        //             ],
+        //         }
+        //     ],
+        //     category: "Control",
+        //     returns: "Control",
+        //     description: "While a condition is true, do something.",
+        //     multiline: true,
+        // },
         "for()do": {
             name: "for()do",
             parts: [
@@ -82,7 +82,7 @@ var StandardGrace = {
                     args: [
                         {
                             type: 'Block',
-                            returns: 'Any',
+                            returns: 'Note Control',
                             multiline: true,
                             params: 1,
                             description: "Something to do for each item.",
@@ -108,7 +108,7 @@ var StandardGrace = {
                 {
                     name: 'then',
                     args: [
-                        {type: 'Block', returns: 'Any', multiline: true,
+                        {type: 'Block', returns: 'Note Control', multiline: true,
                             description: "Something to do if true."}
                     ],
                 }
@@ -131,14 +131,14 @@ var StandardGrace = {
                 {
                     name: 'then',
                     args: [
-                        {type: 'Block', returns: 'Any', multiline: true,
+                        {type: 'Block', returns: 'Note Control', multiline: true,
                             description: "Something to do if true."}
                     ],
                 },
                 {
                     name: 'else',
                     args: [
-                        {type: 'Block', returns: 'Any', multiline: true,
+                        {type: 'Block', returns: 'Note Control', multiline: true,
                             description: "Something to do if false."}
                     ],
                 }
@@ -742,7 +742,8 @@ dialects.musical = {
             description: "Play C Note",
             type: "note",
             tooltiptext: "Represents a 'C' Note.  Needs to be placed within an Instrument to be played.",
-            tooltiptitle: "'C' Note"
+            tooltiptitle: "'C' Note",
+            tooltipimage: "img/c.png"
         },
         "D": {
             name: "D",
@@ -756,7 +757,8 @@ dialects.musical = {
             description: "Play D Note",
             type: "note",
             tooltiptext: "Represents a 'D' Note.  Needs to be placed within an Instrument to be played.",
-            tooltiptitle: "'D' Note"
+            tooltiptitle: "'D' Note",
+            tooltipimage: "img/d.png"
         },
         "E": {
             name: "E",
@@ -770,7 +772,8 @@ dialects.musical = {
             description: "Play E Note",
             type: "note",
             tooltiptext: "Represents a 'E' Note.  Needs to be placed within an Instrument to be played.",
-            tooltiptitle: "'E' Note"
+            tooltiptitle: "'E' Note",
+            tooltipimage: "img/e.png"
         },
         "F": {
             name: "F",
@@ -784,7 +787,8 @@ dialects.musical = {
             description: "Play F Note",
             type: "note",
             tooltiptext: "Represents a 'F' Note.  Needs to be placed within an Instrument to be played.",
-            tooltiptitle: "'F' Note"
+            tooltiptitle: "'F' Note",
+            tooltipimage: "img/f.png"
         },
         "G": {
             name: "G",
@@ -798,7 +802,8 @@ dialects.musical = {
             description: "Play G Note",
             type: "note",
             tooltiptext: "Represents a 'G' Note.  Needs to be placed within an Instrument to be played.",
-            tooltiptitle: "'G' Note"
+            tooltiptitle: "'G' Note",
+            tooltipimage: "img/g.png"
         },
         "A": {
             name: "A",
@@ -812,7 +817,8 @@ dialects.musical = {
             description: "Play A Note",
             type: "note",
             tooltiptext: "Represents a 'A' Note.  Needs to be placed within an Instrument to be played.",
-            tooltiptitle: "'A' Note"
+            tooltiptitle: "'A' Note",
+            tooltipimage: "img/a.png"
         },
         "B": {
             name: "B",
@@ -826,7 +832,8 @@ dialects.musical = {
             description: "Play B Note",
             type: "note",
             tooltiptext: "Represents a 'B' Note.  Needs to be placed within an Instrument to be played.",
-            tooltiptitle: "'B' Note"
+            tooltiptitle: "'B' Note",
+            tooltipimage: "img/b.png"
         },
         "Rest": {
             name: "Rest",
@@ -838,7 +845,9 @@ dialects.musical = {
             ],
             returns: "Note",
             description: "Rest a beat",
-            type: "note"
+            type: "note",
+            tooltiptext: "Represents a Rest. Rests pause audio for one beat. Needs to be placed within an Instrument to be played.",
+            tooltiptitle: "Rest",
         },
         "flat": {
             name: "flat",
@@ -853,7 +862,9 @@ dialects.musical = {
             returns: "Note Effect",
             description: "Takes in notes and returns them as flats",
             multiline: true,
-            type: "note"
+            type: "note",
+            tooltiptext: "Method that takes in notes and lowers each note by a half step (semitone).",
+            tooltiptitle: "♭ Flat { Notes }"
         },
         "sharp": {
             name: "sharp",
@@ -868,7 +879,9 @@ dialects.musical = {
             returns: "Note Effect",
             description: "Takes in notes and returns them as sharps",
             multiline: true,
-            type: "note"
+            type: "note",
+            tooltiptext: "Method that takes in notes and raises each note by a half step (semitone).",
+            tooltiptitle: "♯ Sharp { Notes }",
         },
         "octave()on": {
             name: "octave()on",
@@ -891,7 +904,9 @@ dialects.musical = {
             selfcall: true,
             description: "Takes in notes and adjusts their octave",
             toplevel: true,
-            type: "note"
+            type: "note",
+            tooltiptext: "Method that takes in notes and adjusts them to the entered Octave number.  By default all notes are Octave 4.  Typically, Octaves 0 - 8 are used.",
+            tooltiptitle: "Octave ( Number ) on { Notes }",
         },
         "monoSynth": {
             name: "monoSynth",
@@ -1174,7 +1189,7 @@ for (var k in dialects.musical.methods){
         dialects.musical.methods[k].category = "Effects";
     }
     else if(dialects.musical.methods[k].type == "timing"){
-        dialects.musical.methods[k].category = "Timing";
+        dialects.musical.methods[k].category = "Other";
     }
     else{
        dialects.musical.methods[k].category = "Graceful Music";
@@ -1218,7 +1233,7 @@ function createDialectRequestTile(req) {
             // console.log(tile);
     
     //create Tool Tips for displaying useful information
-    if(req.tooltiptitle || req.tooltiptext){
+    if(req.tooltiptitle || req.tooltiptext || req.tooltipimage){
 
         var tooltip = document.createElement("div")
         tooltip.classList.add("tooltip");
@@ -1235,11 +1250,22 @@ function createDialectRequestTile(req) {
             tooltiptext.appendChild(document.createTextNode(req.tooltiptext));
         }
 
-        tooltip.appendChild(tooltiptitle);
-        tooltip.appendChild(tooltiptext);
+        var tooltipimage = document.createElement("img");
+        tooltipimage.classList.add("tooltipimage");
+        tooltipimage.src = req.tooltipimage;
+        if(req.tooltiptitle){
+            tooltip.appendChild(tooltiptitle);
+        }
+        if(req.tooltiptext){
+            tooltip.appendChild(tooltiptext);
+        }
+        if(req.tooltipimage){
+            tooltip.appendChild(tooltipimage);
+        }
+
         tile.appendChild(tooltip);
     }
-    console.log(tile);
+    // console.log(tile);
     tile.dataset.category = req.category;
     if (req.constant)
         tile.classList.add('constant');
@@ -1371,19 +1397,8 @@ function getVarInputs(n) {
 }
 
 
-// var glen = 0;
 function codeSerialiser(n) {
     var req = serialisers[n.dataset.serialiserIndex];
-    // console.log(n);
-    // console.log(grace_id);
-    // req.test = 5;
-    // console.log(req);
-    // console.log(n.database.serialiserIndex);
-    // console.log(req);
-    // console.log(glen++);
-    // console.log(req);
-    // console.log(grace_id);
-    // console.log(n);
     var out = "";
     var line = n;
     if (req.multiline) {
@@ -1399,15 +1414,12 @@ function codeSerialiser(n) {
         if (i > 0)
             out += " ";
         out += part.name;
-        // console.log(n);
         if (part.args.length == 0) {
+            //add in a grace-id attribute so we can follow music while playing
             if($(n).attr('data-types')=='Note'){
                 $(n).attr("grace-id",grace_id);
                 out += " (" + grace_id + ")";
-                // console.log(n);
-                // console.log(grace_id);
                 grace_id++;
-                // console.log($(n).attr('grace-id'));
             }
         } else if (part.args.length == 1) {
             var arg = part.args[0];
@@ -1455,7 +1467,6 @@ function codeSerialiser(n) {
             ho += j;
         }
     }
-    // console.log(out);
     return out;
 }
 

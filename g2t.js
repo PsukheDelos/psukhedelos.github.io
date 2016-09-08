@@ -109,6 +109,7 @@ function t_stop(){
 // ******************
 
 function t_synth_mono(timing, vol, rate){
+  // console.log("mono");
   var mono = new Tone.MonoSynth().fan(fft, waveform).toMaster();
   mono.volume.value = vol;
   var seq_id = sequences.length;
@@ -284,9 +285,11 @@ function t_synth_duo(timing, vol, rate){
     if(note.note){
 		  duo.triggerAttackRelease(note.note, timing, time);
     }
-	}, sequence ).start(0);
+	}, sequence );
 
   duoSeq.playbackRate = rate;
+  duoSeq.loop = true;
+  duoSeq.start(0);
 
 	instruments.push(duo);
 	sequences.push(duoSeq);
@@ -906,6 +909,7 @@ loop();
 /*
  * Extra Functionality
  */
+  // $('<div>test</div>').insertAfter($('#category-bar').children(':input[value="Notes"]'));
 
 var timer = 0;
 $(document).ready(function () {
@@ -925,7 +929,17 @@ $(document).ready(function () {
         }, 500);
       }
    });
-   $('#toolbox .tile.dialect-method[data-types="Instrument Membrane"]').append("div");
+
+   // $('#toolbox .tile.dialect-method[data-types="Instrument Membrane"]').append("div");
+
+   // $( "<p>Test</p>" ).insertAfter( ".category-bar[Value=Notes]" );
+
+   // console.log($("#category-bar[value='Notes'"));
+   // console.log($('#category-bar :input[value="Notes"]'));
+   // console.log();
+   // console.log($('#category-bar').children(':input[value="Notes"]')[0]);
+  // console.log($('#category-bar').children(':input[value="Notes"]'));
+   // $(".category-bar").detach().appendTo('#DestinationContainerNode')
    // var test2 = test.first();
    // test2 = test2.append("<div>test</div>");
    // console.log(test2);

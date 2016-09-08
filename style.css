@@ -173,27 +173,45 @@ input {
     color: #080;
 }
 .tooltip {
-    visibility: hidden;
-    /*width: 120px;*/
+/*    visibility: hidden;
     background-color: blue;
     color: #fff;
     text-align: center;
     border-radius: 6px;
     padding: 5px 0;
-    opacity: .50;
-
-    /* Position the tooltip */
+    opacity: .80;
     z-index: 1;
     position: absolute;
     right: 470px;
-    /*top: 1%;*/
     white-space:normal;
     margin-top: 3%;
     width: 300px;
     overflow-x: hidden;
-    word-wrap:break-word;
-    /*word-wrap:break-word;*/
-    /*display:inline;*/
+    word-wrap:break-word;*/
+
+    /*margin-top: 5%;*/
+    visibility: hidden;
+    /* width: 120px; */
+    background-color: blue;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    opacity: .80;
+    z-index: 1;
+    position: absolute;
+    right: 470px;
+    /* top: 1%; */
+    white-space: normal;
+    /* margin-top: 0; */
+    width: 300px;
+    /* overflow-x: hidden; */
+    /* overflow-y: scroll; */
+    word-wrap: break-word;
+    /* word-wrap: break-word; */
+    display: flex;
+    /*top: 15%;*/
+    flex-direction: column;
 }
 .tooltiptext{
 /*    width: 300px;
@@ -204,6 +222,10 @@ input {
     font-size: large;
     font-weight: bolder;
     background: black;
+}
+.tooltipimage{
+    align-self: center;
+    width: 50%;
 }
 #toolbox .tile:hover .tooltip {
     visibility: visible;
@@ -322,9 +344,13 @@ input {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22), 0 0 5px blue;
 }
 
+
+
 .tile.dialect-method[data-category="Notes"] {
     background: lime;
     border: 2px outset hsl(90, 25%, 25%);
+    -webkit-flex-direction: column;
+    -webkit-align-items: flex-start;
 }
 .tile.highlighted.dialect-method[data-category="Notes"] {
     background: yellow;
@@ -606,7 +632,20 @@ input {
 }
 #category-bar input {
     height: 100%;
+    background: lightgreen;
 }
+#category-bar input[value="Notes"]{
+    background: yellow;
+} 
+#category-bar input[value="Instruments"]{
+    background: yellow;
+} 
+#category-bar input[value="Effects"]{
+    background: yellow;
+} 
+#category-bar input[value="Other"]{
+    background: yellow;
+} 
 .tile .op, .tile .cmpop {
     display:inline-flex;
     display: -webkit-inline-flex;
