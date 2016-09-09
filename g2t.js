@@ -111,7 +111,7 @@ function t_stop(){
 function t_synth_mono(timing, vol, rate){
   // console.log("mono");
   var mono = new Tone.MonoSynth().fan(fft, waveform).toMaster();
-  mono.volume.value = vol;
+  mono.volume.value = vol-30;
   var seq_id = sequences.length;
 
   var monoSeq = new Tone.Sequence(function(time, note){
@@ -141,7 +141,7 @@ function t_synth_mono(timing, vol, rate){
 
 function t_synth_pluck(timing, vol, rate){
 	var pluck = new Tone.PluckSynth().fan(fft, waveform).toMaster();
-  pluck.volume.value = vol;
+  pluck.volume.value = vol-10;
   var seq_id = sequences.length;
 	var pluckSeq = new Tone.Sequence(function(time, note){
 
@@ -169,7 +169,7 @@ function t_synth_pluck(timing, vol, rate){
 
 function t_synth_poly(timing, vol, rate){
 	var poly = new Tone.PolySynth().fan(fft, waveform).toMaster();
-  poly.volume.value = vol;
+  poly.volume.value = vol-30;
   var seq_id = sequences.length;
 
 	var polySeq = new Tone.Sequence(function(time, note){
@@ -266,7 +266,7 @@ function t_synth_membrane(timing, vol, rate){
 
 function t_synth_duo(timing, vol, rate){
 	var duo = new Tone.DuoSynth().fan(fft, waveform).toMaster();
-  duo.volume.value = vol;
+  duo.volume.value = vol+10;
   var seq_id = sequences.length;
 
 	var duoSeq = new Tone.Sequence(function(time, note){
@@ -918,6 +918,7 @@ $(document).ready(function () {
    $('[type="text"]').keyup(function () { 
       if(playing){
         timer++;
+        // alert("hi");
         //only recompile if someone has not typed for 500ms
         setTimeout(function() {
              timer--;

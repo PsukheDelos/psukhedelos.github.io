@@ -514,7 +514,7 @@ method atModuleEnd(module) {
 
 var octave := 4;
 var timing := "4n";
-var volume := -25;
+var volume := -80;
 var playbackrate := 1;
 
 var applyFlat := false
@@ -801,15 +801,29 @@ method sixteenth(){
 // ******************
 method VolumePercentage(v)on(blocks){
     var oldVolume := volume
-    
-    //constrain max volume
-    if(v > 100) then {
-        //max volume: 0dB
-        volume := 0 
-    } else {
-        //constrain dB between -50 and 0
-        volume := -80 + (v/100)*50        
+    // dom.window.console.log()
+    // volume := -v;
+
+    var c := v
+
+    if (v > 100) then {
+        c := 100
     }
+
+
+
+    volume := (100-c) / 100 * 80 * -1
+    dom.window.console.log(volume)
+    // volume := volume * (v / 100)
+
+    // //constrain max volume
+    // if(v > 100) then {
+    //     //max volume: 0dB
+    //     volume := 0 
+    // } else {
+    //     //constrain dB between -50 and 0
+    //     volume := -80 + (v/100)*50        
+    // }
  
     var ret := blocks.apply
     volume := oldVolume
