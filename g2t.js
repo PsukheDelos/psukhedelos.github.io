@@ -104,6 +104,26 @@ function t_stop(){
   Tone.Transport.bpm.value = 300;
 }
 
+function t_reset(){
+
+  Tone.Transport.cancel(0);
+
+  if(instruments.length > 0){
+    for (var i = instruments.length - 1; i >= 0; i--) {
+      instruments[i].disconnect();
+    }
+  }
+
+  if(sequences.length > 0){
+    for (var i = sequences.length - 1; i >= 0; i--) {
+      sequences[i].removeAll();
+    }
+  }
+
+  instruments = [];
+  sequences = [];
+}
+
 
 // * Instruments 
 // ******************
@@ -111,7 +131,7 @@ function t_stop(){
 function t_synth_mono(timing, vol, rate){
   // console.log("mono");
   var mono = new Tone.MonoSynth().fan(fft, waveform).toMaster();
-  mono.volume.value = vol-30;
+  mono.volume.value = vol-15;
   var seq_id = sequences.length;
 
   var monoSeq = new Tone.Sequence(function(time, note){
@@ -141,7 +161,7 @@ function t_synth_mono(timing, vol, rate){
 
 function t_synth_pluck(timing, vol, rate){
 	var pluck = new Tone.PluckSynth().fan(fft, waveform).toMaster();
-  pluck.volume.value = vol-10;
+  pluck.volume.value = vol;
   var seq_id = sequences.length;
 	var pluckSeq = new Tone.Sequence(function(time, note){
 
@@ -169,7 +189,8 @@ function t_synth_pluck(timing, vol, rate){
 
 function t_synth_poly(timing, vol, rate){
 	var poly = new Tone.PolySynth().fan(fft, waveform).toMaster();
-  poly.volume.value = vol-30;
+  // console.log(vol);
+  poly.volume.value = vol;
   var seq_id = sequences.length;
 
 	var polySeq = new Tone.Sequence(function(time, note){
@@ -266,7 +287,7 @@ function t_synth_membrane(timing, vol, rate){
 
 function t_synth_duo(timing, vol, rate){
 	var duo = new Tone.DuoSynth().fan(fft, waveform).toMaster();
-  duo.volume.value = vol+10;
+  duo.volume.value = vol;
   var seq_id = sequences.length;
 
 	var duoSeq = new Tone.Sequence(function(time, note){
@@ -297,25 +318,7 @@ function t_synth_duo(timing, vol, rate){
 	applyEffects(duo);
 }
 
-function t_reset(){
 
-	Tone.Transport.cancel(0);
-
-	if(instruments.length > 0){
-		for (var i = instruments.length - 1; i >= 0; i--) {
-			instruments[i].disconnect();
-		}
-	}
-
-	if(sequences.length > 0){
-		for (var i = sequences.length - 1; i >= 0; i--) {
-			sequences[i].removeAll();
-		}
-	}
-
-	instruments = [];
-	sequences = [];
-}
 
 // * Effects 
 // ******************

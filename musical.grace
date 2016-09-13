@@ -514,7 +514,7 @@ method atModuleEnd(module) {
 
 var octave := 4;
 var timing := "4n";
-var volume := -80;
+var volume := -30; //range from -40:-20
 var playbackrate := 1;
 
 var applyFlat := false
@@ -803,6 +803,11 @@ method VolumePercentage(v)on(blocks){
     var oldVolume := volume
     // dom.window.console.log()
     // volume := -v;
+    //volume should range from -40(min) to -20 (max)
+
+    var minVol := -40
+    var maxVol := -20
+    var range := maxVol - minVol
 
     var c := v
 
@@ -812,7 +817,7 @@ method VolumePercentage(v)on(blocks){
 
 
 
-    volume := (100-c) / 100 * 80 * -1
+    volume := (c / 100) * range + minVol
     dom.window.console.log(volume)
     // volume := volume * (v / 100)
 
