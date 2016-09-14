@@ -921,9 +921,7 @@ dialects.musical = {
             returns: "Instrument",
             description: "Plays notes with a monoSynth",
             multiline: true,
-            type: "instrument",
-            tooltiptext: "Method that takes in notes and lowers each note by a half step (semitone).",
-            tooltiptitle: "♭ Flat { Notes }"
+            type: "instrument"
         },
         "pluckSynth": {
             name: "pluckSynth",
@@ -1020,7 +1018,9 @@ dialects.musical = {
             returns: "Effect",
             description: "Adds a Chorus effect",
             multiline: true,
-            type: "effect"
+            type: "effect",
+            tooltiptext: "A stereo Chorus effect which adds a bit of left and right delay to an Instrument",
+            tooltiptitle: "Chorus { Instrument }"
         },
         "Reverb": {
             name: "Reverb",
@@ -1035,7 +1035,9 @@ dialects.musical = {
             returns: "Effect",
             description: "Adds a Reverb effect",
             multiline: true,
-            type: "effect"
+            type: "effect",
+            tooltiptext: "Adds some Reverberation to an Instrument",
+            tooltiptitle: "Reverb { Instrument }"
         },
         "Autowah": {
             name: "Autowah",
@@ -1050,7 +1052,9 @@ dialects.musical = {
             returns: "Effect",
             description: "Adds an Autowah effect",
             multiline: true,
-            type: "effect"
+            type: "effect",
+            tooltiptext: "An Autowah effect which adds a distinctive, choppy, funky sound to an Instrument",
+            tooltiptitle: "Autowah { Instrument }"
         },
         "Cheby": {
             name: "Cheby",
@@ -1065,7 +1069,9 @@ dialects.musical = {
             returns: "Effect",
             description: "Adds a Cheby effect",
             multiline: true,
-            type: "effect"
+            type: "effect",
+            tooltiptext: "A Chebyshev waveshaper, an effect which adds some distortion to an Instrument",
+            tooltiptitle: "Cheby { Instrument }"
         },
         "SetBPM": {
             name: "SetBPM",
@@ -1079,7 +1085,9 @@ dialects.musical = {
             ],
             description: "Sets the Beats Per Minute",
             returns: "Global BPM",
-            type: "timing"
+            type: "timing",
+            tooltiptext: "Sets the Beats Per Minute for a song. The higher the number, the faster the song! The default BPM is 300.",
+            tooltiptitle: "SetBPM { Number }"
         },
         // "Time()on": {
         //     name: "Time()on",
@@ -1152,7 +1160,9 @@ dialects.musical = {
             selfcall: true,
             description: "Adjust playback rate",
             toplevel: true,
-            type: "timing"
+            type: "timing",
+            tooltiptext: "Adjusts the playback rate of an instrument relative to the song's BPM",
+            tooltiptitle: "PlayBackRatePercentage { Number } on { Instrument }"
         },
         "VolumePercentage()on": {
             name: "VolumePercentage()on",
@@ -1175,7 +1185,9 @@ dialects.musical = {
             selfcall: true,
             description: "Adjust volume",
             toplevel: true,
-            type: "timing"
+            type: "timing",
+            tooltiptext: "Adjusts the volume of an Instrument",
+            tooltiptitle: "VolumePercentage { Number } on { Instrument }"
         },
 
     }
