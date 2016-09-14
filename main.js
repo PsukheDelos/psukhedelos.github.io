@@ -419,6 +419,21 @@ function go() {
     document.getElementById('stdout_txt').value = "";
     minigrace.modname = "main";
     minigrace.compilerun(getCode());
+    $('[type="text"]').keyup(function () { 
+      if(playing){
+        timer++;
+        // alert("hi");
+        //only recompile if someone has not typed for 500ms
+        setTimeout(function() {
+             timer--;
+             if(timer==0){
+              t_stop();
+              t_reset();
+              go();
+             }
+        }, 500);
+      }
+   });
 }
 var theBrowser = 'unknown';
 if (navigator.userAgent.search('Chrome') != -1) {
