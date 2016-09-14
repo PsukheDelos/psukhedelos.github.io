@@ -863,8 +863,8 @@ dialects.musical = {
             description: "Takes in notes and returns them as flats",
             multiline: true,
             type: "note",
-            // tooltiptext: "Method that takes in notes and lowers each note by a half step (semitone).",
-            // tooltiptitle: "♭ Flat { Notes }"
+            tooltiptext: "Method that takes in notes and lowers each note by a half step (semitone).",
+            tooltiptitle: "♭ Flat { Notes }"
         },
         "sharp": {
             name: "sharp",
@@ -921,7 +921,9 @@ dialects.musical = {
             returns: "Instrument",
             description: "Plays notes with a monoSynth",
             multiline: true,
-            type: "instrument"
+            type: "instrument",
+            tooltiptext: "Method that takes in notes and lowers each note by a half step (semitone).",
+            tooltiptitle: "♭ Flat { Notes }"
         },
         "pluckSynth": {
             name: "pluckSynth",
